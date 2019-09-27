@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/VCode.js"></script>
+    
+    <link rel="stylesheet" href="css/register.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="r-container">
+        <div class="r-head">
+            <img src="image/logo-icon.png" alt="">
+            <img src="image/slogan-0224.png" alt="">
+        </div>
+        <div class="r-content">
+            <p>注册万表会员</p>
+            <div class="r-content-from">
+                <form action="">
+                    <div>
+                        <em class="r-content-from-phone"></em>
+                        <input type="text" placeholder="请输入手机号码">
+                    </div>
+                    <div class="r-error">
+                        <em class="r-content-from-error"></em>
+                        <span>请输入您的手机号</span>
+                    </div>
+                    <div class="r-content-from-clear">
+                        <em class="r-content-from-dun"></em>
+                        <input type="text" placeholder="请输入图形验证码" id="r-content-from-input">
+                        <div id="r-content-from-img" ></div>
+                    </div>
+                   
+                   
+                    <div>
+                        <em class="r-content-from-s"></em>
+                        <input type="text" placeholder="请设置密码">
+                    </div>
+                    <div class="r-error">
+                        <em class="r-content-from-error"></em>
+                        <span>密码应为6-20位任意字符组合</span>
+                    </div>
+                    <div>
+                        <em class="r-content-from-s"></em>
+                        <input type="text" placeholder="请再次输入密码">
+                    </div>
+                    <div class="r-error">
+                        <em class="r-content-from-error"></em>
+                        <span>两次密码不一致，请检查你的密码</span>
+                    </div>
+                    <input id="r-content-from-last" type="text"  placeholder="如有推荐人，请填写推荐人手机号">
+                </form>
+            </div>
+        </div>
+       
+    </div>
+</body>
+</html>
