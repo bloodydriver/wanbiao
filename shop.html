@@ -117,9 +117,9 @@
                                 <span>x12期</span>
                             </p>
                             <span><i></i> 免息免手续费</span>
-                            <!-- <div class="L_right_pay">
-                                <p>信用卡分期付款服务</p>
-                                <p>部分银行免息免手续费分期，详情请咨询客服</p>
+                            <div id="L_right_pay">
+                                <p class="L_pay_title1">信用卡分期付款服务</p>
+                                <p class="L_pay_title2">部分银行免息免手续费分期，详情请咨询客服</p>
                                 <ul>
                                     <li><i></i><span>招商</span></li>
                                     <li><i></i><span>建行</span></li>
@@ -128,7 +128,7 @@
                                     <li><i></i><span>广发</span></li>
                                     <li><i></i><span>工行</span></li>
                                 </ul>
-                            </div> -->
+                            </div>
                         </div>
                         <div class="L_shop_price_all">
                             <span>万表价</span>
@@ -210,11 +210,20 @@
                     <div class="L_shop_number">
                         <span>数量</span>
                         <div class="L_shop_count">
-                            <button>-</button>
+                            <button class="L_number_sub">-</button>
                             <input type="text" value="1">
-                            <button>+</button>
+                            <button class="L_number_add">+</button>
                         </div>
-                        
+                        <p></p>
+                    </div>
+                    <div class="L_shop_buy">
+                        <button class="L_shop_btn1" type="button">立即购买</button>
+                        <button class="L_shop_btn2" type="button">加入购物车</button>
+                        <div class="L_buy_code">
+                            <i></i>
+                            <span>手机购买</span>
+                            <img src="https://www.wbiao.cn/pub/qr/?content=https://m.wbiao.cn/goods/51564.html" alt="">
+                        </div>
                     </div>
                 </div>
             </div>
@@ -352,6 +361,36 @@
         $(".L_shop_promise li").mouseleave(function() {
             $(".L_placehoder").css("display","none");
         })
+
+        //免息鼠标效果
+        $(".L_shop_date>span").mouseenter(function() {
+            $("#L_right_pay").css("display","block")
+        })
+        $(".L_shop_date>span").mouseleave(function() {
+            $("#L_right_pay").css("display","none")
+        })
+
+        //购物数量加减
+        $(".L_number_sub").click(function() {
+            $(".L_shop_count input")[0].value--;
+            if($(".L_shop_count input")[0].value<=0) {
+                $(".L_shop_count input")[0].value=1;
+                $(".L_shop_number>p").text("购买的数量不能小于1").css("display","block");
+                $(".L_shop_number>p").fadeToggle(4000)
+            }
+        })
+        $(".L_number_add").click(function() {
+            $(".L_shop_count input")[0].value++;
+        })
+
+        //手机购买显示二维码
+        $(".L_buy_code").mouseenter(function() {
+            $(".L_buy_code img").css("display","block")
+        })
+        $(".L_buy_code").mouseleave(function() {
+            $(".L_buy_code img").css("display","none")
+        })
+
     </script>
 </body>
 </html>
