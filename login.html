@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/login.css">
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/login.js"></script>
+    <script src="js/VCode.js"></script>
     <title>万表网</title>
 </head>
 <body>
@@ -30,22 +31,31 @@
                                 <em class="m-main-login-p-g">竖杠</em>
                                 <span class="m-main-login-p-right">扫码登录</span>
                             </p>
+                            <!-- 动态码登录 -->
+                            <div class="m-main-login-move">
+                                <input type="text" placeholder="手机号码">
+                                <input type="text" placeholder="请输入图形验证码">
+                                <div id="r-content-from-img" ></div>
+                                <input type="text" placeholder="短信验证码">
+                                <div class="fff">获取验证码</div>
+                                <button type="button">立即登录</button>
+                                <span>
+                                    <a href="register.html"> 免费注册</a>
+                                </span>
+                            </div>
+                            <!-- 密码登录 -->
                             <div class="m-main-login-div">
                                 <input type="text" placeholder="手机号码/会员名/邮箱">
                                 <input type="password" placeholder="密码">
                                 <button type="button">立即登录</button>
                                 <p>
-                                    <span>免费注册</span>
+                                    <span>
+                                        <a href="register.html"> 免费注册</a>
+                                    </span>
                                     <span>忘记密码</span>
                                 </p>
                             </div>
-                            <p class="m-main-login-footer">
-                                <span class="m-main-login-footer-img"></span>
-                                <span class="m-main-login-footer-left">手机动态码登录</span>
-                                <em class="m-main-login-footer-g">丨</em>
-                                <span class="m-main-login-footer-hidden">仅在APP开放QQ、微信等社交帐号登录功能，<a href="javascript:void(0)">下载登录</a></span>
-                                <span class="m-main-login-footer-right">社交登录</span>
-                            </p>
+                            <!-- 二维码登录 -->
                             <div class="m-main-login-code">
                                 <img src="image/qr.png" alt="">
                                 <p class="m-main-login-code-p">使用
@@ -57,6 +67,17 @@
                                     下载万表app
                                 </div>
                             </div>
+
+                            <p class="m-main-login-footer">
+                                <!-- <span class="m-main-login-footer-img"></span> -->
+                                <!-- <span class="m-main-login-footer-left">手机动态码登录</span> -->
+                                <span class="m-main-login-footer-left">账号密码</span>
+                                <em class="m-main-login-footer-g">丨</em>
+                                <span class="m-main-login-footer-hidden">仅在APP开放QQ、微信等社交帐号登录功能，<a href="javascript:void(0)">下载登录</a></span>
+                                <span class="m-main-login-footer-right">社交登录</span>
+                            </p>
+                            
+                           
                         </div>
                     </div>
                 </form>
