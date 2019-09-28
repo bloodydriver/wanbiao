@@ -223,7 +223,7 @@ table { border-collapse:collapse; border-spacing:0; }
     margin: auto;
 }
 .L_shop_detail {
-    overflow: hidden;
+    height: auto;
 }
 .L_shop_img_content {
     float: left;
@@ -266,7 +266,7 @@ table { border-collapse:collapse; border-spacing:0; }
     line-height: 80px;
     margin-top: 15px;
 }
-.L_shop_img_bottom i {
+.L_shop_img_bottom i, .L_img_share_left, .L_img_share_right {
     display: inline-block;
     width: 12px;
     height: 12px;
@@ -803,7 +803,6 @@ table { border-collapse:collapse; border-spacing:0; }
     margin-top: 24px;
     letter-spacing: -4px;
 }
-
 .L_shop_btn1 {
     float: left;
     width: 180px;
@@ -830,10 +829,12 @@ table { border-collapse:collapse; border-spacing:0; }
     text-align: center;
     background-color: #fff;
     margin-left: 10px;
+    font-weight: 700;
     cursor: pointer;
 }
 .L_shop_btn2:hover {
     border: 1px solid #333;
+    color: #333;
 }
 .L_buy_code {
     position: relative;
@@ -871,4 +872,189 @@ table { border-collapse:collapse; border-spacing:0; }
     top: 0;
     width: 110px;
     height: 110px;
+}
+.L_shop_share {
+    font-size: 12px;
+    margin: 20px 0 0 2px;
+}
+.L_shop_share span {
+    cursor: pointer;
+}
+.L_shop_share span:first-child {
+    font-size: 12px;
+    color: #477db3;
+    margin-right: 5px;
+}
+.L_shop_share span:last-child {
+    color: #477db3;
+    padding-left: 7px;
+    border-left: 1px solid #ccc;
+}
+.L_share_shade {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(238,238,238,.2);
+}
+.L_share_content {
+    position: absolute;
+    width: 780px;
+    height: 513px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 8px 8px 0 0;
+}
+.L_share_content>p {
+    height: 64px;
+    line-height: 64px;
+    color: #333;
+    padding-left: 20px;
+    font-size: 18px;
+    border-bottom: 1px solid #eee;
+}
+.L_share_content>p i {
+    float: right;
+    background-image: url('images/icon.png');
+    background-position: 0 -462px;
+    background-size: 589px;
+    width: 32px;
+    height: 32px;
+    margin-top: 16px;
+    margin-right: 16px;
+    cursor: pointer;
+}
+.L_shareTo {
+    padding: 30px 40px;
+    height: 300px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+.L_share_check {
+    overflow: hidden;
+    line-height: 16px;
+}
+.L_share_check span {
+    float: left;
+    margin-right: 10px;
+    font-size: 12px;
+}
+.L_share_check input, .L_share_check i {
+    float: left;
+}
+.L_share_check input {
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+}
+.L_share_check i {
+    background-image: url('images/icon.png');
+    background-size: 589px;
+    width: 15px;
+    height: 15px;
+    margin-right: 10px;
+}
+.L_share_check>i:nth-child(3) {
+    background-position: -74px -537px;
+}
+.L_share_check>i:nth-child(5) {
+    background-position: -124px -537px;
+}
+.L_share_check>i:last-child {
+    background-position: -174px -537px;
+}
+.L_shareTo textarea {
+    margin-top: 8px;
+    width: 700px;
+    height: 100px;
+    font-size: 14px;
+    line-height: 30px;
+}
+.L_share_img {
+    width: 700px;
+    margin-top: 50px;
+}
+.L_share_box {
+    float: left;
+    width: 660px;
+    margin-left: 10px;
+}
+.L_img_share_left {
+    float: left;
+    color: #999;
+    margin-top: 30px;
+    transform: rotate(-135deg);
+}
+.L_img_share_right {
+    float: right;
+    color: #999;
+    margin-top: 30px;
+    transform: rotate(45deg);
+}
+.L_share_list li {
+    float: left;
+    width: 64px;
+    height: 64px;
+    padding: 6px;
+    margin-right: 10px;
+    opacity: .5;
+    border: 2px solid #fff;
+    cursor: pointer;
+}
+.L_share_list li>img {
+    width: 64px;
+    height: 64px;
+}
+.L_share_li {
+    opacity: 1 !important;
+    border: 2px solid #cc5252 !important;
+}
+.L_whileShare {
+    overflow: hidden;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    border-radius: 0 0 8px 8px;
+    background: #fff;
+}
+.L_whileShare a {
+    float: right;
+    cursor: pointer;
+    height: 48px;
+    line-height: 48px;
+    margin: 0 10px 0 0;
+    border-radius: 100px;
+}
+.L_whileShare a:first-child {
+    width: 140px;
+    border: 1px solid #cc5252;
+    color: #fff;
+    background: #cc5252;
+    margin-right: 20px;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+}
+.L_whileShare a:first-child:hover {
+    opacity: .9;
+}
+.L_whileShare a:last-child {
+    width: 100px;
+    font-size: 14px;
+    text-align: center;
+    font-weight: 400;
+    text-decoration: none;
+    color: #999;
+    border: 1px solid #999;
+}
+.L_AD {
+    cursor: pointer;
+    margin-top: 50px; 
+    border: 0;
+}
+.L_shop_nav {
+    margin-top: 50px;
 }

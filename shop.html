@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <script src="jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="shop.css">
     <title>Document</title>
 </head>
@@ -97,6 +97,10 @@
                             </ul>
                         </div>
                         <i class="L_img_list_right"></i>
+                    </div>
+                    <div class="L_shop_share">
+                        <span>收藏</span>
+                        <span>分享</span>
                     </div>
                 </div>
                 <div class="L_shop_detail_right">
@@ -227,7 +231,33 @@
                     </div>
                 </div>
             </div>
+            <img class="L_AD" src="https://image8.wbiao.co/mall/a62ef484a0ca496285420bb08801867f.jpg" alt="">
+            <div class="L_shop_nav">
+                <div class="L_shop_nav_left">
+                    <div class="L_self_shop">
+                        <h2>阿玛尼ARMANI</h2>
+                        <div class="L_self_content">
+                            <a href="">
+                                <img src="" alt="">
+                                <span></span>
+                            </a>
+                            <p>全部商品</p><span>1165</span>
+                            <p>累计销量</p><span>1165</span>
+                            <p>关注数</p><span>1165</span>
+                        </div>
+                        <div class="L_shop_look">
+                            <i></i><span>进店逛逛</span>
+                            <i></i><span>联系客服</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="L_shop_nav_content">
+
+                </div>
+
+            </div>
         </div>
+
     </div>
     <!--遮罩轮播图-->
     <div class="L_img_shade">
@@ -259,6 +289,56 @@
             <span class="L_shade_off"></span>
         </div>
     </div>
+    <!-- 遮罩分享 -->
+    <div class="L_share_shade">
+        <div class="L_share_content">
+            <p>
+                分享给好友
+                <i></i>
+            </p>
+            <div class="L_shareTo">
+                <p class="L_share_check">
+                    <span>分享到：</span>
+                    <input type="checkbox"><i></i>
+                    <input type="checkbox"><i></i>
+                    <input type="checkbox"><i></i>
+                </p>
+                <textarea name="" id="" cols="30" rows="10">我在@万表发现了一个非常不错的商品阿玛尼-LUIGI系列 AR1970 石英男表 万表价：2120。感觉不错，分享一下</textarea>
+                <div class="L_share_img">
+                    <i class="L_img_share_left"></i>
+                    <div class="L_share_box">
+                        <ul class="L_share_list">
+                            <li class="L_share_li">
+                                <img src="https://image8.wbiao.co/shop/c7fe11add1b24475b1d582b053687469.jpg?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff" alt="">
+                            </li>
+                            <li>
+                                <img src="https://image8.wbiao.co/shop/201708_16_AR1970_29629.jpg?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff" alt="">
+                            </li>
+                            <li>
+                                <img src="https://image8.wbiao.co/shop/50410debdf744890bb1c2bc4851de1c1.JPG?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff" alt="">
+                            </li>
+                            <li>
+                                <img src="https://image8.wbiao.co/shop/8ae381227d1e4af68fdc34af8941112b.JPG?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff" alt="">
+                            </li>
+                            <li>
+                                <img src="https://image8.wbiao.co/shop/94ad15e495b9433abd415135d6b2315a.JPG?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff" alt="">
+                            </li>
+                            <li>
+                                <img src="https://image8.wbiao.co/shop/180049aad9f64c3f81bdcd4c0e6b02f6.jpg?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <i class="L_img_share_right"></i>
+                </div>
+            </div>
+            <div class="L_whileShare">
+                <a href="javascript:void(0)">分享</a>
+                <a href="javascript:void(0)">取消</a>
+            </div>
+        </div>
+    </div>
+
+    
 
     <script>
         //搜索提示
@@ -389,6 +469,26 @@
         })
         $(".L_buy_code").mouseleave(function() {
             $(".L_buy_code img").css("display","none")
+        })
+
+        //分享
+        $(".L_share_list li").click(function() {
+            $(this).addClass("L_share_li").siblings().removeClass("L_share_li");
+        })
+        $(".L_share_check input").eq(0).prop("checked",true);
+        $(".L_share_check input").click(function() {
+            $(this).prop("checked",true).siblings().prop("checked",false)
+
+        })
+        $(".L_share_shade").hide();
+        $(".L_share_content>p i").click(function() {
+            $(".L_share_shade").hide();
+        })
+        $(".L_whileShare a").eq(1).click(function() {
+            $(".L_share_shade").hide();
+        })
+        $(".L_shop_share span").eq(1).click(function() {
+            $(".L_share_shade").show();
         })
 
     </script>
