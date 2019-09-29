@@ -1058,3 +1058,132 @@ table { border-collapse:collapse; border-spacing:0; }
 .L_shop_nav {
     margin-top: 50px;
 }
+.L_shop_nav_left {
+    width: 210px;
+    float: left;
+}
+.L_self_shop>h2, .L_self_seach h2 {
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #666;
+    background-color: #f1f1f1;
+    padding-left: 12px;
+    border: 1px solid #f1f1f1;
+    font-weight: 700;
+}
+.L_self_content {
+    position: relative;
+    padding: 30px 14px 20px;
+    border: 1px solid #eee;
+}
+.L_self_content>a {
+    overflow: hidden;
+    display: block;
+    width: 84px;
+    height: 84px;
+    border: 1px solid #ddd;
+    margin: 0 auto 16px;
+    padding: 5px;
+    border-radius: 50%;
+}
+.L_self_content>a span {
+    display: inline-block;
+    width: 38px;
+    height: 16px;
+    border: 1px solid #cc9952;
+    border-radius: 10px;
+    line-height: 16px;
+    color: #cc9952;
+    font-size: 12px;
+    text-align: center;
+    position: absolute;
+    top: 31px;
+    right: 38px;
+}
+.L_self_content>p {
+    display: inline-block;
+    text-align: right;
+    font-size: 12px;
+    color: #999;
+    width: 88px;
+}
+.L_self_content>span {
+    display: inline-block;
+    font-size: 12px;
+    color: #333;
+    margin-left: 8px;
+    width: 84px;
+    font-weight: 700;
+}
+.L_shop_look {
+    margin-top: 30px;
+
+    padding-top: 18px;
+    border-top: 1px solid #ddd;
+}
+.L_shop_look span {
+    font-size: 12px;
+    color: #666;
+}
+.L_shop_look span:nth-child(2) {
+    margin-right: 24px;
+}
+.L_shop_look i:first-child {
+    display: inline-block;
+    background-image: url('images/icon.png');
+    background-position: -332px -504px;
+    background-size: 589px;
+    width: 16px;
+    height: 16px;
+    vertical-align: middle;
+    margin-left: 7px;
+    margin-right: 7px;
+}
+.L_shop_look i:nth-child(3) {
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+    border: 2px solid #cc9952;
+    border-radius: 16px;
+    vertical-align: middle;
+    margin-right: 7px;
+}
+.L_self_seach {
+    margin-top: 10px;
+}
+.L_self_seach_content {
+    padding: 20px 16px 24px 12px;
+    border: 1px solid #eee;
+}
+.L_self_seach_content p {
+    overflow: hidden;
+    margin-bottom: 12px;
+}
+.L_self_seach_content>p span {
+    float: left;
+    width: 48px;
+    text-align: right;
+    font-size: 12px;
+    color: #666;
+    line-height: 28px;
+    margin-right: 12px
+}
+.L_self_seach_content>p input {
+    float: left;
+    outline: 0;
+    border: 1px solid #ddd;
+    height: 26px;
+    padding-left: 4px;
+}
+.L_self_seach_content>p:first-child input {
+    width: 113px;
+}
+.L_self_seach_content>p:nth-child(2) input {
+    width: 44px;
+}
+#L_noMargin {
+    width: 4px;
+    color: #999;
+    margin: 0 3px 0 4px;
+}
