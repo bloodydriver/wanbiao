@@ -1,9 +1,8 @@
-
-       $(function () {
+$(function () {
     // 定义：存储验证码
      var verifyCode = new GVerify("r-content-from-img");
     // 登录的js验证
-   
+   console.log(verifyCode.options.code)
     $(".r-error").click(function () {
         // var res = verifyCode.validate(document.getElementById("r-content-from-img").value);  //获取验证码
   
@@ -134,16 +133,16 @@
         },
 
         /**验证验证码**/
-        validate: function(code){
-            var code = code.toLowerCase();
-            var v_code = this.options.code.toLowerCase();
-            if(code == v_code){
-                return true;
-            }else{
-                this.refresh();
-                return false;
-            }
-        }
+        // validate: function(code){
+        //     var code = code.toLowerCase();
+        //     var v_code = this.options.code.toLowerCase();
+        //     if(code == v_code){
+        //         return true;
+        //     }else{
+        //         this.refresh();
+        //         return false;
+        //     }
+        // }
     };
     /**生成字母数组**/
     function getAllLetter() {

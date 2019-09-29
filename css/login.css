@@ -36,7 +36,6 @@ table { border-collapse:collapse; border-spacing:0; }
 }
 .m-main-content a {
     width: 100%;
-    height: 580px;
 }
 .m-main-login {
     width: 1000px;
@@ -132,6 +131,14 @@ table { border-collapse:collapse; border-spacing:0; }
     width: 98px;
     height: 44px;
     float: right;
+}
+.m-main-login-footer-left {
+    display: none;
+    float: left;
+}
+.m-main-login-footer-left1 {
+    padding-left: 48px;
+    float: left;
 }
 
 /* //密码登录 */
@@ -247,7 +254,7 @@ input:-moz-placeholder {
     left: 100px;
     background-image: url(../image/spriteB.png);
     background-position: -369px -269px;
-    
+    display: none;
 }
 
 .m-main-bottom-content {
@@ -301,4 +308,22 @@ input:-moz-placeholder {
     left: 110px;
     border-radius: 21px;
     color: #666;
+    cursor: pointer;
+}
+
+/* //万表app登录页面 */
+.m-main-login-logo {
+    width: 260px;
+    height: 260px;
+    margin:10px auto 0;
+    border-radius:15px; 
+    border: 1px solid #ddd;
+    display: none;
+}
+.m-main-login-logo img {
+    width: 230px;
+    height: 230px;
+    margin-left: 15px;
+    margin-top: 15px;
+    border: none;
 }
