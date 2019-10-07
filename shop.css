@@ -1312,8 +1312,10 @@ table { border-collapse:collapse; border-spacing:0; }
     color: #999;
     line-height: 24px;
 }
-.imgList img {
+.L_nav_content img {
     display: block;
     margin: auto;
-    margin-bottom: 20px;
+}
+.imgList {
+    margin-bottom: 20px; 
 }

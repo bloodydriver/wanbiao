@@ -356,12 +356,18 @@
                         <div class="imgList">
                             <img src="https://image8.wbiao.co/shop/baeeddad38264753b17e4659950eda38.jpg?x-oss-process=image/resize,w_920" alt="">
                         </div>
-                        <div class="imgList">
-                            <img src="https://image8.wbiao.co/detail/goods_201708_16_1502849608617399138.jpg?x-oss-process=image/resize,w_920/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
-                        </div>
-                        <div class="imgList">
-                            <img src="https://image8.wbiao.co/detail/goods_201708_16_1502849608273144795.jpg?x-oss-process=image/resize,w_920/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
-                        </div>
+                        <img src="https://image8.wbiao.co/detail/goods_201708_16_1502849608617399138.jpg?x-oss-process=image/resize,w_920/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                        <img src="https://image8.wbiao.co/detail/goods_201708_16_1502849608273144795.jpg?x-oss-process=image/resize,w_920/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                        <img src="https://image8.wbiao.co/detail/goods_201708_16_1502849608929996632.jpg?x-oss-process=image/resize,w_920/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                        <img src="https://image8.wbiao.co/detail/goods_201708_16_1502849608981138635.jpg?x-oss-process=image/resize,w_920/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                        <img src="https://image8.wbiao.co/detail/goods_201708_16_1502849608626506599.jpg?x-oss-process=image/resize,w_920/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                        <img src="https://image8.wbiao.co/detail/goods_201708_16_1502849608054208176.jpg?x-oss-process=image/resize,w_920/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                        <img src="https://image8.wbiao.co/shop/50410debdf744890bb1c2bc4851de1c1.JPG?x-oss-process=image/resize,w_920/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                        <img src="https://image8.wbiao.co/shop/94ad15e495b9433abd415135d6b2315a.JPG?x-oss-process=image/resize,w_920/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                        <img src="https://image8.wbiao.co/shop/8ae381227d1e4af68fdc34af8941112b.JPG?x-oss-process=image/resize,w_920/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                        <img src="https://image8.wbiao.co/shop/180049aad9f64c3f81bdcd4c0e6b02f6.jpg?x-oss-process=image/resize,w_920/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                        <img src="https://image8.wbiao.co/detail/goods_201708_16_1502849608897655402.jpg?x-oss-process=image/resize,w_920/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                    
                     </div>
 
                 </div>
@@ -459,7 +465,11 @@
             $(".L_header_rigth span").hide();
         })
         $(".L_seach_input").blur(function() {
-            $(".L_header_rigth span").show();
+            if($(".L_seach_input").val()=="") {
+                $(".L_header_rigth span").show();
+            }else {
+                $(".L_header_rigth span").hide();
+            }
         })
         
         //放大镜效果
@@ -566,7 +576,7 @@
             if($(".L_shop_count input")[0].value<=0) {
                 $(".L_shop_count input")[0].value=1;
                 $(".L_shop_number>p").text("购买的数量不能小于1").css("display","block");
-                $(".L_shop_number>p").fadeToggle(4000)
+                $(".L_shop_number>p").fadeToggle(3000)
             }
         })
         $(".L_number_add").click(function() {
@@ -588,7 +598,6 @@
         $(".L_share_check input").eq(0).prop("checked",true);
         $(".L_share_check input").click(function() {
             $(this).prop("checked",true).siblings().prop("checked",false)
-
         })
         $(".L_share_shade").hide();
         $(".L_share_content>p i").click(function() {
