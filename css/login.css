@@ -133,12 +133,13 @@ table { border-collapse:collapse; border-spacing:0; }
     float: right;
 }
 .m-main-login-footer-left {
-    display: none;
+    /* display: none; */
     float: left;
 }
 .m-main-login-footer-left1 {
     padding-left: 48px;
     float: left;
+    display: none;
 }
 
 /* //密码登录 */
@@ -181,9 +182,7 @@ table { border-collapse:collapse; border-spacing:0; }
     font-size: 14px;
     cursor: pointer;
 }
-.m-main-login-div {
-    display: none;
-}
+
 .m-main-login-div span:last-child {
     margin-left: 184px;
 }
@@ -236,7 +235,7 @@ input:-moz-placeholder {
 .m-main-login-footer-hidden::after {
     content:"";/*:before和:after必带技能*/
     display:block;
-    position:absolute;/*日常绝对定位*/
+    position:absolute;
     top:30px;
     left: 260px;
     border:6px solid transparent;
@@ -254,7 +253,7 @@ input:-moz-placeholder {
     left: 100px;
     background-image: url(../image/spriteB.png);
     background-position: -369px -269px;
-    display: none;
+    /* display: none; */
 }
 
 .m-main-bottom-content {

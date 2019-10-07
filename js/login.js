@@ -53,15 +53,15 @@ $(function(){
         $(".m-main-login-logo").css("display","none");
 
     })
-    $(".m-main-login-footer-left").click(function(){
-        $(".m-main-login-move").css("display","block");
-        $(".m-main-login-div").css("display","none");
-        $(this).css("display","none");
-        $(".m-main-login-footer-img").css("display","none");
-        $(".m-main-login-footer-left1").css("display","block");
-        $(".m-main-login-logo").css("display","none");
+    // $(".m-main-login-footer-left").click(function(){
+    //     $(".m-main-login-move").css("display","block");
+    //     $(".m-main-login-div").css("display","none");
+    //     $(this).css("display","none");
+    //     $(".m-main-login-footer-img").css("display","none");
+    //     $(".m-main-login-footer-left1").css("display","block");
+    //     $(".m-main-login-logo").css("display","none");
 
-    })
+    // })
     var count = 0;
     $(".m-main-login-code-div").click(function(){
         if(count%2==0){
