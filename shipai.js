@@ -198,22 +198,35 @@ $(function(){      //客服聊天对话框
             'welcome': '您好，robot001为您服务'
         }
     };
-    console.log(serviceData.robot.welcome)
     var dialogueInput = document.getElementById('dialogue_input'),
         dialogueContain = document.getElementById('dialogue_contain'),
         dialogueHint = document.getElementById('dialogue_hint'),
-        btnOpen = document.getElementById('btn_open'),
+        // btnOpen = document.getElementById('btn_open'),
         btnClose = document.getElementById('btn_close'),
+        photo=document.getElementById('btn-pic'),
+        photo1 = document.getElementById("btn_close1"),
+        photo2 =document.getElementById("btn_close2"),
         timer,
         timerId,
         shiftKeyOn = false; 
-
-    btnOpen.addEventListener('click', function(e) {
-        $('.dialogue-support-btn').css({'display': 'none'});
+    photo.addEventListener('click', function(e) {
         $('.dialogue-main').css({'display': 'inline-block', 'height': '0'});
         $('.dialogue-main').animate({'height': '600px'})
+    });
+    photo1.addEventListener('click', function(e) {
+        $('.dialogue-main').animate({'height': '0'}, function() {
+            $('.dialogue-main').css({'display': 'none'});
+            $('.wrapper-zoom').css({'display': 'inline-block'});
+        });
     })
-
+    photo2.addEventListener('click', function(e) {
+        $('.dialogue-main').toggleClass("dialogue-style");
+    })
+    $(".wrapper-zoom").click(function(){
+        $('.dialogue-main').css({'display': 'inline-block', 'height': '0'});
+        $('.dialogue-main').animate({'height': '600px'})
+        $(this).hide()
+    })
     btnClose.addEventListener('click', function(e) {
         $('.dialogue-main').animate({'height': '0'}, function() {
             $('.dialogue-main').css({'display': 'none'});
@@ -277,30 +290,14 @@ $(function(){      //客服聊天对话框
         dialogueContain.appendChild(nodeP);
         dialogueContain.scrollTop = dialogueContain.scrollHeight;
     };
-    // $(".dialogue-hover").hide()
-    // $(".dialogue-wrapper").mouseenter(function(){
-    //     $(".dialogue-hover").fadeTo("slow",1,function(){
-    //         $(".dialogue-hover").show();
-    //     })
-    // })
-    $(function text(){
-        $(".car").toggle(
-                function(){
-                    $(".right-panel").css({right:"0"});
-            },
-            function(){
-                $(".right-panel").css({right:"-262px"});
-            }
-            );
-
+    $(".car").click(function(){
+        $(".right-panel").css({right:"0"})
+        $(".right-panel-box").eq($(".car").index($(this))).show().siblings().hide()
     })
-        
-    
     $(".right-panel-top .on").click(function(){
         $(this).css({borderBottom:"3px solid #333"}).eq(0).siblings(".on").css({"borderBottom":""})
     })
     $(".right-panel-close").click(function(){
         $(".right-panel").css({right:"-262px"})
     })
-
 })
