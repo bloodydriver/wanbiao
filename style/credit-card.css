@@ -17,7 +17,7 @@ table { border-collapse:collapse; border-spacing:0; }
 /* 顶部 */
 .x_card_head {
     width: 100%;
-    font-family: Tahoma,Arial,"宋体"
+    font-family: Tahoma,Arial,"宋体";
 }
 .x_top_info {
     width: 1000px;
@@ -191,4 +191,93 @@ table { border-collapse:collapse; border-spacing:0; }
     outline: none;
     cursor: pointer;
     background: url(../images/credit-card-btn.jpg) no-repeat 0 0;
+}
+/* 顶部银行列表 */
+.x_top_bank {
+    width: 1000px;
+    height: 37px;
+    margin: auto;
+}
+.x_top_bank:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.x_bank_list {
+    float: left;
+}
+.x_bank_list i {
+    display: inline-block;
+    background: url(../images/credit-card-bankicon.jpg) no-repeat 0 0;
+    width: 14px;
+    height: 8px;
+    margin-right: 15px;
+}
+.x_bank_list span {
+    display: block;
+    width: 210px;
+    height: 37px;
+    line-height: 37px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #aa1313;
+    text-align: center;
+    color: #e7cbcb;
+}
+.x_top_nav {
+    float: left;
+    height: 37px;
+    margin-left: 25px;
+}
+.x_top_nav ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.x_top_nav li {
+    float: left;
+}
+.x_top_nav a {
+    display: block;
+    height: 35px;
+    padding: 0px 18px;
+    color: #333;
+    font-size: 14px;
+    line-height: 35px;
+    letter-spacing: -1px;
+    font-weight: 700;
+    text-decoration: none;
+}
+/* 申请信用卡快速通道 */
+.x_bank {
+    font-family: Tahoma,Arial,"宋体";
+    width: 1100px;
+    height: 138px;
+    margin: auto;
+}
+.x_bank_aisle {
+    width: 1000px;
+    margin: auto;
+}
+.x_bank_aisle h3 {
+    height: 43px;
+    line-height: 43px;
+    margin-top: 35px;
+    border-bottom: 2px solid #f4f4f4;
+    font-size: 20px;
+    color: #888;
+}
+.x_bank_silder {
+    margin-top: 18px;
+}
+.x_bank_item li:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.x_bank_item a {
+    float: left;
+    margin: 0 20px;
+    text-decoration: none;
 }
