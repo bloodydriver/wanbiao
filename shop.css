@@ -1057,6 +1057,7 @@ table { border-collapse:collapse; border-spacing:0; }
 }
 .L_shop_nav {
     margin-top: 50px;
+    overflow: hidden;
 }
 .L_shop_nav_left {
     width: 210px;
@@ -1291,6 +1292,7 @@ table { border-collapse:collapse; border-spacing:0; }
     border-bottom: 1px solid #ddd;
 }
 .L_nav_content {
+    display: none;
     margin: auto;
     margin-top: 21px;
     width: 920px;
@@ -1318,4 +1320,224 @@ table { border-collapse:collapse; border-spacing:0; }
 }
 .imgList {
     margin-bottom: 20px; 
+}
+.unitPrice {
+    margin-top: 40px;
+    padding: 20px;
+    background: #f7f7f7;
+}
+.unitPrice_a {
+    font-size: 14px;
+    color: #666;
+    line-height: 19px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.unitPrice_b {
+    font-size: 12px;
+    color: #999;
+    line-height: 24px;
+}
+.unitPrice_b>span {
+    font-size: 14px;
+    color: #666;
+    line-height: 19px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+.L_shop_comment {
+    width: 920px;
+    margin-top: 40px;
+}
+.L_shop_comment>h2 {
+    height: 40px;
+    background: #f7f7f7;
+    font-size: 14px;
+    color: #666;
+    padding-left: 12px;
+    line-height: 40px;
+    font-weight: 700;
+}
+.L_comment_top {
+    margin: 20px 0;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+.L_comment_top_a {
+    display: inline-block;
+    padding-left: 12px;
+    cursor: pointer;
+}
+.L_comment_top_b {
+    display: inline-block;
+    margin-left: 25px;
+    margin-top: 6px;
+    font-size: 12px;
+    vertical-align: text-bottom;
+}
+.L_comment_top_a>div {
+    overflow: hidden;
+    float: left;
+    font-size: 48px;
+    line-height: 48px;
+    color: #ccaa7a;
+    margin-right: 2px;
+}
+.L_comment_top_a>span {
+    font-size: 12px;
+    color: #ccaa7a;
+    line-height: 16px;
+}
+.L_comment_top_a>p {
+    font-size: 18px;
+    color: #ccaa7a;
+    line-height: 30px;
+}
+.L_comment_top_b>p {
+    display: inline-block;
+    width: 121px;
+    height: 36px;
+    border: 1px solid #ccaa7a;
+    color: #ccaa7a;
+    border-radius: 100px;
+    line-height: 36px;
+    text-align: center;
+    cursor: pointer;
+    margin-right: 20px;
+}
+.L_comment_top_b>span {
+    display: inline-block;
+    width: 83px;
+    height: 36px;
+    border: 1px solid #ccc;
+    color: #666;
+    border-radius: 100px;
+    line-height: 36px;
+    cursor: pointer;
+    text-align: center;
+}
+.L_shop_comment ul>li {
+    overflow: hidden;
+}
+.comment_user {
+    float: left;
+    width: 108px;
+    padding-top: 11px;
+}
+.comment_user img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+}
+.comment_user p {
+    font-size: 12px;
+    color: #666;
+    text-align: center;
+    margin-top: 9px;
+    line-height: 22px;
+    word-break: break-all;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.comment_content {
+    float: left;
+    width: 774px;
+    padding: 10px 20px 50px 18px;
+}
+.comment_start {
+    overflow: hidden;
+}
+.comment_start i {
+    float: left;
+    background-image: url('images/icon.png');
+    background-position: -254px -504px;
+    background-size: 589px;
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+} 
+.comment_start span {
+    float: left;
+    border-radius: 2px;
+    padding: 0 4px;
+    line-height: 16px;
+    font-size: 10px;
+    color: #fff;
+    background-color: #FFBF80;
+    margin-left: 5px;
+}
+.comment_txt {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #666;
+    line-height: 24px;
+}
+.comment_image {
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+.comment_image img {
+    display: inline-block;
+    width: 106px;
+    height: 106px;
+    border: 1px solid #ddd;
+    padding: 1px;
+    cursor: pointer;
+}
+.comment_date {
+    margin-top: 4px;
+    font-size: 12px;
+    color: #999;
+    line-height: 16px;
+}
+.comment_date span {
+    margin-right: 5px;
+}
+.specification_title {
+    padding-left: 12px;
+    font-size: 14px;
+    color: #666;
+    height: 40px;
+    line-height: 40px;
+    background: #f7f7f7;
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+.specification_title_a {
+    padding: 20px 60px 20px 20px;
+    overflow: hidden;
+}
+.specification_title_a>span {
+    float: left;
+    font-size: 12px;
+    line-height: 12px;
+    color: #999;
+    width: 100px;
+    text-align: right;
+    font-weight: 700;
+}
+.title_a_fl {
+    float: left;
+    margin-left: 40px;
+}
+.title_a_fl>p {
+    margin-bottom: 16px;
+    overflow: hidden;
+}
+.title_a_fl>p span:first-child {
+    float: left;
+    font-size: 12px;
+    line-height: 12px;
+    width: 80px;
+    text-align: right;
+    font-size: 12px;
+    color: #999;
+}
+.title_a_fl>p span:last-child {
+    float: left;
+    margin-left: 20px;
+    font-size: 12px;
+    line-height: 12px;
+    color: #666;
 }
