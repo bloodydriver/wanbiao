@@ -1,5 +1,5 @@
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,p,blockquote,th,td { margin:0; padding:0; }
-body { background:#fff; color:#555; font-size:14px; font-family: Verdana, Arial, Helvetica, sans-serif; }
+body { background:#fff; color:#555; font-size:14px; font-family: Helvetica,Tahoma,Arial,"Hiragino Sans GB","Hiragino Sans GB W3","Microsoft YaHei",STXihei,STHeiti,Heiti,SimSun,sans-serif; }
 td,th,caption { font-size:14px; }
 h1, h2, h3, h4, h5, h6 { font-weight:normal; font-size:100%; }
 address, caption, cite, code, dfn, em, strong, th, var { font-style:normal; font-weight:normal;}
@@ -20,7 +20,11 @@ input::-webkit-input-placeholder,textarea::-webkit-input-placeholder{
 html {
     background-color: #eee;
 }
-
+.ell { /* 断点 */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
 .wrap {
     width: 1200px;
     margin: 0 auto;
@@ -295,7 +299,7 @@ a:hover {
     height: 67px;
     background: url(../images/spriteA.png) -140px -38px;
     cursor: pointer;
-    z-index: 99;
+    z-index: 9;
 }
 .bot_msg {
     position: absolute;
@@ -323,7 +327,7 @@ a:hover {
     transition: all 0.1s;
 }
 .bot_msg_close:hover {
-    transform: rotate(90deg);
+    transform: rotate(360deg);
 }
 .bot_msg_shape {
     position: absolute;
@@ -417,24 +421,174 @@ a:hover {
     opacity: 0;
 } */
 .main {
+    position: relative;
     background-color: red;
+}
+.index_left_nav {
+    position: absolute;
+    top: 0;
+    left: 160px;
+    width: 200px;
+    height: 460px;
+    background-color: rgba(255,255,255,.9);
+    z-index: 2;
+}
+.index_left_nav li {
+    width: 200px;
+    padding: 0 8px;
+    height: 57.6px;
+    line-height: 57.6px;
+    border-left: 3px solid transparent;
+    box-sizing: border-box;
+    overflow: hidden;
+}
+.index_left_nav ul li:hover {
+    background-color: #fff;
+    border-left: 3px solid #ccaa7a;
+}
+.index_left_nav li:hover .index_left_nav_list{
+    display: block;
+}
+.index_left_nav li a {
+    font-size: 12px;
+    color: #666;
+}
+.index_left_nav li a:first-child {
+    font-weight: 800;
+    color: #4d4d4d;
+}
+.index_left_nav li i {
+    display: inline-block;
+    width: 1px;
+    height: 1px;
+    padding-right: 5px;
+    font-size: 12px;
+    color: #b3b3b3;
+}
+.index_left_nav li a:first-child:hover {
+    text-decoration: none;
+}
+.index_left_nav li a:hover {
+    text-decoration: underline;
+}
+.index_left_nav_list {
+    position: absolute;
+    top: 0;
+    left: 200px;
+    width: 980px;
+    height: 480px;
+    padding: 10px 15px 10px; 
+    box-sizing: border-box;
+    display: none;
+    background-color: #fff;
+}
+.index_left_nav_list_tit {
+    float: left;
+    width: 690px;
+    padding-left: 3px; 
+    line-height: 20px;
+    border-left: 5px solid #666;
+    font-weight: 800;
+}
+.index_left_nav_list_img {
+    position: relative;
+    float: left;
+    width: 695px;
+    height: 300px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-right: 10px;
+    border-left: 1px solid #d8d8d8;
+    overflow: auto;
+}
+.index_left_nav_btm_shadow {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 20px;
+    background: url(../images/list_btm_shadow.png) bottom center;
+    z-index: 1;
+}
+.index_left_nav_list_hot {
+    background-color: red;
+}
+.index_left_nav_list_img::-webkit-scrollbar {  /*滚动条背景颜色*/
+    width: 4px;
+    background-color: #fff;
+}
+.index_left_nav_list_img::-webkit-scrollbar-thumb { /*滚动条颜色*/
+    background-color: #d8d8d8;
+}
+.index_left_nav_list_img a {
+    position: relative;
+    float: left;
+    width: 137px;
+    height: 79px;
+    border-right: 1px solid #d8d8d8;
+    border-bottom: 1px solid #d8d8d8;
+    border-top: 1px solid #d8d8d8;
+}
+.index_left_nav_list_img img {
+    width: 100px;
+    height: 40px;
+    margin: 19px 19px;
+}
+.index_left_nav_list_img a:hover .index_left_nav_list_img_info {
+    display: block;
+}
+.index_left_nav_list_img_info {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    line-height: 80px;
+    background-color: #ccaa7a;
+    font-size: 14px;
+    font-weight: 800;
+    color: #fff;
+    text-align: center;
+}
+.index_left_nav_right_img {
+    position: absolute;
+    right: 25px;
+    top: 20px;
+}
+#index_left_nav_list_btn {
+    float: left;
+    width: 695px;
+}
+#index_left_nav_list_btn a {
+    display: inline-block;
+    padding: 0 18px;
+    line-height: 35px;
+    border: 1px solid #eee;
+    background-color: #fff;
+    font-size: 14px;
+    font-weight: normal;
+    color: #666;
+    border-radius: 100px;
+}
+#index_left_nav_list_btn a:hover {
+    text-decoration: navajowhite;
+    background-color: #ccaa7a;
+    color: #fff;
 }
 .swiper-container {
     width: 100%;
     height: 460px;
 }  
-
-/*
 .swiper-slide a img {
     position: absolute;
-    left: 50%;
+    left: 48%;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
 }
-
+/*
 .swiper-slide a img {
     position: absolute;
     left: 50%;
@@ -448,17 +602,16 @@ a:hover {
 .swiper-button-next {
     width: 36px;
     height: 60px;
-  content: '';
 }
 .swiper-button-prev {
-    left: 390px;
+    left: 358px;
     background: url(../images/spriteA.png) -141px -183px;
 }
 .swiper-button-prev:hover {
     background: url(../images/spriteA.png) -261px -183px;
 }
 .swiper-button-next {
-    right: 300px;
+    right: 200px;
     background: url(../images/spriteA.png) -300px -183px;
 }
 .swiper-button-next:hover {
@@ -617,15 +770,18 @@ li .tit_spc:hover {
 .foot_info a:hover {
     color: #ccc;
 }
-.foot_slide_info {
+.foot_slide_info,.foot_slide_info1 {
     color: #999;
     cursor: pointer;
 }
-.foot_info_list {
+.foot_info_list,.foot_info_list1 {
     width: 1000px;
-    height: 45px;
-    line-height: 45px;
+    height: 30px;
+    line-height: 30px;
     margin: 0 auto;
+}
+.foot_info_list1 {
+    width: 1300px;
 }
 .copyright {
     width: 700px;
@@ -649,7 +805,6 @@ li .tit_spc:hover {
     margin: 20px 0;
 }
 .nice_link {
-    width: 840px;
     margin: 0 auto;
     padding: 12px 0;
     text-align: center;
@@ -667,4 +822,20 @@ li .tit_spc:hover {
 }
 .nice_link a:last-child:hover {
     color: #999;
+}
+.zd_index_list_item {
+    margin-top: 10px;
+}
+.zd_index_list_item li {
+    float: left;
+    overflow: hidden;
+    width: 290px;
+    height: 280px;
+    margin-right: 10px;
+}
+.zd_index_list_item img {
+    transition: all .5s ease;
+}
+.zd_index_list_item li:hover img {
+    transform: scale(1.1);
 }
