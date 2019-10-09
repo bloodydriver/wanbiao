@@ -22,7 +22,8 @@ html {
 }
 .ell { /* 断点 */
     overflow: hidden;
-    text-overflow: ellipsis;
+    -o-text-overflow: ellipsis;
+       text-overflow: ellipsis;
     white-space: nowrap;
 }
 .wrap {
@@ -96,7 +97,8 @@ a:hover {
     border-left:1px solid transparent;
     border-right: 1px solid transparent;
     border-bottom: 1px solid #fff;
-    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
 }
 #ser:hover {
     text-decoration: none;
@@ -162,7 +164,8 @@ a:hover {
     height: 40px;
     padding-left: 30px;
     border: 1px solid #ddd;
-    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
     outline: none;
     color:#ccc;
     font-size:12px;
@@ -185,6 +188,9 @@ a:hover {
     color: #fff;
     text-align: center;
     cursor: pointer;
+    background-image: -webkit-linear-gradient(left,#da6666 0,#b33636 100%);
+    background-image: -moz-linear-gradient(left,#da6666 0,#b33636 100%);
+    background-image: -o-linear-gradient(left,#da6666 0,#b33636 100%);
     background-image: linear-gradient(-270deg,#da6666 0,#b33636 100%);
 }
 .QCindex {
@@ -239,6 +245,9 @@ a:hover {
     width: 200px;
     height: 50px;
     color: #fff;
+    background-image: -webkit-linear-gradient(181deg,#b34747 1%,#cc5252 98%);
+    background-image: -moz-linear-gradient(181deg,#b34747 1%,#cc5252 98%);
+    background-image: -o-linear-gradient(181deg,#b34747 1%,#cc5252 98%);
     background-image: linear-gradient(269deg,#b34747 1%,#cc5252 98%);
 }
 .nav_left a {
@@ -310,11 +319,18 @@ a:hover {
     background-color: #fff;
     cursor: default;
     opacity: 0;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    -moz-transition: all 1s;
     transition: all 1s;
 }
 .bot:hover .bot_msg{
     opacity: 1;
-    transform: translateX(-5px);
+    -webkit-transform: translateX(-5px);
+       -moz-transform: translateX(-5px);
+        -ms-transform: translateX(-5px);
+         -o-transform: translateX(-5px);
+            transform: translateX(-5px);
 }
 .bot_msg_close {
     position: absolute;
@@ -324,10 +340,17 @@ a:hover {
     height: 15px;
     background: url(../images/spriteB.png) -98px -504px;
     cursor: pointer;
+    -webkit-transition: all 0.1s;
+    -o-transition: all 0.1s;
+    -moz-transition: all 0.1s;
     transition: all 0.1s;
 }
 .bot_msg_close:hover {
-    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+       -moz-transform: rotate(360deg);
+        -ms-transform: rotate(360deg);
+         -o-transform: rotate(360deg);
+            transform: rotate(360deg);
 }
 .bot_msg_shape {
     position: absolute;
@@ -422,12 +445,12 @@ a:hover {
 } */
 .main {
     position: relative;
-    background-color: red;
+    background-color: #f5f5f5;
 }
 .index_left_nav {
     position: absolute;
     top: 0;
-    left: 160px;
+    left: 192px;
     width: 200px;
     height: 460px;
     background-color: rgba(255,255,255,.9);
@@ -439,7 +462,8 @@ a:hover {
     height: 57.6px;
     line-height: 57.6px;
     border-left: 3px solid transparent;
-    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+         box-sizing: border-box;
     overflow: hidden;
 }
 .index_left_nav ul li:hover {
@@ -476,9 +500,10 @@ a:hover {
     top: 0;
     left: 200px;
     width: 980px;
-    height: 480px;
+    height: 460px;
     padding: 10px 15px 10px; 
-    box-sizing: border-box;
+    -moz-box-sizing: border-box; 
+         box-sizing: border-box;
     display: none;
     background-color: #fff;
 }
@@ -555,11 +580,11 @@ a:hover {
     right: 25px;
     top: 20px;
 }
-#index_left_nav_list_btn {
+.index_left_nav_list_btn {
     float: left;
     width: 695px;
 }
-#index_left_nav_list_btn a {
+.index_left_nav_list_btn a {
     display: inline-block;
     padding: 0 18px;
     line-height: 35px;
@@ -570,8 +595,10 @@ a:hover {
     color: #666;
     border-radius: 100px;
 }
-#index_left_nav_list_btn a:hover {
-    text-decoration: navajowhite;
+.index_left_nav_list_btn a:hover {
+    -webkit-text-decoration: navajowhite;
+       -moz-text-decoration: navajowhite;
+            text-decoration: navajowhite;
     background-color: #ccaa7a;
     color: #fff;
 }
@@ -579,39 +606,22 @@ a:hover {
     width: 100%;
     height: 460px;
 }  
-<<<<<<< HEAD
-
-.swiper-slide a img {
-    position: absolute;
-    left: 46%;
-=======
 .swiper-slide a img {
     position: absolute;
     left: 48%;
->>>>>>> a84da84c939e3d993ceb34ac9295519079080167
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
 }
-/*
-.swiper-slide a img {
-    position: absolute;
-    left: 50%;
-    -webkit-transform: translateX(-50%);
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    transform: translateX(-50%);
-} */
 .swiper-button-prev,
 .swiper-button-next {
     width: 36px;
     height: 60px;
 }
 .swiper-button-prev {
-    left: 358px;
+    left: 390px;
     background: url(../images/spriteA.png) -141px -183px;
 }
 .swiper-button-prev:hover {
@@ -841,8 +851,15 @@ li .tit_spc:hover {
     margin-right: 10px;
 }
 .zd_index_list_item img {
+    -webkit-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -moz-transition: all .5s ease;
     transition: all .5s ease;
 }
 .zd_index_list_item li:hover img {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
     transform: scale(1.1);
 }
