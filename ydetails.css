@@ -715,7 +715,7 @@ a {
     font-size: 14px;
     color: #fff;
 }
-.dialogue-wrapper .dialogue-support-btn .dialogue-support-icon {  
+.dialogue-support-icon {  
     width: 61px;
     height: 64px;
     background-image: url("img/a.png");
@@ -723,12 +723,14 @@ a {
     background-color: #fff;
     border-radius: 50%;
     top: 100px;
-    right: 0;
+    right: 262px;
     font-weight: normal;
     display: inline-block;
     position: absolute;
     z-index: 5;
+ 
 }
+
 .dialogue-service-info .dialogue-support-img {
     width: 61px;
     height: 64px;
@@ -748,14 +750,21 @@ a {
 .dialogue-main {
     position: fixed;
     display: none;
-    right: 100px;
+    right: 0;
     bottom: 10px;
     width: 600px;
     height: 600px;
     border-radius: 4px;
     box-shadow: 0 0 5px rgba(0, 0, 0, .4);
-}
+    z-index: 22;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
 
+}
+/* .dialogue-style {
+    display: inline-block;
+    height: 700px;
+} */
 /*客服对话框头部*/
  .dialogue-header {
     position: relative;
@@ -769,12 +778,70 @@ a {
 
 .dialogue-close {
     position: absolute;
-    top: 1px;
+    top: 16px;
     right: 12px;
     padding: 2px;
     font-size: 22px;
     cursor: pointer;
+    width: 21px;
+    height: 21px;
+    background-image: url(img/chaticon.png);
+    background-repeat: no-repeat;
+    background-position: -390px -225px;
 }
+.dialogue-close3 {
+    position: absolute;
+    top: 16px;
+    right: 12px;
+    background-image: url(img/a.png);
+    background-position: -97px -504px;
+    background-size: 589px;
+    width: 17px;
+    height: 16px;
+    position: absolute;
+    transition:  all 0.2s
+}
+.dialogue-close3:hover{
+    transform: rotate(360deg);
+    
+}
+.dialogue-close1 {
+    position: absolute;
+    top: 16px;
+    right: 80px;
+    padding: 2px;
+    font-size: 22px;
+    cursor: pointer;
+    width: 21px;
+    height: 21px;
+    background-image: url(img/chaticon.png);
+    background-repeat: no-repeat;
+    background-position: -299px -225px;
+}
+.dialogue-close4 {
+    background-image: url(img/a.png);
+    background-position: -97px -504px;
+    background-size: 589px;
+    width: 17px;
+    height: 16px;
+    position: absolute;
+    top: 16px;
+    right: 10px;
+}
+.dialogue-close2 {
+    position: absolute;
+    top: 16px;
+    right: 43px;
+    padding: 2px;
+    font-size: 22px;
+    cursor: pointer;
+    width: 21px;
+    height: 21px;
+    background-image: url(img/chaticon.png);
+    background-repeat: no-repeat;
+    background-position: -360px -225px;
+}
+
 
 .dialogue-service-info {
     position: relative;
@@ -787,20 +854,23 @@ a {
 .dialogue-contain {
     overflow-y: auto;
     padding: 10px;
-    height: 380px;
+    height: 350px;
     width: 400px;
     word-wrap: break-word;
-    background-color: #f9f9f9;
-    display: inline-block   
+    display: inline-block ;
+    background:#fff;  
+}
+.dialogue-contain img {
+    margin:0 0 10px 50px;
+    background-color: transparent
 }
 .dialogue-aside {
-    width: 178px;
-    /* height: 400px; */
+    width: 180px;
     background: #fff;
     display: inline-block;
     position: absolute;
     top: 100px;
-    right: 2px;
+    right: 0;
 }
 .dialogue-pic img{
     height: 299px;
@@ -813,12 +883,13 @@ a {
     display: inline-block;
     position: relative;
     padding: 10px;
-    max-width: 200px;
+    max-width: 330px;
     white-space: pre-wrap;
     border: 1px solid #09d07d;
     border-radius: 4px;
     background-color: #09d07d;
     box-sizing: border-box;
+    margin-bottom: 10px
 }
 .dialogue-aside .dialogue-trouble li{
     font-size: 14px;
@@ -849,11 +920,33 @@ a {
 .dialogue-customer-text {
     margin-right: 20px;
 }
+.wrapper-zoom {
+    width: 213px;
+    height: 44px;
+    border: 1px solid rgb(200, 199, 198);
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 1111;
+}
+.wrapper-zoom img {
+    width: 35px;
+    height: 35px;
+    margin: 4px 8px;
+    display: inline-block
+} 
+.wrapper-zoom .ari {
+    display: inline-block;
+    font-size: 12px;
+    position: absolute;
+    top: 18px;
+    right: 20px;
+}
 
 /*客服对话框底部与输入*/
  .dialogue-submit {
     position: relative;
-    padding: 10px;
+    /* padding: 10px; */
     width: 400px;
     height: 100px;
     color: #000;
@@ -904,16 +997,42 @@ a {
     /* overflow-y: auto; */
     display: inline-block;
     padding: 5px 10px;
-    width: 410px;
-    height: 70px;
+    width: 421px;
+    height: 85px;
     vertical-align: middle;
     white-space: pre-wrap;
     word-wrap: break-word;
     resize: none;
     border-right: 1px solid #ddd;
     box-sizing: border-box;
+    outline: none
 }
-
+.send-message {
+    float: right;
+    color: rgb(255, 255, 255);
+    width: auto;
+    height: 28px;
+    text-align: center;
+    padding: 0px 22px;
+    cursor: pointer;
+    background: #b32424;
+    box-sizing: content-box;
+    border-radius: 4px;
+    margin-top:4px;
+    outline: none
+}
+.over-message {
+    text-decoration: none;
+    margin: 8px 10px 8px 0px;
+    padding: 0px 10px;
+    height: 24px;
+    color: rgb(1, 1, 1);
+    cursor: pointer;
+    box-sizing: content-box;
+    position: absolute;
+    top: 88px;
+    right: 70px;
+}
 .dialogue-input-tools {
     display: inline-block;
     width: 80px;
@@ -924,18 +1043,24 @@ a {
     position: relative;
     height: 133px;
 }
-.dialogue-hover {
+.dialogue-hover {   /*鼠标悬浮上时对话框的弹出*/
     width: 300px;
     height: 180px;
     position: absolute;
-    display: none;
+    opacity: 0;
+    /* display: none; */
     top: 100px;
-    right: 75px;
+    right: 337px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 10px 1px;
     text-align: center;
-    /* z-index: 2; */
     border-radius: 5px;
+    transition: all 1s ;
+
     background: rgb(255, 255, 255);
+}
+.dialogue-support-btn:hover .dialogue-hover {
+    transition: all 1s ease ;
+    opacity: 1;
 }
 .dialogue-hover .content .contentbox {
     width: 86%;
@@ -967,6 +1092,7 @@ a {
     font-size: 14px;
     float: left;
     width: 50%;
+    color: #333
 }
 .dialogue-hover .talk_btn .btn1 {
     position: relative;
@@ -1080,6 +1206,7 @@ a {
     padding: 18px 10px 15px 10px;
     bottom: -44px;
     height: 186px;
+    display: none;
 }
 .ypanel-btn .twomadiv img {
     margin:0 auto;
@@ -1105,6 +1232,7 @@ a {
     background: #fff;
     padding: 0 10px;
     border-bottom: 1px solid #ddd;
+    font-size: 14px;
 }
 .ypanel-btn .fl {
     color: #333;
@@ -1124,7 +1252,7 @@ a {
 }
 .right-panel .show-login {
     display: inline-block;
-    float: right;
+    /* float: right; */
     margin-right: 5px;
 }
 .right-panel .cart-empty {
@@ -1162,9 +1290,9 @@ a {
 .right-panel .left-panel .btnn:hover .ypanel-box4 {
     display: block;
 }
-.right-panel .left-panel .btnn:hover .ypanel-box {
+.right-panel .left-panel .btnn:hover .ypanel-box5 {
     display: block;
 }
-.dialogue-support-btn:hover .dialogue-hover {
-    display: block;
+body {
+    height: 5000px;
 }

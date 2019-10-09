@@ -222,6 +222,9 @@ $(function(){      //客服聊天对话框
     photo2.addEventListener('click', function(e) {
         $('.dialogue-main').toggleClass("dialogue-style");
     })
+    $(".over-message").click(function(){
+        $(".dialogue-main").hide()
+    })
     $(".wrapper-zoom").click(function(){
         $('.dialogue-main').css({'display': 'inline-block', 'height': '0'});
         $('.dialogue-main').animate({'height': '600px'})
@@ -250,7 +253,7 @@ $(function(){      //客服聊天对话框
             return true;
         } else if (e.keyCode == 13) {
             var nodeP = document.createElement('p'),
-                nodeSpan = document.createElement('span');
+            nodeSpan = document.createElement('span');
             nodeP.classList.add('dialogue-customer-contain');
             nodeSpan.classList.add('dialogue-text', 'dialogue-customer-text');
             nodeSpan.innerHTML = dialogueInput.value;
@@ -260,22 +263,30 @@ $(function(){      //客服聊天对话框
             submitCustomerText(dialogueInput.value);
         }
     });
-
+    
     dialogueInput.addEventListener('keyup', function(e) {
         if (e.keyCode == 13) {
             dialogueInput.value = null;
         }
     });
-
-    function submitCustomerText(text) {
-        console.log(text)
-        // code here 向后端发送text内容
-
-        // 模拟后端回复
-        var num = Math.random() * 10;
-        if (num <= 7) {
-            getServiceText(serviceData);
+    $(".send-message").click(function(){  //鼠标点击发送
+        if(dialogueInput.value != ''){
+            var nodeP = document.createElement('p'),
+            nodeSpan = document.createElement('span');
+            nodeP.classList.add('dialogue-customer-contain');
+            nodeSpan.classList.add('dialogue-text', 'dialogue-customer-text');
+            nodeSpan.innerHTML = dialogueInput.value;
+            nodeP.appendChild(nodeSpan);
+            dialogueContain.appendChild(nodeP);
+            dialogueContain.scrollTop = dialogueContain.scrollHeight;
+            submitCustomerText(dialogueInput.value);
+            dialogueInput.value = null;
+        }else{
+            alert("请输入内容")
         }
+    })
+    function submitCustomerText(text) {
+            getServiceText(serviceData);
     }
 
     function getServiceText(data) {
@@ -300,4 +311,10 @@ $(function(){      //客服聊天对话框
     $(".right-panel-close").click(function(){
         $(".right-panel").css({right:"-262px"})
     })
+    // $(".dialogue-support-icon").mouseenter(function(){
+    //     $(".dialogue-hover").fadeIn("slow")
+    // })
+    // $(".dialogue-support-icon").mouseleave(function(){
+    //     $(".dialogue-hover").fadeOut("slow")
+    // })
 })
