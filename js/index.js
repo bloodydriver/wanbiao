@@ -53,6 +53,9 @@ $(function() {
     $(".foot_slide_info").click(function() {
         $(".foot_info_list").slideToggle();        
     })
+    $(".foot_slide_info1").click(function() {
+        $(".foot_info_list1").slideToggle();        
+    })
     // swiper
     var mySwiper = new Swiper ('.swiper-container', {
         direction: 'horizontal', // 垂直切换选项
