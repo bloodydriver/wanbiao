@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
     <link rel="stylesheet" href="shop.css">
+    <script src="shop.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -239,7 +240,6 @@
                             <a href="">
                                 <img src="https://image8.wbiao.co/shop/0ddca2694fb9496090d74ac8cdeaa357.jpg" alt="">
                                 <span>自营</span>
-
                             </a>
                             <p>全部商品</p><span>1165</span>
                             <p>累计销量</p><span>1165</span>
@@ -347,6 +347,7 @@
                             <a>线下体验</a>
                             <a>评价(99)</a>
                         </div>
+                        <p>立即购买</p>
                     </div>
                     <div class="L_nav_content" style="display: block">
                         <div class="prompt">
@@ -526,12 +527,31 @@
                             </div>
                         </div>
                     </div>
-
+                    <div class="L_nav_content">
+                        <div class="prompt">
+                            <p>温馨提示</p>
+                            <p>
+                                1.商品展示区划去的价格为品牌建议零售价，并非原价；万表价为商品实时售价，欢迎比较购买！
+                                <br>
+                                2.万表商城销售的手表都是正品手表，享受品牌官方保修；亦由万表名匠提供全国售后诚信服务！
+                            </p>
+                        </div>
+                        <img src="https://image8.wbiao.co/shop/5498f3570e5f45a989d4e0a09dd1c352.png" alt="">
+                        <p><strong> 售后详细规则请参考</strong><span>：https://www.wbiao.cn/help-20.html</span></p>
+                    </div>
+                    <div class="L_nav_content">
+                        <ul class="more_shop">
+                        </ul>
+                    </div>
+                    <div class="L_nav_content">
+                        <div class="L_shop_comment">
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
-
             </div>
         </div>
-
     </div>
     <!--遮罩轮播图-->
     <div class="L_img_shade">
@@ -611,202 +631,5 @@
             </div>
         </div>
     </div>
-
-    
-
-    <script>
-        //搜索提示
-        $(".L_header_rigth span").click(function() {
-            $(".L_seach_input").focus();
-        })
-        $(".L_seach_input").focus(function() {
-            $(".L_header_rigth span").hide();
-        })
-        $(".L_seach_input").blur(function() {
-            if($(".L_seach_input").val()=="") {
-                $(".L_header_rigth span").show();
-            }else {
-                $(".L_header_rigth span").hide();
-            }
-        })
-        
-        //放大镜效果
-        var L_arr1=["https://image8.wbiao.co/shop/c7fe11add1b24475b1d582b053687469.jpg?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff",
-        "https://image8.wbiao.co/shop/201708_16_AR1970_29629.jpg?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff",
-        "https://image8.wbiao.co/shop/50410debdf744890bb1c2bc4851de1c1.JPG?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff",
-        "https://image8.wbiao.co/shop/8ae381227d1e4af68fdc34af8941112b.JPG?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff",
-        "https://image8.wbiao.co/shop/94ad15e495b9433abd415135d6b2315a.JPG?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff",
-        "https://image8.wbiao.co/shop/180049aad9f64c3f81bdcd4c0e6b02f6.jpg?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff"];
-        var L_arr2=["https://image8.wbiao.co/shop/c7fe11add1b24475b1d582b053687469.jpg?x-oss-process=image/resize,m_pad,w_1000,h_1000,color_ffffff/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center",
-        "https://image8.wbiao.co/shop/201708_16_AR1970_29629.jpg?x-oss-process=image/resize,m_pad,w_1000,h_1000,color_ffffff/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center",
-        "https://image8.wbiao.co/shop/50410debdf744890bb1c2bc4851de1c1.JPG?x-oss-process=image/resize,m_pad,w_1000,h_1000,color_ffffff/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center",
-        "https://image8.wbiao.co/shop/8ae381227d1e4af68fdc34af8941112b.JPG?x-oss-process=image/resize,m_pad,w_1000,h_1000,color_ffffff/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center",
-        "https://image8.wbiao.co/shop/94ad15e495b9433abd415135d6b2315a.JPG?x-oss-process=image/resize,m_pad,w_1000,h_1000,color_ffffff/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center",
-        "https://image8.wbiao.co/shop/180049aad9f64c3f81bdcd4c0e6b02f6.jpg?x-oss-process=image/resize,m_pad,w_1000,h_1000,color_ffffff/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center"];
-        var imgIndex=0;
-        function imgTab(imgIndex) {
-            $(".L_shop_img img")[0].src=L_arr1[imgIndex];
-            $(".L_shop_img_box").mousemove(function() {
-            $(".L_shop_img img").css({
-                "width": "800px",
-                "height": "800px",
-                "position": "absolute", 
-                "left": -(event.clientX-250),
-                "top": -(event.clientY-250)
-                })
-            $(".L_shop_img img")[0].src=L_arr2[imgIndex];
-            })
-        }
-        imgTab(0);
-        $(".L_img_list li").mouseenter(function() {
-            $(this).addClass("L_img_list_li").siblings().removeClass("L_img_list_li");
-            imgTab($(this).index())
-        })
-        $(".L_shop_img_box").mouseleave(function() {
-            $(".L_shop_img img").animate({"opacity": 0},"show",function() {
-                $(".L_shop_img img")[0].style="";
-                $(".L_shop_img img")[0].src=L_arr1[$(".L_img_list li").index($(".L_img_list_li"))]
-            }) 
-        })
-
-        //图片下方轮播
-        var index=$(".L_img_list li").length;
-        $(".L_img_list_right").click(function() {
-            if(index>5) {
-                $(".L_img_list").animate({"right":"+=85px"},"slow")
-                index--;
-            }
-        })
-        $(".L_img_list_left").click(function() {
-            if($(".L_img_list li").length>5&&index<=5) {
-                $(".L_img_list").animate({"right":"-=85px"},"slow")
-                index++;
-            }
-        })
-
-        //遮罩轮播
-        $(".L_img_shade").hide();
-        var num=0;
-        function imgShade() {
-            $(".L_shade_content_left").click(function() {
-                num--;
-                if(num<0) {
-                    num=0;
-                }
-                $(".L_shade_ul").animate({"left": -num*700+"px"},"flast")
-            })
-            $(".L_shade_content_right").click(function() {
-                num++;
-                if(num>5) {
-                    num=5;
-                }
-                $(".L_shade_ul").animate({"left": -num*700+"px"},"flast")
-            })
-        };
-        $("#L_change_img").click(function() {
-            $(".L_img_shade").show();
-            $(".L_shade_off").click(function() {
-                $(".L_img_shade").hide();
-                imgShade=null;   //调用完后移除
-            });
-            imgShade();
-        })
-
-        //承诺中的文字提示
-        $(".L_shop_promise li").mouseenter(function() {
-            $(".L_placehoder").eq($(this).index()).css("display","block").not($(".L_placehoder").eq($(this).index())).css("display","none")
-        })
-        $(".L_shop_promise li").mouseleave(function() {
-            $(".L_placehoder").css("display","none");
-        })
-
-        //免息鼠标效果
-        $(".L_shop_date>span").mouseenter(function() {
-            $("#L_right_pay").css("display","block")
-        })
-        $(".L_shop_date>span").mouseleave(function() {
-            $("#L_right_pay").css("display","none")
-        })
-
-        //购物数量加减
-        $(".L_number_sub").click(function() {
-            $(".L_shop_count input")[0].value--;
-            if($(".L_shop_count input")[0].value<=0) {
-                $(".L_shop_count input")[0].value=1;
-                $(".L_shop_number>p").text("购买的数量不能小于1").css("display","block");
-                $(".L_shop_number>p").fadeToggle(3000)
-            }
-        })
-        $(".L_number_add").click(function() {
-            $(".L_shop_count input")[0].value++;
-        })
-
-        //手机购买显示二维码
-        $(".L_buy_code").mouseenter(function() {
-            $(".L_buy_code img").css("display","block")
-        })
-        $(".L_buy_code").mouseleave(function() {
-            $(".L_buy_code img").css("display","none")
-        })
-
-        //分享
-        $(".L_share_list li").click(function() {
-            $(this).addClass("L_share_li").siblings().removeClass("L_share_li");
-        })
-        $(".L_share_check input").eq(0).prop("checked",true);
-        $(".L_share_check input").click(function() {
-            $(this).prop("checked",true).siblings().prop("checked",false)
-        })
-        $(".L_share_shade").hide();
-        $(".L_share_content>p i").click(function() {
-            $(".L_share_shade").hide();
-        })
-        $(".L_whileShare a").eq(1).click(function() {
-            $(".L_share_shade").hide();
-        })
-        $(".L_shop_share span").eq(1).click(function() {
-            $(".L_share_shade").show();
-        })
-
-        //用户评论部分
-        for(var i=0;i<20;i++) {
-            $(".L_shop_comment ul")[0].innerHTML+=`
-            <li>
-                <div class="comment_user">
-                    <img src="https://image8.wbiao.co/member/377d6476-af58-4171-909d-627d1e459c0f.jpg" alt="">
-                    <p>s****u</p>
-                </div> 
-                <div class="comment_content">
-                    <div class="comment_start">
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                        <i></i>
-                        <span>金卡会员</span>
-                    </div>
-                    <div class="comment_txt">
-                        适合年轻人带 皮带舒服 带一阵子就不硬了
-                        总体来说满意
-                    </div>
-                    <div class="comment_image">
-                        <img src="https://image8.wbiao.co/comment/eafc2524-94c4-4f9f-8700-955cf92e68e3.jpg?x-oss-process=image/resize,m_fill,w_106,h_106,color_f1f1f1" alt="">
-                    </div>
-                    <div class="comment_date">
-                        <span>2019-07-29 14:07:48</span>
-                        <span>混合 黑色</span>
-                    </div>
-                </div>  
-            </li>
-        `
-        }
-
-        //导航切换
-        $(".L_move_nav a").click(function() {
-            $(this).addClass("L_checkOn").siblings().removeClass("L_checkOn");
-            $(".L_nav_content").css("display","block").not($(".L_nav_content").eq($(this).index())).css("display","none")
-        })
-        
-    </script>
 </body>
 </html>

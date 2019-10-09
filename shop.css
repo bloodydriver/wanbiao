@@ -163,13 +163,13 @@ table { border-collapse:collapse; border-spacing:0; }
     width: 18px;
     height: 17px;
     margin: 15px 10px 9px 17px;
-    background: url('images/icon1.png') center no-repeat;
+    background: url('Limages/icon1.png') center no-repeat;
     background-position: -111px -346px;
     background-size: 475px;
 }
 .L_nav_div2 {
     height: 36px;
-    background-image: url('images/nva_bottom.png');
+    background-image: url('Limages/nva_bottom.png');
     background-repeat: repeat-x;
 }
 .L_nav_bottom {
@@ -238,7 +238,7 @@ table { border-collapse:collapse; border-spacing:0; }
 }
 .L_shop_img i {
     display: block;
-    background-image: url('images/icon.png');
+    background-image: url('Limages/icon.png');
     background-position: -546px -253px;
     background-size: 589px;
     width: 19px;
@@ -392,7 +392,7 @@ table { border-collapse:collapse; border-spacing:0; }
     top: 12px;
     cursor: pointer;
     display: block;
-    background-image: url('images/icon.png');
+    background-image: url('Limages/icon.png');
     background-position: 0 -462px;
     background-size: 589px;
     width: 32px;
@@ -493,7 +493,7 @@ table { border-collapse:collapse; border-spacing:0; }
     display: inline-block;
     width: 16px;
     height: 16px;
-    background: url('images/icon.png');
+    background: url('Limages/icon.png');
     background-position: -48px -537px;
     background-size: 589px;
     vertical-align: sub;
@@ -641,7 +641,7 @@ table { border-collapse:collapse; border-spacing:0; }
 }
 .L_shop_serev a>i {
     display: inline-block;
-    background-image: url('images/icon1.png');
+    background-image: url('Limages/icon1.png');
     background-position: -269px -256px;
     background-size: 475px;
     width: 14px;
@@ -682,7 +682,7 @@ table { border-collapse:collapse; border-spacing:0; }
 }
 .L_shop_style>div i {
     display: inline-block;
-    background-image: url('images/icon.png');
+    background-image: url('Limages/icon.png');
     background-position: -304px -325px;
     background-size: 589px;
     width: 14px;
@@ -755,7 +755,7 @@ table { border-collapse:collapse; border-spacing:0; }
 }
 #L_right_pay i {
     display: block;
-    background-image: url('images/icon1.png');
+    background-image: url('Limages/icon1.png');
     background-size: 475px;
     width: 32px;
     height: 32px;
@@ -845,7 +845,7 @@ table { border-collapse:collapse; border-spacing:0; }
 .L_buy_code i {
     display: inline-block;
     margin: 2px 26px 0 26px;
-    background-image: url('images/icon1.png');
+    background-image: url('Limages/icon1.png');
     background-position: -443px -367px;
     background-size: 475px;
     width: 20px;
@@ -919,7 +919,7 @@ table { border-collapse:collapse; border-spacing:0; }
 }
 .L_share_content>p i {
     float: right;
-    background-image: url('images/icon.png');
+    background-image: url('Limages/icon.png');
     background-position: 0 -462px;
     background-size: 589px;
     width: 32px;
@@ -952,7 +952,7 @@ table { border-collapse:collapse; border-spacing:0; }
     margin-right: 5px;
 }
 .L_share_check i {
-    background-image: url('images/icon.png');
+    background-image: url('Limages/icon.png');
     background-size: 589px;
     width: 15px;
     height: 15px;
@@ -1132,7 +1132,7 @@ table { border-collapse:collapse; border-spacing:0; }
 }
 .L_shop_look i:first-child {
     display: inline-block;
-    background-image: url('images/icon.png');
+    background-image: url('Limages/icon.png');
     background-position: -332px -504px;
     background-size: 589px;
     width: 16px;
@@ -1270,9 +1270,9 @@ table { border-collapse:collapse; border-spacing:0; }
     float: right;
 }
 .L_move_nav {
+    float: left;
     width: 660px;
     height: 40px;
-    display: block;
     line-height: 40px;
 }
 .L_move_nav a {
@@ -1282,6 +1282,7 @@ table { border-collapse:collapse; border-spacing:0; }
     font-size: 16px;
     color: #666;
     padding-bottom: 3px;
+    cursor: pointer;
 }
 .L_checkOn {
     border-bottom: 3px solid #333;
@@ -1289,7 +1290,24 @@ table { border-collapse:collapse; border-spacing:0; }
     font-weight: 700;
 }
 .L_bottom_line {
+    overflow: hidden;
+    width: 960px;
+    background-color: #fff;
     border-bottom: 1px solid #ddd;
+}
+.L_bottom_line>p {
+    display: none;
+    float: right;
+    background: #cc5252;
+    border-radius: 100px;
+    width: 120px;
+    height: 32px;
+    line-height: 32px;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    margin-top: 4px;
+    cursor: pointer;
 }
 .L_nav_content {
     display: none;
@@ -1450,7 +1468,7 @@ table { border-collapse:collapse; border-spacing:0; }
 }
 .comment_start i {
     float: left;
-    background-image: url('images/icon.png');
+    background-image: url('Limages/icon.png');
     background-position: -254px -504px;
     background-size: 589px;
     width: 16px;
@@ -1540,4 +1558,73 @@ table { border-collapse:collapse; border-spacing:0; }
     font-size: 12px;
     line-height: 12px;
     color: #666;
+}
+.L_nav_content>p {
+    margin-top: 30px;
+    font-size: 12px;
+    color: #666;
+    font-weight: bold;
+}
+.L_nav_content>p strong {
+    padding-left: 10px;
+    font-family: "宋体";
+}
+.L_img_left {
+    float: left;
+}
+.L_img_left img {
+    width: 559px;
+    height: 406px;
+}
+.L_content_right {
+    float: left;
+    width: 280px;
+    height: 324px;
+    border: 1px solid #eee;
+    border-left: 0;
+    padding: 40px;
+}
+.p1 {
+    font-size: 18px;
+    color: #333;
+    line-height: 18px;
+}
+.p2 {
+    font-size: 14px;
+    color: #333;
+    line-height: 14px;
+    margin-top: 28px;
+}
+.p3 {
+    font-size: 14px;
+    color: #666;
+    line-height: 18px;
+    margin-top: 12px;
+}
+.clearfix {
+    overflow: hidden;
+}
+.fl {
+    float: left;
+    font-size: 14px;
+    color: #2a2a2a;
+    line-height: 14px;
+    margin-right: 15px;
+    margin-bottom: 12px;
+    display: block;
+}
+.p4 {
+    font-size: 14px;
+    color: #4a90e2;
+    line-height: 14px;
+    margin-top: 15px;
+    display: block;
+}
+.more_shop {
+    overflow: hidden;
+}
+.more_shop li {
+    width: 100%;
+    height: 406px;
+    margin-bottom: 40px;
 }
