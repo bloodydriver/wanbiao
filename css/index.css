@@ -424,17 +424,16 @@ a:hover {
     height: 460px;
 }  
 
-/*
 .swiper-slide a img {
     position: absolute;
-    left: 50%;
+    left: 46%;
     -webkit-transform: translateX(-50%);
     -moz-transform: translateX(-50%);
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
 }
-
+/*
 .swiper-slide a img {
     position: absolute;
     left: 50%;
