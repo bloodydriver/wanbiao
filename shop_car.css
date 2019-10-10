@@ -26,6 +26,9 @@ table { border-collapse:collapse; border-spacing:0; }
 }
 .header_right {
     float: right;
+    margin-top: 35px;
+    margin-right: 40px;
+    border-top: 1px solid #eee;
 }
 .header_logo a {
     display: inline-block;
@@ -34,20 +37,16 @@ table { border-collapse:collapse; border-spacing:0; }
 .header_logo a:first-child {
     margin: 8px 0 12px 45px;
 }
-.header_right ul {
-    width: 468px;
-    margin-top: 35px;
-    margin-right: 40px;
-    padding-top: 10px;
-    border-top: 1px solid #eee;
-}
 .header_right li {
-    display: inline-block;
+    float: left;
+    width: 156px;
     position: relative;
-    width: 113px;
     color: #999;
-    text-align: center;
+    text-align: left;
     margin-top: 5px;
+}
+.header_right ul li:last-child {
+    width: 0;
 }
 .header_right i {
     position: absolute;
@@ -57,14 +56,82 @@ table { border-collapse:collapse; border-spacing:0; }
     z-index: 2;
     width: 10px;
     height: 10px;
-    margin-top: -21px;
+    margin-top: -10px;
     border: 2px solid #ccc;
     box-sizing: border-box;
 }
 .header_right span {
     position: absolute;
-    left: -50px;
+    display: inline-block;
+    width: 156px;
+    left: -78px;
     color: #999;
     font-size: 12px;
+    margin-top: 10px;
     text-align: center;
+}
+.changeColor>i {
+    width: 16px;
+    height: 16px;
+    background: #cc5252;
+    margin-top: -13px;
+    border: none;
+}
+.changeColor>span {
+    color: #cc5252;
+}
+.shopNull {
+    padding: 110px 0 265px;
+    text-align: center;
+}
+.shopNull>i {
+    display: block;
+    background-image: url('Limages/icon.png');
+    background-position: 0 -112px;
+    background-size: 589px;
+    width: 82px;
+    height: 84px;
+    margin: 0 auto 21px;
+}
+.shopNull .p1 {
+    font-size: 18px;
+    color: #666;
+    line-height: 25px;
+}
+.shopNull .p2 {
+    font-size: 14px;
+    color: #999;
+    line-height: 20px;
+    margin-top: 5px;
+}
+.shopNull .p2>a {
+    font-size: 12px;
+    color: #cc5252;
+    text-decoration: underline;
+}
+.shopNull>div {
+    margin-top: 47px;
+}
+.shopNull>div .a1 {
+    background: #cc5252;
+    color: #fff;
+    display: inline-block;
+    width: 100px;
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid #cc5252;
+    border-radius: 100px;
+    margin: 0 9px;
+    font-size: 14px;
+}
+.shopNull>div .a2 {
+    display: inline-block;
+    width: 100px;
+    height: 34px;
+    line-height: 34px;
+    border: 1px solid #cc5252;
+    border-radius: 100px;
+    margin: 0 9px;
+    font-size: 14px;
+    color: #cc5252;
 }
