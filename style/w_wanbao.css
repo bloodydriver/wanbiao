@@ -298,7 +298,8 @@ table { border-collapse:collapse; border-spacing:0; }
     width: 100%;
     font-size: 0;
 }
-.w_brandList1,.w_brandList2,.w_brandFooter1,.w_brandFooter2 {
+.w_brandList1,.w_brandList2,.w_brandFooter1,
+.w_brandFooter2 {
     width:50%;
     display: inline-block;
     cursor: pointer;
@@ -309,7 +310,8 @@ table { border-collapse:collapse; border-spacing:0; }
     line-height: 40px;
     background-color: #f1f1f1;
 }
-.w_brandName1,.w_brandName2,.w_brandF1,.w_brandF2{
+.w_brandName1,.w_brandName2,.w_brandF1,
+.w_brandF2{
     padding-top: 20px;
     color: #959595;
     line-height: 20px;
@@ -376,7 +378,7 @@ table { border-collapse:collapse; border-spacing:0; }
     margin-bottom: 8px;
     font-size: 12px
 }
-.w_headRight,.w_headRight1,.w_headRight2 {
+.w_headRight,.w_headRight1,.w_headRight2,.w_headRight3 {
    font-size: 12px;
    width: 970px;
    float: right;
@@ -1081,7 +1083,6 @@ table { border-collapse:collapse; border-spacing:0; }
 }
 .w_cont1 {
     font-size: 12px;
-
 }
 .w_cont-bt {
     position: relative;
@@ -1240,7 +1241,7 @@ a:hover {
     text-align: center;
     padding: 30px 0 40px;
 }
-.w_number-Bt a{
+.w_number-Bt1{
     display: inline-block;
     width: 28px;
     height: 28px;
@@ -1251,25 +1252,107 @@ a:hover {
     border-radius: 50%;
     border: 1px solid #fff;
 }
-.w_number-Bt a:hover{
+.w_number-Bt1:hover{
     background-color: #f1f1f1;
     border: 1px solid #f1f1f1;
 }
-#w_number-Bt1 {
+.w_number-Bt2:hover{
+    background-color: #f1f1f1;
+    border: 1px solid #f1f1f1;
+}
+.w_number-Bt3:hover{
+    background-color: #f1f1f1;
+    border: 1px solid #f1f1f1;
+}
+.w_number-Bt3 {
     display: none;
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    color: #999;
+    margin-left: 8px;
+    border-radius: 50%;
+    border: 1px solid #fff;
     background:url('../images/spriteB.png');
     background-position: -507px  -37px;
     background-size: 589px;
     vertical-align: bottom;
+    position: absolute;
+    top: 30px;
+    left: 245px;
 }
 .w_number-Bt2 {
+    display: inline-block;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    font-size: 14px;
+    color: #999;
+    margin-left: 8px;
+    border-radius: 50%;
+    border: 1px solid #fff;
     background:url('../images/spriteB.png');
     background-position: -507px 0px;
     background-size: 589px;
     vertical-align: bottom;
+    position: absolute;
+    top: 30px;
+    left: 690px;
+}
+.w_headRight2 {
+    position: relative;
 }
 .w_number-Bta{
     border: 1px solid #666;
     background-color: #666;
     color: #fff;
+}
+.w_number-Bta:hover{
+    background-color: #ccaa7a;
+    border: 1px solid #ccaa7a;
+}
+.w_number-show {
+    display: inline-block;
+}
+.w_number-hide {
+    display: none;
+}
+.w_link-lit1 {
+    padding: 22px 12px 0;
+    color: #666;
+    position: relative;
+}
+.w_link-pt1 {
+    padding-bottom: 6px;
+    margin-bottom: 6px;
+    border-bottom: 1px solid #eee;
+}
+.w_link-ul1,.w_link-ul2,.w_link-ul3,
+.w_link-ul4,.w_link-ul5{
+    height: 26px;
+    overflow: hidden;
+}
+.w_link-lit1 li{
+    display: block;
+    float: left;
+    margin-right: 15px;
+    margin-bottom: 8px;
+}
+.w_link-lit1 li a{
+    color: #999;
+}
+.w_link-lit1 li a:hover{
+    color: #b01330;
+}
+.w_link-pt2,.w_link-pt3,.w_link-pt4,
+.w_link-pt5,.w_link-pt6{
+  display: inline-block;
+  position: absolute;
+  top: 22px;
+  right: 13px;
+}
+.w_link-ul {
+    height: auto;
 }
