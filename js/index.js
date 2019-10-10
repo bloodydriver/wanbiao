@@ -15,6 +15,44 @@ $(function () {
         $(this).val("劳力士").css("color", "#ccc");
         $(".tips").hide();
     })
+    //主页隐藏导航栏
+    $(document).on("scroll", function () {
+        var index_scrollTop = $(this).scrollTop();
+        if (index_scrollTop > 200) {
+            $(".index_hide_nav_list_bg").show();
+        } else {
+            $(".index_hide_nav_list_bg").hide();
+        }
+    })
+    $(".index_nav_right_glass").click(function () {
+        $(".index_nav_right_glass_more").animate({
+            right: "110px",
+            opacity: "1",
+        }, 500)
+    })
+    $(".index_nav_right_glass_arrow").click(function () {
+        $(".index_nav_right_glass_more").animate({
+            right: "-290px",
+            opacity: "0",
+        }, 1000)
+    })
+    $("#index_nav_right_glass_input").focus(function () {
+        $(this).val("").css("color", "#333");
+        $(".index_right_hide_nav").show();
+    })
+    $("#index_nav_right_glass_input").blur(function () {
+        $(this).val("劳力士").css("color", "#ccc");
+        $(".index_right_hide_nav").hide();
+    })
+    // 主页左侧导航栏渐变 
+    $(".index_left_nav_list_img").on("scroll", function () {
+        var index_left_nav_scrollTop = $(this).scrollTop();
+        if (index_left_nav_scrollTop > 10) {
+            $(".index_left_nav_btm_shadow").hide()
+        } else {
+            $(".index_left_nav_btm_shadow").show();
+        }
+    })
     // 客户服务
     $("#drop_window").hide();
     $("#ser").mouseover(function () {
