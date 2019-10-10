@@ -98,6 +98,7 @@ a {
     float: left;
     width: 680px;
     overflow: hidden;
+    border: 1px solid red;
 }
 .submession {
     float: right;
@@ -135,12 +136,36 @@ a {
     color: #888;
     font-size: 13px;
     margin-top: 15px;
+    position: relative;
 }
-.yleftList .span {
+.yleftList  .span {
     margin: 0 10px;
 }
-.yleftList  .share {
-    float: right
+.yleftList .info span {
+    margin: 0 10px;
+    font-size: 12px;
+
+}
+.yleftList .info .share {
+    float: right;
+    margin-right: 20px;
+}
+.yleftList .share-icon {
+    width: 0;
+    height: 0;
+    border: 4px solid #666;
+    border-right-color: transparent;
+    border-left-color: transparent;
+    border-bottom-color: transparent;
+    position: absolute;
+    top: 12px;
+    right: 10px;
+}
+.submession-icon {
+    color: #b32424;
+    font-size: 14px;
+    background: url(https://qd2.wbiao.co/img/5.0/news/submission.png) 0 1px no-repeat;
+    padding-left: 25px;
 }
 .yleftList .article img {
     max-width: 710px;
@@ -191,13 +216,15 @@ a {
  /* display: inline-block; */
 }
 .ymainbox1 {
-    display: inline-block
+    display: inline-block;
+    border: 1px solid #333;
 }
 .yrightArea {
     width: 280px;
     margin: 23px 0 0 30px;
     overflow: hidden;
-    display: inline-block
+    display: inline-block;
+    border:1px solid #333
 }
 .change_btn {
     float: right;
@@ -461,6 +488,17 @@ a {
     margin-top: 35px;
     float: left;
     border: 1px  solid black
+}
+.yleftList .relevance_brands .logo li {
+    width: 100px;
+    height: 40px;
+    border: 1px solid black;
+    float: left;
+    margin: 10px 20px 0 5px;
+}
+.logo-icon1 {
+    background-image: url(img/brands_gray.jpg) no-repeat;
+    
 }
 .yleftList .more {
     float: right;
@@ -751,7 +789,7 @@ a {
     position: fixed;
     display: none;
     right: 0;
-    bottom: 10px;
+    bottom: 0;
     width: 600px;
     height: 600px;
     border-radius: 4px;
@@ -759,6 +797,7 @@ a {
     z-index: 22;
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
+    background: #fff;
 
 }
 /* .dialogue-style {
@@ -1048,18 +1087,17 @@ a {
     height: 180px;
     position: absolute;
     opacity: 0;
-    /* display: none; */
     top: 100px;
     right: 337px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 10px 1px;
     text-align: center;
     border-radius: 5px;
     transition: all 1s ;
-
     background: rgb(255, 255, 255);
 }
 .dialogue-support-btn:hover .dialogue-hover {
-    transition: all 1s ease ;
+    /* transition: all 1s ease ; */
+    transform:  right 200px;
     opacity: 1;
 }
 .dialogue-hover .content .contentbox {
