@@ -135,3 +135,150 @@ table { border-collapse:collapse; border-spacing:0; }
     font-size: 14px;
     color: #cc5252;
 }
+.shopAll {
+    margin-top: 40px;
+}
+.shopAll>h2 {
+    height: 40px;
+    line-height: 40px;
+    font-size: 14px;
+    color: #333;
+    font-weight: 700;
+}
+.checkAll {
+    width: 100%;
+    height: 34px;
+    line-height: 34px;
+    background: #f5f5f5;
+    color: #666;
+    font-size: 12px;
+    margin-bottom: 20px;
+}
+.checkAll i, .shopName>i, .shopCar_content li>i {
+    float: left;
+    margin: 11px 19px;
+    background-image: url('Limages/icon.png');
+    background-position: -576px -255px;
+    background-size: 589px;
+    width: 12px;
+    height: 12px;
+    cursor: pointer;
+}
+.checkAll>span {
+    float: left;
+    width: 90px;
+    margin-right: 20px;
+}
+.checkAll>ul {
+    float: right;
+}
+.checkAll>ul li {
+    display: inline-block;
+    width: 120px;
+    margin-left: 24px;
+    text-align: center;
+}
+.shop_num {
+    font-size: 12px;
+}
+.shopCar_content {
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+}
+.shopName {
+    height: 44px;
+    line-height: 44px;
+    background: #f5f5f5;
+    border-bottom: 1px solid #ddd;
+}
+.shopName>i {
+    margin-top: 16px;
+}
+.shopName>span {
+    color: #666;
+    font-size: 12px;
+    font-weight: 700;
+}
+.shopCar_content li {
+    height: 105px;
+    padding-top: 15px;
+    overflow: hidden;
+}
+.shopCar_content li>i {
+    margin-top: 40px;
+}
+.content, .shopCar_content li>img  {
+    float: left;
+}
+.shopCar_content li>img {
+    width: 90px;
+    height: 90px;
+    background: url('https://image8.wbiao.co/shop/c7fe11add1b24475b1d582b053687469.jpg?x-oss-process=image/resize,w_90,h_90') center no-repeat;
+    background-size: contain;
+}
+.content {
+    margin-top: 5px;
+    margin-left: 20px;
+}
+.content p {
+    width: 250px;
+    color: #666;
+    font-size: 12px;
+    line-height: 22px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.control {
+    float: right;
+    font-size: 12px;
+    margin-top: 6px;
+}
+.control>span, .control div, .control a {
+    float: left;
+    width: 120px;
+    color: #666;
+    text-align: center;
+    margin-left: 24px;
+}
+.control div {
+    margin-left: 44px;
+    margin-right: 24px;
+    width: 76px;
+    height: 18px;
+    line-height: 17px;
+    color: #333;
+    text-align: center;
+}
+.control div>button {
+    float: left;
+    width: 16px;
+    height: 18px;
+    cursor: pointer;
+    font-size: 14px;
+    outline: none;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    outline: none;
+}
+.control div>input {
+    border: 1px solid #ddd;
+    border-left: none; 
+    border-right: none;
+    width: 42px;
+    height: 16px;
+    float: left;
+    text-align: center;
+    outline: none;
+}
+.shopCar_content li>a {
+    width: 120px;
+    float: right;
+    text-align: center;
+    color: #999;
+    font-size: 12px;
+    line-height: 22px;
+}
+.checkOn {
+    background-position: -576px -233px !important;
+}
