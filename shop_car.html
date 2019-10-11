@@ -117,6 +117,7 @@
         $(".del").click(function() {
             $(".shopCar_content").eq($(".del").index($(this))).empty();
             if($(".shopCar_content").html()=="") {
+                $(".shopAll").css("display","none");
                 $(".shopNull").css("display","block")
             }else {
                 $(".shopNull").css("display","none")
