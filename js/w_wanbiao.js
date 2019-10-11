@@ -724,7 +724,7 @@ $(function(){
         $(".w_lstt2").html($mt)
      }
     })
-     $(".w_lstt3").on("click",function(){
+    $(".w_lstt3").on("click",function(){
         var $mt=$(".w_lstt2").html();
        $(".w_lstt2").html("");
         console.log($mt);
@@ -734,7 +734,16 @@ $(function(){
         }
         
     })
-})
+    window.onscroll=function () {
+        var top = document.documentElement.scrollTop || document.body.scrollTop 
+        var bt=document.getElementsByClassName("w_label-top")[0];
+        if(top>=600){
+         bt.classList.add("w_label-fix")
+        }else{
+            bt.classList.remove("w_label-fix")
+        }
+    }
+});
 $(function(){
     var $arr=[{"img1":"https://image8.wbiao.co/shop/c7b1285ee380485f9b9743f3495c07c7.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"¥ 3,560","bt6":"￥325.8","bt7":"￥3,910","bt8":"【天梭原装正品，全球联保两年】天梭TISSOT-力洛克系列T006.407.11.033.00 自动机械男表","bt10":"80小时动储","bt101":"/销量6749","bt11":"天梭TISSOT"},
               {"img1":"https://image8.wbiao.co/shop/28cc3cbbf68a49afb3186dc8bef4c345.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"¥ 4,900","bt6":"￥480.8","bt7":"¥5,770","bt8":"瑞士艺术制表大师爱宝时（EPOS）-Emotion情感系列 罗马假期-水蓝版 3390.152.20.16.25 机械男表","bt10":"水蓝版 ","bt101":"/ 销量5488","bt11":"瑞士爱宝时官方旗舰店"},
@@ -827,7 +836,100 @@ $(function(){
         var $gt=$(this).index();
         $(".w_cont-bt13").eq($gt).hide()
     })
-})
+});
+$(function(){
+    var $arr=[{"img1":"https://image8.wbiao.co/shop/eafa1f232a92494c80b8a784e3689102.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":" ￥357.5 ","bt7":"¥4,290","bt8":"【明星同款】法国优雅时尚腕表品牌：Michel Herbelin赫柏林 Antarès恒星系列  吉普赛女郎  COF.1","bt10":"","bt101":"销量1823","bt11":"法国赫柏林官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/f29bae2deb9143cab946f7327d677e59.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"","bt6":"￥316.7 ","bt7":"¥3,800","bt8":"法国优雅时尚腕表品牌：Michel Herbelin赫","bt10":"","bt101":"销量2141","bt11":"法国赫柏林官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/387bdecc2ed44b968273330924c9ac66.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"￥2,680","bt6":"￥383.3","bt7":" ¥4,600","bt8":"【预计10月中下旬发货】法国优雅时尚腕表品牌：赫柏林Michel Herbelin  Perles珍珠系列  爱之印","bt10":"","bt101":"销量2365","bt11":"法国赫柏林官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/dabf6e7c7ec443e0bf52a18618750e18.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"¥ 3,560","bt6":"￥325.8","bt7":"￥3,910","bt8":"【天梭原装正品，全球联保两年】天梭TISSOT-力洛克系列T006.407.11.033.00 自动机械男表","bt10":"80小时动储","bt101":"/销量6749","bt11":"法国赫柏林官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/80b6a4d2175c4028999e3e2eab242d3f.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"¥ 4,900","bt6":"￥480.8","bt7":"¥5,770","bt8":"瑞士艺术制表大师爱宝时（EPOS）-Emotion情感系列 罗马假期-水蓝版 3390.152.20.16.25 机械男表","bt10":"水蓝版 ","bt101":"/ 销量5488","bt11":"瑞士爱宝时官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/a161059a8d61487b8de01d7ea96cc866.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥511.7","bt7":"¥6,140","bt8":"【10月中下旬发货】瑞士艺术制表大师爱宝时（EPOS）-Emotion情感系列 罗马假期-雪白版 3390.15","bt10":"雪白版 ","bt101":"/ 销量4843","bt11":"瑞士爱宝时官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/8a033d3eb6504297b0c8cca50c10af61.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"￥2,680","bt6":"￥245.8 ","bt7":"¥2,950","bt8":"【魏大勋同款】西铁城Citizen-光动能男表系列 BX1001-89L 万年历男表","bt10":"万年历/世界时","bt101":"/ 销量122","bt11":"瑞士爱宝时官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/e7d33eecb3b34707a8ea0eef0a974cf4.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"￥3,560","bt6":"￥325.8 ","bt7":"¥3,910","bt8":"【天梭原装正品，全球联保两年】 天梭TISSOT-力洛克系列 T006.407.11.053.00 机械男表","bt10":"80小时动储 ","bt101":"/ 销量3679","bt11":"天梭TISSOT"},
+              {"img1":"https://image8.wbiao.co/shop/7fb073bb85aa47a39d77d5b1825ca2b1.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥325.8","bt7":" ¥3,910","bt8":"德国高级独立制表品牌：格拉苏蒂·莫勒Muehle·Glashuette-Sporty  运动系列 M1-25-21-LB 29er 商务机","bt10":"商务休闲随心搭配 ","bt101":"/ 销量2574","bt11":"德国莫勒官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/8b090ac160334f1582aff9d08f9b2120.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥325.8","bt7":" ¥3,910","bt8":"【天梭原装正品，全球联保两年】 天梭TISSOT-力洛克系列 T006.407.11.053.00 机械男表","bt10":"80小时动储 ","bt101":"/ 销量3683","bt11":"天梭TISSOT"},
+              {"img1":"https://image8.wbiao.co/shop/a221efbc71e84fe6b7586487c30519b0.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":" ￥866.7 ","bt7":"¥10,400","bt8":"瑞士柏高Paul Picot -梦想家 商务休闲 P4104.SG.1021.1106 机械男表","bt10":"畅销款式 ","bt101":"/ 销量1800","bt11":"瑞士柏高官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/81842aa125364752a6f9498408acd4f9.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"￥3,630","bt6":"￥362.5 ","bt7":"¥4,350","bt8":"法国国民腕表品牌：Michel Herbelin赫柏林 City都市系列  雅士  1669/07GO  男士自动机械表","bt10":"赠送钢带 ","bt101":"/ 销量1398","bt11":"法国赫柏林官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/69f0d8432b4341f8b2082074c6b57ff9.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":" ￥441.7","bt7":" ¥5,300","bt8":"法国国民腕表品牌：赫柏林Michel Herbelin Trophy 领航员系列 1660/22TER 极地迷棕 男士机械表","bt10":"销量159","bt101":"","bt11":"法国赫柏林官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/393a36219f4d468ca1ca27565209170d.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"￥16,760","bt6":" ￥1579.2","bt7":" ¥18,950","bt8":"【德国海军定制款】德国高级独立制表品牌：格拉苏蒂莫勒Muehle·Glashuette Nautical Wristwatches ","bt10":"运动爱好者必备","bt101":" / 销量496","bt11":"德国莫勒官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/0ff12fe35ba34cc696cd8f7af8c0a8eb.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"¥ 3,560","bt6":"￥325.8","bt7":"￥3,910","bt8":"【天梭原装正品，全球联保两年】天梭TISSOT-力洛克系列T006.407.11.033.00 自动机械男表","bt10":"80小时动储","bt101":"/销量6749","bt11":"天梭TISSOT"},
+              {"img1":"https://image8.wbiao.co/shop/201502_28_424_10_33_20_53_001_04070.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"¥ 4,900","bt6":"￥480.8","bt7":"¥5,770","bt8":"瑞士艺术制表大师爱宝时（EPOS）-Emotion情感系列 罗马假期-水蓝版 3390.152.20.16.25 机械男表","bt10":"水蓝版 ","bt101":"/ 销量5488","bt11":"瑞士爱宝时官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/86dc33501ad841018f994e63aa309688.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥511.7","bt7":"¥6,140","bt8":"【10月中下旬发货】瑞士艺术制表大师爱宝时（EPOS）-Emotion情感系列 罗马假期-雪白版 3390.15","bt10":"雪白版 ","bt101":"/ 销量4843","bt11":"瑞士爱宝时官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/33b69253962a4fc1ae4056378faa4983.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"￥2,680","bt6":"￥245.8 ","bt7":"¥2,950","bt8":"【魏大勋同款】西铁城Citizen-光动能男表系列 BX1001-89L 万年历男表","bt10":"万年历/世界时","bt101":"/ 销量122","bt11":"瑞士爱宝时官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/815a6ff6caa4495c92fe9131e51bf14c.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"￥3,560","bt6":"￥325.8 ","bt7":"¥3,910","bt8":"【天梭原装正品，全球联保两年】 天梭TISSOT-力洛克系列 T006.407.11.053.00 机械男表","bt10":"80小时动储 ","bt101":"/ 销量3679","bt11":"天梭TISSOT"},
+              {"img1":"https://image8.wbiao.co/shop/89da41158fdb4b2687695fb9f2354c3c.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥325.8","bt7":" ¥3,910","bt8":"【天梭原装正品，全球联保两年】 天梭TISSOT-力洛克系列 T006.407.11.053.00 机械男表","bt10":"80小时动储 ","bt101":"/ 销量3683","bt11":"天梭TISSOT"},
+              {"img1":"https://image8.wbiao.co/shop/39615789c11840eb987d70f96029a695.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":" ￥866.7 ","bt7":"¥10,400","bt8":"瑞士柏高Paul Picot -梦想家 商务休闲 P4104.SG.1021.1106 机械男表","bt10":"畅销款式 ","bt101":"/ 销量1800","bt11":"瑞士柏高官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/58b0bbcfbf2544198abf8a41a4e4d267.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"￥3,630","bt6":"￥362.5 ","bt7":"¥4,350","bt8":"法国国民腕表品牌：Michel Herbelin赫柏林 City都市系列  雅士  1669/07GO  男士自动机械表","bt10":"赠送钢带 ","bt101":"/ 销量1398","bt11":"法国赫柏林官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/ed32ce915f994eb6ad6c43e13c47b417.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":" ￥441.7","bt7":" ¥5,300","bt8":"法国国民腕表品牌：赫柏林Michel Herbelin Trophy 领航员系列 1660/22TER 极地迷棕 男士机械表","bt10":"销量159","bt101":"","bt11":"法国赫柏林官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/e71e35bc0f01404b9fc15dbe29dbdc17.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"￥16,760","bt6":" ￥1579.2","bt7":" ¥18,950","bt8":"【德国海军定制款】德国高级独立制表品牌：格拉苏蒂莫勒Muehle·Glashuette Nautical Wristwatches ","bt10":"运动爱好者必备","bt101":" / 销量496","bt11":"德国莫勒官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/00027ee065b1490abbabb2d21642afe5.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"￥3,560","bt6":"￥325.8 ","bt7":"¥3,910","bt8":"【天梭原装正品，全球联保两年】 天梭TISSOT-力洛克系列 T006.407.11.053.00 机械男表","bt10":"80小时动储 ","bt101":"/ 销量3679","bt11":"天梭TISSOT"},
+              {"img1":"https://image8.wbiao.co/shop/110556385610467c8180e0a9e52a8147.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥325.8","bt7":" ¥3,910","bt8":"德国高级独立制表品牌：格拉苏蒂·莫勒Muehle·Glashuette-Sporty  运动系列 M1-25-21-LB 29er 商务机","bt10":"商务休闲随心搭配 ","bt101":"/ 销量2574","bt11":"德国莫勒官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/00027ee065b1490abbabb2d21642afe5.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥325.8","bt7":" ¥3,910","bt8":"【天梭原装正品，全球联保两年】 天梭TISSOT-力洛克系列 T006.407.11.053.00 机械男表","bt10":"80小时动储 ","bt101":"/ 销量3683","bt11":"天梭TISSOT"},
+              {"img1":"https://image8.wbiao.co/shop/aaa2fece91584b6dbbfa50b678e284a0.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":" ￥866.7 ","bt7":"¥10,400","bt8":"瑞士柏高Paul Picot -梦想家 商务休闲 P4104.SG.1021.1106 机械男表","bt10":"畅销款式 ","bt101":"/ 销量1800","bt11":"瑞士柏高官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/b2b786ec45b746a583a68e158c5583d9.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"￥3,630","bt6":"￥362.5 ","bt7":"¥4,350","bt8":"法国国民腕表品牌：Michel Herbelin赫柏林 City都市系列  雅士  1669/07GO  男士自动机械表","bt10":"赠送钢带 ","bt101":"/ 销量1398","bt11":"法国赫柏林官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/9dcd454470d94c6eb8817a3e19f2b909.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":" ￥441.7","bt7":" ¥5,300","bt8":"法国国民腕表品牌：赫柏林Michel Herbelin Trophy 领航员系列 1660/22TER 极地迷棕 男士机械表","bt10":"销量159","bt101":"","bt11":"法国赫柏林官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/be30c4da13c8488a98a38bf901358578.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"￥16,760","bt6":" ￥1579.2","bt7":" ¥18,950","bt8":"【德国海军定制款】德国高级独立制表品牌：格拉苏蒂莫勒Muehle·Glashuette Nautical Wristwatches ","bt10":"运动爱好者必备","bt101":" / 销量496","bt11":"德国莫勒官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/c7b1285ee380485f9b9743f3495c07c7.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"¥ 3,560","bt6":"￥325.8","bt7":"￥3,910","bt8":"【天梭原装正品，全球联保两年】天梭TISSOT-力洛克系列T006.407.11.033.00 自动机械男表","bt10":"80小时动储","bt101":"/销量6749","bt11":"天梭TISSOT"},
+              {"img1":"https://image8.wbiao.co/shop/28cc3cbbf68a49afb3186dc8bef4c345.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"¥ 4,900","bt6":"￥480.8","bt7":"¥5,770","bt8":"瑞士艺术制表大师爱宝时（EPOS）-Emotion情感系列 罗马假期-水蓝版 3390.152.20.16.25 机械男表","bt10":"水蓝版 ","bt101":"/ 销量5488","bt11":"瑞士爱宝时官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/c7b1285ee380485f9b9743f3495c07c7.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"¥ 3,560","bt6":"￥325.8","bt7":"￥3,910","bt8":"【天梭原装正品，全球联保两年】天梭TISSOT-力洛克系列T006.407.11.033.00 自动机械男表","bt10":"80小时动储","bt101":"/销量6749","bt11":"天梭TISSOT"},
+              {"img1":"https://image8.wbiao.co/shop/28cc3cbbf68a49afb3186dc8bef4c345.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"¥ 4,900","bt6":"￥480.8","bt7":"¥5,770","bt8":"瑞士艺术制表大师爱宝时（EPOS）-Emotion情感系列 罗马假期-水蓝版 3390.152.20.16.25 机械男表","bt10":"水蓝版 ","bt101":"/ 销量5488","bt11":"瑞士爱宝时官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/d5f66e5fef0247f099b76840941958e1.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥511.7","bt7":"¥6,140","bt8":"【10月中下旬发货】瑞士艺术制表大师爱宝时（EPOS）-Emotion情感系列 罗马假期-雪白版 3390.15","bt10":"雪白版 ","bt101":"/ 销量4843","bt11":"瑞士爱宝时官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/110556385610467c8180e0a9e52a8147.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥325.8","bt7":" ¥3,910","bt8":"德国高级独立制表品牌：格拉苏蒂·莫勒Muehle·Glashuette-Sporty  运动系列 M1-25-21-LB 29er 商务机","bt10":"商务休闲随心搭配 ","bt101":"/ 销量2574","bt11":"德国莫勒官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/6d8690a545534660beef12a536b6b43d.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥325.8","bt7":" ¥3,910","bt8":"【天梭原装正品，全球联保两年】 天梭TISSOT-力洛克系列 T006.407.11.053.00 机械男表","bt10":"80小时动储 ","bt101":"/ 销量3683","bt11":"天梭TISSOT"},
+              {"img1":"https://image8.wbiao.co/shop/aaa2fece91584b6dbbfa50b678e284a0.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":" ￥866.7 ","bt7":"¥10,400","bt8":"瑞士柏高Paul Picot -梦想家 商务休闲 P4104.SG.1021.1106 机械男表","bt10":"畅销款式 ","bt101":"/ 销量1800","bt11":"瑞士柏高官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/be30c4da13c8488a98a38bf901358578.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"￥16,760","bt6":" ￥1579.2","bt7":" ¥18,950","bt8":"【德国海军定制款】德国高级独立制表品牌：格拉苏蒂莫勒Muehle·Glashuette Nautical Wristwatches ","bt10":"运动爱好者必备","bt101":" / 销量496","bt11":"德国莫勒官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/85571f545f4f4b1b931d63efa261ad70.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥511.7","bt7":"¥6,140","bt8":"【10月中下旬发货】瑞士艺术制表大师爱宝时（EPOS）-Emotion情感系列 罗马假期-雪白版 3390.15","bt10":"雪白版 ","bt101":"/ 销量4843","bt11":"瑞士爱宝时官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/7172aed8de084aa1857665f12b665db4.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"￥2,680","bt6":"￥245.8 ","bt7":"¥2,950","bt8":"【魏大勋同款】西铁城Citizen-光动能男表系列 BX1001-89L 万年历男表","bt10":"万年历/世界时","bt101":"/ 销量122","bt11":"瑞士爱宝时官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/201708_15_F20335_1_90719.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"￥3,560","bt6":"￥325.8 ","bt7":"¥3,910","bt8":"【天梭原装正品，全球联保两年】 天梭TISSOT-力洛克系列 T006.407.11.053.00 机械男表","bt10":"80小时动储 ","bt101":"/ 销量3679","bt11":"天梭TISSOT"},
+              {"img1":"https://image8.wbiao.co/shop/b687a05af20b4ff7b6dfe0060340145c.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥325.8","bt7":" ¥3,910","bt8":"【天梭原装正品，全球联保两年】 天梭TISSOT-力洛克系列 T006.407.11.053.00 机械男表","bt10":"80小时动储 ","bt101":"/ 销量3683","bt11":"天梭TISSOT"},
+              {"img1":"https://image8.wbiao.co/shop/b970c3e4da87419ab5f66e4560872964.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":" ￥866.7 ","bt7":"¥10,400","bt8":"瑞士柏高Paul Picot -梦想家 商务休闲 P4104.SG.1021.1106 机械男表","bt10":"畅销款式 ","bt101":"/ 销量1800","bt11":"瑞士柏高官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/cb839292568c4382a383d6b52f4f641e.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"￥3,630","bt6":"￥362.5 ","bt7":"¥4,350","bt8":"法国国民腕表品牌：Michel Herbelin赫柏林 City都市系列  雅士  1669/07GO  男士自动机械表","bt10":"赠送钢带 ","bt101":"/ 销量1398","bt11":"法国赫柏林官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/7696a6d9e37b4ae89509ffed120df6fa.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":" ￥441.7","bt7":" ¥5,300","bt8":"法国国民腕表品牌：赫柏林Michel Herbelin Trophy 领航员系列 1660/22TER 极地迷棕 男士机械表","bt10":"销量159","bt101":"","bt11":"法国赫柏林官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/5854090cb9374db1bcc32e1a69d01cf9.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"￥16,760","bt6":" ￥1579.2","bt7":" ¥18,950","bt8":"【德国海军定制款】德国高级独立制表品牌：格拉苏蒂莫勒Muehle·Glashuette Nautical Wristwatches ","bt10":"运动爱好者必备","bt101":" / 销量496","bt11":"德国莫勒官方旗舰店"},
+            ];
+    for(var i=0;i<$arr.length;i++){
+        $(".w_cont2").append(`
+        <li class='w_cont-bt'>
+            <a class='w_cont-bta' href='https://www.wbiao.cn/goods/62520.html' >
+                <img class='w_cont_img1' src='${$arr[i].img1}' alt="">  
+                <div class="w_cont-bt1"> 
+                    <img class="w_cont_img2" src='${$arr[i].img2}' alt=""> 
+                    <span class="w_cont-bt2">${$arr[i].bt2}</span>
+                </div>  
+            </a>  
+            <div class="w_cont-bt3">
+                <p class="w_cont-bt4"> 
+                    <span class="w_cont-bt5">月付</span> 
+                    <span class="w_cont-bt6">${$arr[i].bt6}</span> 
+                    <span class="w_cont-bt7">${$arr[i].bt7}</span> 
+                </p> 
+                <a class="w_cont-bt8" href="https://www.wbiao.cn/goods/62520.html">${$arr[i].bt8}</a>
+                <div class="w_cont-bt9"> 
+                    <span class="w_cont-bt10">${$arr[i].bt10}</span> 
+                    <span class="w_cont-bt101">${$arr[i].bt101}</span>
+                </div> 
+                <a  class="w_cont-bt11" href="https://www.wbiao.cn/shop/13">${$arr[i].bt11}</a>
+                <p class="w_cont-bt12">  
+                    <span>免息分期</span>       
+                </p>
+                <div class="w_cont-bt13"> 
+                    <a class="w_cont-bt14" href="javascript:void(0);" >加入收藏</a> 
+                    <a class="w_cont-bt15" href="javascript:void(0);" >已收藏</a>   
+                    <a class="w_cont-bt16" href="javascript:void(0);" >加入购物车</a> 
+                </div>
+            </div>
+        </li> 
+        `)
+    }
+    $(".w_cont-bt").on("mouseover",function(){
+        var $gt=$(this).index();
+        $(".w_cont-bt13").eq($gt).show()
+    })
+    $(".w_cont-bt").on("mouseout",function(){
+        var $gt=$(this).index();
+        $(".w_cont-bt13").eq($gt).hide()
+    })
+});
 $(function(){
     $a=4;
     $(".w_number-Bt2").on("click",function(){
@@ -908,7 +1010,7 @@ $(function(){
         $(this).addClass("w_number-Bta").siblings().removeClass("w_number-Bta");
     })
    
-})
+});
 $(function(){
     var att=["积家手表","朗格手表","江诗丹顿手表","百达翡丽手表","宝玑手表","伯爵手表","爱彼手表","宝珀手表","格拉苏蒂∙原创手表","法穆兰手表","雅典手表","帝舵手表",
     "泰格豪雅手表","高峯手表","欧米茄手表","劳力士手表","万国手表","沛纳海手表","卡地亚手表","萧邦手表","宇舶手表","梅花手表","依波路手表","天梭手表","英纳格手表","浪琴手表",
@@ -1007,4 +1109,98 @@ $(function(){
             $(".w_link-pt6").html("+更多")
         }
     })
+});
+$(function() {
+    $(".w_cont_img1").lazyload({
+      placeholder: "../images/w_imgfex1.png", 
+      effect: "fadeIn"
+    }); 
+
+});
+$(function() {
+    var cont=[{"w_fastimg":"https://image8.wbiao.co/mall/e10aaee14770422b94e06111dabeb266.png?x-oss-process=image/resize,m_pad,h_200,w,200","a1":"商务"},
+              {"w_fastimg":"https://image8.wbiao.co/mall/dfbd58c60a2b4ad39628e9e762491a12.png?x-oss-process=image/resize,m_pad,h_200,w,200","a1":"时尚简约"},
+              {"w_fastimg":"https://image8.wbiao.co/mall/f21cd6efe48b4cc7a3fb53f3e625162d.png?x-oss-process=image/resize,m_pad,h_200,w,200","a1":"运动"},
+              {"w_fastimg":"https://image8.wbiao.co/mall/1e06b306dbd64e509c82dddb8f500a0f.png?x-oss-process=image/resize,m_pad,h_200,w,200","a1":"计时"},
+              {"w_fastimg":"https://image8.wbiao.co/mall/61876ab5849946fd8616e8bb31f2ff29.png?x-oss-process=image/resize,m_pad,h_200,w,200","a1":"月相款"},
+              {"w_fastimg":"https://image8.wbiao.co/mall/f3610fb91bac42babf33091153019c80.png?x-oss-process=image/resize,m_pad,h_200,w,200","a1":"经典女款"},
+              {"w_fastimg":"https://image8.wbiao.co/mall/eecd3ae9388247c691b17355ee5abe7d.png?x-oss-process=image/resize,m_pad,h_200,w,200","a1":"经典男表"},
+              {"w_fastimg":"https://image8.wbiao.co/mall/be96e8cf1f9543fb8a5c34dc2e3208f1.png?x-oss-process=image/resize,m_pad,h_200,w,200","a1":"个性时尚"},
+              {"w_fastimg":"https://image8.wbiao.co/mall/7d01cee4eaf045b8abc889847f3a4c42.png?x-oss-process=image/resize,m_pad,h_200,w,200","a1":"艺术"}
+            ];
+for(var i=0;i<cont.length;i++){
+    $(".w_fast2-ul").append(`
+        <li class="w_fast2-li">
+            <img class="w_fast2-img" src='${cont[i].w_fastimg}' alt="">
+            <a class="w_fast2-a1";href="javascript:;">${cont[i].a1}</a>
+        </li>
+    `)
+};
+$(".w_fast2-a1").eq(0).addClass("w_fast2-a2");
+$(".w_fast2-a1").on("click",function(){
+    $(".w_fast2-a1").removeClass("w_fast2-a2");
+    $(this).addClass("w_fast2-a2");
 })
+$(".w_fast3-a").on("click",function(){
+    console.log(1111);
+    
+    $(this).addClass("w_fast2-a2").siblings().removeClass("w_fast2-a2");
+})
+})
+$(function(){
+    var $arr=[{"img1":"https://image8.wbiao.co/shop/a178542e3e80465cac78f057054550f6.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":" ￥4108.3  ","bt7":"¥49,300","bt8":"瑞士柏高Paul Picot -FIRSHIRE 梦想家系列 全日历月相表  P0459.SRG.1022.7604 正装休闲 机械男表(全","bt10":"","bt101":"销量74","bt11":"瑞士柏高官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/3c58b50686bc49ab8fb582ec75c6df0a.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"","bt6":"￥316.7 ","bt7":"¥3,800","bt8":"法国优雅时尚腕表品牌：Michel Herbelin赫","bt10":"","bt101":"销量2141","bt11":"法国赫柏林官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/ca350e3bb28b494e903019c1453f1e87.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"￥2,680","bt6":"￥383.3","bt7":" ¥4,600","bt8":"【预计10月中下旬发货】法国优雅时尚腕表品牌：赫柏林Michel Herbelin  Perles珍珠系列  爱之印","bt10":"","bt101":"销量2365","bt11":"法国赫柏林官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/d847df2e3823472c86727a06010d183c.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"¥ 3,560","bt6":"￥325.8","bt7":"￥3,910","bt8":"【天梭原装正品，全球联保两年】天梭TISSOT-力洛克系列T006.407.11.033.00 自动机械男表","bt10":"80小时动储","bt101":"/销量6749","bt11":"法国赫柏林官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/9f73248eda99472d92b83c61170515c2.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"¥ 4,900","bt6":"￥480.8","bt7":"¥5,770","bt8":"瑞士艺术制表大师爱宝时（EPOS）-Emotion情感系列 罗马假期-水蓝版 3390.152.20.16.25 机械男表","bt10":"水蓝版 ","bt101":"/ 销量5488","bt11":"瑞士爱宝时官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/038c757faf274881870d08f66340340b.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥511.7","bt7":"¥6,140","bt8":"【10月中下旬发货】瑞士艺术制表大师爱宝时（EPOS）-Emotion情感系列 罗马假期-雪白版 3390.15","bt10":"雪白版 ","bt101":"/ 销量4843","bt11":"瑞士爱宝时官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/461204afe893468ab23c513da97f1b7b.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"￥2,680","bt6":"￥245.8 ","bt7":"¥2,950","bt8":"【魏大勋同款】西铁城Citizen-光动能男表系列 BX1001-89L 万年历男表","bt10":"万年历/世界时","bt101":"/ 销量122","bt11":"瑞士爱宝时官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/c9c5a662285f42e69304239c35308d91.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"￥3,560","bt6":"￥325.8 ","bt7":"¥3,910","bt8":"【天梭原装正品，全球联保两年】 天梭TISSOT-力洛克系列 T006.407.11.053.00 机械男表","bt10":"80小时动储 ","bt101":"/ 销量3679","bt11":"天梭TISSOT"},
+              {"img1":"https://image8.wbiao.co/shop/ddb1f1090a1542be8bfcbb452781a42d.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"￥2,680","bt6":"￥245.8 ","bt7":"¥2,950","bt8":"【魏大勋同款】西铁城Citizen-光动能男表系列 BX1001-89L 万年历男表","bt10":"万年历/世界时","bt101":"/ 销量122","bt11":"瑞士爱宝时官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/7696a6d9e37b4ae89509ffed120df6fa.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":" ￥441.7","bt7":" ¥5,300","bt8":"法国国民腕表品牌：赫柏林Michel Herbelin Trophy 领航员系列 1660/22TER 极地迷棕 男士机械表","bt10":"销量159","bt101":"","bt11":"法国赫柏林官方旗舰店"},
+              {"img1":"https://image8.wbiao.co/shop/c9c5a662285f42e69304239c35308d91.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"https://image8.wbiao.co/mall/e6c159b6eae54b278cdffe347713a1cd.png","bt2":"￥16,760","bt6":" ￥1579.2","bt7":" ¥18,950","bt8":"【德国海军定制款】德国高级独立制表品牌：格拉苏蒂莫勒Muehle·Glashuette Nautical Wristwatches ","bt10":"运动爱好者必备","bt101":" / 销量496","bt11":"德国莫勒官方旗舰店"},
+            ];
+    for(var i=0;i<$arr.length;i++){
+        $(".w_cont3").append(`
+        <li class='w_cont-bt'>
+            <a class='w_cont-bta' href='https://www.wbiao.cn/goods/62520.html' >
+                <img class='w_cont_img1' src='${$arr[i].img1}' alt="">  
+                <div class="w_cont-bt1"> 
+                    <img class="w_cont_img2" src='${$arr[i].img2}' alt=""> 
+                    <span class="w_cont-bt2">${$arr[i].bt2}</span>
+                </div>  
+            </a>  
+            <div class="w_cont-bt3">
+                <p class="w_cont-bt4"> 
+                    <span class="w_cont-bt5">月付</span> 
+                    <span class="w_cont-bt6">${$arr[i].bt6}</span> 
+                    <span class="w_cont-bt7">${$arr[i].bt7}</span> 
+                </p> 
+                <a class="w_cont-bt8" href="https://www.wbiao.cn/goods/62520.html">${$arr[i].bt8}</a>
+                <div class="w_cont-bt9"> 
+                    <span class="w_cont-bt10">${$arr[i].bt10}</span> 
+                    <span class="w_cont-bt101">${$arr[i].bt101}</span>
+                </div> 
+                <a  class="w_cont-bt11" href="https://www.wbiao.cn/shop/13">${$arr[i].bt11}</a>
+                <p class="w_cont-bt12">  
+                    <span>免息分期</span>      
+                </p>
+                <span class="w_cont-bt121">自营</span>
+                <div class="w_cont-bt13"> 
+                    <a class="w_cont-bt14" href="javascript:void(0);" >加入收藏</a> 
+                    <a class="w_cont-bt15" href="javascript:void(0);" >已收藏</a>   
+                    <a class="w_cont-bt16" href="javascript:void(0);" >加入购物车</a> 
+                </div>
+            </div>
+        </li> 
+        `)
+    }
+    $(".w_cont-bt").on("mouseover",function(){
+        var $gt=$(this).index();
+        $(".w_cont-bt13").eq($gt).show()
+    })
+    $(".w_cont-bt").on("mouseout",function(){
+        var $gt=$(this).index();
+        $(".w_cont-bt13").eq($gt).hide()
+    })
+});
