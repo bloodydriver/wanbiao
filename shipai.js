@@ -184,137 +184,144 @@ $(function () {
         })
     }
     )(jQuery);
-    $(".medioReport").click(function(){
+    $(".medioReport").click(function(){ // 媒体报道一行的tab切换
         $(".yleftList").hide()
-        $(".ymainbox1").show()
-    });
+        $(".tab-change .ymainbox1").eq($(this).index()).show().siblings().hide();
+        $(this).css({"border-bottom":"2px solid #b01330","color":"#b01330"}).eq(0).siblings().css({"border-bottom":"none","color":"#333"})});
 
 });
-$(function(){      //客服聊天对话框
-    var serviceData = {
-        'robot': {
-            'name': 'robot001',
-            'dialogue': ['模拟回复1', '模拟回复2', '模拟回复3'],
-            'welcome': '您好，robot001为您服务'
-        }
-    };
-    var dialogueInput = document.getElementById('dialogue_input'),
-        dialogueContain = document.getElementById('dialogue_contain'),
-        dialogueHint = document.getElementById('dialogue_hint'),
-        // btnOpen = document.getElementById('btn_open'),
-        btnClose = document.getElementById('btn_close'),
-        photo=document.getElementById('btn-pic'),
-        photo1 = document.getElementById("btn_close1"),
-        photo2 =document.getElementById("btn_close2"),
-        timer,
-        timerId,
-        shiftKeyOn = false; 
-    photo.addEventListener('click', function(e) {
-        $('.dialogue-main').css({'display': 'inline-block', 'height': '0'});
-        $('.dialogue-main').animate({'height': '600px'})
-    });
-    photo1.addEventListener('click', function(e) {
-        $('.dialogue-main').animate({'height': '0'}, function() {
-            $('.dialogue-main').css({'display': 'none'});
-            $('.wrapper-zoom').css({'display': 'inline-block'});
-        });
-    })
-    photo2.addEventListener('click', function(e) {
-        $('.dialogue-main').toggleClass("dialogue-style");
-    })
-    $(".over-message").click(function(){
-        $(".dialogue-main").hide()
-    })
-    $(".wrapper-zoom").click(function(){
-        $('.dialogue-main').css({'display': 'inline-block', 'height': '0'});
-        $('.dialogue-main').animate({'height': '600px'})
-        $(this).hide()
-    })
-    btnClose.addEventListener('click', function(e) {
-        $('.dialogue-main').animate({'height': '0'}, function() {
-            $('.dialogue-main').css({'display': 'none'});
-            $('.dialogue-support-btn').css({'display': 'inline-block'});
-        });
-    })
+// $(function(){      //客服聊天对话框
+//     var serviceData = {
+//         'robot': {
+//             'name': 'robot001',
+//             'dialogue': ['模拟回复1', '模拟回复2', '模拟回复3'],
+//             'welcome': '您好，robot001为您服务'
+//         }
+//     };
+//     var dialogueInput = document.getElementById('dialogue_input'),
+//         dialogueContain = document.getElementById('dialogue_contain'),
+//         dialogueHint = document.getElementById('dialogue_hint'),
+//         // btnOpen = document.getElementById('btn_open'),
+//         btnClose = document.getElementById('btn_close'),
+//         photo=document.getElementById('btn-pic'),
+//         photo1 = document.getElementById("btn_close1"),
+//         photo2 =document.getElementById("btn_close2"),
+//         timer,
+//         timerId,
+//         shiftKeyOn = false; 
+//     photo.addEventListener('click', function(e) {
+//         $('.dialogue-main').css({'display': 'inline-block', 'height': '0'});
+//         $('.dialogue-main').animate({'height': '600px'})
+//     });
+//     photo1.addEventListener('click', function(e) {
+//         $('.dialogue-main').animate({'height': '0'}, function() {
+//             $('.dialogue-main').css({'display': 'none'});
+//             $('.wrapper-zoom').css({'display': 'inline-block'});
+//         });
+//     })
+//     photo2.addEventListener('click', function(e) {
+//         $('.dialogue-main').toggleClass("dialogue-style");
+//     })
+//     $(".over-message").click(function(){
+//         $(".dialogue-main").hide()
+//     })
+//     $(".wrapper-zoom").click(function(){
+//         $('.dialogue-main').css({'display': 'inline-block', 'height': '0'});
+//         $('.dialogue-main').animate({'height': '600px'})
+//         $(this).hide()
+//     })
+//     btnClose.addEventListener('click', function(e) {
+//         $('.dialogue-main').animate({'height': '0'}, function() {
+//             $('.dialogue-main').css({'display': 'none'});
+//             $('.dialogue-support-btn').css({'display': 'inline-block'});
+//         });
+//     })
 
-    dialogueInput.addEventListener('keydown', function(e) {
-        var e = e || window.event;
-        if (shiftKeyOn) {
-            return true;
-        } else if (e.keyCode == 13 && dialogueInput.value == '') {
-            setTimeout(function() {
-                fadeIn(dialogueHint);
-                clearTimeout(timerId)
-                timer = setTimeout(function() {
-                    fadeOut(dialogueHint)
-                }, 2000);
-            }, 10);
-            timerId = timer;
-            return true;
-        } else if (e.keyCode == 13) {
-            var nodeP = document.createElement('p'),
-            nodeSpan = document.createElement('span');
-            nodeP.classList.add('dialogue-customer-contain');
-            nodeSpan.classList.add('dialogue-text', 'dialogue-customer-text');
-            nodeSpan.innerHTML = dialogueInput.value;
-            nodeP.appendChild(nodeSpan);
-            dialogueContain.appendChild(nodeP);
-            dialogueContain.scrollTop = dialogueContain.scrollHeight;
-            submitCustomerText(dialogueInput.value);
-        }
-    });
+//     dialogueInput.addEventListener('keydown', function(e) {
+//         var e = e || window.event;
+//         if (shiftKeyOn) {
+//             return true;
+//         } else if (e.keyCode == 13 && dialogueInput.value == '') {
+//             setTimeout(function() {
+//                 fadeIn(dialogueHint);
+//                 clearTimeout(timerId)
+//                 timer = setTimeout(function() {
+//                     fadeOut(dialogueHint)
+//                 }, 2000);
+//             }, 10);
+//             timerId = timer;
+//             return true;
+//         } else if (e.keyCode == 13) {
+//             var nodeP = document.createElement('p'),
+//             nodeSpan = document.createElement('span');
+//             nodeP.classList.add('dialogue-customer-contain');
+//             nodeSpan.classList.add('dialogue-text', 'dialogue-customer-text');
+//             nodeSpan.innerHTML = dialogueInput.value;
+//             nodeP.appendChild(nodeSpan);
+//             dialogueContain.appendChild(nodeP);
+//             dialogueContain.scrollTop = dialogueContain.scrollHeight;
+//             submitCustomerText(dialogueInput.value);
+//         }
+//     });
     
-    dialogueInput.addEventListener('keyup', function(e) {
-        if (e.keyCode == 13) {
-            dialogueInput.value = null;
-        }
-    });
-    $(".send-message").click(function(){  //鼠标点击发送
-        if(dialogueInput.value != ''){
-            var nodeP = document.createElement('p'),
-            nodeSpan = document.createElement('span');
-            nodeP.classList.add('dialogue-customer-contain');
-            nodeSpan.classList.add('dialogue-text', 'dialogue-customer-text');
-            nodeSpan.innerHTML = dialogueInput.value;
-            nodeP.appendChild(nodeSpan);
-            dialogueContain.appendChild(nodeP);
-            dialogueContain.scrollTop = dialogueContain.scrollHeight;
-            submitCustomerText(dialogueInput.value);
-            dialogueInput.value = null;
-        }else{
-            alert("请输入内容")
-        }
-    })
-    function submitCustomerText(text) {
-            getServiceText(serviceData);
-    }
+//     dialogueInput.addEventListener('keyup', function(e) {
+//         if (e.keyCode == 13) {
+//             dialogueInput.value = null;
+//         }
+//     });
+//     $(".send-message").click(function(){  //鼠标点击发送
+//         if(dialogueInput.value != ''){
+//             var nodeP = document.createElement('p'),
+//             nodeSpan = document.createElement('span');
+//             nodeP.classList.add('dialogue-customer-contain');
+//             nodeSpan.classList.add('dialogue-text', 'dialogue-customer-text');
+//             nodeSpan.innerHTML = dialogueInput.value;
+//             nodeP.appendChild(nodeSpan);
+//             dialogueContain.appendChild(nodeP);
+//             dialogueContain.scrollTop = dialogueContain.scrollHeight;
+//             submitCustomerText(dialogueInput.value);
+//             dialogueInput.value = null;
+//         }else{
+//             alert("请输入内容")
+//         }
+//     })
+//     function submitCustomerText(text) {
+//             getServiceText(serviceData);
+//     }
 
-    function getServiceText(data) {
-        var serviceText = data.robot.dialogue,
-            i = Math.floor(Math.random() * serviceText.length);
-        var nodeP = document.createElement('p'),
-            nodeSpan = document.createElement('span');
-        nodeP.classList.add('dialogue-service-contain');
-        nodeSpan.classList.add('dialogue-text', 'dialogue-service-text');
-        nodeSpan.innerHTML = serviceText[i];
-        nodeP.appendChild(nodeSpan);
-        dialogueContain.appendChild(nodeP);
-        dialogueContain.scrollTop = dialogueContain.scrollHeight;
-    };
-    $(".car").click(function(){
-        $(".right-panel").css({right:"0"})
-        $(".right-panel-box").eq($(".car").index($(this))).show().siblings().hide()
-    })
-    $(".right-panel-top .on").click(function(){
-        $(this).css({borderBottom:"3px solid #333"}).eq(0).siblings(".on").css({"borderBottom":""})
-    })
-    $(".right-panel-close").click(function(){
-        $(".right-panel").css({right:"-262px"})
-    })
-    // $(".dialogue-support-icon").mouseenter(function(){
-    //     $(".dialogue-hover").fadeIn("slow")
-    // })
-    // $(".dialogue-support-icon").mouseleave(function(){
-    //     $(".dialogue-hover").fadeOut("slow")
-    // })
+//     function getServiceText(data) {
+//         var serviceText = data.robot.dialogue,
+//             i = Math.floor(Math.random() * serviceText.length);
+//         var nodeP = document.createElement('p'),
+//             nodeSpan = document.createElement('span');
+//         nodeP.classList.add('dialogue-service-contain');
+//         nodeSpan.classList.add('dialogue-text', 'dialogue-service-text');
+//         nodeSpan.innerHTML = serviceText[i];
+//         nodeP.appendChild(nodeSpan);
+//         dialogueContain.appendChild(nodeP);
+//         dialogueContain.scrollTop = dialogueContain.scrollHeight;
+//     };
+//     $(".car").click(function(){
+//         $(".right-panel").css({right:"0"})
+//         $(".right-panel-box").eq($(".car").index($(this))).show().siblings().hide()
+//     })
+//     $(".right-panel-top .on").click(function(){
+//         $(this).css({borderBottom:"3px solid #333"}).eq(0).siblings(".on").css({"borderBottom":""})
+//     })
+//     $(".right-panel-close").click(function(){
+//         $(".right-panel").css({right:"-262px"})
+//     })
+    
+// })
+
+$(function(){
+    //本文相关品牌
+$(".logo-icon1, .logo-icon2, .logo-icon3, .logo-icon4").mouseenter(function(){
+    $(this).css({background:"#b01330"})
+    $(this).find("div").css({"display":"block"})
+})
+$(".logo-icon1,.logo-icon2,.logo-icon3,.logo-icon4").mouseleave(function(){
+    $(this).css({background:""});
+    $(".logo-icon1-text").hide()
+})
 })

@@ -98,7 +98,21 @@ a {
     float: left;
     width: 680px;
     overflow: hidden;
-    border: 1px solid red;
+}
+.medioReport {
+    display: block;
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    padding: 5px 10px;
+    margin: 0 10px;
+    border-bottom: 2px solid #fff;
+    font-weight: 700;
+    cursor: pointer;
+}
+.medioReport:hover{
+    color: #b01330;
+    border-bottom: 2px solid #b01330;
 }
 .submession {
     float: right;
@@ -213,18 +227,19 @@ a {
 .ymainbox{
  width: 1200px;
  margin: auto;
- /* display: inline-block; */
+ position: relative;
 }
 .ymainbox1 {
     display: inline-block;
-    border: 1px solid #333;
 }
 .yrightArea {
     width: 280px;
     margin: 23px 0 0 30px;
     overflow: hidden;
     display: inline-block;
-    border:1px solid #333
+    position: absolute;
+    top: 161px;
+    right: 208px;
 }
 .change_btn {
     float: right;
@@ -487,18 +502,60 @@ a {
     height: 163px;
     margin-top: 35px;
     float: left;
-    border: 1px  solid black
+}
+.yleftList .relevance_brands .logo{
+    position: relative;
+    font-size: 14px;
 }
 .yleftList .relevance_brands .logo li {
     width: 100px;
     height: 40px;
-    border: 1px solid black;
     float: left;
     margin: 10px 20px 0 5px;
 }
 .logo-icon1 {
-    background-image: url(img/brands_gray.jpg) no-repeat;
-    
+    background-image: url(img/brands_gray.jpg);
+    background-position: -600px -720px;
+    background-repeat: no-repeat;
+}
+.logo-icon1-text{
+    display: none;
+    color: #fff;
+    margin: 12px 29px;
+}
+.logo-icon2 {
+    background-image: url(img/brands_gray.jpg);
+    background-position: -600px -540px;
+    background-repeat: no-repeat;
+}
+.logo-icon3 {
+    background-image: url(img/brands_gray.jpg);
+    background-position: -120px -900px;
+    background-repeat: no-repeat;
+}
+.logo-icon4 {
+    background-image: url(img/brands_gray.jpg);
+    background-position: -600px -810px;
+    background-repeat: no-repeat;
+}
+.rb_middle2 {
+    width: 237px;
+    height: 24px;
+    padding: 1px 10px;
+    line-height: 24px;
+    color: #9a9a9a;
+    font-size: 13px;
+}
+.rb_middle2-text {
+    outline: none;
+    width: 237px;
+    height: 24px;
+    padding: 1px 10px;
+    line-height: 24px;
+    color: #9a9a9a;
+    display: block;
+    border: 0;
+    background-position: 0 -842px;
 }
 .yleftList .more {
     float: right;
