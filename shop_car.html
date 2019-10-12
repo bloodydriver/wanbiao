@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="shop_car.css">
-    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>   
     <title>Document</title>
 </head>
 <body>
@@ -52,7 +52,7 @@
         <div class="shopAll">
             <h2>全部商品 （<span class="shop_num">1</span>）</h2>
             <div class="checkAll">
-                <i class="check"></i>
+                <i></i>
                 <span>全选</span>
                 <span>商品信息</span>
                 <ul>
@@ -67,27 +67,7 @@
                     <i class="check"></i>
                     <span>阿玛尼ARMANI</span>
                 </div>
-                <ul>
-                    <li>
-                        <i class="check"></i>
-                        <img src="" alt="">
-                        <div class="content">
-                            <p>阿玛尼-LUIGI系列 AR1970 石英男表</p>
-                            <p>真皮 黑色</p>
-                        </div>
-                        <div class="control">
-                            <span>￥<span class="price">2120</span></span>
-                            <div>
-                                <button class="sub" type="button">-</button>
-                                <input type="text" value="1">
-                                <button class="add" type="button">+</button>
-                            </div>
-                            <span class="priceAll" style="font-weight: 700;">￥2120</span>
-                            <a class="del" href="javascript:void(0)">删除</a>
-                        </div>
-                        <a href="">移入收藏</a>
-                    </li>
-                </ul>
+                <ul></ul>
             </div>
         </div>
     </div>
@@ -96,33 +76,74 @@
 </body>
 <script>
     $(function() {
+        //商品添加
+        for(var i=0; i<5; i++) {
+            $(".shopCar_content ul").append(`
+            <li>
+                <i class="check"></i>
+                <img src="" alt="">
+                <div class="content">
+                    <p>阿玛尼-LUIGI系列 AR1970 石英男表</p>
+                    <p>真皮 黑色</p>
+                </div>
+                <div class="control">
+                    <span>￥<span class="price">2120</span></span>
+                    <div>
+                        <button class="sub" type="button">-</button>
+                        <input class="number" type="text" value="1">
+                        <button class="add" type="button">+</button>
+                    </div>
+                    <span class="priceAll" style="font-weight: 700;">￥2120</span>
+                    <a class="del" href="javascript:void(0)">删除</a>
+                </div>
+                <a href="">移入收藏</a>
+            </li>
+            `)
         $(".check").click(function() {
+            console.log($(this).hasClass("checkOn"))
             if($(this).hasClass("checkOn")) {
-                $(".check").removeClass("checkOn")
+                $(".check").removeClass("checkOn");
             }else {
+                $(this).addClass("checkOn")
+            }
+        })
+        $(".checkAll i").click(function() {
+           console.log($(this).hasClass("checkOn"))
+            if($(".checkAll i").hasClass("checkOn")) {
+                $(".check").removeClass("checkOn")
+                $(this).removeClass("checkOn")
+            }else {
+                console.log(111)
                 $(".check").addClass("checkOn")
+                $(this).addClass("checkOn")
             }
         })
-        $(".sub").click(function() {
-            $(".control input")[0].value--;
-            if($(".control input")[0].value<=1) {
-                $(".control input")[0].value=1;
+        
+        $(".sub").click(function() {//点击后会触发下方兄弟事件
+            $(".number")[$(".sub").index($(this))].value--;
+            if($(".number")[$(".sub").index($(this))].value<=1) {
+                $(".number")[$(".sub").index($(this))].value=1;
             }
-            $(".priceAll")[0].innerHTML="￥"+$(".control input")[0].value*$(".price")[0].innerHTML;
+            $(".priceAll")[$(".sub").index($(this))].innerHTML="￥"+$(".control input")[0].value*$(".price")[0].innerHTML;
         })
-        $(".add").click(function() {
-            $(".control input")[0].value++;
-            $(".priceAll")[0].innerHTML="￥"+$(".control input")[0].value*$(".price")[0].innerHTML;
+        $(".add").on("click",function() {//点击后会触发下方兄弟事件
+            console.log($(".add").index($(this)))
+            $(".number")[$(".add").index($(this))].value++;
+            $(".priceAll")[$(".add").index($(this))].innerHTML="￥"+$(".control input")[$(".add").index($(this))].value*$(".price")[0].innerHTML;
         })
-        $(".del").click(function() {
-            $(".shopCar_content").eq($(".del").index($(this))).empty();
-            if($(".shopCar_content").html()=="") {
+        $(".del").click(function() {//点击后会触发下方兄弟事件
+            // console.log($(".shopCar_content li").eq($(".del").index($(this))).siblings())
+            $(".shopCar_content li").eq($(".del").index($(this))).remove().not($(".shopCar_content li").eq($(".del").index($(this))).siblings());
+            if($(".shopCar_content ul")[0].children.length==0) {  //购物车清空后
                 $(".shopAll").css("display","none");
                 $(".shopNull").css("display","block")
             }else {
                 $(".shopNull").css("display","none")
             }
         })
+
+        
+        }
     })
 </script>
 </html>

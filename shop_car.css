@@ -203,6 +203,10 @@ table { border-collapse:collapse; border-spacing:0; }
     height: 105px;
     padding-top: 15px;
     overflow: hidden;
+    border-top: 1px dashed #ddd;
+}
+.shopCar_content li:first-child {
+    border-top: none;
 }
 .shopCar_content li>i {
     margin-top: 40px;
