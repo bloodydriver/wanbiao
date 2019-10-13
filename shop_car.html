@@ -69,6 +69,24 @@
                 </div>
                 <ul></ul>
             </div>
+            <div class="payment">
+                <div class="check_payment">
+                    <i></i>
+                    <a href="javascript:void(0)">全选</a>
+                    <a href="javascript:void(0)">删除</a>
+                    <a href="javascript:void(0)">移入收藏</a>
+                    <a href="javascript:void(0)">清空失效商品</a>
+                    <p>已选商品<span>0</span>件</p>
+                </div>
+                <div class="pay">
+                    <div>
+                        <p>合计<span>￥0</span></p>
+                        <p>总额<span>￥0</span></p>
+                    </div>
+                    
+                    <button>结算</button>
+                </div>
+            </div>
         </div>
     </div>
     
@@ -98,52 +116,70 @@
                 </div>
                 <a href="">移入收藏</a>
             </li>
-            `)
+            `)}
+        
+        $(".shop_num").text($(".shopCar_content li").length);
+
+        //选中商品
+        var checked = function() {  //判断是否所有商品被选中
+            if($(".shopCar_content ul .checkOn").length==$(".shopCar_content li").length) {
+                $(".checkAll i").addClass("checkOn")
+                $(".shopName>.check").addClass("checkOn")
+            }else {
+                $(".checkAll i").removeClass("checkOn")
+                $(".shopName>.check").removeClass("checkOn")
+            }
+        }
         $(".check").click(function() {
-            console.log($(this).hasClass("checkOn"))
             if($(this).hasClass("checkOn")) {
-                $(".check").removeClass("checkOn");
+                $(this).removeClass("checkOn");
             }else {
                 $(this).addClass("checkOn")
             }
+            checked();
         })
         $(".checkAll i").click(function() {
-           console.log($(this).hasClass("checkOn"))
-            if($(".checkAll i").hasClass("checkOn")) {
+            if($(this).hasClass("checkOn")) {
                 $(".check").removeClass("checkOn")
                 $(this).removeClass("checkOn")
             }else {
-                console.log(111)
                 $(".check").addClass("checkOn")
                 $(this).addClass("checkOn")
             }
         })
-        
-        $(".sub").click(function() {//点击后会触发下方兄弟事件
+        $(".shopName>.check").click(function() {
+            if($(this).hasClass("checkOn")) {
+                $(".check").removeClass("checkOn")
+            }else {
+                $(".check").addClass("checkOn")
+            }
+            checked();
+        })
+
+        //商品计数及小计
+        $(".sub").click(function() {
             $(".number")[$(".sub").index($(this))].value--;
             if($(".number")[$(".sub").index($(this))].value<=1) {
                 $(".number")[$(".sub").index($(this))].value=1;
             }
             $(".priceAll")[$(".sub").index($(this))].innerHTML="￥"+$(".control input")[0].value*$(".price")[0].innerHTML;
         })
-        $(".add").on("click",function() {//点击后会触发下方兄弟事件
-            console.log($(".add").index($(this)))
+        $(".add").on("click",function() {
             $(".number")[$(".add").index($(this))].value++;
             $(".priceAll")[$(".add").index($(this))].innerHTML="￥"+$(".control input")[$(".add").index($(this))].value*$(".price")[0].innerHTML;
         })
-        $(".del").click(function() {//点击后会触发下方兄弟事件
-            // console.log($(".shopCar_content li").eq($(".del").index($(this))).siblings())
-            $(".shopCar_content li").eq($(".del").index($(this))).remove().not($(".shopCar_content li").eq($(".del").index($(this))).siblings());
-            if($(".shopCar_content ul")[0].children.length==0) {  //购物车清空后
+        $(".del").click(function() {
+            $(".shopCar_content li").eq($(".del").index($(this))).remove()
+            if($(".shopCar_content li").length==0) {  //购物车清空后
                 $(".shopAll").css("display","none");
                 $(".shopNull").css("display","block")
             }else {
                 $(".shopNull").css("display","none")
             }
+            $(".shop_num").text($(".shopCar_content li").length);
+            checked();
         })
-
-        
-        }
+  
     })
 </script>
 </html>

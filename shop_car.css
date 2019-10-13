@@ -154,7 +154,7 @@ table { border-collapse:collapse; border-spacing:0; }
     font-size: 12px;
     margin-bottom: 20px;
 }
-.checkAll i, .shopName>i, .shopCar_content li>i {
+.checkAll i, .shopName>i, .shopCar_content li>i, .check_payment i {
     float: left;
     margin: 11px 19px;
     background-image: url('Limages/icon.png');
@@ -285,4 +285,56 @@ table { border-collapse:collapse; border-spacing:0; }
 }
 .checkOn {
     background-position: -576px -233px !important;
+}
+.payment {
+    width: 100%;
+    height: 60px;
+    line-height: 60px;
+    margin-top: 40px;
+    margin-bottom: 90px;
+    color: #666;
+    font-size: 12px;
+    background: #f2f2f2;
+}
+.payment p {
+    display: inline-block;
+}
+.check_payment {
+    float: left;
+}
+.check_payment i {
+    margin-top: 24px;
+}
+.check_payment a {
+    display: inline-block;
+    margin-right: 28px;
+    color: #666;
+}
+.check_payment p {
+    margin-left: 133px;
+}
+.check_payment p>span {
+    color: #cc5252;
+}
+.pay {
+    float: right;
+}
+.pay button {
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    width: 180px;
+    height: 60px;
+    background: #cc5252;
+    font-weight: 700;
+    text-align: center;
+    cursor: pointer;
+}
+.pay div {
+    display: inline-block;
+    overflow: hidden;
+}
+.pay p {
+    float: right;
+    line-height: 25px;
 }
