@@ -16,15 +16,19 @@
         die("连接失败".$con->connect_error);   // 函数输出一条信息，同时推出当前脚本;
     }
     echo "连接成功";
-//  $user = $_REQUEST["user"];
-//  $pass = $_REQUEST["password"];
- 	$user = "123456";
-    $pass = 123456;
+    $pass = $_POST["password"];
+    $phone = $_POST["phone"];
     
-    $user = "create table user (name char(10), password char(10));";
-    $insert = "insert into user (name, password) values ('$user',$pass);";
-
-       if($con->query($user)===true) {
+// 	$user = 1515;
+//  $pass = 123456;
+//  $phone = 15038174722;
+//  $people = 15645623154;
+    
+    $userInfo = "create table userInfo ( password char(100), phone char(100));";
+ 
+    $insert = "insert into userInfo ( password, phone) values ('.$pass','.$phone');";
+    
+       if($con->query($userInfo)===true) {
            echo "创建成功";
        }else {
            echo "创建失败";
@@ -32,7 +36,7 @@
 
     if($con->query($insert)===true) {
         echo "注册成功";
-        header('location:demo.html');   // 是控制php进行跳转   一般我们都是跳转php文件  也可以跳转html文件
+        header('location:login.html');   // 是控制php进行跳转   一般我们都是跳转php文件  也可以跳转html文件
     }else {
         echo "插入数据失败".$con->error;
     };

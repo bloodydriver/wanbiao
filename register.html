@@ -22,7 +22,7 @@
             <p>注册万表会员</p>
             <div class="r-content-from">
                 
-            	<form action="http://localhost/login1.php" method="post" class="r-content-from1">
+            	<form action="http://localhost/login.php" method="post" onsubmit="return check()" class="r-content-from1">
                     <div>
                         <em class="r-content-from-phone"></em>
                         <input id="phone" type="text" placeholder="请输入手机号码" name="phone" maxlength="11">
@@ -33,12 +33,12 @@
                     </div>
                     <div class="r-content-from-clear">
                         <em class="r-content-from-dun"></em>
-                        <input type="text" placeholder="请输入图形验证码" id="r-content-from-input">
+                        <input  type="text" placeholder="请输入图形验证码" id="r-content-from-input">
                         <div id="r-content-from-img" ></div>
                     </div>
                     <div class="r-error">
                         <em class="r-content-from-error"></em>
-                        <span id="error2">请输入图形验证码</span>
+                        <span id="error2">请输入正确的图形验证码</span>
                     </div>
                     <!-- <div class="r-content-from-phone1">
                         <em class="r-content-from-dun"></em>
@@ -65,7 +65,7 @@
                         <em class="r-content-from-error"></em>
                         <span id="error4">两次密码不一致，请检查你的密码</span>
                     </div>
-                    <input id="r-content-from-last" type="text"  placeholder="如有推荐人，请填写推荐人手机号" name="people"  maxlength="11">
+                    <!-- <input id="r-content-from-last" type="text"  placeholder="如有推荐人，请填写推荐人手机号" name="people"  maxlength="11"> -->
                     <input type="submit" value="立即注册" class="r-content-from-submit"></input>
                     <p>点击“立即注册”，即表示您同意并愿意遵守
                         <a href="javascript:void(0)">万表网用户协议</a>
@@ -79,5 +79,8 @@
        
     </div>
     <script src="js/register.js"></script>
+    <script>
+        
+    </script>
 </body>
 </html>
