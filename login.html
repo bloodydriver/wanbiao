@@ -23,7 +23,7 @@
                 <a href="javacsript:void(0)">
                     <img src="image/login-bg.jpg" alt="">
                 </a>
-                <form action="">
+                <form action="http://localhost/login.php" method="post" onsubmit="return check()">
                     <div class="m-main-login">
                         <div class="m-main-login-one">
                             <p class="m-main-login-p">
@@ -45,9 +45,9 @@
                             </div> -->
                             <!-- 密码登录 -->
                             <div class="m-main-login-div">
-                                <input type="text" placeholder="手机号码/会员名/邮箱" class="user" >
-                                <input type="password" placeholder="密码" class="password">
-                                <button type="button" class="submit">立即登录</button>
+                                <input type="text" placeholder="手机号码/会员名/邮箱" class="user"  name="phone">
+                                <input type="password" placeholder="密码" class="password" name="password">
+                                <button type="submit" class="submit">立即登录</button>
                                 <p>
                                     <span>
                                         <a href="register.html"> 免费注册</a>
