@@ -114,10 +114,10 @@ $(function () {
     $(".foot_info_list").slideUp();
     $(".foot_slide_info").click(function () {
         $(".foot_info_list").slideToggle();
-    })
+    });
     $(".foot_slide_info1").click(function () {
         $(".foot_info_list1").slideToggle();
-    })
+    });
     // swiper
     var mySwiper = new Swiper('.swiper-container', {
         direction: 'horizontal', // 垂直切换选项
@@ -137,5 +137,14 @@ $(function () {
             delay: 3000, //时间 毫秒
             disableOnInteraction: false, //用户操作之后是否停止自动轮播默认true 
         },
-    })
+    });
+    // lazyload
+    $("img").lazyload({
+        effect: "fadeIn", 
+        container: $("body"),
+      });
+    $("img").lazyload({
+    effect: "fadeIn", 
+    container: $(".swiper-container"),
+    });
 })
