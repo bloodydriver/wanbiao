@@ -143,8 +143,5 @@ $(function () {
         effect: "fadeIn", 
         container: $("body"),
       });
-    $("img").lazyload({
-    effect: "fadeIn", 
-    container: $(".swiper-container"),
-    });
+   
 })
