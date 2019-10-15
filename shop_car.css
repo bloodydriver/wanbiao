@@ -186,6 +186,7 @@ table { border-collapse:collapse; border-spacing:0; }
     margin-bottom: 20px;
 }
 .shopName {
+    position: relative;
     height: 44px;
     line-height: 44px;
     background: #f5f5f5;
@@ -320,6 +321,7 @@ table { border-collapse:collapse; border-spacing:0; }
     float: right;
 }
 .pay button {
+    float: right;
     color: #fff;
     font-size: 14px;
     border: none;
@@ -330,11 +332,98 @@ table { border-collapse:collapse; border-spacing:0; }
     text-align: center;
     cursor: pointer;
 }
-.pay div {
+.pay>div {
     display: inline-block;
     overflow: hidden;
+    line-height: 18px;
+    margin-right: 28px;
+    text-align: right;
 }
 .pay p {
     float: right;
+    line-height: 18px;
+}
+.pay p:first-child {
+    font-size: 14px;
+    margin-top: 12px;
+}
+.pay p:first-child span {
+    color: #cc5252;
+    font-size: 14px;
+    font-weight: 700;
+}
+.number {
+    background-color: #fff;
+}
+.shopName a {
+    float: right;
+    width: 50px;
+    height: 18px;
+    line-height: 18px;
+    text-align: center;
+    margin-right: 35px;
+    margin-top: 12px;
+    border: 1px solid #cc5252;
+    border-radius: 100px;
+    color: #cc5252;
+}
+.ticket {
+    position: absolute;
+    top: 45px;
+    right: 4px;
+    padding: 24px 24px 9px 24px;
+    border-radius: 6px;
+    background: #fff;
+    box-shadow: 0 0 4px 1px #ddd;
+    z-index: 2;
+}
+.ticket em {
+    float: left;
+    width: 68px;
+    height: 38px;
+    margin-right: 15px;
+    color: #fff;
+    font-size: 18px;
+    background: url('Limages/icon.png');
+    background-position: -168px -239px;
+    background-size: 589px;
+    text-align: center;
+}
+.ticket p {
+    float: left;
+    width: 215px;
+    margin-right: 15px;
+}
+.ticket div {
+    float: left;
+    line-height: 20px;
+}
+.ticket .p1 {
+    font-size: 14px;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 19px;
+    margin-bottom: 4px;
+}
+.ticket .p2 {
+    color: #ccc;
+    line-height: 12px;
+    font-size: 12px;
+}
+.ticket i {
+    display: inline-block;
+    width: 63px;
+    height: 25px;
     line-height: 25px;
+    text-align: center;
+    color: #999;
+    border: 1px solid #ccc;
+    border-radius: 100px;
+    margin-top: 5.5px;
+    font-size: 12px;
+    font-style: normal;
+    box-sizing: border-box;
+    cursor: pointer;
 }
