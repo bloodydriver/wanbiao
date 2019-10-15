@@ -3,7 +3,14 @@ $(function () {
      var verifyCode = new GVerify("r-content-from-img");
     // 登录的js验证
    console.log(verifyCode.options.code)
-    $(".r-error").click(function () {
+  
+   $("#r-content-from-input").blur(function(){
+        if(!(($("#r-content-from-input").val())==verifyCode.options.code)){
+            $(".r-error").eq(1).css("display","block")
+        }else {
+            $(".r-error").eq(1).css("display","none")
+        } 
+    }) 
         // var res = verifyCode.validate(document.getElementById("r-content-from-img").value);  //获取验证码
   
 
@@ -20,7 +27,7 @@ $(function () {
 // 　　　　　　　　verifyCode();  //重新刷新验证码
 //             return false;
 //         }
-    });
+  
 
 });
 // 生成图形验证码的JS文件

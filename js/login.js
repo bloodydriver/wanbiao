@@ -1,4 +1,5 @@
 $(function(){
+
     //控制tab切换
     $(".m-main-login-p-right,.m-main-login-footer-hidden>a").click(function(){
         $(".m-main-login-move").css("display","none");
@@ -77,9 +78,6 @@ $(function(){
             $(".m-main-login-code-div").html("下载万表app");
             count++;
         }
+        
     })
-	$(".submit").click(function(){
-		var user = $(".user").val()
-		var pass = $(".password").val()
-	})
 })

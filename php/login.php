@@ -31,7 +31,7 @@
             if($phone==$arr["phone"] && $pass==$arr["password"]) {
                 echo "登录成功";
                 
-                header('location: xq.html');
+                header('location: index.html');
                 // if(isset($_REQUEST["rem"])) {
                 //     $rem = $_REQUEST["rem"];
                 //     if($rem==1) {
