@@ -138,10 +138,33 @@ $(function () {
             disableOnInteraction: false, //用户操作之后是否停止自动轮播默认true 
         },
     });
+    var index_to_buy_list_swiper = new Swiper('.index_buy_list_swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 3000, 
+            disableOnInteraction: false,
+        },
+        slidesPerView: 1,  //设置slider容器能够同时显示的slides数量(carousel模式)。
+        spaceBetween: 30,  //在slide之间设置距离（单位px）。
+      });
+    var index_to_list_right_swiper = new Swiper('.index_buy_list_slider_right_swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 3000, 
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+
     // lazyload
     $("img").lazyload({
-        effect: "fadeIn", 
-        // event: "sporty",
+        effect: "fadeIn",
         container: $("body"),
       });
    
