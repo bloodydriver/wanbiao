@@ -234,6 +234,7 @@ a {
 }
 .ymainbox1 {
     display: inline-block;
+    width: 1200px;
 }
 .ymainbox1 .position {
     font-size: 12px;
@@ -1480,4 +1481,226 @@ a {
 }
 .watch-left .sub a:hover {
     color: #b01330;
+}
+.watchright {
+    width: 780px;
+    float: right;
+    margin-top: 20px;
+}
+.watch-problem {
+    background-color: #f5f5f5;
+    border: 1px solid #ddd;
+    border-top: 3px solid #4d4d4d;
+    padding: 26px 30px;
+    width: 498px;
+    height: 292px;
+    float: left;
+}
+.watch-problem .top {
+    height: 22px;
+}
+.watch-problem .t {
+    color: #333;
+    margin: 15px 3px 10px;
+    font-size: 12px;
+}
+.watch-problem textarea {
+    border: 1px solid #ddd;
+    padding: 10px;
+    color: #999;
+    height: 100px;
+    width: 478px;
+    font-size: 14px;
+    resize: none;
+    outline: none;
+}
+.upload {
+    position: relative;
+    top: 0;
+    float: left;
+}
+.input-file {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 28px;
+    width: 75px;
+    opacity: 0;
+}
+.upload .btn {
+    border: 1px solid #ccc;
+    padding: 3px 10px;
+    display: block;
+    color: #666;
+    font-size: 14px;
+    text-decoration: none;
+    background: #fff;
+}
+.freepro {
+    width: 115px;
+    height: 36px;
+    display: block;
+    border: 0;
+    cursor: pointer;
+    margin-top: 5px;
+    background: #b01330;
+    color: #fff;
+    float: right;
+}
+.qa-num {
+    width: 198px;
+    height: 140px;
+    border: 1px solid #ddd;
+    float: right;
+    overflow: hidden;
+    background-color: #f9f9f9;
+}
+.qa-num .floor {
+    width: 168px;
+    padding: 15px 15px 10px;
+}
+.qa-num .tit {
+    width: 100%;
+    display: block;
+    font-weight: bold;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 8px;
+}
+.qa-num .con {
+    width: 100%;
+    font-size: 18px;
+    color: #333;
+}
+.qa-ua {
+    width: 178px;
+    height: 174px;
+    border: 1px solid #ddd;
+    float: right;
+    overflow: hidden;
+    margin-top: 10px;
+    background-color: #f9f9f9;
+    padding: 10px;
+}
+.qu-ua .top {
+    width: 100%;
+    display: block;
+    color: #997239;
+    font-size: 18px;
+
+}
+
+.qa-ua {
+    font-size: 12px;
+}
+.qa-ua .middle a {
+    color: #999;
+    margin-right: 10px;
+    margin-top: 10px;
+    float: left;
+}
+.qa-ua .middle a:hover {
+    color: #b01330;
+}
+.qa-ea {
+    width: 286px;
+    height: 122px;
+    float: left;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    margin-top: 10px;
+    padding: 10px 15px;
+}
+.qa-ea .top {
+    position: relative;
+    width: 100%;
+}
+.qa-ea .tit{
+    color: #997239;
+    font-size: 18px;
+}
+.qa-ea .top a {
+    font-size: 14px;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+.qa-ea .mid li {
+    font-size: 14px;
+    display: block;
+    margin-top: 3px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+.qa-ea .mid a {
+    color: #666;
+    line-height: 1.5;
+    cursor: pointer;
+    font-size: 12px;
+}
+.qa-ea .mid a:hover{
+    color: #b01330;
+}
+ .qa-ea .top a {
+     color: #666;
+     font-size: 14px;
+ }
+.qa-ea .mid li a i {
+    color: #b01330;
+    font-style: normal;
+    margin-right: 5px;
+}
+.qa-sb {
+    width: 402px;
+    height: 122px;
+    border: 1px solid #ddd;
+    float: right;
+    padding: 10px 20px;
+    margin-top: 10px;
+}
+.qa-sb a {
+    color: #333;
+    font-size: 18px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.qa-sb a i {
+    background-color: #b01130;
+    color: #fff;
+    font-style: normal;
+    font-size: 12px;
+    margin-right: 5px;
+    float: left;
+    position: relative;
+    top: 3px;
+    text-align: center;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+}
+.qa-sb .q {
+    font-size: 14px;
+    line-height: 20px;
+    height: 78px;
+    color: #333;
+    margin-top: 10px;
+    display: block;
+    overflow: hidden;
+}
+.qa-sb .q i {
+    font-style: normal;
+    font-size: 12px;
+    background-color: #997239;
+    color: #fff;
+    float: left;
+    margin-right: 5px;
+    text-align: center;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
 }
