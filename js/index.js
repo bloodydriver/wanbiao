@@ -141,6 +141,7 @@ $(function () {
     // lazyload
     $("img").lazyload({
         effect: "fadeIn", 
+        // event: "sporty",
         container: $("body"),
       });
     $("img").lazyload({
