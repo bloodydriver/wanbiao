@@ -144,8 +144,5 @@ $(function () {
         // event: "sporty",
         container: $("body"),
       });
-    $("img").lazyload({
-    effect: "fadeIn", 
-    container: $(".swiper-container"),
-    });
+   
 })
