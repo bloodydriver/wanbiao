@@ -6,7 +6,7 @@ $(function() {
             <i class="check"></i>
             <img src="" alt="">
             <div class="content">
-                <p>阿玛尼-LUIGI系列 AR1970 石英男表</p>
+                <p>阿玛尼-LUIGI系列 AR1970 石英男表${i+1}</p>
                 <p>真皮 黑色</p>
             </div>
             <div class="control">
@@ -88,12 +88,12 @@ $(function() {
         if($(".number")[$(".sub").index($(this))].value<=1) {
             $(".number")[$(".sub").index($(this))].value=1;
         }
-        $(".priceAll")[$(".sub").index($(this))].innerHTML="￥"+$(".control input")[0].value*$(".price")[0].innerHTML;
+        $(".priceAll")[$(".sub").index($(this))].innerHTML="￥"+$(".number")[$(".sub").index($(this))].value*$(".price").eq($(".sub").index($(this))).text();
         getPrice();
     })
     $(".add").on("click",function() {
         $(".number")[$(".add").index($(this))].value++;
-        $(".priceAll")[$(".add").index($(this))].innerHTML="￥"+$(".control input")[$(".add").index($(this))].value*$(".price")[0].innerHTML;
+        $(".priceAll")[$(".add").index($(this))].innerHTML="￥"+$(".number")[$(".add").index($(this))].value*$(".price").eq($(".add").index($(this))).text();
         getPrice();
     })
 
