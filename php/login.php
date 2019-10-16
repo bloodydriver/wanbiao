@@ -30,20 +30,13 @@
             // echo $arr["name"].$arr["password"];
             if($phone==$arr["phone"] && $pass==$arr["password"]) {
                 echo "登录成功";
-                
                 header('location: index.html');
-                // if(isset($_REQUEST["rem"])) {
-                //     $rem = $_REQUEST["rem"];
-                //     if($rem==1) {
-                        // setcookie("username",$_REQUEST["admin"], time()+60*60*24*7);
-                        // setcookie("password",$_REQUEST["pass"], time()+60*60*24*7);
-
-                    //     $txt = $_REQUEST["admin"]." ".$_REQUEST["pass"];
-                    //     setcookie("aaa", $txt, time()+60*60*24*7);
-                    // }
+                $_SESSION['name'];
+                  $_SESSION['password']; 
                 
             } else {
                 echo "登陆失败";
+                // header('location: login.html');
             }
         }
     };
