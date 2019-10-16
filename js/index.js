@@ -140,7 +140,8 @@ $(function () {
     });
     // lazyload
     $("img").lazyload({
-        effect: "fadeIn", 
+        effect: "fadeIn",
+        event: "click" ,
         container: $("body"),
       });
    
