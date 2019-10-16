@@ -119,29 +119,58 @@ $(function () {
         $(".foot_info_list1").slideToggle();
     });
     // swiper
-    var mySwiper = new Swiper('.swiper-container', {
+    var mySwiper = new Swiper('.swiper-container1', {
         direction: 'horizontal', // 垂直切换选项
         loop: true, // 循环模式选项
         effect: 'fade', //切换样式
         // 分页器
         pagination: {
-            el: '.swiper-pagination',
+            el: '.swiper-pagination1',
             clickable: true,
         },
         // 如果需要前进后退按钮
         navigation: {
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: '.swiper-button-next1',
+            prevEl: '.swiper-button-prev1',
         },
         autoplay: {
             delay: 3000, //时间 毫秒
             disableOnInteraction: false, //用户操作之后是否停止自动轮播默认true 
         },
     });
+    var index_to_buy_list_swiper = new Swiper('.index_buy_list_swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 3000, 
+            disableOnInteraction: false,
+        },
+        slidesPerView: 1,  //设置slider容器能够同时显示的slides数量(carousel模式)。
+        spaceBetween: 30,  //在slide之间设置距离（单位px）。
+        navigation: {
+            nextEl: '.index_buy_list_swiper-button-next',
+            prevEl: '.index_buy_list_swiper-button-prev',
+        },
+      });
+    var index_to_list_right_swiper = new Swiper('.index_buy_list_slider_right_swiper-container', {
+        // effect : 'fade',
+        loop: true,
+        autoplay: {
+            delay: 3000, 
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.index_buy_right_swiper-pagination',
+        },
+        navigation: {
+            nextEl: '.index_buy_right_swiper-button-next',
+            prevEl: '.index_buy_right_swiper-button-prev',
+        },
+    });
+
     // lazyload
     $("img").lazyload({
         effect: "fadeIn",
-        event: "click" ,
+        event: "sporty" ,
         container: $("body"),
       });
    
