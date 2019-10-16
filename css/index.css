@@ -502,6 +502,7 @@ a:hover {
 .index_nav_right_glass_arrow {
     float: left;
     background: url(../images/spriteA.png) 0 -346px;
+    -o-background-size: 475px;
     background-size: 475px;
     width: 32px;
     height: 50px;
@@ -560,7 +561,7 @@ a:hover {
     background: url(../images/spriteA.png) -446px -256px no-repeat;
 }
 
-.bot {
+/* .bot {
     position: fixed;
     top: 222px;
     right: 0;
@@ -668,7 +669,7 @@ a:hover {
 .bot_msg_btm a:first-child {
     color: #cc3d3d;
     font-weight: 700;
-}
+} */
 
 .index_left_nav {
     position: absolute;
@@ -720,11 +721,11 @@ a:hover {
     color: #b3b3b3;
 }
 
-.index_left_nav li a:first-child:hover {
+.index_left_nav li>a:first-child:hover {
     text-decoration: none;
 }
 
-.index_left_nav li a:hover {
+.index_left_nav li>a:hover {
     text-decoration: underline;
 }
 
@@ -871,12 +872,14 @@ a:hover {
     width: 100%;
     height: 460px;
 }
+
 .swiper-container a {
     height: 460px;
     display: block;
     overflow: hidden;
     position: relative;
 }
+
 .swiper-slide a img {
     position: absolute;
     left: 48%;
@@ -938,6 +941,107 @@ a:hover {
     background-color: #fff;
 }
 
+.index_time_to_buy_left_box {
+    float: left;
+    width: 350px;
+    height: 280px;
+    overflow: hidden;
+}
+
+.index_time_to_buy_left {
+    position: relative;
+    width: 350px;
+    height: 280px;
+    background-color: red;
+    -webkit-transition: all 0.5s;
+    -o-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+}
+
+.index_time_to_buy_left:hover {
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+.index_time_to_buy_left:hover .index_time_to_buy_left_shadow {
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, #000 70%);
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0, #000 70%);
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0, #000 70%);
+    background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0) 0, #000 70%);
+}
+
+.index_time_to_buy_left_txt {
+    position: absolute;
+    left: 0;
+    bottom: 30px;
+    width: 350px;
+    height: 50px;
+    color: #fff;
+    text-align: center;
+    z-index: 9;
+}
+
+.index_time_to_buy_left img {
+    width: 350px;
+    height: 280px;
+}
+
+.index_time_to_buy_left_txt1 {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.index_time_to_buy_left_txt2 {
+    font-size: 12px;
+}
+
+.index_time_to_buy_left_shadow {
+    width: 350px;
+    height: 110px;
+    position: absolute;
+    bottom: 0;
+    opacity: .6;
+    z-index: 8;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0, #000 100%);
+    background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0, #000 100%);
+    background-image: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0, #000 100%);
+    background-image: linear-gradient(-180deg, rgba(0, 0, 0, 0) 0, #000 100%);
+}
+
+.index_buy_list_slider {
+    float: left;
+    width: 600px;
+    height: 280px;
+    margin: 0 10px 0 30px;
+    background-color: red;
+    overflow: hidden;
+}
+.index_buy_list_swiper-container,
+.index_buy_list_slider_right_swiper-containe {
+    width: 100%;
+    height: 100%;
+}
+.index_buy_list_swiper-container .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+  }
+.index_but_list_slider_right {
+    float: right;
+    width: 190px;
+    height: 280px;
+    background-color: red;
+    overflow: hidden;
+}
+.index_buy_list_slider_right_swiper-container {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+}
 .top_foot {
     background-color: #fff;
 }
