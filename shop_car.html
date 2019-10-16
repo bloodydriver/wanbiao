@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="shop_car.css">
-    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>   
-    <title>Document</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>  
+    <script src="shop_car.js"></script> 
+    <title>购物车</title>
 </head>
 <body>
     <div class="box">
@@ -65,15 +66,20 @@
             <div class="shopCar_content">
                 <div class="shopName">
                     <i class="check"></i>
-                    <span>阿玛尼ARMANI <a href="javascript:void(0)">领券</a></span>
-                    <div class="ticket">
-                        <em>¥870</em>
-                        <div>
-                            <p class="p1">大牌保价神券</p></br>
-                            <p class="p2">2019.10.09-2019.10.19</p>
-                        </div>
-                        <i>领取</i>
-                    </div>
+                    <span>阿玛尼ARMANI 
+                        <a href="javascript:void(0)">
+                            <span>领券</span>
+                            <div class="ticket" style="display: none;">
+                                <em>¥870</em>
+                                <div>
+                                    <p class="p1">大牌保价神券</p></br>
+                                    <p class="p2">2019.10.09-2019.10.19</p>
+                                </div>
+                                <i>领取</i>
+                            </div>
+                        </a>
+                    </span>
+                    <em style="display: none;"></em>
                 </div>
                 <ul></ul>
             </div>
@@ -90,151 +96,12 @@
                     <div>
                         <p>合计<span>￥<span class="total">0</span></span></p>
                         <br>
-                        <p>总额<span>￥0</span></p>
+                        <p>总额<span>￥</span><sapn class="totalPrice">0</span></p>
                     </div>
                     <button>结算</button>
                 </div>
             </div>
         </div>
     </div>
-    
-    
 </body>
-<script>
-    $(function() {
-        //商品添加
-        for(var i=0; i<5; i++) {
-            $(".shopCar_content ul").prepend(`
-            <li>
-                <i class="check"></i>
-                <img src="" alt="">
-                <div class="content">
-                    <p>阿玛尼-LUIGI系列 AR1970 石英男表</p>
-                    <p>真皮 黑色</p>
-                </div>
-                <div class="control">
-                    <span>￥<span class="price">2120</span></span>
-                    <div>
-                        <button class="sub" type="button">-</button>
-                        <input class="number" type="text" value="1" disabled>
-                        <button class="add" type="button">+</button>
-                    </div>
-                    <span class="priceAll" style="font-weight: 700;">￥2120</span>
-                    <a class="del" href="javascript:void(0)">删除</a>
-                </div>
-                <a href="">移入收藏</a>
-            </li>
-            `)}
-        
-        $(".shop_num").text($(".shopCar_content li").length);
-
-        //选中商品
-        var checked = function() {  //判断是否所有商品被选中
-            if($(".shopCar_content ul .checkOn").length==$(".shopCar_content li").length) {
-                $(".checkAll i").addClass("checkOn")
-                $(".shopName>.check").addClass("checkOn")
-                $(".check_payment i").addClass("checkOn")
-                
-            }else {
-                $(".checkAll i").removeClass("checkOn")
-                $(".shopName>.check").removeClass("checkOn")
-                $(".check_payment i").removeClass("checkOn")
-            }
-        }
-        $(".check").click(function() { //单个商品选中
-            if($(this).hasClass("checkOn")) {
-                $(this).removeClass("checkOn");
-            }else {
-                $(this).addClass("checkOn")
-            }
-            checked();
-            getPrice();
-        })
-        $(".checkAll i").click(function() { //全选
-            if($(this).hasClass("checkOn")) {
-                $(".check").removeClass("checkOn")
-                $(this).removeClass("checkOn")
-                $(".check_payment i").removeClass("checkOn")
-            }else {
-                $(".check").addClass("checkOn")
-                $(this).addClass("checkOn")
-                $(".check_payment i").addClass("checkOn")
-            }
-            getPrice();
-        })
-        $(".shopName>.check").click(function() { //选中店铺
-            if($(this).hasClass("checkOn")) {
-                $(".check").removeClass("checkOn")
-            }else {
-                $(".check").addClass("checkOn")
-            }
-            checked();
-            getPrice();
-        })
-
-        $(".check_payment i").click(function() { //结算全选
-            if($(this).hasClass("checkOn")) {
-                $(this).removeClass("checkOn");
-                $(".check").removeClass("checkOn");
-                $(".checkAll i").removeClass("checkOn");
-            }else {
-                $(".check").addClass("checkOn");
-                $(this).addClass("checkOn");
-                $(".checkAll i").addClass("checkOn");
-            }
-            checked();
-            getPrice();
-        })
-
-        //商品计数及小计
-        $(".sub").click(function() {
-            $(".number")[$(".sub").index($(this))].value--;
-            if($(".number")[$(".sub").index($(this))].value<=1) {
-                $(".number")[$(".sub").index($(this))].value=1;
-            }
-            $(".priceAll")[$(".sub").index($(this))].innerHTML="￥"+$(".control input")[0].value*$(".price")[0].innerHTML;
-            getPrice();
-        })
-        $(".add").on("click",function() {
-            $(".number")[$(".add").index($(this))].value++;
-            $(".priceAll")[$(".add").index($(this))].innerHTML="￥"+$(".control input")[$(".add").index($(this))].value*$(".price")[0].innerHTML;
-            getPrice();
-        })
-
-        //删除商品
-        var clearCar = function () {
-            if($(".shopCar_content li").length==0) {  //购物车清空后
-                $(".shopAll").css("display","none");
-                $(".shopNull").css("display","block")
-            }else {
-                $(".shopNull").css("display","none")
-            }
-            $(".shop_num").text($(".shopCar_content li").length);//删除后的商品数量
-        }
-        $(".del").click(function() { //单个商品删除
-            $(".shopCar_content li").eq($(".del").index($(this))).remove()
-            clearCar();
-            checked();
-            getPrice();
-        })
-        $(".checkDel").click(function() { //选中商品删除
-            $(".shopCar_content li>.checkOn").parent().remove(); 
-            clearCar();
-            getPrice();
-        })
-
-        //结算总价
-       function getPrice() {
-            $(".total")[0].innerHTML=0;//每次执行事件进行清0
-            for (var j=0;j<$(".shopCar_content li").length;j++) { //循环所有的商品
-                if($(".shopCar_content li .check").eq(j).hasClass("checkOn")) { //判断每个商品是否被选中
-                    $(".total")[0].innerHTML+=("+"+$(".priceAll").eq(j).text().substr(1));  //选中后进行价格拼接  
-                }
-            }
-            $(".total")[0].innerHTML=eval($(".total").text());  //计算总价
-            $(".checkedNum").text($(".shopCar_content li .checkOn").length); //选中商品的数量
-        }
-        
-    })
-</script>
 </html>
