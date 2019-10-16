@@ -1104,7 +1104,7 @@ $(function(){
     })
 });
 $(function() {
-    $(".w_cont_img1").lazyload({
+    $("img").lazyload({
       placeholder: "../images/w_imgfex1.png", 
       effect: "fadeIn"
      }); 
