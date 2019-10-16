@@ -17,27 +17,23 @@
     echo "连接成功";
 
 
-    $phone = $_POST["phone"];
-    $pass = $_POST["password"];
-    
-    echo $phone;
-    echo $pass;
+	$phone = $_POST["phone"];
+	$pass = $_POST["password"];
+	
 
-    $select = "select * from userinfo;";
-    $test = $con->query($select);
-    if($test->num_rows>0) {
-        while($arr=$test->fetch_assoc()) {
-            // echo $arr["name"].$arr["password"];
-            if($phone==$arr["phone"] && $pass==$arr["password"]) {
-                echo "登录成功";
-                header('location: index.html');
-                $_SESSION['name'];
-                  $_SESSION['password']; 
-                
-            } else {
-                echo "登陆失败";
-                // header('location: login.html');
-            }
-        }
-    };
+	
+	
+	$sql = "select * from userinfo where phone=$phone ;";
+	$test = $con->query($sql);
+	if ($test) {
+		 while($arr=$test->fetch_assoc()) {
+			 if($pass==$arr["password"]){
+				header('location: index.html');
+			} else {
+				header('location: demo.html');
+			}
+		 }   
+	}
+
+ 
 ?>

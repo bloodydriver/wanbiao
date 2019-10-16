@@ -38,7 +38,8 @@
         echo "注册成功";
         header('location:login.html');   // 是控制php进行跳转   一般我们都是跳转php文件  也可以跳转html文件
     }else {
-        echo "插入数据失败".$con->error;
+        echo "注册失败";
+        header('location:register.html'); 
     };
 
 
