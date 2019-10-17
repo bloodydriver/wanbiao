@@ -211,9 +211,11 @@
 .swiper-pagination-fraction,
 .swiper-pagination-custom,
 .swiper-container-horizontal > .swiper-pagination-bullets {
+  position: absolute;
   bottom: 10px;
   left: 0;
   width: 100%;
+  
 }
 /* Bullets */
 .swiper-pagination-bullets-dynamic {
