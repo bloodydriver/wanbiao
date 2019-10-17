@@ -957,6 +957,11 @@ $(function(){
         $(".w_number-Bt1").on("click",function(){
             $(this).addClass("w_number-Bta").siblings().removeClass("w_number-Bta");
         })
+        if($(".w_number-Bt1").eq(0).hasClass("w_number-Bta")==true){
+            $(".w_number-Bt3").removeClass("w_number-show")
+        }else{
+            $(".w_number-Bt3").addClass("w_number-show")
+        }
     })
     $(".w_number-Bt3").on("click",function(){
         $a--;
@@ -999,10 +1004,26 @@ $(function(){
         $(".w_number-Bt1").on("click",function(){
             $(this).addClass("w_number-Bta").siblings().removeClass("w_number-Bta");
         })
+        if($(".w_number-Bt1").eq(0).hasClass("w_number-Bta")==true){
+            $(".w_number-Bt3").removeClass("w_number-show")
+        }else{
+            $(".w_number-Bt3").addClass("w_number-show")
+        }
     });
     $(".w_number-Bt1").on("click",function(){
         $(this).addClass("w_number-Bta").siblings().removeClass("w_number-Bta");
+        var $a=$(this).index();
+        if($(".w_number-Bt1").eq(0).hasClass("w_number-Bta")==true){
+            $(".w_number-Bt3").removeClass("w_number-show")
+        }else{
+            $(".w_number-Bt3").addClass("w_number-show")
+        }
     })
+    if($(".w_number-Bt1").eq(0).hasClass("w_number-Bta")==true){
+        $(".w_number-Bt3").removeClass("w_number-show")
+    }else{
+        $(".w_number-Bt3").addClass("w_number-show")
+    }
 });
 $(function(){
     var att=["积家手表","朗格手表","江诗丹顿手表","百达翡丽手表","宝玑手表","伯爵手表","爱彼手表","宝珀手表","格拉苏蒂∙原创手表","法穆兰手表","雅典手表","帝舵手表",
