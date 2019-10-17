@@ -121,21 +121,24 @@ $(function() {
 
     //结算总价
    function getPrice() {
-        $(".total")[0].innerHTML=0; //每次执行事件进行清0
+        $(".totalPrice")[0].innerHTML=0; //每次执行事件进行清0
         for (var j=0;j<$(".shopCar_content li").length;j++) { //循环所有的商品
             if($(".shopCar_content li .check").eq(j).hasClass("checkOn")) { //判断每个商品是否被选中
-                $(".total")[0].innerHTML+=("+"+$(".priceAll").eq(j).text().substr(1));  //选中后进行价格拼接  
+                $(".totalPrice")[0].innerHTML+=("+"+$(".priceAll").eq(j).text().substr(1));  //选中后进行价格拼接  
             }
         }
-        $(".total")[0].innerHTML=eval($(".total").text());  //计算总价
+        $(".totalPrice")[0].innerHTML=eval($(".totalPrice").text());  //计算总价
         $(".checkedNum").text($(".shopCar_content li .checkOn").length); //选中商品的数量
         if($(".ticket>em").hasClass("ticketOn")) {  //判断是否领券
-            $(".totalPrice").text($(".total")[0].innerHTML-$(".ticket>em").text().substr(1)); //领券后的价格
-            if($(".totalPrice").text()<0) { //避免领券后价格为负值
-                $(".totalPrice").text(0)
+            $(".total").text($(".totalPrice")[0].innerHTML-$(".ticket>em").text().substr(1)); //领券后的价格
+            if($(".total").text()<0) { //避免领券后价格为负值，同时在有价格时显示优惠价格
+                $(".total").text(0);
+                $(".totalPrice~span").hide()
+            }else {
+                $(".totalPrice~span").show()
             }
         }else {
-            $(".totalPrice").text($(".total")[0].innerHTML);  //未领券的价格
+            $(".total").text($(".totalPrice")[0].innerHTML);  //未领券的价格
         }
     }
     
@@ -152,6 +155,9 @@ $(function() {
         $(this).text("领取成功").css("border","none");
         if($(this).text("领取成功")) {
             $(".ticket>em").addClass("ticketOn")
+            $(".totalPrice").parent().append(`
+                <span style="margin-left: 10px">活动优惠${$(".ticket>em").text()}</span> 
+                `)                  //领取优惠券后在总额后插入优惠价格
             getPrice();
         }
     })
