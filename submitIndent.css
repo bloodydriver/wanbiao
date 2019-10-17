@@ -1,0 +1,176 @@
+.submitIndent {
+    width: 990px;
+    margin: auto;
+}
+.dot i{
+    background: #cc5252;
+    border: none;
+}
+.header_right ul {
+    position: relative;
+}
+/*购物进度线*/
+.header_right ul:before {
+    content: "";
+    height: 0;
+    width: 156px;
+    border-top: 1px solid #cc5252;
+    position: absolute;
+    top: -1px;
+    left: 0;
+}
+.message {
+    margin-top: 20px;
+}
+.L_title {
+    width: 100%;
+    height: 20px;
+    line-height: 16px;
+    border-left: 2px solid #eee;
+}
+.L_title h2 {
+    float: left;
+    color: #333;
+    font-size: 16px;
+}
+.L_title>span {
+    float: left;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #666;
+    background: #fff;
+    margin: 0 10px 0 -9px;
+}
+.L_title>span i {
+    width: 4px;
+    height: 4px;
+    background: #666;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 6px;
+    margin-left: 4px;
+}
+.L_title h2 a {
+    display: inline-block;
+    color: #477db3;
+    margin-left: 10px;
+    text-decoration: underline;
+    font-weight: 400;
+    font-size: 12px;
+}
+.L_address {
+    width: 100%;
+    overflow: hidden;
+    padding: 14px 0 50px 10px;
+    border-left: 2px solid #eee;
+}
+.addAddress, .L_address ul li {
+    border: 1px dotted #477db3;
+    float: left;
+    margin-right: 12px;
+    margin-bottom: 10px;
+    width: 314px;
+    height: 84px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.addAddress span {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin: auto;
+    line-height: 80px;
+    text-align: center;
+    color: #477db3;
+}
+.addAddress i {
+    display: inline-block;
+    background-image: url('Limages/icon.png');
+    background-position: -328px -325px;
+    background-size: 589px;
+    width: 14px;
+    height: 14px;
+    vertical-align: -2px;
+}
+.L_address ul {
+    float: left;
+    font-size: 12px;
+}
+.L_address ul li {
+    position: relative;
+    border: 2px solid #cc5252;
+}
+.L_address ul li>span {
+    display: none;
+    top: 0;
+    right: 0;
+    position: absolute;
+    width: 50px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    color: #477db3;
+    background: #f1f1f1;
+} 
+.L_address ul li:hover .hover {
+    display: block;
+}
+.L_address ul li .p1 {
+    color: #cc5252;
+    font-weight: 700;
+    font-size: 12px;
+    padding-top: 9px;
+    line-height: 24px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 34px;
+    padding-right: 20px;
+}
+.L_address ul li .p1>span {
+    margin-right: 2px;
+}
+.L_address ul li .p1 i {
+    font-style: normal;
+    display: inline-block;
+    width: 36px;
+    height: 16px;
+    line-height: 15px;
+    background: #f1f1f1;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    padding: 1px 2px;
+}
+.L_address ul li .p2, .L_address ul li .p3 {
+    color: #999;
+    height: 18px;
+    line-height: 18px;
+    padding-left: 34px;
+    padding-right: 20px;
+}
+.L_address ul li .p2 i {
+    display: inline-block;
+    background-image: url('Limages/icon.png');
+    background-position: -280px -296px;
+    background-size: 589px;
+    width: 18px;
+    height: 18px;
+    vertical-align: bottom;
+    margin-left: -20px;
+}
+.L_address ul li>div {
+    position: relative;
+}
+.L_address ul li>div>i {
+    display: inline-block;
+    position: relative;
+    background-image: url('Limages/icon.png');
+    background-position: -376px -325px;
+    background-size: 589px;
+    width: 14px;
+    height: 14px;
+    bottom: 2px;
+    left: 297px;
+}
