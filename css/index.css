@@ -862,7 +862,7 @@ a:hover {
     background-color: #ccaa7a;
     color: #fff;
 }
-
+/* 主体部分CSS开始 */
 .main {
     position: relative;
     background-color: #f5f5f5;
@@ -942,6 +942,7 @@ a:hover {
 }
 
 .index_time_to_buy_left_box {
+    position: relative;
     float: left;
     width: 350px;
     height: 280px;
@@ -953,13 +954,14 @@ a:hover {
     width: 350px;
     height: 280px;
     background-color: red;
+}
+.index_time_to_buy_left img {
     -webkit-transition: all 0.5s;
     -o-transition: all 0.5s;
     -moz-transition: all 0.5s;
     transition: all 0.5s;
 }
-
-.index_time_to_buy_left:hover {
+.index_time_to_buy_left:hover img {
     -webkit-transform: scale(1.1);
     -moz-transform: scale(1.1);
     -ms-transform: scale(1.1);
@@ -1042,6 +1044,8 @@ a:hover {
     font-size: 18px;
     background: #fff;
 }
+
+/* 主体部分CSS结束 */
 .top_foot {
     background-color: #fff;
 }
