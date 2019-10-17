@@ -898,7 +898,7 @@ a:hover {
     height: 60px;
     top: 230px;
     margin-top: -30px;
-    z-index: 9;
+    z-index: 1;
     cursor: pointer;
 }
 
