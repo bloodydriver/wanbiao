@@ -141,38 +141,45 @@ $(function () {
     var index_to_buy_list_swiper = new Swiper('.index_buy_list_swiper-container', {
         loop: true,
         autoplay: {
-            delay: 3000, 
+            delay: 3000,
             disableOnInteraction: false,
         },
-        slidesPerView: 1,  //设置slider容器能够同时显示的slides数量(carousel模式)。
-        spaceBetween: 30,  //在slide之间设置距离（单位px）。
+        slidesPerView: 1, //设置slider容器能够同时显示的slides数量(carousel模式)。
+        spaceBetween: 30, //在slide之间设置距离（单位px）。
         navigation: {
             nextEl: '.index_buy_list_swiper-button-next',
             prevEl: '.index_buy_list_swiper-button-prev',
         },
-      });
+    });
     var index_to_list_right_swiper = new Swiper('.index_buy_list_slider_right_swiper-container', {
         loop: true,
         effect: 'fade',
         autoplay: {
-            delay: 3000, 
+            delay: 3000,
             disableOnInteraction: false,
         },
         pagination: {
             el: '.index_buy_right_swiper-pagination',
-            clickable :true,
+            clickable: true,
         },
         navigation: {
             nextEl: '.index_buy_right_swiper-button-next',
             prevEl: '.index_buy_right_swiper-button-prev',
         },
     });
-
+    //主页tab切换
+    $(".zd_index_boom_tit li").css({
+        "background-color": "#333",
+        "color": "#f2d291",
+    }).siblings().css({
+        "color": "#666",
+        "background-color": "#e6e6e6",
+    })
     // lazyload
     $("img").lazyload({
         effect: "fadeIn",
-        event: "sporty" ,
+        event: "sporty",
         container: $("body"),
-      });
-   
+    });
+
 })
