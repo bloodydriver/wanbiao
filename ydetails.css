@@ -1704,3 +1704,223 @@ a {
     height: 18px;
     line-height: 18px;
 }
+.watch-midd {
+    width: 100%;
+    height: 361px;
+    margin-top: 40px;
+    border: 1px solid #ccc;
+}
+.watch-midd .top {
+    position: relative;
+    display: block;
+    width: 100%;
+}
+.watch-midd .top .tit {
+    font-size: 22px;
+    color: #333;
+}
+.watch-midd .top a {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 14px;
+    color: #666;
+}
+.watch-top {
+    display: block;
+    height: 610px;
+} 
+.watch-midd .bot {
+    padding:  20px 0 10px;
+}
+.watch-midd .mid  .tabs {
+    display: flex;
+    flex-flow: row nowrap;
+    border-top: 1px solid#ddd;
+}
+.watch-midd .mid li {
+    height: 38px;
+    line-height: 38px;
+    width: 248px;
+    text-align: center;
+    color: #666;
+    float: left;
+    border-right: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    font-size: 14px;
+    cursor: pointer;
+}
+.watch-midd .bot .l {
+    width: 472px;
+    float: left;
+    padding: 0 20px;
+}
+.watch-midd .lquest a {
+    color: #333;
+    font-size: 18px;
+    width: 100%;
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.lquest a i {
+    background-color: #b01130;
+    color: #fff;
+    font-style: normal;
+    font-size: 12px;
+    margin-right: 5px;
+    float: left;
+    position: relative;
+    top: 3px;
+    text-align: center;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+}
+.lquest .respon {
+    font-size: 14px;
+    line-height: 20px;
+    height: 78px;
+    color: #333;
+    margin-top: 10px;
+    display: block;
+    overflow: hidden;
+}
+.lquest .respon i {
+    font-style: normal;
+    font-size: 12px;
+    background-color: #997239;
+    color: #fff;
+    float: left;
+    margin-right: 5px;
+    text-align: center;
+    width: 18px;
+    height: 18px;
+    line-height: 18px;
+}
+.watch-midd .bot .bottom {
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid #ddd;
+}
+.watch-midd .bot .bottom li {
+    width: 100%;
+    display: block;
+    position: relative;
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #333;
+}
+.watch-midd .bot .bottom li:hover a{
+    color: #b01330;
+    text-decoration: none;
+} 
+.watch-midd .bot li  i {
+    font-style: normal;
+    color: #b01330;
+    margin: 0 5px;
+}
+.watch-midd .bot .time {
+    position: absolute;
+    top: 4px;
+    right: 0;
+    color: #999;
+}
+.watch-midd .bot li a {
+    color: #333;
+}
+.watch-midd .bot .r {
+    width: 470px;
+    float: right;
+    border-left: 1px dashed #ddd;
+    padding: 0 10px;
+}
+.yreponse .ff {
+    font-size: 22px;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+.yreponse {
+    margin-top: 40px;
+    height: 470px;
+}
+.goodss  .item li{
+    margin: 0 10px;
+    width: 225px;
+    height: 420px;
+    float: left;
+    overflow: hidden;
+}
+.goodss  li {
+    float: left;
+}
+.goodss  img{
+    height: 330px;
+    margin-left: -40px;
+}
+.goodss .desc {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    display: block;
+    font-size: 14px;
+    margin-top: 20px;
+}
+.goodss .desc .price {
+    color: #b01330;
+    font-size: 12px;
+}
+.goodss .desc .text {
+    width: 100%;
+    display: block;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #333;
+    font-size: 12px;
+}
+.more .first {
+    border-right: 1px dashed #ddd;
+    width: 321px;
+    height: 250px;
+    float: left;
+    margin-right: 20px;
+}
+.more .first .top {
+    color: #333;
+    font-size: 22px;
+
+}
+.more .first .mo {
+    float: right;
+}
+.more li {
+    width: 300px;
+    margin-bottom: 5px;
+    position: relative;
+}
+.more li:hover a{
+    color: #b01330;
+    text-decoration: none;
+}
+.more li .a{
+    width: 70%;
+    display: inline-block;
+    height: 21px;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 14px;;
+}
+.timer {
+    position: absolute;
+    color: #999;
+    top: 5px;
+    right: 0;
+    font-size: 12px;
+}
+
