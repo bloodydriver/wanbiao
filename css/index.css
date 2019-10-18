@@ -1036,17 +1036,69 @@ a:hover {
     background-color: #fff;
     overflow: hidden;
 }
+
 .index_buy_list_swiper-container,
 .index_buy_list_slider_right_swiper-containe {
     position: relative;
     width: 100%;
     height: 100%;
 }
-.index_buy_list_swiper-container .swiper-slide {
+
+.index_buy_list_swiper-container .swiper-slide > a {
+    float: left;
+    width: 200px;
+    height: 280px;
+}
+.index_buy_list_swiper-container .swiper-slide > a img {
+    position: relative;
+    width: 166px;
+    height: 166px;
+}
+.index_buy_list_swiper-container .swiper-slide > a  > p {
     text-align: center;
-    font-size: 18px;
-    background: #fff;
-  }
+    color: #666;
+    margin: 10px 0;
+    font-weight: 800;
+    font-size: 12px;
+    font-family: DIN-Bold;
+}
+.index_buy_list_price {
+    width: 110px;
+    height: 20px;
+    margin: 0 auto;
+    font-size: 12px;
+    color: #fff;
+    text-align: center;
+}
+.index_buy_list_swiper-container .swiper-slide > a  i {
+    float: left;
+    line-height: 20px;
+    padding: 0 6px;
+    box-sizing: border-box;
+    font-weight: 800;
+    font-style: normal;
+    font-family: DIN-Bold;
+}
+.index_buy_list_swiper-container .swiper-slide > a i:first-child {
+    min-width: 35px;
+    background: url(../images/spriteA.png) -42px -374px;
+}
+.index_buy_list_swiper-container .swiper-slide > a i:last-child {
+    min-width: 45px;
+    background-color: #f2f2f2;
+    color: #cc5252;
+    border-radius: 0 10px 10px 0;
+}
+del {
+    display: block;
+    margin-top: 3px;
+    text-align: center;
+    text-decoration: line-through;
+    color: #999;
+    font-size: 12px;
+    font-family: DIN-Bold;
+    font-weight: 800;
+}
 .index_but_list_slider_right {
     float: right;
     width: 190px;
@@ -1054,42 +1106,46 @@ a:hover {
     background-color: #fff;
     overflow: hidden;
 }
+
 .index_buy_list_slider_right_swiper-container {
     position: relative;
-    height: 280px;
+    width: 145px;
+    height: 200px;
+    margin: 25px auto;
     text-align: center;
     font-size: 18px;
     background-color: #fff;
 }
+
 .index_buy_right_swiper-button-next,
 .index_buy_right_swiper-button-prev {
     width: 20px;
     height: 20px;
     position: absolute;
-    top: 140px;
+    top: 100px;
     margin-top: -10px;
     cursor: pointer;
     z-index: 9;
 }
 
 .index_buy_right_swiper-button-prev {
-    left: 0;
+    left: -20px;
     background: url(../images/spriteA.png) -137px -374px no-repeat;
 }
 .index_buy_right_swiper-button-next {
-    right: 0;
-    background: url(../images/spriteA.png) -95px -374px no-repeat;
+    right: -20px;
+    background: url(../images/spriteA.png) -87px -374px no-repeat;
 }
 .index_buy_right_swiper-button-prev:hover {
     background: url(../images/spriteA.png) -418px -296px no-repeat;
 }
 .index_buy_right_swiper-button-next:hover {
-    background: url(../images/spriteA.png) -116px -374px no-repeat;
+    background: url(../images/spriteA.png) -109px -374px no-repeat;
 }
 .index_buy_list_slider_right_swiper-container .index_buy_right_swiper-pagination {
     position: absolute;
-    left: 40px;
-    bottom: 5px;
+    left: 25px;
+    bottom: -35px;
     width: auto;
 }
 .index_buy_right_swiper-pagination .swiper-pagination-bullet {
@@ -1116,6 +1172,7 @@ a:hover {
     z-index: 9;
     cursor: pointer;
 }
+
 .index_buy_list_swiper-button-prev {
     left: 0;
     background: url(../images/spriteA.png) -142px -184px no-repeat;
@@ -1132,6 +1189,8 @@ a:hover {
 }
 
 /* 主体部分CSS结束 */
+
+
 .top_foot {
     background-color: #fff;
 }

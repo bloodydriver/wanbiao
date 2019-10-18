@@ -152,14 +152,15 @@ $(function () {
         },
       });
     var index_to_list_right_swiper = new Swiper('.index_buy_list_slider_right_swiper-container', {
-        // effect : 'fade',
         loop: true,
+        effect: 'fade',
         autoplay: {
             delay: 3000, 
             disableOnInteraction: false,
         },
         pagination: {
             el: '.index_buy_right_swiper-pagination',
+            clickable :true,
         },
         navigation: {
             nextEl: '.index_buy_right_swiper-button-next',
