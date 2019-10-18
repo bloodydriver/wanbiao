@@ -119,6 +119,7 @@ $(function () {
         $(".foot_info_list1").slideToggle();
     });
     // swiper
+    // 主页轮播
     var mySwiper = new Swiper('.swiper-container1', {
         direction: 'horizontal', // 垂直切换选项
         loop: true, // 循环模式选项
@@ -138,6 +139,7 @@ $(function () {
             disableOnInteraction: false, //用户操作之后是否停止自动轮播默认true 
         },
     });
+    // 限时购轮播1
     var index_to_buy_list_swiper = new Swiper('.index_buy_list_swiper-container', {
         loop: true,
         autoplay: {
@@ -151,6 +153,7 @@ $(function () {
             prevEl: '.index_buy_list_swiper-button-prev',
         },
     });
+    // 限时购轮播2
     var index_to_list_right_swiper = new Swiper('.index_buy_list_slider_right_swiper-container', {
         loop: true,
         effect: 'fade',
@@ -165,6 +168,20 @@ $(function () {
         navigation: {
             nextEl: '.index_buy_right_swiper-button-next',
             prevEl: '.index_buy_right_swiper-button-prev',
+        },
+    });
+    // 二手交易轮播
+    var zd_index_boom_slider_list_swiper = new Swiper('.zd_index_boom_swiper-container', {
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        slidesPerView: 1,
+        spaceBetween: 30,
+        navigation: {
+            nextEl: '.zd_index_boom_swiper-button-next',
+            prevEl: '.zd_index_boom_swiper-button-prev',
         },
     });
     //主页tab切换

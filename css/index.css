@@ -1210,7 +1210,8 @@ del {
 /* 主体部分CSS结束 */
 
 
-.top_foot {
+.top_foot,
+.footer {
     background-color: #fff;
 }
 
@@ -1603,4 +1604,42 @@ li .tit_spc:hover {
 }
 .index_tab_btns_right:hover {
     background: url(../images/spriteA.png) -342px -184px no-repeat;
+}
+.zd_index_boom_swiper-container {
+    position: relative;
+    float: left;
+    margin-left: 8px;
+    width: 800px;
+    height: 280px;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.zd_index_boom_swiper-button-prev,
+.zd_index_boom_swiper-button-next {
+    width: 30px;
+    height: 60px;
+    position: absolute;
+    top: 50%;
+    z-index: 9;
+    cursor: pointer;
+}
+
+
+.zd_index_boom_swiper-button-prev {
+    left: 0;
+    background: url(../images/spriteA.png) -142px -184px no-repeat;
+}
+
+.zd_index_boom_swiper-button-prev:hover {
+    background: url(../images/spriteA.png) -222px -184px no-repeat;
+}
+
+.zd_index_boom_swiper-button-next {
+    right: 0;
+    background: url(../images/spriteA.png) -302px -184px no-repeat;
+}
+
+.zd_index_boom_swiper-button-next:hover {
+    background: url(../images/spriteA.png) -182px -184px no-repeat;
 }
