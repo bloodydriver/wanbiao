@@ -108,7 +108,11 @@ $(function () {
               <em>${$s}</em>
               <i>秒</i>`
         );
-    }
+        if (countdown < 0) {
+            clearInterval(index_countDown_timer);
+            $(".zd_index_left_time").html("已失效");
+        }
+    };
     var index_countDown_timer = setInterval(indexCountdown, 1000);
     // 尾部彩蛋
     $(".foot_info_list").slideUp();
@@ -177,6 +181,8 @@ $(function () {
             delay: 3000,
             disableOnInteraction: false,
         },
+        observer: true, //修改swiper自己或子元素时，自动初始化swiper
+        observeParents: true, //修改swiper的父元素时，自动初始化swiper
         slidesPerView: 1,
         spaceBetween: 30,
         navigation: {
@@ -192,6 +198,44 @@ $(function () {
         "color": "#666",
         "background-color": "#e6e6e6",
     })
+    //二手拍卖倒计时
+    function index_boom_countDown(ele, futureTime) {
+        var localTime = new Date(); //当前时间的毫秒数
+        var inputTime = new Date(futureTime); //规定时间的毫秒数
+        var countdown = (inputTime - localTime) / 1000; //时间差
+        var $h = parseInt(countdown / 60 / 60 % 24);
+        $h = $h < 10 ? "0" + $h : $h;
+        var $m = parseInt(countdown / 60 % 60);
+        $m = $m < 10 ? "0" + $m : $m;
+        var $s = parseInt(countdown % 60);
+        $s = $s < 10 ? "0" + $s : $s;
+        $(ele).html(
+            ` <em>${$h}</em>
+              <i>:</i>
+              <em>${$m}</em>
+              <i>:</i>
+              <em>${$s}</em>
+            `
+        );
+        if (countdown < 0) {
+            clearInterval(zd_index_boom_countDown);
+            $(ele).html("已失效");
+        }
+    };
+
+    function time() {
+        index_boom_countDown('.boom_countDown1', '2019-10-25 14:15:00');
+        index_boom_countDown('.boom_countDown2', '2019-11-18 23:48:00');
+        index_boom_countDown('.boom_countDown3', '2019-12-18 01:48:00');
+        index_boom_countDown('.boom_countDown4', '2019-12-18 07:23:00');
+        index_boom_countDown('.boom_countDown5', '2019-10-25 01:15:00');
+        index_boom_countDown('.boom_countDown6', '2019-11-11 11:11:11');
+        index_boom_countDown('.boom_countDown7', '2019-12-28 00:00:00');
+        index_boom_countDown('.boom_countDown8', '2019-11-19 00:00:00');
+    }
+    var zd_index_boom_countDown = setInterval(time, 1000);
+
+
     // lazyload
     $("img").lazyload({
         effect: "fadeIn",

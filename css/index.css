@@ -1502,27 +1502,21 @@ li .tit_spc:hover {
     vertical-align: bottom;
 }
 
-.zd_index_time_shop a {
-    float: right;
-    display: block;
-    width: 70px;
-    height: 60px;
-    line-height: 60px;
-    font-size: 12px;
-}
-
 .zd_index_time_shop a:hover {
     text-decoration: underline;
 }
+
 .zd_index_boom {
     position: relative;
     margin-top: 20px;
 }
+
 .zd_index_boom_tit {
     height: 60px;
     margin-left: 10px;
 }
-.zd_index_boom_tit > p {
+
+.zd_index_boom_tit>p {
     float: left;
     line-height: 60px;
     font-weight: 800;
@@ -1530,11 +1524,13 @@ li .tit_spc:hover {
     color: #4a4a4a;
     margin-right: 20px;
 }
+
 .zd_index_boom_tit ul {
     float: left;
     margin-top: 15px;
 }
-.zd_index_boom_tit  li {
+
+.zd_index_boom_tit li {
     position: relative;
     float: left;
     min-width: 70px;
@@ -1549,10 +1545,12 @@ li .tit_spc:hover {
     background-color: #e6e6e6;
     cursor: pointer;
 }
+
 .zd_index_boom_tit li:hover {
     background-color: #333;
     color: #f2d291;
 }
+
 .index_shape_of_jiao {
     position: absolute;
     bottom: -4px;
@@ -1562,26 +1560,33 @@ li .tit_spc:hover {
     height: 4px;
     background: url(../images/spriteA.png) -326px -168px no-repeat;
 }
+
 .index_boom_list_right {
     float: right;
     width: 800px;
     height: 360px;
 }
+
 .index_boom_list_right a {
     float: right;
 }
+
 .index_boom_list_right a:nth-child(1) {
     margin-bottom: 10px;
 }
+
 .index_boom_list_right a:nth-child(2) {
     margin: 0 15px 10px 0;
 }
+
 .index_boom_list_right a:nth-child(4) {
     margin-right: 15px;
 }
+
 .index_boom_list_right img:hover {
-    box-shadow: 0 2px 10px 0 rgba(0,0,0,.15);
+    box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .15);
 }
+
 .index_tab_btns_left,
 .index_tab_btns_right {
     width: 30px;
@@ -1591,20 +1596,25 @@ li .tit_spc:hover {
     cursor: pointer;
     z-index: 1;
 }
+
 .index_tab_btns_left {
     left: 0;
     background: url(../images/spriteA.png) -142px -184px no-repeat;
 }
+
 .index_tab_btns_left:hover {
     background: url(../images/spriteA.png) -262px -184px no-repeat;
 }
+
 .index_tab_btns_right {
     right: 0;
     background: url(../images/spriteA.png) -302px -184px no-repeat;
 }
+
 .index_tab_btns_right:hover {
     background: url(../images/spriteA.png) -342px -184px no-repeat;
 }
+
 .zd_index_boom_swiper-container {
     position: relative;
     float: left;
@@ -1615,16 +1625,35 @@ li .tit_spc:hover {
     overflow: hidden;
 }
 
+.index_right_more {
+    height: 60px;
+    float: right;
+}
+
+.index_right_more a {
+    display: block;
+    width: 70px;
+    height: 60px;
+    line-height: 60px;
+    font-size: 12px;
+    color: #666;
+}
+
+.index_right_more a:hover {
+    color: #333;
+    text-decoration: underline;
+}
+
 .zd_index_boom_swiper-button-prev,
 .zd_index_boom_swiper-button-next {
     width: 30px;
     height: 60px;
     position: absolute;
     top: 50%;
+    margin-top: -30px;
     z-index: 9;
     cursor: pointer;
 }
-
 
 .zd_index_boom_swiper-button-prev {
     left: 0;
@@ -1642,4 +1671,97 @@ li .tit_spc:hover {
 
 .zd_index_boom_swiper-button-next:hover {
     background: url(../images/spriteA.png) -182px -184px no-repeat;
+}
+
+.zd_index_boom_swiper-container .swiper-slide>a {
+    position: relative;
+    float: left;
+    width: 200px;
+    height: 280px;
+    text-align: center;
+}
+
+.zd_index_boom_swiper-container .swiper-slide>a img {
+    float: left;
+    margin-top: 30px;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.index_boom_label {
+    display: block;
+    padding: 0 8px;
+    height: 18px;
+    line-height: 18px;
+    position: absolute;
+    top: 30px;
+    left: 34px;
+    color: #fff;
+    font-size: 12px;
+    background: linear-gradient(90deg, #e6c9a1 0, #ccaa7a 100%);
+    border-radius: 8px 1px 12px 1px;
+    z-index: 9;
+    font-style: normal;
+}
+
+.index_boom_info {
+    position: relative;
+    top: 195px;
+    width: 100%;
+}
+
+.index_boom_tit {
+    width: 100%;
+    color: #666;
+    font-weight: 700;
+    text-align: center;
+    font-size: 12px;
+    margin: 10px 0 5px 0;
+}
+
+.index_boom_time_box {
+    position: relative;
+    height: 16px;
+    background: linear-gradient(270deg, #f26161 0, #cc3d3d 100%);
+    border-radius: 8px;
+    display: inline-block;
+    padding: 0 3px;
+    text-align: center;
+}
+
+.index_boom_time_box i {
+    font-style: normal;
+}
+
+.index_boom_time_icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    background: url(../images/spriteA.png) -219px -346px;
+    width: 16px;
+    height: 16px;
+}
+
+.index_boom_countDown {
+    padding: 0 8px 0 20px;
+    line-height: 16px;
+    font-size: 12px;
+    color: #fff;
+}
+
+.index_boom_money {
+    margin-top: 8px;
+}
+
+.index_boom_price {
+    color: #b34747;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.index_boom_del {
+    text-decoration: line-through;
+    color: #999;
+    font-size: 12px;
 }
