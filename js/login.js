@@ -29,10 +29,6 @@ $(function(){
         $(".m-main-login-logo").css("display","none");
 
     })
-    // console.log($(".m-main-login-code-div").html())
-    // $(".m-main-login-p-right").click(function(){
-        
-    // })
     var num = 0;
     $(".m-main-login-footer-right").click(function(){
         if(num%2==0){

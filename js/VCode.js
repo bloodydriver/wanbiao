@@ -11,24 +11,6 @@ $(function () {
             $(".r-error").eq(1).css("display","none")
         } 
     }) 
-        // var res = verifyCode.validate(document.getElementById("r-content-from-img").value);  //获取验证码
-  
-
-        // 判断：输入框里验证码和获取到的验证码是否一致
-//         if (res) {   //如果一样就验证成功
-// 　　　　　　　　console.log(验证成功的操作);
-//         }else if(res.length <1){   //验证码输入的长度=等于0，就提示验证码错误
-// 　　　　　　　　console.log(验证码错误的操作);
-// 　　　　　　　　verifyCode();  //重新刷新验证码
-//             return false;
-
-//         } else {   //如不一致，就验证错误
-// 　　　　　　　　console.log(验证码错误的操作);
-// 　　　　　　　　verifyCode();  //重新刷新验证码
-//             return false;
-//         }
-  
-
 });
 // 生成图形验证码的JS文件
 !(function(window, document) {
