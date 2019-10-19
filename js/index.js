@@ -1,11 +1,11 @@
 $(function () {
     // 右侧客服
-    $(".ad_close").click(function () {
-        $(this).parent().slideUp();
-    })
-    $(".bot_msg_close").click(function () {
-        $(".bot_msg").css("opacity", "0");
-    })
+    // $(".ad_close").click(function () {
+    //     $(this).parent().slideUp();
+    // })
+    // $(".bot_msg_close").click(function () {
+    //     $(".bot_msg").css("opacity", "0");
+    // })
     // 主页搜索栏
     $("#index_search").focus(function () {
         $(this).val("").css("color", "#333");
@@ -191,13 +191,61 @@ $(function () {
         },
     });
     //主页tab切换
-    $(".zd_index_boom_tit li").css({
+    // $("zd_index_boom .index_chart_tab:first-child").show().siblings().hide();
+
+    $(".zd_index_boom_tit ul li:first-child").css({
         "background-color": "#333",
         "color": "#f2d291",
-    }).siblings().css({
-        "color": "#666",
-        "background-color": "#e6e6e6",
-    })
+    }).siblings().children().hide();
+
+    indexTab = $(".index_chart_tab .index_time_to_buy_left_box");
+
+    $(".zd_index_boom_tit li").on("mouseover",function() {
+        i = $(this).index();
+        indexTab.eq(i).css({"display":"block"}).siblings().css({"display":"none"});
+        $(this).css({
+            "background-color": "#333",
+            "color": "#f2d291",
+        }).children().show();
+        $(this).siblings().css({
+            "color": "#666",
+            "background-color": "#e6e6e6",
+        }).children().hide();
+    });
+
+    i = $(".zd_index_boom_tit li").index();
+    
+    $(".index_tab_btns_left").click(function() {
+        i--;
+        if(i < 0) {
+            i = 2;
+        }
+        indexTab.eq(i).css({"display":"block"}).siblings().css({"display":"none"});
+        $(this).parent().next().children().eq(1).children().eq(i).css({
+            "background-color": "#333",
+            "color":"#f2d291",
+        }).children().show();
+        $(this).parent().next().children().eq(1).children().eq(i).siblings().css({
+            "color":"#666",
+            "background-color": "#e6e6e6",
+        }).children().hide();
+    });
+    
+    $(".index_tab_btns_right").click(function() {
+        i++;
+        if(i >= indexTab.length) {
+            i = 0;
+        }
+        indexTab.eq(i).css({"display":"block"}).siblings().css({"display":"none"});
+        $(this).parent().next().children().eq(1).children().eq(i).css({
+            "background-color": "#333",
+            "color":"#f2d291",
+        }).children().show();
+        $(this).parent().next().children().eq(1).children().eq(i).siblings().css({
+            "color":"#666",
+            "background-color": "#e6e6e6",
+        }).children().hide();
+    });
     //二手拍卖倒计时
     function index_boom_countDown(ele, futureTime) {
         var localTime = new Date(); //当前时间的毫秒数
