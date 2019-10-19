@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="shop_car.css">
     <link rel="stylesheet" href="submitIndent.css">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="shop_car.js"></script>
     <title>Document</title>
 </head>
 <body>
@@ -104,38 +106,222 @@
                     </li>
                 </ul>
                 <a class="addAddress" href="javascript:void(0)">
-                    
                     <span><i></i> 添加收货地址</span>
                 </a>
             </div>
         </div>
-        <div class="">
+        <div class="delivery">
             <div class="L_title">
                 <span>
                     <i></i>
                 </span>
                 <h2>送货清单（<span>1</span>）<a href="javascript:void(0)">返回购物车修改</a></h2>
             </div>
-            <div class="">
-
+            <div class="shopList">
+                <h2>阿玛尼ARMANI（<span>1</span>）</h2> 
+                <ul>
+                    <li>
+                        <div class="shopMessage">
+                            <a href="">
+                                <img src="https://image8.wbiao.co/shop/c7fe11add1b24475b1d582b053687469.jpg?x-oss-process=image/resize,w_90,h_90" alt="">
+                            </a>
+                            <div class="shopContent">
+                                <p class="p1">阿玛尼-LUIGI系列 AR1970 石英男表</p>
+                                <p class="p2">真皮 黑色</p>
+                                <span>七天退换</span>
+                            </div>
+                            <div class="shopMessage_fl">
+                                <span>￥<span class="price">2120</span></span>
+                                <div>
+                                    <button class="sub" type="button">-</button>
+                                    <input class="number" type="text" value="1" disabled>
+                                    <button class="add" type="button">+</button>
+                                </div>
+                                <span class="priceAll" style="font-weight: 700;">￥2120</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <h2><span>保障服务 </span>万表名匠手表维修诚信平台</h2>
+                <ul class="ul1">
+                    <li>
+                        <div class="shopMessage">
+                            <a href="">
+                                <img src="https://image8.wbiao.co/mall/165117ff93814c5fbe64d5b6af93d088.jpg?x-oss-process=image/resize,w_90,h_90" alt="">
+                            </a>
+                            <div class="shopContent">
+                                <p class="p1">万表名匠电池服务-手表维修保养售后</p>
+                                
+                            </div>
+                            <div class="shopMessage_fl">
+                                <span class="span1"><span>￥77</span><span class="priceLine">￥128</span></span>
+                                <span class="span2">+优惠加购</span>
+                                <span class="priceAdd">￥0</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="shopMessage">
+                            <a href="">
+                                <img src="https://image8.wbiao.co/shop/6ad1267c6907474f855e6675b27f3fba.jpg?x-oss-process=image/resize,w_90,h_90" alt="">
+                            </a>
+                            <div class="shopContent">
+                                <p class="p1">万表名匠1年延保服务-手表维修保养售后</p>
+                            </div>
+                            <div class="shopMessage_fl">
+                                <span class="span1"><span>￥143</span><span class="priceLine">￥238</span></span>
+                                <span class="span2">+优惠加购</span>
+                                <span class="priceAdd" style="font-weight: 700;">￥0</span>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="shopMessage">
+                            <a href="">
+                                <img src="https://image8.wbiao.co/shop/a0733d95ae334bbca632660c2888ab76.jpg?x-oss-process=image/resize,w_90,h_90" alt="">
+                            </a>
+                            <div class="shopContent">
+                                <p class="p1">万表名匠3年延保服务-手表维修保养售后</p>
+                            </div>
+                            <div class="shopMessage_fl">
+                                <span class="span1"><span>￥197</span><span class="priceLine">￥328</span></span>
+                                <span class="span2">+优惠加购</span>
+                                <span class="priceAdd" style="font-weight: 700;">￥0</span>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
             </div>
         </div>
-        <div>
-            <div class="L_title">
+        <div class="L_title">
                 <span>
                     <i></i>
                 </span>
-                <h2>收货人信息</h2>
+                <h2>发票类型</h2>
             </div>
+        <div class="invoice">
+            <a href="javascript:void(0)">填写信息</a>
+        </div>
+        <div class="L_title">
+                <span>
+                    <i></i>
+                </span>
+                <h2>优惠券／现金券／礼金券／积分抵用</h2>
+            </div>
+        <div class="coupon">
+            <span>券无可用</span>积分可抵 
+            <span>0</span>元
+            <a href="javascript:void(0)">修改</a>
+        </div>
+        <div class="L_title">
+                <span>
+                    <i></i>
+                </span>
+                <h2>留言</h2>
+            </div>
+        <div class="leave_msg">
             <div>
-
+                <textarea class="msg_area" id="msg_area" maxlength="200" placeholder="请输入..."></textarea>
+                <span>0/200</span>
+            </div>
+            
+        </div>
+        <div class="pay_price">
+            <p>商品总额<span>￥0</span></p>
+            <p>活动优惠<span>￥0</span></p>
+            <p>优惠<span>￥0</span></p>
+            <p>运费<span>￥0</span></p>
+        </div>
+        <div class="L_submit">
+            <span>提交订单</span>
+            <p>应付款<span>￥0</span></p>
+        </div>
+    </div>
+    <div class="shade">
+        <div class="edit_box">
+            <h2>
+                <span>添加收货地址</span>
+                <i></i>
+            </h2>
+            <div class="edit">
+                <p class="p1"> 
+                    <span>(收货人)</span>
+                    <input type="text" placeholder="必填">
+                </p>
+                <p class="p2">
+                    <span>(手机号)</span>
+                    <input type="text" maxlength="11" placeholder="必填">
+                </p>
+                <p class="p3">
+                    <span>(所在地区)</span>
+                    <select name="" id=""></select>
+                </p>
+                <p class="p4"> 
+                    <span>(详细地址)</span>
+                    <input type="text" placeholder="街道门牌">
+                </p>
+                <p class="p5">
+                    <i></i>
+                    <span>设为默认</span>
+                </p>
+            </div>
+            <div class="footer">
+                <button class="btn1">保存并使用</button>
+                <button class="btn2">取消</button>
             </div>
         </div>
-            
-            
-
-        
     </div>
-   
+    
+    <script>
+        $(function() {
+            
+            $(".span2").click(function() {
+                if($(this).hasClass("changeSpan")) {   //是否优惠加购
+                    $(this).removeClass("changeSpan")
+                    $(this).text("+优惠加购");
+                    $(".priceAdd").eq($(".span2").index($(this))).text("￥0")
+                }else {
+                    $(this).addClass("changeSpan")
+                    $(this).text("取消加购");
+                    $(".priceAdd").eq($(".span2").index($(this))).text($(".span1 span:first-child").eq($(".span2").index($(this))).text())
+                }
+            })
+
+            $(".msg_area").keyup(function() {  //留言文本键入字符长度
+                $(".leave_msg span").text($(this).val().length+"/200")
+            })
+
+            //默认地址
+            $(".edit .p5 i").click(function() {
+                if($(this).hasClass("light")) {
+                    $(this).removeClass("light")
+                }else {
+                    $(this).addClass("light")
+                }
+            })
+
+            //添加收货地址
+            $(".addAddress").click(function() {
+                $(".shade").css("display","block")
+            })
+            $(".edit_box h2 i").click(function() {
+                $(".shade").removeAttr("style")
+            })
+            $(".footer .btn2").click(function() {
+                $(".shade").removeAttr("style")
+            })
+            $(".footer .btn1").click(function() {
+                if(!/^\w/.test($(".edit .p1 input").val())) {
+                    console.log($(".edit .p1 input").val())
+                }else if(!/^1[34578]\d{9}$/.test($(".edit .p2 input").val())){
+                    console.log($(".edit .p2 input").val())
+                }else {
+                    
+                }
+                
+            })
+
+        })
+    </script>
 </body>
 </html>
