@@ -99,7 +99,7 @@
 }
 .L_address ul li {
     position: relative;
-    border: 2px solid #cc5252;
+    border: 1px solid #ddd;
 }
 .L_address ul li>span {
     display: none;
@@ -117,7 +117,7 @@
     display: block;
 }
 .L_address ul li .p1 {
-    color: #cc5252;
+    color: #999;
     font-weight: 700;
     font-size: 12px;
     padding-top: 9px;
@@ -153,7 +153,7 @@
 .L_address ul li .p2 i {
     display: inline-block;
     background-image: url('Limages/icon.png');
-    background-position: -280px -296px;
+    background-position: -546px -422px;
     background-size: 589px;
     width: 18px;
     height: 18px;
@@ -164,7 +164,7 @@
     position: relative;
 }
 .L_address ul li>div>i {
-    display: inline-block;
+    display: none;
     position: relative;
     background-image: url('Limages/icon.png');
     background-position: -376px -325px;
@@ -516,4 +516,37 @@
 }
 .footer .btn1:hover {
     opacity: .9;   
+}
+.edit .p3 span {
+    color: #666;
+    font-size: 12px;
+    line-height: 24px;
+}
+.form-control {
+    outline: none;
+    width: 120px;
+    height: 36px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #999;
+    font-size: 16px;
+    padding-left: 5px;
+    margin-right: 8px;
+}
+.form-control option {
+    font-size: 12px;
+}
+.edit>p {
+    position: relative;
+}
+.edit>p em {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    font-size: 12px;
+    color: #cc5252;
+}
+.L_address ul .changeBorder{
+    border: 2px solid #cc5252;
 }

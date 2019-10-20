@@ -22,6 +22,42 @@ $(function() {
             <a href="">移入收藏</a>
         </li>
         `)}
+        var datalist="";
+        $(".pay button").click(function() {  //结算时把勾选的商品节点本地存储
+            
+            for(var j=0;j<$(".checkOn").length;j++) {
+                // console.log($(".content p:first-child").eq($(".shopCar_content li").index($(".checkOn").parent().eq(j))).text())
+                datalist+=`
+                <li>
+                    <div class="shopMessage">
+                        <a href="">
+                            <img src="https://image8.wbiao.co/shop/c7fe11add1b24475b1d582b053687469.jpg?x-oss-process=image/resize,w_90,h_90" alt="">
+                        </a>
+                        <div class="shopContent">
+                            <p class="p1">${$(".content p:first-child").eq($(".shopCar_content li").index($(".checkOn").parent().eq(j))).text()}</p>
+                            <p class="p2">${$(".content p:last-child").eq($(".shopCar_content li").index($(".checkOn").parent().eq(j))).text()}</p>
+                            <span>七天退换</span>
+                        </div>
+                        <div class="shopMessage_fl">
+                            <span>￥<span class="price">${$(".price").eq($(".shopCar_content li").index($(".checkOn").parent().eq(j))).text()}</span></span>
+                            <div>
+                                <button class="sub" type="button">-</button>
+                                <input class="number" type="text" value="${$(".number").eq($(".shopCar_content li").index($(".checkOn").parent().eq(j))).val()}" disabled>
+                                <button class="add" type="button">+</button>
+                            </div>
+                            <span class="priceAll" style="font-weight: 700;">${$(".priceAll").eq($(".shopCar_content li").index($(".checkOn").parent().eq(j))).text()}</span>
+                        </div>
+                    </div>
+                </li>
+                `
+            }
+            localStorage.setItem("list",datalist)
+            if($(".checkOn").length>0) {  //勾选商品后可跳转至结算
+                window.location.href = "submitIndent.html";
+            }
+        })
+        localStorage.setItem("sex","女")
+        
     
     $(".shop_num").text($(".shopCar_content li").length);
 
