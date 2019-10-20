@@ -539,7 +539,7 @@ table { border-collapse:collapse; border-spacing:0; }
 }
 .w_signU1 {
     width: 750px;
-    height: 106px;
+    height: auto;
     padding: 7px 15px;
     overflow: hidden
 }
@@ -744,7 +744,7 @@ table { border-collapse:collapse; border-spacing:0; }
     height: 12px;
     border: 1px solid #333;
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: text-bottom;;
 }
  .w_class5-lt1{
         height: 40px;

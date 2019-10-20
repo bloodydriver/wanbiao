@@ -841,12 +841,14 @@ $(function(){
     $(".w_classify7").on("click",function(){
         if($(".w_classify7-i").hasClass("w_classify7-i1")==false){
             $(".w_classify7-i").addClass("w_classify7-i1")
+            $(".w_classify7-span").html("收起");
             $(".w_classify6").show()
         }else{
             $(".w_classify7-i").removeClass("w_classify7-i1")
-            $(".w_classify6").hide()
+            $(".w_classify6").hide();
+            $(".w_classify7-span").html("更多选项（表盘、表带、功能、防水等");
         }
-    })
+    });
     $(".w_top-inupt").on("click",function(){
         var $bt=$(this).index()
         if($(".w_top-lti").eq($bt).hasClass("w_top-lti1")==false){
@@ -1180,6 +1182,105 @@ $(function(){
     }else{
         $(".w_number-Bt3").addClass("w_number-show")
     }
+});
+$(function(){
+    var $arr=[{"img1":"https://image8.wbiao.co/shop/201703_16_TEZ_LQP__35128.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥49.3","bt7":"¥591","bt8":"积优JEAYOU-柔软鳄鱼皮-新大竹节纹系列表带 20*18TEZ#LQP01 棕色白线真皮表带","bt10":"","bt101":"销量704","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201703_31_CHB18-01-CBK107_38226.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥23.3 ","bt7":"￥279","bt8":"CHIMAERA-意大利系列 CHB18-01-CBK107 真皮手工表带","bt10":"","bt101":"销量66","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201707_14_CHC22-05-CBK107_31170.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥31.5","bt7":" ￥378","bt8":"CHIMAERA-法国小牛皮系列 CHC22-05-CBK107 真皮手工表带","bt10":"","bt101":"销量3","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201707_14_CHC18-05-CBK107_27998.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥31.5","bt7":" ￥378","bt8":"CHIMAERA-法国小牛皮系列 CHC18-05-CBK107 真皮手工表带","bt10":"","bt101":"销量1","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201706_08_CHB20-01-CBK110_18088.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥19.1 ","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201707_14_CHC22-01-CBK107_94669.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥28 ","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201706_08_CHB19-04-CBK110_18319.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥19.1 ","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201510_14_CF19-03-BK07_50239.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥25 ","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201507_15_CE22-01-BK07_61080.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥26 ","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201507_15_CE20-02-BK07_42554.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥24.1 ","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201507_15_CE21-01-BK08_46045.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥25 ","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201507_15_CE18-03-BK07_24730.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥32","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201707_14_CHC20-05-CBK110_30722.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥22 ","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201707_14_CHC20-03-CBK107_54600.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥23.1 ","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201707_14_CHC19-01-CBK107_61528.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥25.2 ","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201707_14_CHC19-01-CBK107_61528.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥22.2 ","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201507_15_CE18-01-BK07_01741.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥23 ","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201507_15_CE20-02-BK07_95528.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥25 ","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201703_28_20_18YZP04_21017.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥62 ","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201703_27_20_18AZZ04_41742.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥58 ","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201605_05_U00212_28115.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥55.2 ","bt7":"￥300","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201605_05_U00212_28115.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥55.2 ","bt7":"￥300","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/d1a3aa53007f497f8bd689d14fcc1ea8.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥55.2 ","bt7":"￥302","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量7","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201703_28_20_18YZZ10_51080.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥25 ","bt7":"￥300","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量12","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201605_05_U00202_39526.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥32 ","bt7":"￥301","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量25","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201703_28_20_18YZZ04_75609.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥52 ","bt7":"￥220","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201703_28_19_18YZP04_44287.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥45 ","bt7":"￥200","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量55","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/a5d1256d66e74b80af1439997af41220.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥62 ","bt7":"￥300","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量56","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201703_16_YZLK__66191.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥22","bt7":"￥350","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量25","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201703_16_TEZ_LQP__35128.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥49.3","bt7":"¥591","bt8":"积优JEAYOU-柔软鳄鱼皮-新大竹节纹系列表带 20*18TEZ#LQP01 棕色白线真皮表带","bt10":"","bt101":"销量704","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201703_31_CHB18-01-CBK107_38226.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥23.3 ","bt7":"￥279","bt8":"CHIMAERA-意大利系列 CHB18-01-CBK107 真皮手工表带","bt10":"","bt101":"销量66","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201707_14_CHC22-05-CBK107_31170.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥31.5","bt7":" ￥378","bt8":"CHIMAERA-法国小牛皮系列 CHC22-05-CBK107 真皮手工表带","bt10":"","bt101":"销量3","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201707_14_CHC18-05-CBK107_27998.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥31.5","bt7":" ￥378","bt8":"CHIMAERA-法国小牛皮系列 CHC18-05-CBK107 真皮手工表带","bt10":"","bt101":"销量1","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201703_28_20_18YZW04_49031.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥32 ","bt7":"￥120","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量15","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201703_28_20_18YZP01_13508.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥25 ","bt7":"￥150","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量46","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201507_15_CE18-01-BK07_01741.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥23 ","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201507_15_CE20-02-BK07_95528.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥25 ","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201703_28_20_18YZP04_21017.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥62 ","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201703_27_20_18AZZ04_41742.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥58 ","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201605_05_U00212_28115.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥55.2 ","bt7":"￥300","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201706_08_CHB20-01-CBK110_18088.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥19.1 ","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201707_14_CHC22-01-CBK107_94669.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥28 ","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201706_08_CHB19-04-CBK110_18319.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥19.1 ","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201510_14_CF19-03-BK07_50239.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥25 ","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201703_28_20_18YZP04_21017.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥62 ","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201703_27_20_18AZZ04_41742.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥58 ","bt7":"￥229","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201703_16_YZZ__09031.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥55.2 ","bt7":"￥300","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+            {"img1":"https://image8.wbiao.co/shop/201703_28_21_18YZZ01_97292.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":"￥55.2 ","bt7":"￥300","bt8":"CHIMAERA-意大利系列 CHB18-03-CBK107 小牛皮手工表带","bt10":"","bt101":"销量27","bt11":"表带精品馆"},
+        ];
+    for(var i=0;i<$arr.length;i++){
+        $(".w_cont3").append(`
+        <li class='w_cont-bt'>
+            <a class='w_cont-bta' href='https://www.wbiao.cn/goods/62520.html' >
+                <img class='w_cont_img1' src='${$arr[i].img1}' alt="">  
+                <div class="w_cont-bt1"> 
+                    <img class="w_cont_img2" src='${$arr[i].img2}' alt=""> 
+                    <span class="w_cont-bt2">${$arr[i].bt2}</span>
+                </div>  
+            </a>  
+            <div class="w_cont-bt3">
+                <p class="w_cont-bt4"> 
+                    <span class="w_cont-bt5">月付</span> 
+                    <span class="w_cont-bt6">${$arr[i].bt6}</span> 
+                    <span class="w_cont-bt7">${$arr[i].bt7}</span> 
+                </p> 
+                <a class="w_cont-bt8" href="https://www.wbiao.cn/goods/62520.html">${$arr[i].bt8}</a>
+                <div class="w_cont-bt9"> 
+                    <span class="w_cont-bt10">${$arr[i].bt10}</span> 
+                    <span class="w_cont-bt101">${$arr[i].bt101}</span>
+                </div> 
+                <a  class="w_cont-bt11" href="https://www.wbiao.cn/shop/13">${$arr[i].bt11}</a>
+                <p class="w_cont-bt12">  
+                    <span>免息分期</span>       
+                </p>
+                <div class="w_cont-bt13"> 
+                    <a class="w_cont-bt14" href="javascript:void(0);" >加入收藏</a> 
+                    <a class="w_cont-bt15" href="javascript:void(0);" >已收藏</a>   
+                    <a class="w_cont-bt16" href="javascript:void(0);" >加入购物车</a> 
+                </div>
+            </div>
+        </li> 
+        `)
+    }
+    $(".w_cont-bt").on("mouseover",function(){
+        var $gt=$(this).index();
+        $(".w_cont-bt13").eq($gt).show()
+    })
+    $(".w_cont-bt").on("mouseout",function(){
+        var $gt=$(this).index();
+        $(".w_cont-bt13").eq($gt).hide()
+    })
+    $(".w_cont-bt16").on("click",function(){
+        $(".w_cont-shop").addClass("w_cont-shop1")   
+        $thime=setTimeout(function(){
+            $(".w_cont-shop").removeClass("w_cont-shop1")   
+        },3000)
+    })
 });
 $(function(){
     var att=["积家手表","朗格手表","江诗丹顿手表","百达翡丽手表","宝玑手表","伯爵手表","爱彼手表","宝珀手表","格拉苏蒂∙原创手表","法穆兰手表","雅典手表","帝舵手表",
