@@ -5,7 +5,7 @@ $(function () {
    console.log(verifyCode.options.code)
   
    $("#r-content-from-input").blur(function(){
-        if(!(($("#r-content-from-input").val())==verifyCode.options.code)){
+        if(!(($("#r-content-from-input").val())==verifyCode.options.code.toLowerCase())){
             $(".r-error").eq(1).css("display","block")
         }else {
             $(".r-error").eq(1).css("display","none")

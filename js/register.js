@@ -58,3 +58,28 @@ function check(){
         return true;
     }
 }
+
+
+var num=0;
+$(".r-content-from-one").click(function(){
+    if(num%2==0){
+        $("#password").attr("type","text");
+        $(this).css("background-position","-187px -137px")
+    }else{
+        $("#password").attr("type","password");
+        $(this).css("background-position","80px 102px")
+    }
+    num++;
+})
+var num1=0;
+$(".r-content-from-two").click(function(){
+    if(num1%2==0){
+        $("#password1").attr("type","text");
+        $(this).css("background-position","-187px -137px")
+    }else{
+        $("#password1").attr("type","password");
+        $(this).css("background-position","80px 102px")
+       
+    }
+    num1++;
+})
