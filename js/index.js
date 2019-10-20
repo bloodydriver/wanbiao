@@ -45,7 +45,7 @@ $(function () {
         $(".index_right_hide_nav").hide();
     })
     // 主页左侧导航栏渐变 
-    $(".index_left_nav_list_img").on("scroll", function () {
+    $(".index_left_nav_list_img").on("scroll load", function () {
         var index_left_nav_scrollTop = $(this).scrollTop();
         if (index_left_nav_scrollTop > 10) {
             $(".index_left_nav_btm_shadow").hide()
@@ -203,9 +203,13 @@ $(function () {
 
     indexChartTab = $(".index_chart_tab .index_time_to_buy_left_box");
     var i = 0;
-    $(".zd_index_chart_tit li").on("mouseover",function() {
+    $(".zd_index_chart_tit li").on("mouseover", function () {
         i = $(this).index();
-        indexChartTab.eq(i).css({"display":"block"}).siblings().css({"display":"none"});
+        indexChartTab.eq(i).css({
+            "display": "block"
+        }).siblings().css({
+            "display": "none"
+        });
         $(this).css({
             "background-color": "#333",
             "color": "#f2d291",
@@ -215,49 +219,61 @@ $(function () {
             "background-color": "#e6e6e6",
         }).children().hide();
     });
-    
-    $(".index_tab_btns_left").click(function() {
+
+    $(".index_tab_btns_left").click(function () {
         i--;
-        if(i < 0) {
-            i = indexChartTab.length-1;
+        if (i < 0) {
+            i = indexChartTab.length - 1;
         }
-        indexChartTab.eq(i).css({"display":"block"}).siblings().css({"display":"none"});
+        indexChartTab.eq(i).css({
+            "display": "block"
+        }).siblings().css({
+            "display": "none"
+        });
         $(this).parent().next().children().eq(1).children().eq(i).css({
             "background-color": "#333",
-            "color":"#f2d291",
+            "color": "#f2d291",
         }).children().show();
         $(this).parent().next().children().eq(1).children().eq(i).siblings().css({
-            "color":"#666",
+            "color": "#666",
             "background-color": "#e6e6e6",
         }).children().hide();
     });
-    
-    $(".index_tab_btns_right").click(function() {
+
+    $(".index_tab_btns_right").click(function () {
         i++;
-        if(i >= indexChartTab.length) {
+        if (i >= indexChartTab.length) {
             i = 0;
         }
-        indexChartTab.eq(i).css({"display":"block"}).siblings().css({"display":"none"});
+        indexChartTab.eq(i).css({
+            "display": "block"
+        }).siblings().css({
+            "display": "none"
+        });
         $(this).parent().next().children().eq(1).children().eq(i).css({
             "background-color": "#333",
-            "color":"#f2d291",
+            "color": "#f2d291",
         }).children().show();
         $(this).parent().next().children().eq(1).children().eq(i).siblings().css({
-            "color":"#666",
+            "color": "#666",
             "background-color": "#e6e6e6",
         }).children().hide();
     });
-    
+
     $(".zd_index_brand_tit ul li:first-child").css({
         "background-color": "#333",
         "color": "#f2d291",
     }).siblings().children().hide();
-    
+
     indexTab = $(".index_brand_tabListbox .index_brand_tabList");
     var j = 0;
-    $(".zd_index_brand_tit li").on("mouseover",function() {
+    $(".zd_index_brand_tit li").on("mouseover", function () {
         j = $(this).index();
-        indexTab.eq(j).css({"display":"block"}).siblings().css({"display":"none"});
+        indexTab.eq(j).css({
+            "display": "block"
+        }).siblings().css({
+            "display": "none"
+        });
         $(this).css({
             "background-color": "#333",
             "color": "#f2d291",
@@ -267,36 +283,44 @@ $(function () {
             "background-color": "#e6e6e6",
         }).children().hide();
     })
-    
-    $(".index_tab_btns_brand_left").click(function() {
+
+    $(".index_tab_btns_brand_left").click(function () {
         j--;
-        if(j < 0) {
-            j = indexTab.length-1;
+        if (j < 0) {
+            j = indexTab.length - 1;
         }
-        indexTab.eq(j).css({"display":"block"}).siblings().css({"display":"none"});
+        indexTab.eq(j).css({
+            "display": "block"
+        }).siblings().css({
+            "display": "none"
+        });
         $(this).parent().next().children().eq(1).children().eq(j).css({
             "background-color": "#333",
-            "color":"#f2d291",
+            "color": "#f2d291",
         }).children().show();
         $(this).parent().next().children().eq(1).children().eq(j).siblings().css({
-            "color":"#666",
+            "color": "#666",
             "background-color": "#e6e6e6",
         }).children().hide();
         console.log(j);
     });
 
-    $(".index_tab_btns_brand_right").click(function() {
+    $(".index_tab_btns_brand_right").click(function () {
         j++;
-        if(j >= indexTab.length) {
+        if (j >= indexTab.length) {
             j = 0;
         }
-        indexTab.eq(j).css({"display":"block"}).siblings().css({"display":"none"});
+        indexTab.eq(j).css({
+            "display": "block"
+        }).siblings().css({
+            "display": "none"
+        });
         $(this).parent().next().children().eq(1).children().eq(j).css({
             "background-color": "#333",
-            "color":"#f2d291",
+            "color": "#f2d291",
         }).children().show();
         $(this).parent().next().children().eq(1).children().eq(j).siblings().css({
-            "color":"#666",
+            "color": "#666",
             "background-color": "#e6e6e6",
         }).children().hide();
     });
