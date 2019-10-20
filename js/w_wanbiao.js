@@ -1,3 +1,88 @@
+$(function () {
+    // 右侧客服
+    $(".ad_close").click(function () {
+        $(this).parent().slideUp();
+    })
+    $(".bot_msg_close").click(function () {
+        $(".bot_msg").css("opacity", "0");
+    })
+    // 主页搜索栏
+    $("#index_search").focus(function () {
+        $(this).val("").css("color", "#333");
+        $(".tips").show();
+    })
+    $("#index_search").blur(function () {
+        $(this).val("劳力士").css("color", "#ccc");
+        $(".tips").hide();
+    })
+    //主页隐藏导航栏
+    $(".index_nav_right_glass").click(function () {
+        $(".index_nav_right_glass_more").animate({
+            right: "110px",
+            opacity: "1",
+        }, 500)
+    })
+    $(".index_nav_right_glass_arrow").click(function () {
+        $(".index_nav_right_glass_more").animate({
+            right: "-290px",
+            opacity: "0",
+        }, 1000)
+    })
+    $("#index_nav_right_glass_input").focus(function () {
+        $(this).val("").css("color", "#333");
+        $(".index_right_hide_nav").show();
+    })
+    $("#index_nav_right_glass_input").blur(function () {
+        $(this).val("劳力士").css("color", "#ccc");
+        $(".index_right_hide_nav").hide();
+    })
+    // 主页左侧导航栏渐变 
+    $(".index_left_nav_list_img").on("scroll", function () {
+        var index_left_nav_scrollTop = $(this).scrollTop();
+        if (index_left_nav_scrollTop > 10) {
+            $(".index_left_nav_btm_shadow").hide()
+        } else {
+            $(".index_left_nav_btm_shadow").show();
+        }
+    })
+    $(".nav_left").on("mouseover",function(){
+        $(".index_left_nav").show()
+    })
+    $(".nav_left").on("mouseout",function(){
+        $(".index_left_nav").hide()
+    })
+    // 客户服务
+    $("#drop_window").hide();
+    $("#ser").mouseover(function () {
+        $("#ser").css({
+            "background-color": "#fff",
+            "border-left": "1px solid #ccc",
+            "border-right": "1px solid #ccc"
+        })
+        $("#drop_window").slideDown();
+    })
+    $("#drop_window").mouseover(function () {
+        $(this).slideDown();
+    })
+    $("#drop_window").mouseleave(function () {
+        $(this).slideUp();
+        $("#ser").css({
+            "background-color": "#f4f4f4",
+            "border-left": "1px solid transparent",
+            "border-right": "1px solid transparent"
+        })
+
+    })
+    // 尾部彩蛋
+    $(".foot_info_list").slideUp();
+    $(".foot_slide_info").click(function () {
+        $(".foot_info_list").slideToggle();
+    });
+    $(".foot_slide_info1").click(function () {
+        $(".foot_info_list1").slideToggle();
+    });
+   
+})
 $(function (){
     $(".w_listLeft2a").on("click",function(){
         var $tet=$(this).index()*(-210);
@@ -110,9 +195,9 @@ $(function(){
             $(".w_signT2").html("收起");
             $(".w_singSa").on("mouseover",function(){
                 $(".w_abc a").eq(0).css("color","#333")
-                $(".clearfix").hide();
+                $(".w_clearfix").hide();
                 $(this).css("color","#cc9952").siblings().css("color","#333")
-                $(".clearfix").eq($(this).index()).show();
+                $(".w_clearfix").eq($(this).index()).show();
             })
         }else {
             $(".w_singB11").hide();
@@ -121,30 +206,13 @@ $(function(){
             $(".w_abc a").eq(0).css("color","#333")
             $(".w_signList2").hide();
             $(".w_signT1").removeClass("w_signT11")
-            $(".clearfix").show();
+            $(".w_clearfix").show();
             $(".w_signList").css("height","120px")
         };
     })
 });
 $(function(){
-    $(".w_class5-bt2").on("click",function(){
-        $(".w_class5-list2").show();
-        $(".w_class5-list1").hide();
-        $(".w_bott2").on("click",function(){
-            $(".w_class5-list2").hide();
-            $(".w_class5-list1").show();
-            $(".w_class5-lt").removeClass("w_class5-de1");
-            $(".w_class5-lt1").removeClass("w_class5-de2");
-            $(".w_class5-lt").removeClass("w_class5-di1");
-            $(".w_bott1").removeClass("w_bott11");
-        });
-        $(".w_class5-li").on("mouseover",function(){
-            var $tet=$(this).index();
-            $(".w_class5-lt").removeClass("w_class5-de1");
-            $(".w_class5-lt1").removeClass("w_class5-de2");
-            $(".w_class5-lt").eq($tet).addClass("w_class5-de1");
-            $(".w_class5-lt1").eq($tet).addClass("w_class5-de2");
-        });
+    var aet=function(){
         $(".w_class5-li").on("click",function(){
             var $te=$(this).index();
             if( $(".w_class5-lt").eq($te).hasClass("w_class5-di1")==false){
@@ -156,10 +224,31 @@ $(function(){
                 $(".w_class5-lt").eq($te).removeClass("w_class5-de1");
                 $(".w_bott1").removeClass("w_bott11");
             } 
-            if($(".w_class5-lt").hasClass("w_class5-di1")){
+            if($(".w_class5-lt").hasClass("w_class5-di1")==true){
                 $(".w_bott1").addClass("w_bott11");
             }
-        }) ;
+        });
+    };
+    $(".w_class5-bt2").on("click",function(){
+        $(".w_class5-list2").show();
+        $(".w_class5-list1").hide();
+        $(".w_class5-li").on("mouseover",function(){
+            var $tet=$(this).index();
+            $(".w_class5-lt").removeClass("w_class5-de1");
+            $(".w_class5-lt1").removeClass("w_class5-de2");
+            $(".w_class5-lt").eq($tet).addClass("w_class5-de1");
+            $(".w_class5-lt1").eq($tet).addClass("w_class5-de2");
+        });
+       aet()
+    }); 
+    $(".w_bott2").on("click",function(){
+        $(".w_class5-list2").hide();
+        $(".w_class5-list1").show();
+        $(".w_class5-lt").removeClass("w_class5-de1");
+        $(".w_class5-lt1").removeClass("w_class5-de2");
+        $(".w_class5-lt").removeClass("w_class5-di1");
+        $(".w_bott1").removeClass("w_bott11");
+       aet()
     });
 });
 $(function(){
@@ -174,16 +263,7 @@ $(function(){
             $(".w_class6-lt1").css("height","14px");
         }
     });
-    $(".w_class6-bt2").on("click",function(){
-        $(".w_class6-Name2").show();
-        $(".w_class6-Name1").hide();
-        $(".w_class6-li1").on("mouseover",function(){
-            var $tet=$(this).index();
-            $(".w_class6-lti1").removeClass("w_class5-de1");
-            $(".w_class6-lts1").removeClass("w_class5-de2");
-            $(".w_class6-lti1").eq($tet).addClass("w_class5-de1");
-            $(".w_class6-lts1").eq($tet).addClass("w_class5-de2");
-        })
+    var aet=function(){
         $(".w_class6-li1").on("click",function(){
             var $te=$(this).index();
             if( $(".w_class6-lti1").eq($te).hasClass("w_class5-di1")==false){
@@ -195,31 +275,35 @@ $(function(){
                 $(".w_class6-lti1").eq($te).removeClass("w_class5-de1");
                 $(".w_class6-h11").removeClass("w_bott11");
             } 
-            if($(".w_class6-lti1").hasClass("w_class5-di1")){
+            if($(".w_class6-lti1").hasClass("w_class5-di1")==true){
                 $(".w_class6-h11").addClass("w_bott11");
             }
         }) 
-        $(".w_class6-h12").on("click",function(){
-            $(".w_class6-Name2").hide();
-            $(".w_class6-Name1").show();
+    }
+    $(".w_class6-bt2").on("click",function(){
+        $(".w_class6-Name2").show();
+        $(".w_class6-Name1").hide();
+        $(".w_class6-li1").on("mouseover",function(){
+            var $tet=$(this).index();
             $(".w_class6-lti1").removeClass("w_class5-de1");
             $(".w_class6-lts1").removeClass("w_class5-de2");
-            $(".w_class6-lti1").removeClass("w_class5-di1");
-            $(".w_class6-h11").removeClass("w_bott11");
+            $(".w_class6-lti1").eq($tet).addClass("w_class5-de1");
+            $(".w_class6-lts1").eq($tet).addClass("w_class5-de2");
         })
-    });
+        aet()
+    }); 
+    $(".w_class6-h12").on("click",function(){
+        $(".w_class6-Name2").hide();
+        $(".w_class6-Name1").show();
+        $(".w_class6-lti1").removeClass("w_class5-de1");
+        $(".w_class6-lts1").removeClass("w_class5-de2");
+        $(".w_class6-lti1").removeClass("w_class5-di1");
+        $(".w_class6-h11").removeClass("w_bott11");
+        aet()
+    })
 });
 $(function(){
-    $(".w_class6-bt3").on("click",function(){
-        $(".w_class6-Name4").show();
-        $(".w_class6-Name3").hide();
-        $(".w_class6-li2").on("mouseover",function(){
-            var $tet=$(this).index();
-            $(".w_class6-lti2").removeClass("w_class5-de1");
-            $(".w_class6-lts2").removeClass("w_class5-de2");
-            $(".w_class6-lti2").eq($tet).addClass("w_class5-de1");
-            $(".w_class6-lts2").eq($tet).addClass("w_class5-de2");
-        })
+    var aet=function(){ 
         $(".w_class6-li2").on("click",function(){
             var $te=$(this).index();
             if( $(".w_class6-lti2").eq($te).hasClass("w_class5-di1")==false){
@@ -231,18 +315,31 @@ $(function(){
                 $(".w_class6-lti2").eq($te).removeClass("w_class5-de1");
                 $(".w_class6-h21").removeClass("w_bott11");
             } 
-            if($(".w_class6-lti2").hasClass("w_class5-di1")){
+            if($(".w_class6-lti2").hasClass("w_class5-di1")==true){
                 $(".w_class6-h21").addClass("w_bott11");
             }
         }) 
-        $(".w_class6-h22").on("click",function(){
-            $(".w_class6-Name4").hide();
-            $(".w_class6-Name3").show();
+    };
+    $(".w_class6-bt3").on("click",function(){
+        $(".w_class6-Name4").show();
+        $(".w_class6-Name3").hide();
+        $(".w_class6-li2").on("mouseover",function(){
+            var $tet=$(this).index();
             $(".w_class6-lti2").removeClass("w_class5-de1");
             $(".w_class6-lts2").removeClass("w_class5-de2");
-            $(".w_class6-lti2").removeClass("w_class5-di1");
-            $(".w_class6-h21").removeClass("w_bott11");
+            $(".w_class6-lti2").eq($tet).addClass("w_class5-de1");
+            $(".w_class6-lts2").eq($tet).addClass("w_class5-de2");
         })
+       aet()
+    }) 
+    $(".w_class6-h22").on("click",function(){
+        $(".w_class6-Name4").hide();
+        $(".w_class6-Name3").show();
+        $(".w_class6-lti2").removeClass("w_class5-de1");
+        $(".w_class6-lts2").removeClass("w_class5-de2");
+        $(".w_class6-lti2").removeClass("w_class5-di1");
+        $(".w_class6-h21").removeClass("w_bott11");
+        aet();
     })
     $(".w_class6-st2").on("click",function(){
         var $regex=/^[0-9]{2,}$/;
@@ -265,16 +362,7 @@ $(function(){
             $(".w_class6-lt4").css("height","14px");
         }
     });
-    $(".w_class6-bt4").on("click",function(){
-        $(".w_class6-Name6").show();
-        $(".w_class6-Name5").hide();
-        $(".w_class6-li3").on("mouseover",function(){
-            var $tet=$(this).index();
-            $(".w_class6-lti3").removeClass("w_class5-de1");
-            $(".w_class6-lts3").removeClass("w_class5-de2");
-            $(".w_class6-lti3").eq($tet).addClass("w_class5-de1");
-            $(".w_class6-lts3").eq($tet).addClass("w_class5-de2");
-        })
+    var aet=function(){
         $(".w_class6-li3").on("click",function(){
             var $te=$(this).index();
             if( $(".w_class6-lti3").eq($te).hasClass("w_class5-di1")==false){
@@ -286,31 +374,35 @@ $(function(){
                 $(".w_class6-lti3").eq($te).removeClass("w_class5-de1");
                 $(".w_class6-h31").removeClass("w_bott11");
             } 
-            if($(".w_class6-lti3").hasClass("w_class5-di1")){
+            if($(".w_class6-lti3").hasClass("w_class5-di1")==true){
                 $(".w_class6-h31").addClass("w_bott11");
             }
         }) 
-        $(".w_class6-h32").on("click",function(){
-            $(".w_class6-Name6").hide();
-            $(".w_class6-Name5").show();
+    };
+    $(".w_class6-bt4").on("click",function(){
+        $(".w_class6-Name6").show();
+        $(".w_class6-Name5").hide();
+        $(".w_class6-li3").on("mouseover",function(){
+            var $tet=$(this).index();
             $(".w_class6-lti3").removeClass("w_class5-de1");
             $(".w_class6-lts3").removeClass("w_class5-de2");
-            $(".w_class6-lti3").removeClass("w_class5-di1");
-            $(".w_class6-h31").removeClass("w_bott11");
+            $(".w_class6-lti3").eq($tet).addClass("w_class5-de1");
+            $(".w_class6-lts3").eq($tet).addClass("w_class5-de2");
         })
+       aet() 
     });
+    $(".w_class6-h32").on("click",function(){
+        $(".w_class6-Name6").hide();
+        $(".w_class6-Name5").show();
+        $(".w_class6-lti3").removeClass("w_class5-de1");
+        $(".w_class6-lts3").removeClass("w_class5-de2");
+        $(".w_class6-lti3").removeClass("w_class5-di1");
+        $(".w_class6-h31").removeClass("w_bott11");
+        aet() 
+    })
 });
 $(function(){
-    $(".w_class6-bt5").on("click",function(){
-        $(".w_class6-Name8").show();
-        $(".w_class6-Name7").hide();
-        $(".w_class6-li4").on("mouseover",function(){
-            var $tet=$(this).index();
-            $(".w_class6-lti4").removeClass("w_class5-de1");
-            $(".w_class6-lts4").removeClass("w_class5-de2");
-            $(".w_class6-lti4").eq($tet).addClass("w_class5-de1");
-            $(".w_class6-lts4").eq($tet).addClass("w_class5-de2");
-        })
+    var aet=function(){
         $(".w_class6-li4").on("click",function(){
             var $te=$(this).index();
             if( $(".w_class6-lti4").eq($te).hasClass("w_class5-di1")==false){
@@ -322,31 +414,35 @@ $(function(){
                 $(".w_class6-lti4").eq($te).removeClass("w_class5-de1");
                 $(".w_class6-h41").removeClass("w_bott11");
             } 
-            if($(".w_class6-lti4").hasClass("w_class5-di1")){
+            if($(".w_class6-lti4").hasClass("w_class5-di1")==true){
                 $(".w_class6-h41").addClass("w_bott11");
             }
         }) 
-        $(".w_class6-h42").on("click",function(){
-            $(".w_class6-Name8").hide();
-            $(".w_class6-Name7").show();
+    }
+    $(".w_class6-bt5").on("click",function(){
+        $(".w_class6-Name8").show();
+        $(".w_class6-Name7").hide();
+        $(".w_class6-li4").on("mouseover",function(){
+            var $tet=$(this).index();
             $(".w_class6-lti4").removeClass("w_class5-de1");
             $(".w_class6-lts4").removeClass("w_class5-de2");
-            $(".w_class6-lti4").removeClass("w_class5-di1");
-            $(".w_class6-h41").removeClass("w_bott11");
+            $(".w_class6-lti4").eq($tet).addClass("w_class5-de1");
+            $(".w_class6-lts4").eq($tet).addClass("w_class5-de2");
         })
+        aet()
     });
+     $(".w_class6-h42").on("click",function(){
+        $(".w_class6-Name8").hide();
+        $(".w_class6-Name7").show();
+        $(".w_class6-lti4").removeClass("w_class5-de1");
+        $(".w_class6-lts4").removeClass("w_class5-de2");
+        $(".w_class6-lti4").removeClass("w_class5-di1");
+        $(".w_class6-h41").removeClass("w_bott11");
+        aet()
+    })
 });
 $(function(){
-    $(".w_class6-bt6").on("click",function(){
-        $(".w_class6-Name10").show();
-        $(".w_class6-Name9").hide();
-        $(".w_class6-li5").on("mouseover",function(){
-            var $tet=$(this).index();
-            $(".w_class6-lti5").removeClass("w_class5-de1");
-            $(".w_class6-lts5").removeClass("w_class5-de2");
-            $(".w_class6-lti5").eq($tet).addClass("w_class5-de1");
-            $(".w_class6-lts5").eq($tet).addClass("w_class5-de2");
-        })
+    var aet=function(){
         $(".w_class6-li5").on("click",function(){
             var $te=$(this).index();
             if( $(".w_class6-lti5").eq($te).hasClass("w_class5-di1")==false){
@@ -362,14 +458,27 @@ $(function(){
                 $(".w_class6-h51").addClass("w_bott11");
             }
         }) 
-        $(".w_class6-h52").on("click",function(){
-            $(".w_class6-Name10").hide();
-            $(".w_class6-Name9").show();
+    }
+    $(".w_class6-bt6").on("click",function(){
+        $(".w_class6-Name10").show();
+        $(".w_class6-Name9").hide();
+        $(".w_class6-li5").on("mouseover",function(){
+            var $tet=$(this).index();
             $(".w_class6-lti5").removeClass("w_class5-de1");
             $(".w_class6-lts5").removeClass("w_class5-de2");
-            $(".w_class6-lti5").removeClass("w_class5-di1");
-            $(".w_class6-h51").removeClass("w_bott11");
+            $(".w_class6-lti5").eq($tet).addClass("w_class5-de1");
+            $(".w_class6-lts5").eq($tet).addClass("w_class5-de2");
         })
+        aet()
+    });
+    $(".w_class6-h52").on("click",function(){
+        $(".w_class6-Name10").hide();
+        $(".w_class6-Name9").show();
+        $(".w_class6-lti5").removeClass("w_class5-de1");
+        $(".w_class6-lts5").removeClass("w_class5-de2");
+        $(".w_class6-lti5").removeClass("w_class5-di1");
+        $(".w_class6-h51").removeClass("w_bott11");
+        aet()
     });
 });
 $(function(){
@@ -384,16 +493,7 @@ $(function(){
             $(".w_class6-lt7").css("height","14px");
         }
     });
-    $(".w_class6-bt7").on("click",function(){
-        $(".w_class6-Name12").show();
-        $(".w_class6-Name11").hide();
-        $(".w_class6-li6").on("mouseover",function(){
-            var $tet=$(this).index();
-            $(".w_class6-lti6").removeClass("w_class5-de1");
-            $(".w_class6-lts6").removeClass("w_class5-de2");
-            $(".w_class6-lti6").eq($tet).addClass("w_class5-de1");
-            $(".w_class6-lts6").eq($tet).addClass("w_class5-de2");
-        })
+    var aet=function(){
         $(".w_class6-li6").on("click",function(){
             var $te=$(this).index();
             if( $(".w_class6-lti6").eq($te).hasClass("w_class5-di1")==false){
@@ -405,31 +505,35 @@ $(function(){
                 $(".w_class6-lti6").eq($te).removeClass("w_class5-de1");
                 $(".w_class6-h61").removeClass("w_bott11");
             } 
-            if($(".w_class6-lti6").hasClass("w_class5-di1")){
+            if($(".w_class6-lti6").hasClass("w_class5-di1")==true){
                 $(".w_class6-h61").addClass("w_bott11");
             }
         }) 
-        $(".w_class6-h62").on("click",function(){
-            $(".w_class6-Name12").hide();
-            $(".w_class6-Name11").show();
+    }
+    $(".w_class6-bt7").on("click",function(){
+        $(".w_class6-Name12").show();
+        $(".w_class6-Name11").hide();
+        $(".w_class6-li6").on("mouseover",function(){
+            var $tet=$(this).index();
             $(".w_class6-lti6").removeClass("w_class5-de1");
             $(".w_class6-lts6").removeClass("w_class5-de2");
-            $(".w_class6-lti6").removeClass("w_class5-di1");
-            $(".w_class6-h61").removeClass("w_bott11");
+            $(".w_class6-lti6").eq($tet).addClass("w_class5-de1");
+            $(".w_class6-lts6").eq($tet).addClass("w_class5-de2");
         })
+       aet()
     });
+    $(".w_class6-h62").on("click",function(){
+        $(".w_class6-Name12").hide();
+        $(".w_class6-Name11").show();
+        $(".w_class6-lti6").removeClass("w_class5-de1");
+        $(".w_class6-lts6").removeClass("w_class5-de2");
+        $(".w_class6-lti6").removeClass("w_class5-di1");
+        $(".w_class6-h61").removeClass("w_bott11");
+        aet()
+    })
 });
 $(function(){
-    $(".w_class6-bt8").on("click",function(){
-        $(".w_class6-Name14").show();
-        $(".w_class6-Name13").hide();
-        $(".w_class6-li7").on("mouseover",function(){
-            var $tet=$(this).index();
-            $(".w_class6-lti7").removeClass("w_class5-de1");
-            $(".w_class6-lts7").removeClass("w_class5-de2");
-            $(".w_class6-lti7").eq($tet).addClass("w_class5-de1");
-            $(".w_class6-lts7").eq($tet).addClass("w_class5-de2");
-        })
+    var aet=function(){
         $(".w_class6-li7").on("click",function(){
             var $te=$(this).index();
             if( $(".w_class6-lti7").eq($te).hasClass("w_class5-di1")==false){
@@ -441,19 +545,32 @@ $(function(){
                 $(".w_class6-lti7").eq($te).removeClass("w_class5-de1");
                 $(".w_class6-h71").removeClass("w_bott11");
             } 
-            if($(".w_class6-lti7").hasClass("w_class5-di1")){
+            if($(".w_class6-lti7").hasClass("w_class5-di1")==true){
                 $(".w_class6-h71").addClass("w_bott11");
             }
         }) 
-        $(".w_class6-h72").on("click",function(){
-            $(".w_class6-Name14").hide();
-            $(".w_class6-Name13").show();
+    }
+    $(".w_class6-bt8").on("click",function(){
+        $(".w_class6-Name14").show();
+        $(".w_class6-Name13").hide();
+        $(".w_class6-li7").on("mouseover",function(){
+            var $tet=$(this).index();
             $(".w_class6-lti7").removeClass("w_class5-de1");
             $(".w_class6-lts7").removeClass("w_class5-de2");
-            $(".w_class6-lti7").removeClass("w_class5-di1");
-            $(".w_class6-h71").removeClass("w_bott11");
+            $(".w_class6-lti7").eq($tet).addClass("w_class5-de1");
+            $(".w_class6-lts7").eq($tet).addClass("w_class5-de2");
         })
+        aet()
     });
+     $(".w_class6-h72").on("click",function(){
+        $(".w_class6-Name14").hide();
+        $(".w_class6-Name13").show();
+        $(".w_class6-lti7").removeClass("w_class5-de1");
+        $(".w_class6-lts7").removeClass("w_class5-de2");
+        $(".w_class6-lti7").removeClass("w_class5-di1");
+        $(".w_class6-h71").removeClass("w_bott11");
+        aet()
+    })
 });
 $(function(){
     $(".w_class6-dot3").on("click",function(){
@@ -467,16 +584,7 @@ $(function(){
             $(".w_class6-lt9").css("height","14px");
         }
     });
-    $(".w_class6-bt9").on("click",function(){
-        $(".w_class6-Name16").show();
-        $(".w_class6-Name15").hide();
-        $(".w_class6-li8").on("mouseover",function(){
-            var $tet=$(this).index();
-            $(".w_class6-lti8").removeClass("w_class5-de1");
-            $(".w_class6-lts8").removeClass("w_class5-de2");
-            $(".w_class6-lti8").eq($tet).addClass("w_class5-de1");
-            $(".w_class6-lts8").eq($tet).addClass("w_class5-de2");
-        })
+    var aet=function(){
         $(".w_class6-li8").on("click",function(){
             var $te=$(this).index();
             if( $(".w_class6-lti8").eq($te).hasClass("w_class5-di1")==false){
@@ -488,31 +596,35 @@ $(function(){
                 $(".w_class6-lti8").eq($te).removeClass("w_class5-de1");
                 $(".w_class6-h81").removeClass("w_bott11");
             } 
-            if($(".w_class6-lti8").hasClass("w_class5-di1")){
+            if($(".w_class6-lti8").hasClass("w_class5-di1")==true){
                 $(".w_class6-h81").addClass("w_bott11");
             }
         }) 
-        $(".w_class6-h82").on("click",function(){
-            $(".w_class6-Name16").hide();
-            $(".w_class6-Name15").show();
+    };
+    $(".w_class6-bt9").on("click",function(){
+        $(".w_class6-Name16").show();
+        $(".w_class6-Name15").hide();
+        $(".w_class6-li8").on("mouseover",function(){
+            var $tet=$(this).index();
             $(".w_class6-lti8").removeClass("w_class5-de1");
             $(".w_class6-lts8").removeClass("w_class5-de2");
-            $(".w_class6-lti8").removeClass("w_class5-di1");
-            $(".w_class6-h81").removeClass("w_bott11");
+            $(".w_class6-lti8").eq($tet).addClass("w_class5-de1");
+            $(".w_class6-lts8").eq($tet).addClass("w_class5-de2");
         })
+      aet()
     });
+     $(".w_class6-h82").on("click",function(){
+        $(".w_class6-Name16").hide();
+        $(".w_class6-Name15").show();
+        $(".w_class6-lti8").removeClass("w_class5-de1");
+        $(".w_class6-lts8").removeClass("w_class5-de2");
+        $(".w_class6-lti8").removeClass("w_class5-di1");
+        $(".w_class6-h81").removeClass("w_bott11");
+        aet()
+    })
 });
 $(function(){
-    $(".w_class6-bt10").on("click",function(){
-        $(".w_class6-Name18").show();
-        $(".w_class6-Name17").hide();
-        $(".w_class6-li9").on("mouseover",function(){
-            var $tet=$(this).index();
-            $(".w_class6-lti9").removeClass("w_class5-de1");
-            $(".w_class6-lts9").removeClass("w_class5-de2");
-            $(".w_class6-lti9").eq($tet).addClass("w_class5-de1");
-            $(".w_class6-lts9").eq($tet).addClass("w_class5-de2");
-        })
+    var aet=function(){
         $(".w_class6-li9").on("click",function(){
             var $te=$(this).index();
             if( $(".w_class6-lti9").eq($te).hasClass("w_class5-di1")==false){
@@ -524,19 +636,33 @@ $(function(){
                 $(".w_class6-lti9").eq($te).removeClass("w_class5-de1");
                 $(".w_class6-h91").removeClass("w_bott11");
             } 
-            if($(".w_class6-lti9").hasClass("w_class5-di1")){
+            if($(".w_class6-lti9").hasClass("w_class5-di1")==true){
                 $(".w_class6-h91").addClass("w_bott11");
             }
         }) 
-        $(".w_class6-h92").on("click",function(){
-            $(".w_class6-Name18").hide();
-            $(".w_class6-Name17").show();
+    };
+    $(".w_class6-bt10").on("click",function(){
+        $(".w_class6-Name18").show();
+        $(".w_class6-Name17").hide();
+        $(".w_class6-li9").on("mouseover",function(){
+            var $tet=$(this).index();
             $(".w_class6-lti9").removeClass("w_class5-de1");
             $(".w_class6-lts9").removeClass("w_class5-de2");
-            $(".w_class6-lti9").removeClass("w_class5-di1");
-            $(".w_class6-h91").removeClass("w_bott11");
+            $(".w_class6-lti9").eq($tet).addClass("w_class5-de1");
+            $(".w_class6-lts9").eq($tet).addClass("w_class5-de2");
         })
+        aet()
+        
     });
+    $(".w_class6-h92").on("click",function(){
+        $(".w_class6-Name18").hide();
+        $(".w_class6-Name17").show();
+        $(".w_class6-lti9").removeClass("w_class5-de1");
+        $(".w_class6-lts9").removeClass("w_class5-de2");
+        $(".w_class6-lti9").removeClass("w_class5-di1");
+        $(".w_class6-h91").removeClass("w_bott11");
+        aet()
+    })
 });
 $(function(){
     $(".w_class6-dot4").on("click",function(){
@@ -550,16 +676,7 @@ $(function(){
             $(".w_class6-lt11").css("height","14px");
         }
     });
-    $(".w_class6-bt11").on("click",function(){
-        $(".w_class6-Name20").show();
-        $(".w_class6-Name19").hide();
-        $(".w_class6-li10").on("mouseover",function(){
-            var $tet=$(this).index();
-            $(".w_class6-lti10").removeClass("w_class5-de1");
-            $(".w_class6-lts10").removeClass("w_class5-de2");
-            $(".w_class6-lti10").eq($tet).addClass("w_class5-de1");
-            $(".w_class6-lts10").eq($tet).addClass("w_class5-de2");
-        })
+    var aet=function(){
         $(".w_class6-li10").on("click",function(){
             var $te=$(this).index();
             if( $(".w_class6-lti10").eq($te).hasClass("w_class5-di1")==false){
@@ -571,31 +688,35 @@ $(function(){
                 $(".w_class6-lti10").eq($te).removeClass("w_class5-de1");
                 $(".w_class6-h101").removeClass("w_bott11");
             } 
-            if($(".w_class6-lti10").hasClass("w_class5-di1")){
+            if($(".w_class6-lti10").hasClass("w_class5-di1")==true){
                 $(".w_class6-h101").addClass("w_bott11");
             }
         }) 
-        $(".w_class6-h102").on("click",function(){
-            $(".w_class6-Name20").hide();
-            $(".w_class6-Name19").show();
+    };
+    $(".w_class6-bt11").on("click",function(){
+        $(".w_class6-Name20").show();
+        $(".w_class6-Name19").hide();
+        $(".w_class6-li10").on("mouseover",function(){
+            var $tet=$(this).index();
             $(".w_class6-lti10").removeClass("w_class5-de1");
             $(".w_class6-lts10").removeClass("w_class5-de2");
-            $(".w_class6-lti10").removeClass("w_class5-di1");
-            $(".w_class6-h101").removeClass("w_bott11");
-        })
+            $(".w_class6-lti10").eq($tet).addClass("w_class5-de1");
+            $(".w_class6-lts10").eq($tet).addClass("w_class5-de2");
+        });
+        aet()
     });
+    $(".w_class6-h102").on("click",function(){
+        $(".w_class6-Name20").hide();
+        $(".w_class6-Name19").show();
+        $(".w_class6-lti10").removeClass("w_class5-de1");
+        $(".w_class6-lts10").removeClass("w_class5-de2");
+        $(".w_class6-lti10").removeClass("w_class5-di1");
+        $(".w_class6-h101").removeClass("w_bott11");
+        aet()
+    })
 });
 $(function(){
-    $(".w_class6-bt12").on("click",function(){
-        $(".w_class6-Name22").show();
-        $(".w_class6-Name21").hide();
-        $(".w_class6-li11").on("mouseover",function(){
-            var $tet=$(this).index();
-            $(".w_class6-lti11").removeClass("w_class5-de1");
-            $(".w_class6-lts11").removeClass("w_class5-de2");
-            $(".w_class6-lti11").eq($tet).addClass("w_class5-de1");
-            $(".w_class6-lts11").eq($tet).addClass("w_class5-de2");
-        })
+    var aet=function(){
         $(".w_class6-li11").on("click",function(){
             var $te=$(this).index();
             if( $(".w_class6-lti11").eq($te).hasClass("w_class5-di1")==false){
@@ -607,31 +728,35 @@ $(function(){
                 $(".w_class6-lti11").eq($te).removeClass("w_class5-de1");
                 $(".w_class6-h111").removeClass("w_bott11");
             } 
-            if($(".w_class6-lti11").hasClass("w_class5-di1")){
+            if($(".w_class6-lti11").hasClass("w_class5-di1")==true){
                 $(".w_class6-h111").addClass("w_bott11");
             }
         }) 
-        $(".w_class6-h112").on("click",function(){
-            $(".w_class6-Name22").hide();
-            $(".w_class6-Name21").show();
+    };
+    $(".w_class6-bt12").on("click",function(){
+        $(".w_class6-Name22").show();
+        $(".w_class6-Name21").hide();
+        $(".w_class6-li11").on("mouseover",function(){
+            var $tet=$(this).index();
             $(".w_class6-lti11").removeClass("w_class5-de1");
             $(".w_class6-lts11").removeClass("w_class5-de2");
-            $(".w_class6-lti11").removeClass("w_class5-di1");
-            $(".w_class6-h111").removeClass("w_bott11");
+            $(".w_class6-lti11").eq($tet).addClass("w_class5-de1");
+            $(".w_class6-lts11").eq($tet).addClass("w_class5-de2");
         })
+       aet()
     });
+    $(".w_class6-h112").on("click",function(){
+        $(".w_class6-Name22").hide();
+        $(".w_class6-Name21").show();
+        $(".w_class6-lti11").removeClass("w_class5-de1");
+        $(".w_class6-lts11").removeClass("w_class5-de2");
+        $(".w_class6-lti11").removeClass("w_class5-di1");
+        $(".w_class6-h111").removeClass("w_bott11");
+        aet()
+    })
 });
 $(function(){
-    $(".w_class6-bt13").on("click",function(){
-        $(".w_class6-Name24").show();
-        $(".w_class6-Name23").hide();
-        $(".w_class6-li12").on("mouseover",function(){
-            var $tet=$(this).index();
-            $(".w_class6-lti12").removeClass("w_class5-de1");
-            $(".w_class6-lts12").removeClass("w_class5-de2");
-            $(".w_class6-lti12").eq($tet).addClass("w_class5-de1");
-            $(".w_class6-lts12").eq($tet).addClass("w_class5-de2");
-        })
+    var aet=function(){
         $(".w_class6-li12").on("click",function(){
             var $te=$(this).index();
             if( $(".w_class6-lti12").eq($te).hasClass("w_class5-di1")==false){
@@ -647,27 +772,32 @@ $(function(){
                 $(".w_class6-h121").addClass("w_bott11");
             }
         }) 
-        $(".w_class6-h122").on("click",function(){
-            $(".w_class6-Name24").hide();
-            $(".w_class6-Name23").show();
+    }
+    $(".w_class6-bt13").on("click",function(){
+        $(".w_class6-Name24").show();
+        $(".w_class6-Name23").hide();
+        $(".w_class6-li12").on("mouseover",function(){
+            var $tet=$(this).index();
             $(".w_class6-lti12").removeClass("w_class5-de1");
             $(".w_class6-lts12").removeClass("w_class5-de2");
-            $(".w_class6-lti12").removeClass("w_class5-di1");
-            $(".w_class6-h121").removeClass("w_bott11");
+            $(".w_class6-lti12").eq($tet).addClass("w_class5-de1");
+            $(".w_class6-lts12").eq($tet).addClass("w_class5-de2");
         })
+        aet()
+        
     });
+    $(".w_class6-h122").on("click",function(){
+        $(".w_class6-Name24").hide();
+        $(".w_class6-Name23").show();
+        $(".w_class6-lti12").removeClass("w_class5-de1");
+        $(".w_class6-lts12").removeClass("w_class5-de2");
+        $(".w_class6-lti12").removeClass("w_class5-di1");
+        $(".w_class6-h121").removeClass("w_bott11");
+        aet()
+    })
 });
 $(function(){
-    $(".w_class6-bt14").on("click",function(){
-        $(".w_class6-Name26").show();
-        $(".w_class6-Name25").hide();
-        $(".w_class6-li13").on("mouseover",function(){
-            var $tet=$(this).index();
-            $(".w_class6-lti13").removeClass("w_class5-de1");
-            $(".w_class6-lts13").removeClass("w_class5-de2");
-            $(".w_class6-lti13").eq($tet).addClass("w_class5-de1");
-            $(".w_class6-lts13").eq($tet).addClass("w_class5-de2");
-        })
+    var aet=function(){
         $(".w_class6-li13").on("click",function(){
             var $te=$(this).index();
             if( $(".w_class6-lti13").eq($te).hasClass("w_class5-di1")==false){
@@ -683,15 +813,29 @@ $(function(){
                 $(".w_class6-h131").addClass("w_bott11");
             }
         }) 
-        $(".w_class6-h132").on("click",function(){
-            $(".w_class6-Name26").hide();
-            $(".w_class6-Name25").show();
+    };
+    $(".w_class6-bt14").on("click",function(){
+        $(".w_class6-Name26").show();
+        $(".w_class6-Name25").hide();
+        $(".w_class6-li13").on("mouseover",function(){
+            var $tet=$(this).index();
             $(".w_class6-lti13").removeClass("w_class5-de1");
             $(".w_class6-lts13").removeClass("w_class5-de2");
-            $(".w_class6-lti13").removeClass("w_class5-di1");
-            $(".w_class6-h131").removeClass("w_bott11");
+            $(".w_class6-lti13").eq($tet).addClass("w_class5-de1");
+            $(".w_class6-lts13").eq($tet).addClass("w_class5-de2");
         })
-    });
+        aet()
+       
+    }); 
+    $(".w_class6-h132").on("click",function(){
+        $(".w_class6-Name26").hide();
+        $(".w_class6-Name25").show();
+        $(".w_class6-lti13").removeClass("w_class5-de1");
+        $(".w_class6-lts13").removeClass("w_class5-de2");
+        $(".w_class6-lti13").removeClass("w_class5-di1");
+        $(".w_class6-h131").removeClass("w_bott11");
+        aet()
+    })
 });
 $(function(){
     $(".w_classify7").on("click",function(){
@@ -733,7 +877,7 @@ $(function(){
     window.onscroll=function () {
         var top = document.documentElement.scrollTop || document.body.scrollTop 
         var fix=document.getElementsByClassName("w_label-top")[0];
-        if(top>=600){
+        if(top>=600&&top<=6400){
             fix.classList.add("w_label-fix");
         }else{
             fix.classList.remove("w_label-fix");
@@ -832,6 +976,12 @@ $(function(){
         var $gt=$(this).index();
         $(".w_cont-bt13").eq($gt).hide()
     })
+    $(".w_cont-bt16").on("click",function(){
+        $(".w_cont-shop").addClass("w_cont-shop1")   
+        $thime=setTimeout(function(){
+            $(".w_cont-shop").removeClass("w_cont-shop1")   
+        },3000)
+    })
 });
 $(function(){
     var $arr=[{"img1":"https://image8.wbiao.co/shop/eafa1f232a92494c80b8a784e3689102.jpg?x-oss-process=image/resize,m_pad,h_350","img2":"","bt2":"","bt6":" ￥357.5 ","bt7":"¥4,290","bt8":"【明星同款】法国优雅时尚腕表品牌：Michel Herbelin赫柏林 Antarès恒星系列  吉普赛女郎  COF.1","bt10":"","bt101":"销量1823","bt11":"法国赫柏林官方旗舰店"},
@@ -924,6 +1074,12 @@ $(function(){
     $(".w_cont-bt").on("mouseout",function(){
         var $gt=$(this).index();
         $(".w_cont-bt13").eq($gt).hide()
+    })
+    $(".w_cont-bt16").on("click",function(){
+        $(".w_cont-shop").addClass("w_cont-shop1")   
+        $thime=setTimeout(function(){
+            $(".w_cont-shop").removeClass("w_cont-shop1")   
+        },3000)
     })
 });
 $(function(){
@@ -1126,7 +1282,7 @@ $(function(){
 });
 $(function() {
     $("img").lazyload({
-      placeholder: "../images/w_imgfex1.png", 
+      placeholder: "https://image8.wbiao.co/shop/c7b1285ee380485f9b9743f3495c07c7.jpg?x-oss-process=image/resize,w_160,h_160,color_ffffff", 
       effect: "fadeIn"
      }); 
 });

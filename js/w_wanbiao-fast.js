@@ -1,3 +1,88 @@
+$(function () {
+    // 右侧客服
+    $(".ad_close").click(function () {
+        $(this).parent().slideUp();
+    })
+    $(".bot_msg_close").click(function () {
+        $(".bot_msg").css("opacity", "0");
+    })
+    // 主页搜索栏
+    $("#index_search").focus(function () {
+        $(this).val("").css("color", "#333");
+        $(".tips").show();
+    })
+    $("#index_search").blur(function () {
+        $(this).val("劳力士").css("color", "#ccc");
+        $(".tips").hide();
+    })
+    //主页隐藏导航栏
+    $(".index_nav_right_glass").click(function () {
+        $(".index_nav_right_glass_more").animate({
+            right: "110px",
+            opacity: "1",
+        }, 500)
+    })
+    $(".index_nav_right_glass_arrow").click(function () {
+        $(".index_nav_right_glass_more").animate({
+            right: "-290px",
+            opacity: "0",
+        }, 1000)
+    })
+    $("#index_nav_right_glass_input").focus(function () {
+        $(this).val("").css("color", "#333");
+        $(".index_right_hide_nav").show();
+    })
+    $("#index_nav_right_glass_input").blur(function () {
+        $(this).val("劳力士").css("color", "#ccc");
+        $(".index_right_hide_nav").hide();
+    })
+    // 主页左侧导航栏渐变 
+    $(".index_left_nav_list_img").on("scroll", function () {
+        var index_left_nav_scrollTop = $(this).scrollTop();
+        if (index_left_nav_scrollTop > 10) {
+            $(".index_left_nav_btm_shadow").hide()
+        } else {
+            $(".index_left_nav_btm_shadow").show();
+        }
+    })
+    $(".nav_left").on("mouseover",function(){
+        $(".index_left_nav").show()
+    })
+    $(".nav_left").on("mouseout",function(){
+        $(".index_left_nav").hide()
+    })
+    // 客户服务
+    $("#drop_window").hide();
+    $("#ser").mouseover(function () {
+        $("#ser").css({
+            "background-color": "#fff",
+            "border-left": "1px solid #ccc",
+            "border-right": "1px solid #ccc"
+        })
+        $("#drop_window").slideDown();
+    })
+    $("#drop_window").mouseover(function () {
+        $(this).slideDown();
+    })
+    $("#drop_window").mouseleave(function () {
+        $(this).slideUp();
+        $("#ser").css({
+            "background-color": "#f4f4f4",
+            "border-left": "1px solid transparent",
+            "border-right": "1px solid transparent"
+        })
+
+    })
+    // 尾部彩蛋
+    $(".foot_info_list").slideUp();
+    $(".foot_slide_info").click(function () {
+        $(".foot_info_list").slideToggle();
+    });
+    $(".foot_slide_info1").click(function () {
+        $(".foot_info_list1").slideToggle();
+    });
+   
+})
 $(function(){
     $(".w_brandFooter1").addClass("w_brandList").siblings().removeClass("w_brandList");
     $(".w_brandFooter1").on("mouseover",function(){
@@ -98,7 +183,7 @@ $(function(){
 });
 $(function() {
     $("img").lazyload({
-      placeholder: "../images/w_imgfex1.png", 
+      placeholder: "https://image8.wbiao.co/shop/c7b1285ee380485f9b9743f3495c07c7.jpg?x-oss-process=image/resize,w_160,h_160,color_ffffff", 
       effect: "fadeIn"
      }); 
 });
