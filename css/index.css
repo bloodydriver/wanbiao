@@ -1211,7 +1211,9 @@ del {
 
 /* 主体部分CSS结束 */
 
-
+.footer {
+    border-top: 1px solid #eee;
+}
 .top_foot,
 .footer {
     background-color: #fff;
@@ -1513,12 +1515,20 @@ li .tit_spc:hover {
     margin-top: 20px;
 }
 
-.zd_index_boom_tit {
+.zd_index_boom_tit
+.zd_index_fashion_tit,
+.zd_index_sport_tit,
+.zd_index_chart_tit,
+.zd_index_brand_tit {
     height: 60px;
     margin-left: 10px;
 }
 
-.zd_index_boom_tit>p {
+.zd_index_boom_tit > p,
+.zd_index_fashion_tit > p,
+.zd_index_sport_tit > p,
+.zd_index_chart_tit > p,
+.zd_index_brand_tit > p {
     float: left;
     line-height: 60px;
     font-weight: 800;
@@ -1527,12 +1537,20 @@ li .tit_spc:hover {
     margin-right: 20px;
 }
 
-.zd_index_boom_tit ul {
+.zd_index_boom_tit ul,
+.zd_index_fashion_tit ul,
+.zd_index_sport_tit ul,
+.zd_index_chart_tit ul,
+.zd_index_brand_tit ul {
     float: left;
     margin-top: 15px;
 }
 
-.zd_index_boom_tit li {
+.zd_index_boom_tit li,
+.zd_index_fashion_tit li,
+.zd_index_sport_tit li,
+.zd_index_chart_tit li,
+.zd_index_brand_tit li {
     position: relative;
     float: left;
     min-width: 70px;
@@ -1548,7 +1566,11 @@ li .tit_spc:hover {
     cursor: pointer;
 }
 
-.zd_index_boom_tit li:hover {
+.zd_index_boom_tit li:hover,
+.zd_index_fashion_tit li:hover,
+.zd_index_sport_tit li:hover,
+.zd_index_chart_tit li:hover,
+.zd_index_brand_tit li:hover {
     background-color: #333;
     color: #f2d291;
 }
@@ -1588,7 +1610,12 @@ li .tit_spc:hover {
 .index_boom_list_right img:hover {
     box-shadow: 0 2px 10px 0 rgba(0, 0, 0, .15);
 }
-
+.index_boom_btns_left,
+.index_boom_btns_right,
+.index_fashion_btns_left,
+.index_fashion_btns_right,
+.index_sport_btns_left,
+.index_sport_btns_right,
 .index_tab_btns_left,
 .index_tab_btns_brand_left,
 .index_tab_btns_right,
@@ -1601,23 +1628,34 @@ li .tit_spc:hover {
     z-index: 1;
 }
 
+.index_boom_btns_left,
+.index_fashion_btns_left,
+.index_sport_btns_left,
 .index_tab_btns_left,
 .index_tab_btns_brand_left {
     left: 0;
     background: url(../images/spriteA.png) -142px -184px no-repeat;
 }
-
+.index_boom_btns_left:hover,
+.index_fashion_btns_left:hover,
+.index_sport_btns_left:hover,
 .index_tab_btns_left:hover,
 .index_tab_btns_brand_left:hover {
     background: url(../images/spriteA.png) -262px -184px no-repeat;
 }
 
+.index_boom_btns_right,
+.index_fashion_btns_right,
+.index_sport_btns_right,
 .index_tab_btns_right,
 .index_tab_btns_brand_right {
     right: 0;
     background: url(../images/spriteA.png) -302px -184px no-repeat;
 }
 
+.index_boom_btns_right:hover,
+.index_fashion_btns_right:hover,
+.index_sport_btns_right:hover,
 .index_tab_btns_right:hover,
 .index_tab_btns_brand_right:hover {
     background: url(../images/spriteA.png) -342px -184px no-repeat;
