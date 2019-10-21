@@ -1,62 +1,43 @@
-$(function() {
-    //商品添加
-    for(var i=0; i<5; i++) {
-        $(".shopCar_content ul").prepend(`
-        <li>
-            <i class="check"></i>
-            <img src="" alt="">
-            <div class="content">
-                <p>阿玛尼-LUIGI系列 AR1970 石英男表${i+1}</p>
-                <p>真皮 黑色</p>
-            </div>
-            <div class="control">
-                <span>￥<span class="price">2120</span></span>
-                <div>
-                    <button class="sub" type="button">-</button>
-                    <input class="number" type="text" value="1" disabled>
-                    <button class="add" type="button">+</button>
-                </div>
-                <span class="priceAll" style="font-weight: 700;">￥2120</span>
-                <a class="del" href="javascript:void(0)">删除</a>
-            </div>
-            <a href="">移入收藏</a>
-        </li>
-        `)}
+   //商品添加
+    // for(var i=0; i<localStorage.getItem("cartNum"); i++) {
+        $(".shopCar_content ul").prepend(localStorage.getItem("cartCode"))
         var datalist="";
         $(".pay button").click(function() {  //结算时把勾选的商品节点本地存储
             
-            for(var j=0;j<$(".checkOn").length;j++) {
+            for(var j=0;j<$(".shopCar_content li .checkOn").length;j++) {
                 // console.log($(".content p:first-child").eq($(".shopCar_content li").index($(".checkOn").parent().eq(j))).text())
                 datalist+=`
                 <li>
                     <div class="shopMessage">
-                        <a href="">
-                            <img src="https://image8.wbiao.co/shop/c7fe11add1b24475b1d582b053687469.jpg?x-oss-process=image/resize,w_90,h_90" alt="">
+                        <a href="javascript:void(0)">
+                            <img src="${$(".shopCar_content li>p img").eq($(".shopCar_content li").index($(".shopCar_content li .checkOn").parent().eq(j)))[0].src}" alt="">
                         </a>
                         <div class="shopContent">
-                            <p class="p1">${$(".content p:first-child").eq($(".shopCar_content li").index($(".checkOn").parent().eq(j))).text()}</p>
-                            <p class="p2">${$(".content p:last-child").eq($(".shopCar_content li").index($(".checkOn").parent().eq(j))).text()}</p>
+                            <p class="p1">${$(".content p:first-child").eq($(".shopCar_content li").index($(".shopCar_content li .checkOn").parent().eq(j))).text()}</p>
+                            <p class="p2">${$(".content p:last-child").eq($(".shopCar_content li").index($(".shopCar_content li .checkOn").parent().eq(j))).text()}</p>
                             <span>七天退换</span>
                         </div>
                         <div class="shopMessage_fl">
-                            <span>￥<span class="price">${$(".price").eq($(".shopCar_content li").index($(".checkOn").parent().eq(j))).text()}</span></span>
+                            <span>￥<span class="price">${$(".price").eq($(".shopCar_content li").index($(".shopCar_content li .checkOn").parent().eq(j))).text()}</span></span>
                             <div>
-                                <button class="sub" type="button">-</button>
-                                <input class="number" type="text" value="${$(".number").eq($(".shopCar_content li").index($(".checkOn").parent().eq(j))).val()}" disabled>
-                                <button class="add" type="button">+</button>
+                                <button class="sub subNum" type="button">-</button>
+                                <input class="number" type="text" value="${$(".number").eq($(".shopCar_content li").index($(".shopCar_content li .checkOn").parent().eq(j))).val()}" disabled>
+                                <button class="add addNum" type="button">+</button>
                             </div>
-                            <span class="priceAll" style="font-weight: 700;">${$(".priceAll").eq($(".shopCar_content li").index($(".checkOn").parent().eq(j))).text()}</span>
+                            <span class="priceAll" style="font-weight: 700;">${$(".priceAll").eq($(".shopCar_content li").index($(".shopCar_content li .checkOn").parent().eq(j))).text()}</span>
                         </div>
                     </div>
                 </li>
                 `
             }
             localStorage.setItem("list",datalist)
+            if($(".ticket>em").hasClass("ticketOn")) {
+                localStorage.setItem("subPrice",$(".ticket>em").text().substr(1))
+            }
             if($(".checkOn").length>0) {  //勾选商品后可跳转至结算
                 window.location.href = "submitIndent.html";
             }
         })
-        localStorage.setItem("sex","女")
         
     
     $(".shop_num").text($(".shopCar_content li").length);
@@ -119,7 +100,7 @@ $(function() {
     })
 
     //商品计数及小计
-    $(".sub").click(function() {
+    $(".sub").on("click",function() {
         $(".number")[$(".sub").index($(this))].value--;
         if($(".number")[$(".sub").index($(this))].value<=1) {
             $(".number")[$(".sub").index($(this))].value=1;
@@ -197,4 +178,3 @@ $(function() {
             getPrice();
         }
     })
-})

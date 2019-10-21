@@ -212,14 +212,17 @@ table { border-collapse:collapse; border-spacing:0; }
 .shopCar_content li>i {
     margin-top: 40px;
 }
-.content, .shopCar_content li>img  {
+.content, .shopCar_content li>p  {
     float: left;
 }
-.shopCar_content li>img {
+.shopCar_content li>p {
     width: 90px;
     height: 90px;
-    background: url('https://image8.wbiao.co/shop/c7fe11add1b24475b1d582b053687469.jpg?x-oss-process=image/resize,w_90,h_90') center no-repeat;
-    background-size: contain;
+}
+.shopCar_content li>p img {
+    display: block;
+    max-width: 90px;
+    margin: auto;
 }
 .content {
     margin-top: 5px;

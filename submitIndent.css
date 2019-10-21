@@ -200,6 +200,9 @@
     overflow: hidden;
     margin-right: 22px;
 }
+.shopMessage a img {
+    max-width: 90px;
+}
 .shopContent {
     float: left;
     width: 476px;
