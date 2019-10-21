@@ -6,7 +6,6 @@ code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
 small{ font-size:12px; } 
 ul, ol { list-style:none; } 
 a { text-decoration:none; } 
-a:hover { text-decoration:underline; } 
 sup { vertical-align:text-top; } 
 sub{ vertical-align:text-bottom; } 
 legend { color:#000; } 
@@ -16,6 +15,9 @@ table { border-collapse:collapse; border-spacing:0; }
 
 
 /* 帮助与支持 */
+body {
+    color: #000;
+}
 .x_help {
     width: 100%;
     background: rgb(241, 241, 241);
@@ -45,6 +47,7 @@ table { border-collapse:collapse; border-spacing:0; }
 /* 帮助与支持菜单 */
 .x_main {
     width: 100%;
+    border-bottom: 1px solid #eee;
 }
 .x_main_help {
     width: 1090px;
@@ -65,7 +68,6 @@ table { border-collapse:collapse; border-spacing:0; }
     border-right: 1px solid #d3d3d3;
     padding-bottom: 9999px;
     margin-bottom: -9999px;
-
 }
 .x_help_right {
     float: right;
@@ -106,6 +108,16 @@ table { border-collapse:collapse; border-spacing:0; }
 .x_help_content table a {
     color: #666;
 }
+.x_help_content td {
+    font-size: 12px;
+}
+.x_help_content strong {
+    color: #000;
+    font-weight: 600;
+}
+.x_help_content-7 p {
+    color: #000;
+}
 .on {
     display: block;
     width: 173px;
@@ -113,3 +125,10 @@ table { border-collapse:collapse; border-spacing:0; }
     color: #fff !important;
     background: url(../images/nav.png) right center no-repeat;
 }
+.index_left_nav {
+    display: none;
+    background: rgb(230, 230, 230);
+    box-shadow: inset -20px -7px 7px -15px rgba(0,0,0,.04);
+}
+
+

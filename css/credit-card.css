@@ -6,7 +6,6 @@ code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
 small{ font-size:12px; } 
 ul, ol { list-style:none; } 
 a { text-decoration:none; } 
-a:hover { text-decoration:underline; } 
 sup { vertical-align:text-top; } 
 sub{ vertical-align:text-bottom; } 
 legend { color:#000; } 
@@ -251,6 +250,7 @@ table { border-collapse:collapse; border-spacing:0; }
 }
 /* 申请信用卡快速通道 */
 .x_bank {
+    position: relative;
     font-family: Tahoma,Arial,"宋体";
     width: 1100px;
     height: 138px;
@@ -271,6 +271,23 @@ table { border-collapse:collapse; border-spacing:0; }
 .x_bank_silder {
     margin-top: 18px;
 }
+.x_bank_item {
+    overflow: hidden;
+}
+/* .x_bank_item ul {
+    width: 400%;
+    transition-duration: .3s;
+} */
+.x_bank_item ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.x_bank_item li {
+    float: left;
+    width: 1000px;
+    position: relative;
+}
 .x_bank_item li:after {
     content: "";
     display: block;
@@ -280,4 +297,140 @@ table { border-collapse:collapse; border-spacing:0; }
     float: left;
     margin: 0 20px;
     text-decoration: none;
+}
+.x_bank_lr a {
+    width: 14px;
+    height: 27px;
+    margin: 0 20px;
+    position: absolute;
+    top: 65px;
+}
+.x_bank_previous {
+    display: block;
+    width: 14px;
+    height: 27px;
+    background: url(../images/credit-card-previous.jpg) no-repeat 0 0;
+    left: 0;
+}
+.x_bank_next {
+    display: block;
+    width: 14px;
+    height: 27px;
+    background: url(../images/credit-card-next.jpg) no-repeat 0 0;
+    right: 0;
+}
+.x_show {
+    left: 0;
+}
+/*  */
+.x_main {
+    width: 1000px;
+    margin: 0 auto;
+}
+.x_bank_content {
+    margin-top: 40px;
+}
+.x_bank_content:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.x_bank_left {
+    float: left;
+    width: 660px;
+}
+.x_bankCard_list {
+    border: 1px solid #dbdbdb;
+    border-top: 2px solid #b01330;
+    margin-bottom: 20px;
+}
+.x_bankCard_list_item {
+    margin: 10px 0;
+}
+.x_bankCard_list_item:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.x_lCard {
+    float: left;
+    width: 400px;
+    border-right: 1px dashed #ddd;
+}
+.x_rCard {
+    float: right;
+    width: 250px;
+}
+.x_lCard:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.x_lCard div {
+    float: left;
+}
+.x_lCard_left {
+    padding: 10px 20px;
+}
+.x_lCard_right h1 {
+    padding: 10px 0 7px;
+}
+.x_lCard_right h1 a {
+    display: block;
+    width: 210px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #b01330;
+}
+.x_lCard_right p {
+    width: 210px;
+    font-size: 12px;
+    color: #000;
+    padding: 0 0 8px 5px;
+    background: url(/img/4.0/credit/cr1.jpg) left 7px no-repeat;
+}
+.x_rCard p {
+    width: 245px;
+    font-size: 12px;
+    padding-top: 5px;
+    line-height: 1;
+}
+.x_rCard p label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    color: #999;
+    padding: 5px 20px 5px 5px;
+}
+.x_overflow_hide {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.x_card_comment {
+    border-top: 1px solid #dbdbdb;
+}
+.x_nfriend {
+    display: inline-block;
+    font-size: 14px;
+    padding: 5px 10px;
+    line-height: 1.5;
+    border-right: 1px solid #dbdbdb;
+}
+.x_comm {
+    display: inline-block;
+    width: 465px;
+    color: #b01330;
+    font-size: 14px;
+    line-height: 1.5;
+    vertical-align: middle;
+}
+.x_more_comm {
+    display: inline-block;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-left: 1px solid #dbdbdb;
+}
+.x_card_comment span a {
+    color: #999;
 }
