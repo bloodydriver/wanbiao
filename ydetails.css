@@ -4,7 +4,7 @@ body, button, input, select, textarea { font:12px/1.5tahoma, arial,  }
 
 h1, h2, h3, h4, h5, h6{ font-size:100%; }
 
-address, cite, dfn, em, var { font-:normal; }
+address, cite, dfn, em, var { font-style:normal; }
 
 code, kbd, pre, samp { font-family:couriernew, courier, monospace; }
 
@@ -99,7 +99,7 @@ a {
     width: 680px;
     overflow: hidden;
 }
-.medioReport {
+.medioReport{
     display: block;
     text-align: center;
     font-size: 14px;
@@ -181,7 +181,7 @@ a {
 .submession-icon {
     color: #b32424;
     font-size: 14px;
-    background: url(https://qd2.wbiao.co/img/5.0/news/submission.png) 0 1px no-repeat;
+    background: url("https://qd2.wbiao.co/img/5.0/news/submission.png") 0 1px no-repeat;
     padding-left: 25px;
 }
 .yleftList .article img {
@@ -328,6 +328,9 @@ a {
     float: left;
     width: 280px;
     height: 328px;
+}
+.yrightArea .slideAD .lidead img {
+    width: 280px;
 }
 .yrightArea .slideAD .box {
     width: 0;
@@ -526,7 +529,7 @@ a {
     margin: 10px 20px 0 5px;
 }
 .logo-icon1 {
-    background-image: url(img/brands_gray.jpg);
+    background-image: url("img/brands_gray.jpg");
     background-position: -600px -720px;
     background-repeat: no-repeat;
 }
@@ -536,17 +539,17 @@ a {
     margin: 12px 29px;
 }
 .logo-icon2 {
-    background-image: url(img/brands_gray.jpg);
+    background-image: url("img/brands_gray.jpg");
     background-position: -600px -540px;
     background-repeat: no-repeat;
 }
 .logo-icon3 {
-    background-image: url(img/brands_gray.jpg);
+    background-image: url("img/brands_gray.jpg");
     background-position: -120px -900px;
     background-repeat: no-repeat;
 }
 .logo-icon4 {
-    background-image: url(img/brands_gray.jpg);
+    background-image: url("img/brands_gray.jpg");
     background-position: -600px -810px;
     background-repeat: no-repeat;
 }
@@ -742,7 +745,6 @@ a {
     margin-top: 24px;
     width: 680px;
     font-weight: bold;
-    font-size: 24px;
     border-bottom: 1px solid #ccc;
     padding-bottom: 5px;
     position: relative;
@@ -893,7 +895,7 @@ a {
     cursor: pointer;
     width: 21px;
     height: 21px;
-    background-image: url(img/chaticon.png);
+    background-image: url("img/chaticon.png");
     background-repeat: no-repeat;
     background-position: -390px -225px;
 }
@@ -901,7 +903,7 @@ a {
     position: absolute;
     top: 16px;
     right: 12px;
-    background-image: url(img/a.png);
+    background-image: url("img/a.png");
     background-position: -97px -504px;
     background-size: 589px;
     width: 17px;
@@ -922,12 +924,12 @@ a {
     cursor: pointer;
     width: 21px;
     height: 21px;
-    background-image: url(img/chaticon.png);
+    background-image: url("img/chaticon.png");
     background-repeat: no-repeat;
     background-position: -299px -225px;
 }
 .dialogue-close4 {
-    background-image: url(img/a.png);
+    background-image: url("img/a.png");
     background-position: -97px -504px;
     background-size: 589px;
     width: 17px;
@@ -945,7 +947,7 @@ a {
     cursor: pointer;
     width: 21px;
     height: 21px;
-    background-image: url(img/chaticon.png);
+    background-image: url("img/chaticon.png");
     background-repeat: no-repeat;
     background-position: -360px -225px;
 }
@@ -1375,7 +1377,7 @@ a {
     color: #666;
 }
 .cart-empty .icon-car {
-    background-image: url(img/a.png);
+    background-image: url("img/a.png");
     background-repeat: no-repeat;
     background-position: 12px -110px;
     position: absolute;
@@ -2084,7 +2086,7 @@ a {
 /*客服部分和购物详情页的结合*/
 .yshop-car {
     width: 260px;
-    height: 122px;
+    height: 683px;
     margin-top: 9px;
     background: #fff;
     position: relative;
@@ -2169,7 +2171,7 @@ a {
 }
 .yshop-car .bottom{
     position: absolute;
-    bottom: -445px;
+    bottom: -16px;
     width: 236px;
     height: 48px;
     padding: 0 12px;
@@ -2215,16 +2217,12 @@ a {
 }
 .collect-g {
     position: relative;
-    width: 118px;
-    height: 146px;
-    /* overflow: hidden; */
+    width: 100%;
+    height: 683px;
     display: none;
     float: left;
     background: #fff;
     padding: 10px 0;
-    margin: 10px 0 0 8px;
-    text-align: center;
-    float: left;
 }
 .collect-g .p1 img {
     width: auto;
@@ -2233,6 +2231,7 @@ a {
 .collect-g .p2 {
     color: #666;
     line-height: 25px;
+    margin-left: 25px;
 }
 .collect-g .p3 {
     display: none;
@@ -2253,8 +2252,7 @@ a {
 }
 .collect-g .bottom {
     position: absolute;
-    bottom: -400px;
-    left: -8px;
+    bottom: -5px;
     width: 260px;
     height: 48px;
     padding: 0 12px;
@@ -2268,3 +2266,119 @@ a {
     color: #666;
 }
 
+.swiper-pagination {
+    bottom: 66px !important;
+    left: 0;
+    width: 100%;
+}
+.articlelist {
+    width: 730px;
+}
+.articlelist .cl {
+    padding: 20px 0;
+    border-bottom: 1px dotted #c4c4c4;
+    height: 158px;
+    overflow: hidden;
+}
+.articlelist .cl .fl {
+    width: 158px;
+    float: left;
+}
+.articlelist .fl img {
+    width: 158px;
+    height: 158px;
+}
+.articlelist .fr {
+    width: 552px;
+    float: right;
+}
+.articlelist .tt {
+    height: 16px;
+    overflow: hidden;
+    color: #333;
+    margin-bottom: 10px;
+    line-height: 16px;
+    font-weight: bold;
+}
+.articlelist .author {
+    font-size: 12px;
+    
+    color: #888;
+}
+.articlelist .fr .author .fir {
+    color: #888;
+}
+.articlelist .author span {
+    margin-right: 19px;
+}
+.articlelist .author span:nth-child(1){
+    color: red;
+}
+.articlelist .se {
+    float: right;
+    
+}
+.articlelist .ct {
+    margin-top: 17px;
+    line-height: 18px;
+    max-height: 36px;
+    overflow: hidden;
+    font-size: 12px;
+    color: #888;
+}
+.articlelist .igw {
+    margin-top: 17px;
+}
+.articlelist .igw img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.ymainbox1 .bottom {
+    display: flex;
+    flex-flow: row nowrap;
+}
+.ymainbox1 .bot-r {
+    width: 250px;
+  
+}
+.ymainbox1 .bot-r .title {
+    margin-top: 24px;
+    font-weight: bold;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 5px;
+    position: relative;
+    display: inline-block;
+    color: #333;
+    width: 100%;
+    height: 30px;
+}
+.ymainbox1 .list-box {
+    display: flex;
+    flex-flow: row nowrap;
+}
+.ymainbox1 .bot-r .img {
+    width: 130px;
+}
+.ymainbox1 .bot-r .img img{
+    width: 130px;
+    height: 130px;
+}
+.ymainbox1 .bot-r .tt {
+    font-weight: bold;
+    line-height: 17px;
+}
+.ymainbox1 .bot-r .em {
+    color: #b01330;
+    line-height: 31px;
+}
+.ymainbox1 .text {
+    font-size: 12px;
+    color: #888;
+    margin-left: 15px;
+    padding-top: 20px;
+}
+.ymainbox1 .text p {
+    width: 60px;
+}

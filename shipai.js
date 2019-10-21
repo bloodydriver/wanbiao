@@ -30,39 +30,39 @@ $(function () {
         })
     }
     )(jQuery);
-    (function () {  //头条新闻下的图片轮播
-        var i = 0;
-        var timer;
-        $('.lidead').eq(0).show().siblings('.lidead').hide();
-        showTime();
-        $('.tab').hover(function () {
-            i = $(this).index();
-            show()
-            clearInterval(timer);
-        }, function () {
-            showTime();
-        });
-        function showTime() {
-            timer = setInterval(function () {
-                show()
-                i++;
-                if (i == 5) {
-                    i = 0;
-                }
-            }, 2000);
-        }
-        function show() {
-            $('.lidead').eq(i).fadeIn(300).siblings('.lidead').fadeOut(300);
-            $(".tab").eq(i).css("background", "#ff6700").siblings(".tab").css("background", "")
-        }
-        $(".lidead").mouseenter(function () {
-            clearInterval(timer)
-        })
-        $(".lidead").mouseleave(function () {
-            showTime()
-        })
-    }
-    )(jQuery)
+    // (function () {  //头条新闻下的图片轮播
+    //     var i = 0;
+    //     var timer;
+    //     $('.lidead').eq(0).show().siblings('.lidead').hide();
+    //     showTime();
+    //     $('.tab').hover(function () {
+    //         i = $(this).index();
+    //         show()
+    //         clearInterval(timer);
+    //     }, function () {
+    //         showTime();
+    //     });
+    //     function showTime() {
+    //         timer = setInterval(function () {
+    //             show()
+    //             i++;
+    //             if (i == 5) {
+    //                 i = 0;
+    //             }
+    //         }, 2000);
+    //     }
+    //     function show() {
+    //         $('.lidead').eq(i).fadeIn(300).siblings('.lidead').fadeOut(300);
+    //         $(".tab").eq(i).css("background", "#ff6700").siblings(".tab").css("background", "")
+    //     }
+    //     $(".lidead").mouseenter(function () {
+    //         clearInterval(timer)
+    //     })
+    //     $(".lidead").mouseleave(function () {
+    //         showTime()
+    //     })
+    // }
+    // )(jQuery)
     $(".r_top span").mouseenter(function () {  //  新闻 图片 评论的tab切换
         $(".r_contentbox").eq($(this).index()).show().siblings().hide();
         $(".r_top span").eq($(this).index()).css("border-top", "2px solid red").siblings().css("border-top", "none")
@@ -138,55 +138,60 @@ $(function () {
         })
     }
     )(jQuery);
-    (function () {   //底部轮播
-        var i = 0;
-        var timer;
-        $('.boxitem').eq(0).show().siblings('.boxitem').hide();
-        showTime();
-        function showTime() {
-            timer = setInterval(function () {
-                $(".boxitem_tab").eq(i).css("background", "red").siblings(".boxitem_tab").css("background", "")
-                $('.boxitem').eq(i).fadeIn(300).siblings('.boxitem').fadeOut(300);
-                i++;
-                if (i == 6) {
-                    i = 0;
-                }
-            }, 2500);
-        }
-        $(".boxitem").mouseenter(function () {
-            clearInterval(timer)
-        })
-        $(".boxitem").mouseleave(function () {
-            showTime()
-        })
-    }
-    )(jQuery);
-    (function () {   //底部轮播
-        var i = 0;
-        var timer;
-        $('.boxitem1').eq(0).show().siblings('.boxitem1').hide();
-        showTime();
-        function showTime() {
-            timer = setInterval(function () {
-                $(".boxitem_tab1").eq(i).css("background", "red").siblings(".boxitem_tab1").css("background", "")
-                $('.boxitem1').eq(i).fadeIn(300).siblings('.boxitem1').fadeOut(300);
-                i++;
-                if (i == 6) {
-                    i = 0;
-                }
-            }, 2500);
-        }
-        $(".boxitem1").mouseenter(function () {
-            clearInterval(timer)
-        })
-        $(".boxitem1").mouseleave(function () {
-            showTime()
-        })
-    }
-    )(jQuery);
+    // (function () {   //底部轮播
+    //     var i = 0;
+    //     var timer;
+    //     $('.boxitem').eq(0).show().siblings('.boxitem').hide();
+    //     showTime();
+    //     function showTime() {
+    //         timer = setInterval(function () {
+    //             $(".boxitem_tab").eq(i).css("background", "red").siblings(".boxitem_tab").css("background", "")
+    //             $('.boxitem').eq(i).fadeIn(300).siblings('.boxitem').fadeOut(300);
+    //             i++;
+    //             if (i == 6) {
+    //                 i = 0;
+    //             }
+    //         }, 2500);
+    //     }
+    //     $(".boxitem").mouseenter(function () {
+    //         clearInterval(timer)
+    //     })
+    //     $(".boxitem").mouseleave(function () {
+    //         showTime()
+    //     })
+    // }
+    // )(jQuery);
+    // (function () {   //底部轮播
+    //     var i = 0;
+    //     var timer;
+    //     $('.boxitem1').eq(0).show().siblings('.boxitem1').hide();
+    //     showTime();
+    //     function showTime() {
+    //         timer = setInterval(function () {
+    //             $(".boxitem_tab1").eq(i).css("background", "red").siblings(".boxitem_tab1").css("background", "")
+    //             $('.boxitem1').eq(i).fadeIn(300).siblings('.boxitem1').fadeOut(300);
+    //             i++;
+    //             if (i == 6) {
+    //                 i = 0;
+    //             }
+    //         }, 2500);
+    //     }
+    //     $(".boxitem1").mouseenter(function () {
+    //         clearInterval(timer)
+    //     })
+    //     $(".boxitem1").mouseleave(function () {
+    //         showTime()
+    //     })
+    // }
+    // )(jQuery);
     $(".medioReport").click(function () { // 媒体报道一行的tab切换
         $(".yleftList").hide()
         $(".tab-change .ymainbox1").eq($(this).index()).show().siblings().hide();
+        console.log($(this).index())
+        var index1 = $(this).index()
+        if (index1 >= 5) {
+            $(".yrightArea").hide()
+        }
         $(this).css({ "border-bottom": "2px solid #b01330", "color": "#b01330" }).eq(0).siblings().css({ "border-bottom": "none", "color": "#333" })
     });
 });
@@ -198,214 +203,40 @@ $(function () {
     })
 
 });
-(function () {  //评论晒单轮播
-    var i = 0;
-    var timer;
-    $('.img9').eq(0).show().siblings().hide();
-    showTime();
-    $('.ttab').hover(function () {
-        i = $(this).index();
-        show()
-        clearInterval(timer);
-    }, function () {
-        showTime();
-    });
-    function showTime() {
-        timer = setInterval(function () {
-            show()
-            i++;
-            if (i == 4) {
-                i = 0;
-            }
-        }, 2000);
-    }
-    function show() {
-        $('.img9').eq(i).fadeIn(300).siblings().fadeOut(300);
-        $(".ttab").eq(i).css("background", "#ff6700").siblings().css("background", "")
-    }
-    $(".img9").mouseenter(function () {
-        clearInterval(timer)
-    })
-    $(".img9").mouseleave(function () {
-        showTime()
-    })
-}
-)(jQuery);
-// var bot22 =document.getElementsByClassName("botbot")[0];
-// console.log(bot22)
-// for(var i=0;i<16;i++){
-//     bot11.innerHTML += `
-//     <div class="bot">
-//     <div class="box">
-//         <div class="l">
-//             <div class="lquest">
-//                 <a href="javascript:void(0)"><i>问</i>香奈儿是哪个国家的品牌</a>
-//                 <div class="respon">
-//                     <i>答</i>暂无回答
-//                 </div>
-//             </div>
-//             <div class="bottom">
-//                 <ul>
-//                     <li><span>•<i>问：</i><a href="javascript:void(0)">女士手表什么牌子好</a></span><span
-//                             class="time">2014-10-23 09:37:22</span></li>
-//                     <li><span>•<i>问：</i><a href="javascript:void(0)">男士手表什么牌子好</a></span><span
-//                             class="time">2014-10-23 09:37:23</span></li>
-//                     <li><span>•<i>问：</i><a href="javascript:void(0)">浪琴手表那个系列好</a></span><span
-//                             class="time">2014-10-23 09:37:24</span></li>
-//                     <li><span>•<i>问：</i><a href="javascript:void(0)">机械手表哪个牌子好</a></span><span
-//                             class="time">2014-10-23 09:37:24</span></li>
-//                 </ul>
-//             </div>
-//         </div>
-//         <div class="r">
-//             <div class="lquest">
-//                 <a href="javascript:void(0)"><i>问</i>送手表代表什么意思</a>
-//                 <div class="respon">
-//                     <i>答</i>暂无回答
-//                 </div>
-//             </div>
-//             <div class="bottom">
-//                 <ul>
-//                     <li><span>•<i>问：</i><a href="javascript:void(0)">梦见手表是什么意思</a></span><span
-//                             class="time">2014-10-23 09:37:22</span></li>
-//                     <li><span>•<i>问：</i><a href="javascript:void(0)">天梭是哪个国家的品牌</a></span><span
-//                             class="time">2014-10-23 09:37:23</span></li>
-//                     <li><span>•<i>问：</i><a href="javascript:void(0)">买手表要注意什么</a></span><span
-//                             class="time">2014-10-23 09:37:24</span></li>
-//                     <li><span>•<i>问：</i><a href="javascript:void(0)">gucci是什么意思</a></span><span
-//                             class="time">2014-10-23 09:37:24</span></li>
-//                 </ul>
-//             </div>
-//         </div>
-//     </div>
-
-// </div>
-//     `
+// (function () {  //评论晒单轮播
+//     var i = 0;
+//     var timer;
+//     $('.img9').eq(0).show().siblings().hide();
+//     showTime();
+//     $('.ttab').hover(function () {
+//         i = $(this).index();
+//         show()
+//         clearInterval(timer);
+//     }, function () {
+//         showTime();
+//     });
+//     function showTime() {
+//         timer = setInterval(function () {
+//             show()
+//             i++;
+//             if (i == 4) {
+//                 i = 0;
+//             }
+//         }, 2000);
+//     }
+//     function show() {
+//         $('.img9').eq(i).fadeIn(300).siblings().fadeOut(300);
+//         $(".ttab").eq(i).css("background", "#ff6700").siblings().css("background", "")
+//     }
+//     $(".img9").mouseenter(function () {
+//         clearInterval(timer)
+//     })
+//     $(".img9").mouseleave(function () {
+//         showTime()
+//     })
 // }
+// )(jQuery);
 
-$(function () {      //客服聊天对话框
-    var serviceData = {
-        'robot': {
-            'name': 'robot001',
-            'dialogue': ['模拟回复1', '模拟回复2', '模拟回复3'],
-            'welcome': '您好，robot001为您服务'
-        }
-    };
-    var dialogueInput = document.getElementById('dialogue_input'),
-        dialogueContain = document.getElementById('dialogue_contain'),
-        dialogueHint = document.getElementById('dialogue_hint'),
-        // btnOpen = document.getElementById('btn_open'),
-        btnClose = document.getElementById('btn_close'),
-        photo = document.getElementById('btn-pic'),
-        photo1 = document.getElementById("btn_close1"),
-        photo2 = document.getElementById("btn_close2"),
-        timer,
-        timerId,
-        shiftKeyOn = false;
-    photo.addEventListener('click', function (e) {
-        $('.dialogue-main').css({ 'display': 'inline-block', 'height': '0' });
-        $('.dialogue-main').animate({ 'height': '600px' })
-    });
-    photo1.addEventListener('click', function (e) {
-        $('.dialogue-main').animate({ 'height': '0' }, function () {
-            $('.dialogue-main').css({ 'display': 'none' });
-            $('.wrapper-zoom').css({ 'display': 'inline-block' });
-        });
-    })
-    photo2.addEventListener('click', function (e) {
-        $('.dialogue-main').toggleClass("dialogue-style");
-    })
-    $(".over-message").click(function () {
-        $(".dialogue-main").hide()
-    })
-    $(".wrapper-zoom").click(function () {
-        $('.dialogue-main').css({ 'display': 'inline-block', 'height': '0' });
-        $('.dialogue-main').animate({ 'height': '600px' })
-        $(this).hide()
-    })
-    btnClose.addEventListener('click', function (e) {
-        $('.dialogue-main').animate({ 'height': '0' }, function () {
-            $('.dialogue-main').css({ 'display': 'none' });
-            $('.dialogue-support-btn').css({ 'display': 'inline-block' });
-        });
-    })
-
-    dialogueInput.addEventListener('keydown', function (e) {
-        var e = e || window.event;
-        if (shiftKeyOn) {
-            return true;
-        } else if (e.keyCode == 13 && dialogueInput.value == '') {
-            setTimeout(function () {
-                fadeIn(dialogueHint);
-                clearTimeout(timerId)
-                timer = setTimeout(function () {
-                    fadeOut(dialogueHint)
-                }, 2000);
-            }, 10);
-            timerId = timer;
-            return true;
-        } else if (e.keyCode == 13) {
-            var nodeP = document.createElement('p'),
-                nodeSpan = document.createElement('span');
-            nodeP.classList.add('dialogue-customer-contain');
-            nodeSpan.classList.add('dialogue-text', 'dialogue-customer-text');
-            nodeSpan.innerHTML = dialogueInput.value;
-            nodeP.appendChild(nodeSpan);
-            dialogueContain.appendChild(nodeP);
-            dialogueContain.scrollTop = dialogueContain.scrollHeight;
-            submitCustomerText(dialogueInput.value);
-        }
-    });
-
-    dialogueInput.addEventListener('keyup', function (e) {
-        if (e.keyCode == 13) {
-            dialogueInput.value = null;
-        }
-    });
-    $(".send-message").click(function () {  //鼠标点击发送
-        if (dialogueInput.value != '') {
-            var nodeP = document.createElement('p'),
-                nodeSpan = document.createElement('span');
-            nodeP.classList.add('dialogue-customer-contain');
-            nodeSpan.classList.add('dialogue-text', 'dialogue-customer-text');
-            nodeSpan.innerHTML = dialogueInput.value;
-            nodeP.appendChild(nodeSpan);
-            dialogueContain.appendChild(nodeP);
-            dialogueContain.scrollTop = dialogueContain.scrollHeight;
-            submitCustomerText(dialogueInput.value);
-            dialogueInput.value = null;
-        } else {
-            alert("请输入内容")
-        }
-    })
-    function submitCustomerText(text) {
-        getServiceText(serviceData);
-    }
-
-    function getServiceText(data) {
-        var serviceText = data.robot.dialogue,
-            i = Math.floor(Math.random() * serviceText.length);
-        var nodeP = document.createElement('p'),
-            nodeSpan = document.createElement('span');
-        nodeP.classList.add('dialogue-service-contain');
-        nodeSpan.classList.add('dialogue-text', 'dialogue-service-text');
-        nodeSpan.innerHTML = serviceText[i];
-        nodeP.appendChild(nodeSpan);
-        dialogueContain.appendChild(nodeP);
-        dialogueContain.scrollTop = dialogueContain.scrollHeight;
-    };
-    $(".car").click(function () {
-        $(".right-panel").css({ right: "0" })
-        $(".right-panel-box").eq($(".car").index($(this))).show().siblings().hide()
-    })
-    $(".right-panel-top .on").click(function () {
-        $(this).css({ borderBottom: "1px solid #333" }).eq(0).siblings(".on").css({ "borderBottom": "" })
-    })
-    $(".right-panel-close").click(function () {
-        $(".right-panel").css({ right: "-262px" })
-    })
-
-})
 
 $(function () {
     //本文相关品牌
@@ -418,41 +249,79 @@ $(function () {
         $(".logo-icon1-text").hide()
     })
 });
-//客服右侧板块与购物详情页的连接
+var ylist = document.getElementsByClassName("ylist");   //循环媒体报道等tab切换下的内容
 
-$(function () {
-    var nu = document.getElementsByClassName("coun")[0]
-    var nu1 = document.getElementsByClassName("coun1")[0]
-    var pre = document.getElementById("pricc");
-    var pre1 = document.getElementById("pric1");
-    var carnum = document.getElementsByClassName("car-number")[0];
-    $(".L_shop_btn2 ,p3").click(function () {
-        $(".login-look").hide();
-        $(".cart-empty").hide();
-        $(".yshop-car").show();
-        $(".car-number").show()
-        carnum.innerHTML++
-        nu.innerHTML++
-        nu1.innerHTML++
-        pre.innerHTML = "￥" + eval(nu.innerHTML * 2120)
-        pre1.innerHTML = "￥" + eval(nu1.innerHTML * 2120)
+for (var j = 0; j < ylist.length; j++) {
+    for (var i = 0; i < 15; i++) {
+        ylist[j].innerHTML += `
+     <li>
+     <div class="essay">
+         <div class="pic">
+             <img src="https://image2.wbiao.co/upload/article/201701/20/1484903470455124781.jpg" alt="">
+         </div>
+         <div class="essay-details">
+             <div class="title">跟随万表欧洲游，感受Chronoswisss瑞宝表顶级珐琅制表工艺</div>
+             <div class="source">
+                 <span>作者：练小爷</span>
+                 <span>2018年01月20日</span>
+                 <span>内容来源：万表网</span>
+             </div>
+             <div class="des">
+                 瑞宝表在琉森总部设立了开放式的表匠工作间，在这里，万表团队可近距离观摩传统手工制表过程，包括像素级的精密部件和珐琅工艺，并有幸与顶级表匠进行交流。瑞宝表的行政总裁Ebstein先生表示，一位老练的表匠，玑镂纹表盘成品率大概在70%左右。而且……
+                 <a href="javascript:void(0)">[更多]</a>
+             </div>
+             <div class="hits">
+                 人气<span>(692)</span><em>|</em>评论<span>(1)</span>
+             </div>
+             <div class="tab1">
+                 <span>标签：</span>瑞宝万表
+             </div>
+         </div>
+     </div>
+ </li>
+     `
+    }
+}
+var aa = document.getElementsByClassName("aa")[0];
+for(var k=0;k<8;k++){
+    aa.innerHTML+=`
+    <li class="cl">
+    <div class="fl"><img src="https://image2.wbiao.co/upload/article/201910/09/1570610773378111915.jpg" alt=""></div>
+    <div class="fr">
+        <p class="tt">打开她的心扉！卡地亚Clé de Cartier系列钥匙腕表</p>
+        <p class="author">
+            <span class="fir">作者：表哥亮</span>
+            <span>2019年10月09日</span>
+            <span class="se">人气<span>(0)</span></span>
+            <span class="se">评论<span>(0)</span>|</span>
+        </p>
+        <p class="ct">【实拍控】今天推荐：卡地亚全新系列Clé de Cartier女士机械腕表WSCL0006</p>
+        <p class="igw">
+            <img src="https://image2.wbiao.co/upload/article/201910/09/1570610773378111915.jpg" alt="">
+            <img src="https://image2.wbiao.co/upload/article/201910/09/1570610805036572998.jpg" alt="">
+            <img src="https://image2.wbiao.co/upload/article/201910/09/1570610837180229978.jpg" alt="">
+            <img src="https://image2.wbiao.co/upload/article/201910/09/1570610868623751041.jpg" alt="">
+            <img src="https://image2.wbiao.co/upload/article/201910/09/1570610908363369240.jpg" alt="">
+            <img src="https://image2.wbiao.co/upload/article/201910/09/1570610927466147634.jpg" alt="">
+        </p>
+    </div>
+</li>
+    `
+}
+var list1=document.getElementsByClassName("lists")[0]
+for(var p=0;p<6;p++){
+    list1.innerHTML+= `
+    <li class="list-box">
+    <div class="img">
+    <img src="https://image2.wbiao.co/goods/b/201709/17/3390_152_20_16_25_32136.png" alt="">
+    </div>
+    <div class="text">
+        <p class="tt">爱宝时</p>
+        <p>EmotionQ情感系列</p>
+        <p><span class="em">528</span>人评论</p>
+    </div>
+</li>
+    `
+}
 
-    });
-    $(".delete-g").click(function () {
-        $(".yshop-car").hide()
-        $(".car-number").hide()
-    });
-    $(".dialogue-support-icon").mouseenter(function () {
-        $(".dialogue-hover").css({ "transform": "right 200px", "opacity": "1" })
-    });
-    $(".dialogue-support-icon").mouseleave(function () {
-        $(".dialogue-hover").css({ "transform": "none", "opacity": "0" })
-    });
-})
-$(function(){
-    $(".collect").click(function(){
-        $(".collect-g").show()
-        $(".cart-empty").hide();
-        $(".login-look").hide();
-    })
-})
+
