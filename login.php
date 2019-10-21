@@ -21,7 +21,7 @@
 	if ($test) {
 		 while($arr=$test->fetch_assoc()) {
 			 if($pass==$arr["password"]){
-				header('location: index.html');
+				header('location:index.html');
 			} else {
 				header('location: demo.html');
 			}
