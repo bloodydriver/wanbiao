@@ -75,15 +75,6 @@ $(function () {
         })
 
     })
-    $("#ser").mouseleave(function () {
-        // $("#ser").css({
-        //     "background-color" : "#f4f4f4",
-        //     "border-left":"1px solid transparent",
-        //     "border-right": "1px solid transparent"
-        // })
-        // $("#drop_window").slideUp();
-        // $(this).siblings().eq(4).hide();
-    })
     //主页倒计时 
     function indexCountdown() {
         var localTime = new Date(); //当前时间的毫秒数
@@ -364,8 +355,9 @@ $(function () {
 
     // lazyload
     $("img").lazyload({
-        effect: "fadeIn",
-        event: "sporty",
+        effect: "show",
+        event: "scroll",
+        threshold: 500,
         container: $("body"),
     });
 
