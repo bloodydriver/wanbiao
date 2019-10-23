@@ -21,3 +21,22 @@ var mySwiper = new Swiper ('.swiper-container', {
         delay: 3000,//1秒切换一次
     },
 })  
+// $(".m-top").
+$(document).on("scroll", function () {
+  var index_scrollTop = $(this).scrollTop();
+  if (index_scrollTop > 200) {
+    // $(".m-container-fixed").css("display","block")
+    $(".m-container-fixed").slideDown(1000);
+  } else {
+    $(".m-container-fixed").slideUp(1000);
+  }
+})
+// $(".m-top").click(function(){
+//   window.scrollTop(0,0);
+// })
+$(".m-top").click(function(){   
+  $('body,html').animate({ 
+      scrollTop:0 
+  },700);
+  return false; //防止冒泡
+});
