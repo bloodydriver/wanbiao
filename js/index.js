@@ -1,8 +1,9 @@
 $(function () {
-    // 右侧客服
-    // $(".ad_close").click(function () {
-    //     $(this).parent().slideUp();
-    // })
+    // 主页顶部关闭广告
+    $(".ad_close").click(function () {
+        $(this).parent().slideUp();
+    })
+    //客服
     // $(".bot_msg_close").click(function () {
     //     $(".bot_msg").css("opacity", "0");
     // })
@@ -355,7 +356,7 @@ $(function () {
 
     // lazyload
     $("img").lazyload({
-        effect: "show",
+        effect: "fadeIn",
         event: "scroll",
         threshold: 500,
         container: $("body"),

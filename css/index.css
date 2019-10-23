@@ -188,7 +188,10 @@ a:hover {
     text-decoration: underline;
     color: #333;
 }
-
+.index_serbox {
+    position: relative;
+    display: inline-block;
+}
 .inner_top a {
     margin: 0 5px;
 }
@@ -205,7 +208,7 @@ a:hover {
 }
 
 #ser {
-    display: inline-block;
+    position: relative;
     width: 62px;
     text-align: center;
     border-left: 1px solid transparent;
@@ -215,16 +218,15 @@ a:hover {
     box-sizing: border-box;
 }
 
-#ser:hover {
+.index_serbox:hover {
     text-decoration: none;
 }
 
 #drop_window {
     position: absolute;
-    top: 28px;
-    left: 118px;
+    top: 27px;
+    right: 5px;
     width: 210px;
-    height: 126px;
     padding: 10px 0;
     background-color: #fff;
     border: 1px solid #ccc;
@@ -1240,25 +1242,25 @@ del {
     margin-top: 50px;
 }
 
-.p1 {
+.index_p1 {
     color: #ccaa7a;
     font-weight: 700;
     font-size: 14px;
     margin-bottom: 15px;
 }
 
-.p2 {
+.index_p2 {
     color: #ccaa7a;
     font-size: 22px;
 }
 
-.p3 {
+.index_p3 {
     color: #999;
     font-size: 12px;
     margin-bottom: 20px;
 }
 
-.p4 {
+.index_p4 {
     display: block;
     width: 130px;
     height: 35px;
@@ -1271,7 +1273,7 @@ del {
     font-weight: 800;
 }
 
-.p4:hover {
+.index_p4:hover {
     background-color: #ccaa7a;
     color: #fff;
 }
