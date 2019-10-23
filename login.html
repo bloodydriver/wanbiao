@@ -15,15 +15,15 @@
         <div class="m-main">
             <div class="m-main-head">
                 <a href="javacsript:void(0)">
-                    <img src="./image/logo-icon.png" alt="">
+                    <img src="images/logo-icon.png" alt="">
                 </a>
                 
             </div>
             <div class="m-main-content">
                 <a href="javacsript:void(0)">
-                    <img src="image/login-bg.jpg" alt="">
+                    <img src="images/login-bg.jpg" alt="">
                 </a>
-                <form action="http://localhost/login.php" method="post" onsubmit="return check()">
+                <form action="http://localhost/wanbiao/login.php" method="post" onsubmit="return check()">
                     <div class="m-main-login">
                         <div class="m-main-login-one">
                             <p class="m-main-login-p">
@@ -45,7 +45,7 @@
                             </div> -->
                             <!-- 密码登录 -->
                             <div class="m-main-login-div">
-                                <input type="text" placeholder="手机号码/会员名/邮箱" class="user"  name="phone">
+                                <input type="text" placeholder="手机号码/会员名/邮箱" class="user"  name="phone" maxlength="11">
                                 <input type="password" placeholder="密码" class="password" name="password">
                                 <button type="submit" class="submit">立即登录</button>
                                 <p>
@@ -57,7 +57,7 @@
                             </div>
                             <!-- 二维码登录 -->
                             <div class="m-main-login-code">
-                                <img src="image/qr.png" alt="" class="m-main-login-img">
+                                <img src="images/qr.png" alt="" class="m-main-login-img">
                                 <p class="m-main-login-code-p">使用
                                     <a>万表app</a>
                                     扫码登录<br>
@@ -69,7 +69,7 @@
                             </div>
                             <!-- 万表app -->
                             <div class="m-main-login-logo">
-                                <img src="image/master-qr.png" >
+                                <img src="images/master-qr.png" >
                             </div>
                             <div class="m-main-login-footer">
                                 <span class="m-main-login-footer-img"></span>
@@ -79,8 +79,6 @@
                                 <span class="m-main-login-footer-hidden">仅在APP开放QQ、微信等社交帐号登录功能，<a href="javascript:void(0)">下载登录</a></span>
                                 <span class="m-main-login-footer-right">社交登录</span>
                             </div>
-                            
-                           
                         </div>
                     </div>
                 </form>

@@ -62,7 +62,7 @@ body {
 }
 .r-content-from-phone,.r-content-from-s,.r-content-from-dun {
     display: inline-block;
-    background-image: url(../image/spriteB.png);
+    background-image: url(../images/spriteB.png);
     background-size: 589px;
     width: 14px;
     height: 16px; 
@@ -81,7 +81,7 @@ body {
 }
 .r-content-from-error {
     display: inline-block;
-    background-image: url(../image/spriteB.png);
+    background-image: url(../images/spriteB.png);
     background-position: -347px -325px;
     background-size: 589px;
     width: 20px;
@@ -161,7 +161,7 @@ input:-moz-placeholder {
     width: 15px;
     height: 15px;
     /* background-color: #000; */
-    background-image: url(../image/d.png);
+    background-image: url(../images/d.png);
     background-position: 80px 102px;
     position: absolute;
     top: 13px;

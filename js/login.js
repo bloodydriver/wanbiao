@@ -77,3 +77,15 @@ $(function(){
         
     })
 })
+function check(){
+    // if($("#r-content-from-last").val()==""){
+    //     $("#r-content-from-last").val("null")
+    // }
+    if($('.user').val()==''){
+        return false
+    }else if($('.password').val()==''){
+        return false
+    }else {
+        return true;
+    }
+}

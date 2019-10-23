@@ -21,9 +21,11 @@
 	if ($test) {
 		 while($arr=$test->fetch_assoc()) {
 			 if($pass==$arr["password"]){
-				header('location:index.html');
+				session_start();
+				$_SESSION["user"]=$phone;
+				header('location:seckill.html');
 			} else {
-				header('location: demo.html');
+				header('location:demo.html');
 			}
 		 }   
 	}
