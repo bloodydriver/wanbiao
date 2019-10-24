@@ -22,6 +22,14 @@ $(function() {
     $(".x_top_server").mouseleave(function() {
         $(this).slideUp("fast");
     }) 
+    //银行快速导航
+    $(".x_bank_menus").css("display","none")
+    $(".x_top_bank>div").mouseenter(function() {
+        $(".x_bank_menus").slideDown("fast");
+    })
+    $(".x_top_bank>div").mouseleave(function() {
+        $(".x_bank_menus").slideUp();
+    })
     // 轮播
     new Swiper('.swiper-container', {
         navigation: {
@@ -30,7 +38,23 @@ $(function() {
         },
         loop: true,
     });
-
+    //信用卡点评 tab切换
+    $(".x_comment_nav li").mouseenter(function() {
+        var i = $(this).index();
+        $(".x_comment_nav a").removeClass("x_nav_col");
+        $(".x_comment_nav a").eq(i).addClass("x_nav_col");
+        $(".x_comm_tab").eq(i).addClass("x_comm_show").siblings().removeClass("x_comm_show");
+    })
+    //底部tab切换
+    $("#x_code_weibo li").on("mouseover",function() {
+        $(this).addClass("x_code_in").siblings().removeClass("x_code_in");
+        $(".x_code_con").eq($(this).index()).addClass("x_code_show").siblings().removeClass("x_code_show")
+    })
+    $("#x_code_server li").on("mouseover",function() {
+        $(this).addClass("x_code_in").siblings().removeClass("x_code_in");
+        $(".x_code_con2").eq($(this).index()).addClass("x_code_show").siblings().removeClass("x_code_show")
+    })
+    
     // help页面
     // 左侧导航栏鼠标经过
     $(".index_left_nav").css("display","none")
