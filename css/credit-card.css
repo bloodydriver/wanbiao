@@ -207,7 +207,7 @@ table { border-collapse:collapse; border-spacing:0; }
     float: left;
 }
 .x_bank_menus {
-    /* display: none; */
+    display: none;
     position: absolute;
     top: 37px;
     left: 0;

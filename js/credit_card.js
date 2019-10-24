@@ -23,12 +23,12 @@ $(function() {
         $(this).slideUp("fast");
     }) 
     //银行快速导航
-    $(".x_bank_menus").css("display","none")
-    $(".x_top_bank>div").mouseenter(function() {
-        $(".x_bank_menus").slideDown("fast");
+    $(".x_bank_list").mouseenter(function() {
+        $(".x_bank_menus").slideToggle("fast");
     })
-    $(".x_top_bank>div").mouseleave(function() {
-        $(".x_bank_menus").slideUp();
+    
+    $(".x_bank_menus").mouseleave(function() {
+        $(this).slideUp("fast");
     })
     // 轮播
     new Swiper('.swiper-container', {
