@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/ydetails.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="dialogue-wrapper">
+        <!--   客服对话框-->
+        <div class="dialogue-main">
+            <div class="dialogue-header">
+                <span id="btn_close1" class="dialogue-close1"></span>
+                <span id="btn_close2" class="dialogue-close2"></span>
+                <span id="btn_close" class="dialogue-close"></span>
+                <div class="dialogue-service-info">
+                    <i class="dialogue-support-img"></i><span class="dialogue-person">高级客服振军为您服务</span>
+                    <p style="margin-left: 117px;">您的一对一名表顾问，为您提供更优质便捷的服务</p>
+                </div>
+            </div>
+            <div id="dialogue_contain" class="dialogue-contain">
+                <img src="https://assist.wbiao.com/setting/uploadIcon/img_entp_info/uploadIcon/wx_1000_922684489.png"
+                    alt="">
+                <p class="dialogue-service-contain"><span
+                        class="dialogue-text dialogue-service-text">您好，001号振军为您服务</span></p>
+                <p class="dialogue-service-contain"><span
+                        class="dialogue-text dialogue-service-text">万表八周年庆盛惠启幕！全球奢华名表低至4.9折，部分品牌每满1000减120
+                        上不封顶！咨询客服购表送白天鹅定制首饰、双面鳄鱼皮表带等好礼！点击进入
+                        <a href="https://m.wbiao.cn/topics/2019920dianqing/">https://m.wbiao.cn/topics/2019920dianqing/</a></span>
+                </p>
+            </div>
+            <div class="dialogue-aside">
+                <div class="dialogue-pic">
+                    <!-- <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2712878680,1972118837&fm=26&gp=0.jpg" alt=""> -->
+                </div>
+                <div class="dialogue-trouble">
+                    <ul>
+                        <li style="text-align:center ;font-size:14px;font-weight: 700">常见问题</li>
+                        <li>• 怎样退货？</li>
+                        <li>• 手表都是正品吗？</li>
+                        <li>• 分期付款怎么操作？</li>
+                        <li>• 能不能货到付款？</li>
+                        <li>• 可以去专柜维修/鉴定吗？</li>
+                    </ul>
+                </div>
+
+            </div>
+            <div class="dialogue-submit">
+                <p id="dialogue_hint" class="dialogue-hint"><span class="dialogue-hint-icon">!</span><span
+                        class="dialogue-hint-text">发送内容不能为空</span></p>
+                <textarea id="dialogue_input" class="dialogue-input-text" placeholder="请输入您的问题，按Enter键提交"></textarea>
+                <span class="over-message">结束会话</span>
+                <button class="send-message">发送</button>
+            </div>
+        </div>
+    </div>
+    <div class="wrapper-zoom" style="display: none;">
+        <img src="https://assist.wbiao.com/setting/uploadIcon/img_pers_info/avatar_origin/wx_1000_ISME9754_T2D_wangshiping.jpg?rand=1426289464"
+            alt="">
+        <div class="ari"> 001号客服 小军为您服务</div>
+    </div>
+    <div class="ypanel-btn">
+        <div class="right-panel">
+            <div id="btn_open" class="dialogue-support-btn">
+                <!--头像鼠标悬浮-->
+                <i class="dialogue-support-icon" id="btn-pic">
+                <div class="dialogue-hover">
+                    <div class="content">
+                        <span class="dialogue-close3"></span>
+                        <span class="trigon"></span>
+                        <span class="contentbox">
+                            <b>十月特惠专场</b>
+                            <em>低至3.5折起 咨询客服享好礼</em>
+                        </span>
+                    </div>
+                    <ul class="talk_btn">
+                        <li class="btn1">选表咨询</li>
+                        <li class="btn">手表维修</li>
+                    </ul>
+                </div>
+            </i>
+            </div>
+            <div class="left-panel">
+                <!--右侧菜单-->
+                <a href="javascript:void(0)" class="btnn">
+                    <i class="car"></i>
+                    <i class="car-number">0</i>
+                    <span class="cardiv ypanel-box1">购物车</span>
+                </a>
+                <a href="javascript:void(0)" class="btnn">
+                    <i class="love car"></i>
+                    <span class="cardiv ypanel-box2">我的收藏</span>
+                </a>
+                <a href="javascript:void(0)" class="btnn">
+                    <i class="clock car"></i>
+                    <span class="cardiv ypanel-box3">浏览足迹</span>
+                </a>
+                <a href="javascript:void(0)" class="btnn">
+                    <i class="twoma"></i>
+                    <div class="twomadiv ypanel-box5">
+                        <img src="https://qd2.wbiao.co/img/5.0/index/tdc/QRcode_wbapp.png?20160919" alt="">
+                        <p>下载万表app</p>
+                    </div>
+                </a>
+                <a href="#" class="btnn">
+                    <i class="up"></i>
+                    <span class="cardiv ypanel-box4">返回顶部</span>
+                </a>
+            </div>
+            <div>
+                <div class="right-panel-box">
+                    <div class="right-panel-top">
+                        <b class="fl">购物车</b>
+                        <span class="dialogue-close4 right-panel-close"></span>
+                    </div>
+                    <p class="login-look">
+                        <span>登录之后显示您之前加入的商品</span>
+                        <a href="javascript：void(0)" class="show-login">现在登录</a>
+                    </p>
+                  <div class="yshop-car" style="display: none;">
+                        <div class="top">
+                            <span class="all">满减</span>
+                            <span class="title">11·11全球名表狂欢节，欧米茄每满100000减500，上不封顶</span>
+                        </div>
+                        <div class="middle">
+                            <div class="left">
+                                <img src="https://image8.wbiao.co/shop/c7fe11add1b24475b1d582b053687469.jpg?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff" alt="">
+                            </div>
+                            <div class="right">
+                                <span class="p1">阿玛尼-LUIGI系列 AR1970 石英男表</span>
+                                <span class="pr"><b id="pricc">￥2120</b><em>x<i class="coun">0</i></em><span class="delete-g">删除</span></span>
+                                
+                            </div>
+                        </div>
+                        <div class="bottom">
+                            <span class="bottom-left">
+                                想买就点右边
+                            </span>
+                            <a href="javascript:void(0)" class="to-car">到购物车结算</a>
+                        </div>
+                    </div>
+                    <div class="cart-empty">
+                        <i class="icon-car"></i>
+                        <span>快去挑心仪的产品吧</span>
+                    </div>
+                    
+                </div>
+                <div class="right-panel-box">
+                    <div class="right-panel-top">
+                        <ul>
+                            <li class="on" style="border-bottom:1px solid #333">商品收藏</li>
+                            <li class="on">店铺收藏</li>
+                        </ul>
+                        <span class="dialogue-close4 right-panel-close"></span>
+                    </div>
+                    <p class="login-look">
+                        <span>登录之后显示您之前收藏的店铺<a href="javascript：void(0)" class="show-login">现在登录</a></span>
+                        
+                    </p>
+                    <div class="collect-g">
+                        <p class="p1"><img src="https://image8.wbiao.co/shop/7ddedc6efcf6440e88ab7743fbc85934.jpg" alt=""></p>
+                        <span class="p2">￥2120</span>
+                        <p class="p3">加入购物车</p>
+                        <div class="bottom">
+                            <a href="javascript:void(0)">查看更多</a>
+                        </div>
+                    </div>
+                    <div class="cart-empty">
+                        <span>快去收藏心仪的产品吧</span>
+                    </div>
+                </div>
+                <div class="right-panel-box">
+                    <div class="right-panel-top">
+                        <b class="fl">浏览足迹</b>
+                        <span class="dialogue-close4 right-panel-close"></span>
+                    </div>
+                    <p class="login-look">
+                        <span>登录后显示您之前浏览商品</span>
+                        <a href="javascript：void(0)" class="show-login">现在登录</a>
+                    </p>
+                    <div class="cart-empty">
+                        <span>暂无浏览记录</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/service.js"></script>
+</body>
+</html>

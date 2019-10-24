@@ -1,0 +1,327 @@
+.li-container{
+    width: 100%;
+    height: 187px;
+}
+.pic{
+	position: relative;
+	width:100%;
+	height: 460px;
+}
+.img img{
+	position:absolute;
+	height: 460px;
+	width: 1583px;
+	float: left;
+}
+.img{
+	position: absolute;
+	top: 0;
+	height: 192px;
+	width: 708px;
+}
+.rudis{
+	background-color: #fff;
+}
+ 
+.swiper{
+	position: absolute;
+	top: 400px;
+	left: 40%;
+}
+.swiper i{
+	display: inline-block;
+	width: 10px;
+	height: 10px;
+	border: 2px solid black;
+	border-radius: 50%;
+    margin-left: 10px;
+}
+/* 以下为轮播图下面内容 */
+.service_box{
+    width: 1583px;
+    height: 2109px;
+    overflow: hidden;
+}
+.service{
+    width: 1200px;
+    margin: -53px auto;
+    overflow: hidden;
+}
+.tit_1{
+    padding: 20px 0;
+    margin-top: 58px;
+}
+.tit_1_title{
+    font-size: 28px;
+    color: #333;
+    font-weight: 700px;
+    vertical-align: middle;
+}
+.tit_2_title{
+    font-size: 14px;
+    color: #999;
+    vertical-align: middle;
+    padding-left: 11px;
+}
+.main img{
+    border: 0;
+    display: block;
+}
+.box {
+    height: 50vh;
+    margin: 0 auto;
+}
+
+/* 清除li样式 */
+ul,
+li {
+    list-style: none;
+}
+
+/* 将ul相对定位，目的是让内容的div绝对定位时相对ul定位，否则会相对body定位 */
+/* ul弹性盒，目的是让li横着排，也可以将li浮动或者转行内块 */
+.ul_sheng {
+    position: relative;
+    display: flex;
+}
+
+/* 将三个li宽度平分，高度60px */
+.li_sheng {
+    flex: 1;
+    height: 60px;
+}
+
+
+/* 设置input的下一个节点label的样式 */
+input+label {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #ccc;
+    font-size: 18px;
+    text-align: center;
+    line-height: 60px;
+    color: #333;
+    cursor: pointer;
+}
+
+/* 设置div内容的基础样式 隐藏内容div*/
+input+label+div {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 60px;
+}
+
+
+/* input选中状态时候对应的label的样式 */
+input:checked+label {
+    background:#CCAA7A;
+    color: #666666;
+    cursor: pointer;
+}
+
+/* input选中时候显示对应的div */
+input:checked+label+div {
+    display: block;
+}
+.float_left img{
+    float: left;
+    margin-top: 15px;
+}
+.float_right{
+    width: 394px;
+    height: 212px;
+    padding: 70px 94px 0 102px;
+    border: 1px solid white;
+    background: #f1f1f1;
+    float: right;
+    margin-left: 18px;
+    margin-top: 15px;
+    line-height: 24px;
+    color: #666;
+    font-size: 14px;
+}
+.float_right h4{
+    font-size: 20px;
+    color: #343434;
+    margin-bottom: 30px;
+}
+/*投资图片及以下内容*/
+.investment_img{
+    cursor:pointer;
+    float: left;
+}
+.investment_mask{
+    position: fixed;
+    top:0;
+    bottom:0;
+    width: 100%;
+    background: rgba(0, 0, 0,.6);
+    display: none;
+    margin-left: -12%;
+    z-index: 1;
+}
+.investment_content{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin-left: -285px;
+    margin-top: -300px;
+    padding: 80px 95px;
+    width: 400px;
+    height: 440px;
+    background: #fff;
+}
+.close{
+    position: absolute;
+    top: 13px;
+    right:13px;
+    cursor:pointer;
+}
+.investment_content h6{
+    font-size: 24px;
+    color: #323232;
+    text-align: center;
+    margin-bottom: 40px;
+}
+.investment_info{
+    height: 280px;
+    overflow: auto;
+    margin-bottom: 88px;
+}
+.investment_info p{
+    font-size: 16px;
+    color: #666;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+.investment_content span{
+    display: block;
+    font-size: 16px;
+    color: #333;
+    text-align: right;
+}
+/*以下为城市搜索城市内容*/
+.province_city{
+    width: 590px;
+    height: 580px;
+}
+.search_area{
+    height: 56px;
+    padding-top: 44px;
+    background: #fff;
+    border: 1px solid #ddd;
+}
+.search_area div{
+    position: relative;
+    height: 46px;
+    width: 360px;
+    margin: 0 auto;
+}
+div input{
+    width: 330px;
+    border: none;
+    outline: 0;
+    border-bottom:1px solid #ddd;
+    height: 36px;
+}
+div img{
+    display: inline-block;
+    vertical-align: bottom;
+    cursor: pointer;
+}
+.area_list{
+    height: 525px;
+    overflow: auto;
+    display: block;
+}
+.area_item{
+    background: #f1f1f1;
+    height: 127px;
+    padding-top: 48px;
+}
+.area_item:nth-child(2n){
+    background: #fafafa;
+}
+.area_left{
+    padding-left:45px;
+    width: 385px;
+}
+.area_name{
+    display: block;
+    font-size: 16px;
+    font-weight: 700;
+    color: #666;
+    margin-bottom: 20px;
+    cursor:pointer;
+}
+.position{
+    font-size: 12px;
+    color: #666;
+}
+.position p{
+    line-height: 20px;
+}
+.area_right{
+    padding:32px 29px;
+    width: 530px;
+}
+.check_map{
+    width: 78px;
+    height: 14px;
+    padding: 11px 12px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    cursor: pointer;
+    float: right;
+    margin-top: -80px;
+}
+.check_map i{
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    background: url(http://static.wbiao.co/d/pc/images/o2o/position_normal.png);
+}
+.check_map span{
+    font-size: 14px;
+    color: #666;
+    vertical-align: middle;
+}
+/*房屋轮播图*/
+.pic_list{
+	position: relative;
+	width: 580px;
+    height: 590px;
+    float:right;
+}
+.pic-img img{
+	position:absolute;
+	height: 580px;
+	width: 590px;
+	float: left;
+}
+.pic-img{
+	position: absolute;
+	top: -98%;
+	height: 590px;
+	width: 580px;
+}
+.dot-list{
+	background-color: #fff;
+}
+ 
+.dot{
+	position: absolute;
+	top: -5%;
+	left: 40%;
+}
+.dot a{
+	display: inline-block;
+	width: 7px;
+	height: 7px;
+	border: 1px solid #ffffff;
+	border-radius: 50%;
+	margin-left: 10px;
+}

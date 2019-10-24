@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.header{
+    width: 100%;
+    height: 247px;
+}
+/* 头部以下内容 */
+.w_main{
+    width: 100%;
+    margin: 0 auto;
+    background: #fff;
+}
+.w_shop_main{
+    width: 100%;
+    padding-bottom: 30px;
+    background: #fff;
+}
+.imagemaps-wrapper{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.imagemaps-wrapper img{
+    width: auto;
+}
+.foot{
+    width: 100%;
+    height: 617px;
+}

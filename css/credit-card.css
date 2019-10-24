@@ -1,0 +1,867 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; } 
+body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; } 
+h1, h2, h3, h4, h5, h6{ font-size:100%; } 
+address, cite, dfn, em, var { font-style:normal; } 
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; } 
+small{ font-size:12px; } 
+ul, ol { list-style:none; } 
+a { text-decoration:none; } 
+sup { vertical-align:text-top; } 
+sub{ vertical-align:text-bottom; } 
+legend { color:#000; } 
+fieldset, img { border:0; } 
+button, input, select, textarea { font-size:100%; } 
+table { border-collapse:collapse; border-spacing:0; } 
+
+/* 顶部 */
+.x_card_head {
+    width: 100%;
+    font-family: Tahoma,Arial,"宋体";
+}
+.x_top_info {
+    width: 1000px;
+    height: 25px;
+    margin: 0 auto;
+}
+.x_top_top:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.x_top_info_1 {
+    float: right;
+    height: 25px;
+    padding-right: 10px;
+}
+.x_top_info_1:after {
+    content:"";
+    display: block;
+    clear: both;
+}
+.x_top_item {
+    float: left;
+    position: relative;
+}
+.x_top_item>a {
+    display: inline-block;
+    padding: 0 3px;
+    height: 22px;
+    line-height: 30px;
+    font-size: 12px;
+    color: #666;
+}
+.x_top_item .x_login {
+    padding-right: 0;
+}
+.x_top_item .x_red {
+    padding-left: 0;
+    color: #b01330;
+}
+.x_top_info_1 a:hover {
+    color: #000;
+}
+.x_top_info_1 span {
+    float: left;
+    width: 20px;
+    height: 30px;
+    background: url(../images/credit-card-line.jpg) no-repeat center center; 
+}
+.x_top_icon {
+    display: inline-block;
+    width: 9px;
+    height: 6px;
+    margin-left: 5px;
+    background: url(../images/credit-card-jt.jpg) no-repeat 0 0;
+}
+.x_top_code, .x_top_server {
+    display:none;
+    position: absolute;
+    top: 28px;
+    right: 0;
+    z-index: 99;
+    width: 220px;
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 0 1px 5px #ddd;
+}
+.x_top_img {
+    display: none;
+    width: 220px;
+    height: 186px;
+}
+.x_top_img img {
+    width: 126px;
+    height: 126px;
+    margin: 30px;
+}
+.x_top_img_show {
+    display: block;
+}
+.x_top_dropdown ul:after {
+    content:"";
+    display: block;
+    clear: both;
+}
+.x_top_dropdown li {
+    float: left;
+    width: 110px;
+    font-size: 12px;
+    line-height: 40px;
+    cursor: pointer;
+    background: #fafafa
+}
+.x_top_dropdown .x_tab_show {
+    color: #fff;
+    background: #332e2e;
+}
+
+.x_top_server {
+    height: 179px;
+}
+.x_help_txt {
+    padding-bottom: 15px;
+}
+.x_help_txt a {
+    float: left;
+    width: 50%;
+    height: 22px;
+    color: #666;
+    font-size: 12px;
+    line-height: 22px;
+    padding: 5px 0;
+}
+
+.x_help_txt, .x_tel_txt {
+    width: 185px;
+    margin: 15px auto;
+    overflow: hidden;
+    border-bottom: 1px solid #eee;
+}
+.x_tel_txt {
+    border: none;
+}
+.x_tel_txt p {
+    font-size: 12px;
+    text-align: center;
+    line-height: 24px;
+    padding-top: 3px;
+}
+/* logo和搜索 */
+.x_top_logo {
+    width: 1000px;
+    height: 96px;
+    margin: auto;
+}
+.x_top_logo:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.x_wb_logo {
+    float: left;
+    margin: 23px 0 0 60px;
+}
+.x_wb_logo a {
+    display: block;
+    width: 280px;
+    height: 49px;
+    background: url(../images/credit-card-logo.jpg) no-repeat;
+}
+.x_wb_search {
+    float: right;
+    width: 307px;
+    margin: 23px 6px 0 0;
+}
+.x_inp {
+    float: left;
+    width: 244px;
+    height: 32px;
+    font-size: 14px;
+    color: #ababab;
+    padding-left: 12px;
+    border: 1px solid #ccc;
+    line-height: 32px;
+}
+.x_btn {
+    float: right;
+    width: 49px;
+    height: 34px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: url(../images/credit-card-btn.jpg) no-repeat 0 0;
+}
+/* 顶部银行列表 */
+.x_top_bank {
+    position: relative;
+    width: 1000px;
+    height: 37px;
+    margin: auto;
+}
+.x_top_bank:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.x_bank_list {
+    float: left;
+}
+.x_bank_menus {
+    display: none;
+    position: absolute;
+    top: 37px;
+    left: 0;
+    width: 988px;
+    padding: 20px 0;
+    z-index: 9;
+    background: #fff;
+}
+.x_menus {
+    display: inline-block;
+    padding: 15px 30px;
+    font-size: 12px;
+    vertical-align: top;
+    color: #666;
+}
+.x_menus_list li {
+    padding-bottom: 5px;
+}
+.x_banktype,.x_typeof {
+    display: inline-block;
+    position: relative;
+    width: 880px;
+    top: 7px;
+}
+.x_selected {
+    display: inline-block;
+    color: #fff !important;
+    background: #b50d0d;
+    padding: 3px 5px;
+}
+.x_banktype span,.x_typeof span {
+    display: inline-block;
+    padding: 5px 0;
+    cursor: pointer;
+    margin-right: 18px;
+}
+.x_banktype a,.x_typeof a {
+    display: inline-block;
+    font-size: 12px;
+    color: #000;
+    line-height: 15px;
+    padding: 3px 5px;
+}
+.x_banktype a:hover,.x_typeof a:hover {
+    color: #fff;
+    background: #b50d0d;
+}
+.x_btn_more a {
+    display: block;
+    color: #999;
+    padding: 0 2px;
+}
+.x_bank_list i {
+    display: inline-block;
+    background: url(../images/credit-card-bankicon.jpg) no-repeat 0 0;
+    width: 14px;
+    height: 8px;
+    margin-right: 15px;
+}
+.x_bank_list span {
+    display: block;
+    width: 210px;
+    height: 37px;
+    line-height: 37px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    background-color: #aa1313;
+    text-align: center;
+    color: #e7cbcb;
+}
+.x_top_nav {
+    float: left;
+    height: 37px;
+    margin-left: 25px;
+}
+.x_top_nav ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.x_top_nav li {
+    float: left;
+}
+.x_top_nav a {
+    display: block;
+    height: 35px;
+    padding: 0px 18px;
+    color: #333;
+    font-size: 14px;
+    line-height: 35px;
+    letter-spacing: -1px;
+    font-weight: 700;
+    text-decoration: none;
+}
+/* 申请信用卡快速通道 */
+.x_bank {
+    position: relative;
+    font-family: Tahoma,Arial,"宋体";
+    width: 1100px;
+    height: 138px;
+    margin: auto;
+}
+.x_bank_aisle {
+    width: 1000px;
+    margin: auto;
+}
+.x_bank_aisle h3 {
+    height: 43px;
+    line-height: 43px;
+    margin-top: 35px;
+    border-bottom: 2px solid #f4f4f4;
+    font-size: 20px;
+    color: #888;
+}
+.x_bank_silder {
+    margin-top: 18px;
+}
+.x_bank_item {
+    overflow: hidden;
+}
+/* .x_bank_item ul {
+    width: 400%;
+    transition-duration: .3s;
+} */
+.x_bank_item ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.x_bank_item li {
+    float: left;
+    width: 1000px;
+    position: relative;
+}
+.x_bank_item li:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.x_bank_item a {
+    float: left;
+    margin: 0 20px;
+    text-decoration: none;
+}
+.x_bank_lr a {
+    width: 14px;
+    height: 27px;
+    margin: 0 20px;
+    position: absolute;
+    top: 65px;
+}
+.x_bank_previous {
+    display: block;
+    width: 14px;
+    height: 27px;
+    background: url(../images/credit-card-previous.jpg) no-repeat 0 0;
+    left: 0;
+}
+.x_bank_next {
+    display: block;
+    width: 14px;
+    height: 27px;
+    background: url(../images/credit-card-next.jpg) no-repeat 0 0;
+    right: 0;
+}
+.x_show {
+    left: 0;
+}
+/*  */
+.x_main {
+    width: 1000px;
+    margin: 0 auto;
+}
+.x_bank_content {
+    margin-top: 40px;
+}
+.x_bank_content:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.x_bank_left {
+    float: left;
+    width: 660px;
+}
+.x_bankCard_list {
+    border: 1px solid #dbdbdb;
+    border-top: 2px solid #b01330;
+    margin-bottom: 20px;
+}
+.x_bankCard_list_item {
+    margin: 10px 0;
+}
+.x_bankCard_list_item:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.x_lCard {
+    float: left;
+    width: 400px;
+    border-right: 1px dashed #ddd;
+}
+.x_rCard {
+    float: right;
+    width: 250px;
+}
+.x_lCard:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.x_lCard div {
+    float: left;
+}
+.x_lCard_left {
+    padding: 10px 20px;
+}
+.x_lCard_right h1 {
+    padding: 10px 0 7px;
+}
+.x_lCard_right h1 a {
+    display: block;
+    width: 210px;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #b01330;
+}
+.x_lCard_right p {
+    width: 210px;
+    font-size: 12px;
+    color: #000;
+    padding: 0 0 8px 5px;
+    background: url(../images/credit-card-dot.jpg) left 7px no-repeat;
+}
+.x_rCard p {
+    width: 245px;
+    font-size: 12px;
+    padding-top: 5px;
+    line-height: 1;
+}
+.x_rCard p label {
+    display: inline-block;
+    width: 100px;
+    text-align: right;
+    color: #999;
+    padding: 5px 20px 5px 5px;
+}
+.x_overflow_hide {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.x_card_comment {
+    border-top: 1px solid #dbdbdb;
+}
+.x_nfriend {
+    display: inline-block;
+    font-size: 14px;
+    padding: 5px 10px;
+    line-height: 1.5;
+    border-right: 1px solid #dbdbdb;
+}
+.x_comm {
+    display: inline-block;
+    width: 465px;
+    color: #b01330;
+    font-size: 14px;
+    line-height: 1.5;
+    vertical-align: middle;
+}
+.x_more_comm {
+    display: inline-block;
+    font-size: 14px;
+    padding: 5px 10px;
+    border-left: 1px solid #dbdbdb;
+}
+.x_card_comment span a {
+    color: #999;
+}
+.x_bank_right {
+    float: right;
+}
+.x_comment_right {
+    width: 300px;
+    margin-bottom: 20px;
+    padding: 10px 5px;
+    box-sizing: border-box;
+    border: 1px solid #dbdbdb;
+}
+.x_comment_title:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.x_comment_nav ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.x_comment_title {
+    padding-bottom: 12px;
+    font-size: 14px;
+    border-bottom: 1px dashed #d4d4d4;
+}
+.x_comment_nav li {
+    float: left;
+    color: #999;
+}
+.x_comment_nav a {
+    color: #999;
+    padding: 0 10px;
+    display: inline-block;
+    font-weight: bold;
+    line-height: 1.5;
+}
+.x_rcomm {
+    float: left;
+    font-weight: bold;
+    color: #000;
+    padding: 5px 0 0 8px;
+}
+.x_comment_nav {
+    float: right;
+}
+.x_creditdate {
+    padding: 5px 0 10px 10px;
+    overflow: hidden;
+}
+.x_comm_tab p {
+    padding-top: 10px;
+}
+.x_comm_tab a {
+    display: block;
+    color: #666;
+    font-size: 12px;
+    line-height: 1.5;
+    padding-left: 10px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    background: url(../images/credit-card-dot.jpg) left center no-repeat;
+}
+.x_comm_tab a:hover {
+    color: #b01330;
+    text-decoration: underline;
+}
+.x_comm_tab {
+    display: none;
+}
+.x_comm_show {
+    display: block;
+}
+.x_nav_col {
+    color: #b01330 !important;
+}
+.x_page_nav {
+    margin: 10px 0;
+    text-align: center;
+}
+.x_page_nav a {
+    display: inline-block;
+    margin: 0 2px;
+    font-size: 12px;
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    color: #997239;
+    line-height: 18px;
+}
+.x_page_nav span {
+    color: #997239;
+    font-size: 12px;
+}
+.x_page_nav a:hover {
+    color: #b01330;
+}
+.x_recommend_watch {
+    margin-top: 80px;
+}
+.x_watch_list {
+    padding-bottom: 5px;
+    margin-bottom: 20px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #666;
+    border-bottom: 2px solid #d4d4d4;
+    overflow: hidden;
+}
+.x_intro_list:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.x_intro_list {
+
+}
+.x_intro_list li {
+    float: left;
+    width: 250px;
+    overflow: hidden;
+    padding-bottom: 5px;
+}
+.x_intro_list li p {
+    display: block;
+    width: 225px;
+    font-size: 12px;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 10px;
+}
+.x_intro {
+    color: #999;
+}
+.x_price_red {
+    color: #b01330;
+    font-weight: bold;
+}
+.x_intro_list li a {
+    display: block;
+}
+.x_intro_list li a:hover p {
+    color: #b01330;
+}
+/* 底部 */
+.x_foot {
+    width: 100%;
+    background-color: #fafafa;
+}
+.x_foot_ribbon {
+    display: block;
+    height: 60px;
+    background-color: #ae0e16;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+}
+.x_wrap {
+    width: 1200px;
+    margin: 0 auto;
+}
+.x_wrap:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.x_wrap>a {
+    float: left;
+    width: 240px;
+    height: 60px;
+    text-align: center;
+    line-height: 60px;
+    color: #fff;
+    font-size: 14px;
+}
+.x_zp1,.x_zp2,.x_zp3,.x_zp4,.x_zp5 {
+    display: inline-block;
+    width: 34px;
+    height: 34px;
+    vertical-align: middle;
+    margin-right: 8px;
+}
+.x_wrap a span {
+    background-image: url(../images/credit-card-elf.png);
+}
+.x_zp1 {
+    background-position: -53px -25px;
+}
+.x_zp2 {
+    background-position: -88px -25px;
+}
+.x_zp3 {
+    background-position: -159px -25px;
+}
+.x_zp4 {
+    background-position: -124px -25px;
+}
+.x_zp5 {
+    background-position: -196px -25px;
+}
+.x_foot_item {
+    background-color: #eee;
+    padding: 0 0 60px;
+    border-bottom: 1px solid #ddd;
+}
+.x_foot_item .x_wrap {
+    padding-top: 60px;
+}
+.x_foot_item .x_wrap:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.x_float_l {
+    float: left;
+}
+.x_p1,.x_p2,.x_p3,.x_p4 {
+    width: 204px;
+    text-align: center;
+}
+.x_p1 {
+    font-size: 14px;
+    color: #333;
+    font-weight: bold;
+    line-height: 14px;
+    padding-bottom: 8px;
+}
+.x_p2 {
+    font-size: 30px;
+    color: #333;
+    line-height: 30px;
+}
+.x_p3 {
+    font-size: 12px;
+    color: #999;
+    line-height: 30px;
+}
+.x_p4 a {
+    display: inline-block;
+    padding: 8px 21px;
+    margin: 20px 3px 0;
+    font-size: 12px;
+    color: #b22424;
+    border: 1px solid #b32424;
+    border-radius: 5px;
+}
+.x_item_list {
+    margin-left: 60px;
+}
+.x_item_list:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.x_item_list dl {
+    float: left;
+    width: 98px;
+}
+.x_item_list dt {
+    color: #333;
+    font-weight: bold;
+    font-size: 14px;
+}
+.x_item_list dd a {
+    display: block;
+    width: 100%;
+    height: 24px;
+    color: #666;
+    font-size: 12px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 24px;
+}
+.x_item_list dd {
+    margin-top: 30px;
+}
+.x_code_weibo {
+    margin-left: 10px;
+}
+.x_item_weibo, .x_item_server {
+    width: 208px;
+    height: 148px;
+    margin-top: -10px;
+    border-left: 1px solid #ddd;
+}
+.x_item_server {
+    border-right: 1px solid #ddd;
+}
+.x_code_weibo ul:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.x_code_weibo li {
+    float: left;
+    width: 95px;
+    height: 24px;
+    font-size: 12px;
+    line-height: 24px;
+    text-align: center;
+    color: #666;
+    background: #ddd;
+    cursor: pointer;
+}
+.x_code_img {
+    width: 93px;
+    margin: 11px auto 8px;
+}
+.x_code_img img {
+    width: 100%
+}
+.x_code_txt {
+    display: block;
+    margin-top: -4px;
+    color: #666;
+    font-size: 12px;
+    text-align: center;
+}
+.x_code_weibo .x_code_in {
+    color: #fff;
+    background: #666;
+}
+.x_code_con, .x_code_con2 {
+    display: none;
+}
+.x_code_show {
+    display: block;
+}
+/*  */
+.x_b_info {
+    width: 100%;
+    background: #eee;
+    padding-bottom: 14px;
+}
+.x_b_info1 {
+    padding-top: 25px;
+    text-align: center;
+    line-height: 20px;
+}
+.x_wrap_info {
+    width: 1200px;
+    margin: 0 auto;
+}
+.x_wrap_info a {
+    margin: 0 8px;
+    font-size: 12px;
+    color: #666;
+    line-height: 1.5;
+}
+.x_wrap_info span {
+    margin-left: 10px;
+    font-family: "宋体";
+    font-size: 14px;
+    cursor: pointer;
+}
+.x_b_corp {
+    margin-top: 35px;
+    text-align: center;
+}
+.x_b_corp p {
+    font-size: 12px;;
+    color: #999;
+    margin-bottom: 10px;
+}
+.x_b_corp a {
+    color: #999;
+    line-height: 1.5;
+}
+.x_b_ico {
+    text-align: center;
+    margin-top: 30px;
+}
+.x_b_ico a {
+    display: inline-block;
+    margin: 0 10px;
+    line-height: 1.5;
+}

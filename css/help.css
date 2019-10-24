@@ -1,0 +1,134 @@
+body, h1, h2, h3, h4, h5, h6, hr, p, blockquote, dl, dt, dd, ul, ol, li, pre, form, fieldset, legend, button, input, textarea, th, td { margin:0; padding:0; } 
+body, button, input, select, textarea { font:12px/1.5tahoma, arial, \5b8b\4f53; } 
+h1, h2, h3, h4, h5, h6{ font-size:100%; } 
+address, cite, dfn, em, var { font-style:normal; } 
+code, kbd, pre, samp { font-family:couriernew, courier, monospace; } 
+small{ font-size:12px; } 
+ul, ol { list-style:none; } 
+a { text-decoration:none; } 
+sup { vertical-align:text-top; } 
+sub{ vertical-align:text-bottom; } 
+legend { color:#000; } 
+fieldset, img { border:0; } 
+button, input, select, textarea { font-size:100%; } 
+table { border-collapse:collapse; border-spacing:0; } 
+
+
+/* 帮助与支持 */
+body {
+    color: #000;
+}
+.x_help {
+    width: 100%;
+    background: rgb(241, 241, 241);
+    margin-bottom: 18px;
+    line-height: 36px;
+}
+.x_help_1 {
+    width: 1092px;
+    height: 36px;
+    margin: auto;
+} 
+.x_help a {
+    float: left;
+    text-decoration: none;
+    color: #666;
+    font-size: 12px;
+}
+.x_help a:last-child:before {
+    content: ">";
+    font-size: 13px;
+    color: #383737;
+    display: inline-block;
+    font-family: "宋体";
+    margin-right: 8px;
+    margin-left: 5px;
+}
+/* 帮助与支持菜单 */
+.x_main {
+    width: 100%;
+    border-bottom: 1px solid #eee;
+}
+.x_main_help {
+    width: 1090px;
+    margin: 0 auto;
+    border: 1px solid #d3d3d3;
+    overflow: hidden;
+}
+.x_main_help:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.x_help_left {
+    float: left;
+    width: 200px;
+    color: #333;
+    background: #fbfbfb;
+    border-right: 1px solid #d3d3d3;
+    padding-bottom: 9999px;
+    margin-bottom: -9999px;
+}
+.x_help_right {
+    float: right;
+    width: 889px;
+}
+.x_help_menu {
+    float: left;
+    padding-bottom: 10px;
+    width: 200px;
+    background: url(../images/line.jpg) bottom center no-repeat;
+}
+.x_help_menu:last-child {
+    background: none;
+}
+.x_help_left dl dt {
+    font-size: 12px;
+    color: #010101;
+    font-weight: 700;
+    padding: 25px 0 15px 30px;
+}
+.x_help_left dl dd a {
+    text-decoration: none;
+    height: 26px;
+    font-size: 12px;
+    color: #414141;
+    line-height: 25px;
+    letter-spacing: 1px;
+    padding-left: 35px;
+}
+.x_help_content {
+    font-size: 12px;
+    padding: 20px;
+    line-height: 22px;
+}
+.x_help_content a {
+    text-decoration: none;
+}
+.x_help_content table a {
+    color: #666;
+}
+.x_help_content td {
+    font-size: 12px;
+}
+.x_help_content strong {
+    color: #000;
+    font-weight: 600;
+}
+.x_help_content-7 p {
+    color: #000;
+}
+.x_on {
+    display: block;
+    width: 173px;
+    height: 26px;
+    color: #fff !important;
+    background: url(../images/nav.png) right center no-repeat;
+}
+.index_left_nav {
+    display: none;
+    background: rgb(230, 230, 230);
+    box-shadow: inset -20px -7px 7px -15px rgba(0,0,0,.04);
+}
+
+

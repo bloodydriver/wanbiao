@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/VCode.js"></script>  
+    <link rel="stylesheet" href="css/register.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="r-container">
+        <div class="r-head">
+            <img src="images/logo-icon.png" alt="">
+            <img src="images/slogan-0224.png" alt="">
+        </div>    
+        	<div class="r-content">
+            <p>注册万表会员</p>
+            <div class="r-content-from">             
+            	<form action="http://localhost/wanbiao/register.php" method="post" onsubmit="return check()" class="r-content-from1">
+                    <div>
+                        <em class="r-content-from-phone"></em>
+                        <input id="phone" type="text" placeholder="请输入手机号码" name="phone" maxlength="11">
+                    </div>
+                    <div class="r-error">
+                        <em class="r-content-from-error"></em>
+                        <span id="error1">请输入您的手机号</span>
+                    </div>
+                    <div class="r-content-from-clear">
+                        <em class="r-content-from-dun"></em>
+                        <input  type="text" placeholder="请输入图形验证码" id="r-content-from-input">
+                        <div id="r-content-from-img" ></div>
+                    </div>
+                    <div class="r-error">
+                        <em class="r-content-from-error"></em>
+                        <span id="error2">请输入正确的图形验证码</span>
+                    </div>
+                    <!-- <div class="r-content-from-phone1">
+                        <em class="r-content-from-dun"></em>
+                        <input type="text" placeholder="请输入短信验证码" id="r-content-from-code">
+                        <button type="button"> 获取验证码</button>
+                    </div> -->
+                    <!--<div class="r-error">
+                        <em class="r-content-from-error"></em>
+                        <span>请输入您的手机号</span>
+                    </div>-->
+                    <div style="position: relative;">
+                        <em class="r-content-from-s"></em>
+                        <input id="password" type="password" placeholder="请设置密码" name="password"  maxlength="20">
+                        <span class="r-content-from-one"></span>
+                    </div>
+                    <div class="r-error">
+                        <em class="r-content-from-error"></em>
+                        <span id="error3">密码应为6-20位任意字符组合</span>
+                    </div>
+                    <div style="position: relative;">
+                        <em class="r-content-from-s"></em>
+                        <input id="password1" type="password" placeholder="请再次输入密码" maxlength="20">
+                        <span class="r-content-from-two"></span>
+                    </div>
+                    <div class="r-error">
+                        <em class="r-content-from-error"></em>
+                        <span id="error4">两次密码不一致，请检查你的密码</span>
+                    </div>
+                    <!-- <input id="r-content-from-last" type="text"  placeholder="如有推荐人，请填写推荐人手机号" name="people"  maxlength="11"> -->
+                    <input type="submit" value="立即注册" class="r-content-from-submit">
+                    <p>点击“立即注册”，即表示您同意并愿意遵守
+                        <a href="javascript:void(0)">万表网用户协议</a>
+                    </p>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="js/register.js"></script>
+</body>
+</html>

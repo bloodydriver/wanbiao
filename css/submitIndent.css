@@ -1,0 +1,555 @@
+.submitIndent {
+    width: 990px;
+    margin: auto;
+}
+.dot i{
+    background: #cc5252;
+    border: none;
+}
+.header_right ul {
+    position: relative;
+}
+/*购物进度线*/
+.header_right ul:before {
+    content: "";
+    height: 0;
+    width: 156px;
+    border-top: 1px solid #cc5252;
+    position: absolute;
+    top: -1px;
+    left: 0;
+}
+.message {
+    margin-top: 45px;
+}
+.L_title {
+    width: 100%;
+    height: 20px;
+    line-height: 16px;
+    border-left: 2px solid #eee;
+}
+.L_title h2 {
+    float: left;
+    color: #333;
+    font-size: 16px;
+}
+.L_title>span {
+    float: left;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    border: 2px solid #666;
+    background: #fff;
+    margin: 0 10px 0 -9px;
+}
+.L_title>span i {
+    width: 4px;
+    height: 4px;
+    background: #666;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 5.5px;
+    margin-left: 4.7px;
+}
+.L_title h2 a {
+    display: inline-block;
+    color: #477db3;
+    margin-left: 10px;
+    text-decoration: underline;
+    font-weight: 400;
+    font-size: 12px;
+}
+.L_address, .shopList, .invoice, .leave_msg, .coupon {
+    width: 100%;
+    overflow: hidden;
+    padding: 14px 0 50px 10px;
+    border-left: 2px solid #eee;
+}
+.addAddress, .L_address ul li {
+    border: 1px dotted #477db3;
+    float: left;
+    margin-right: 12px;
+    margin-bottom: 10px;
+    width: 314px;
+    height: 84px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+.addAddress span {
+    display: block;
+    font-size: 14px;
+    font-weight: 700;
+    margin: auto;
+    line-height: 80px;
+    text-align: center;
+    color: #477db3;
+}
+.addAddress i {
+    display: inline-block;
+    background-image: url('../images/icon.png');
+    background-position: -328px -325px;
+    background-size: 589px;
+    width: 14px;
+    height: 14px;
+    vertical-align: -2px;
+}
+.L_address ul {
+    float: left;
+    font-size: 12px;
+}
+.L_address ul li {
+    position: relative;
+    border: 1px solid #ddd;
+}
+.L_address ul li>span {
+    display: none;
+    top: 1px;
+    right: 1px;
+    position: absolute;
+    width: 50px;
+    height: 22px;
+    line-height: 22px;
+    text-align: center;
+    color: #477db3;
+    background: #f1f1f1;
+} 
+.L_address ul li:hover .hover {
+    display: block;
+}
+.L_address ul li .p1 {
+    color: #999;
+    font-weight: 700;
+    font-size: 12px;
+    padding-top: 9px;
+    line-height: 24px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    padding-left: 34px;
+    padding-right: 20px;
+}
+.L_address ul li .p1>span {
+    margin-right: 2px;
+}
+.L_address ul li .p1 i {
+    font-style: normal;
+    display: inline-block;
+    width: 36px;
+    height: 16px;
+    line-height: 15px;
+    background: #f1f1f1;
+    font-size: 12px;
+    color: #999;
+    text-align: center;
+    padding: 1px 2px;
+}
+.L_address ul li .p2, .L_address ul li .p3 {
+    color: #999;
+    height: 18px;
+    line-height: 18px;
+    padding-left: 34px;
+    padding-right: 20px;
+}
+.L_address ul li .p2 i {
+    display: inline-block;
+    background-image: url('../images/icon.png');
+    background-position: -546px -422px;
+    background-size: 589px;
+    width: 18px;
+    height: 18px;
+    vertical-align: bottom;
+    margin-left: -20px;
+}
+.L_address ul li>div {
+    position: relative;
+}
+.L_address ul li>div>i {
+    display: none;
+    position: relative;
+    background-image: url('../images/icon.png');
+    background-position: -376px -325px;
+    background-size: 589px;
+    width: 14px;
+    height: 14px;
+    bottom: 2px;
+    left: 297px;
+}
+.delivery .shopList {
+    font-size: 12px;
+}
+.shopList h2 {
+    height: 30px;
+    line-height: 30px;
+    background: #f1f1f1;
+    color: #999;
+    padding: 0 15px;
+    font-size: 12px;
+}
+.shopList li {
+    padding: 10px 18px 0 18px;
+    border-top: 1px solid #ddd;
+}
+.shopMessage {
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+.shopMessage a {
+    float: left;
+    width: 90px;
+    height: 90px;
+    overflow: hidden;
+    margin-right: 22px;
+}
+.shopMessage a img {
+    max-width: 90px;
+}
+.shopContent {
+    float: left;
+    width: 476px;
+}
+.shopContent .p1 {
+    line-height: 26px;
+    font-weight: 700;
+    margin: 1px 0 2px;
+    color: #666;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.shopContent .p2 {
+    color: #999;
+}
+.shopContent span {
+    display: inline-block;
+    line-height: 16px;
+    margin-top: 19px;
+    margin-right: 5px;
+    text-align: center;
+    color: #b3a26b;
+    border: 1px solid #ddd;
+    border-radius: 100px;
+    box-sizing: border-box;
+    padding: 0 6px;
+}
+.shopMessage_fl {
+    float: left;
+    width: 300px;
+    height: 20px;
+    line-height: 20px;
+    margin-top: 8px;
+}
+.shopMessage_fl>span {
+    float: left;
+    width: 100px;
+    color: #666;
+
+}
+.shopMessage_fl>div {
+    float: left;
+    margin: 0 11px;
+    width: 75px;
+    height: 18px;
+    line-height: 17px;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    color: #333;
+    text-align: center;
+}
+.shopMessage_fl>div button {
+    float: left;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    border: none;
+    outline: none;
+    background-color: #fff;
+}
+.shopMessage_fl>div input {
+    border: 0;
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+    width: 39px;
+    height: 16px;
+    
+    float: left;
+    text-align: center;
+}
+.shopMessage_fl .priceAll, .priceAdd {
+    text-align: right;
+    font-weight: 700;
+}
+.priceLine {
+    text-decoration: line-through;
+    color: #ccc;
+    margin-left: 5px;
+}
+.shopMessage_fl .span2 {
+    display: inline-block;
+    width: 78px;
+    height: 20px;
+    border-radius: 10px;
+    background: #cc5252;
+    color: #fff;
+    text-align: center;
+    cursor: pointer;
+}
+.shopMessage_fl .changeSpan {
+    border: 1px solid #ddd;
+    background: #fff;
+    color: #ccc;
+}
+.invoice a, .coupon a {
+    display: inline-block;
+    color: #477db3;
+    font-size: 12px;
+    margin-left: 15px;
+    text-decoration: underline;
+    font-weight: 400;
+}
+.msg_area {
+    width: 290px;
+    max-width: 290px;
+    height: 65px;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    color: #333;
+    font-size: 12px;
+}
+.leave_msg>div {
+    display: inline-block;
+    position: relative;
+    font-size: 12px;
+}
+.leave_msg span {
+    position: absolute;
+    bottom: 10px;
+    right: 13px;
+    color: #999;
+}
+.coupon {
+    font-size: 12px;
+}
+.coupon span:first-child {
+    margin-right: 20px;
+    margin-left: 10px;
+}
+.coupon span:nth-child(2) {
+    color: #cc5252;
+}
+.pay_price {
+    text-align: right;
+    font-size: 12px;
+    line-height: 32px;
+    color: #666;
+}
+.pay_price span {
+    display: inline-block;
+    width: 115px;
+    color: #cc5252;
+}
+.L_submit {
+    height: 60px;
+    margin-top: 40px;
+    margin-bottom: 130px;
+    background: #f2f2f2;
+}
+.L_submit p {
+    float: right;
+    text-align: right;
+    font-size: 14px;
+    line-height: 60px;
+    margin-right: 30px;
+}
+.L_submit>span {
+    float: right;
+    width: 160px;
+    color: #fff;
+    background-color: #cc5252;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 60px;
+    text-align: center;
+    cursor: pointer;
+}
+.L_submit p span {
+    color: #cc5252;
+    margin-left: 5px;
+}
+.shade {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .2);
+    z-index: 99;
+}
+.edit_box {
+    position: fixed;
+    width: 780px;
+    height: 513px;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 8px;
+}
+.edit_box h2 {
+    position: relative;
+    height: 64px;
+    line-height: 64px;
+    background: #fff;
+    color: #333;
+    font-size: 18px;
+    font-weight: normal;
+    border-radius: 8px 8px 0 0;
+    box-sizing: border-box;
+    border-bottom: 1px solid #eee;
+    padding: 0 80px 0 20px;
+    cursor: move;
+}
+.edit_box h2 i {
+    position: absolute;
+    display: inline-block;
+    width: 32px;
+    height: 32px;
+    background-image: url('../images/icon.png');
+    background-position: 0 -462px;
+    background-size: 589px;
+    right: 15px;
+    top: 15px;
+    cursor: pointer;
+}
+.edit {
+    padding: 30px 40px;
+    height: 300px;
+}
+.edit .p1, .edit .p2 {
+    display: inline-block;
+    width: 320px;
+    margin-bottom: 24px;
+}
+.edit p:first-child {
+    margin-right: 40px;
+}
+.edit p span, .editP1 {
+    display: block;
+    color: #666;
+    line-height: 24px;
+    font-size: 12px;
+
+}
+.edit input {
+    width: 100%;
+    height: 36px;
+    line-height: 36px;
+    border: 0;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+    color: #333;
+    box-sizing: border-box;
+}
+.edit .p3, .edit .p4, .edit .p5 {
+    margin-bottom: 24px;
+    width: 480px;
+}
+.edit .p5 i {
+    display: inline-block;
+    width: 14px;
+    height: 14px;
+    margin-right: 4px;
+    border: 2px solid #ddd;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.edit .p5 .light {
+    width: 22px;
+    height: 22px;
+    border: none;
+    margin: 0;
+    background-image: url('../images/icon.png');
+    background-position: -272px -144px;
+    background-size: 589px;
+    vertical-align: text-bottom;
+}
+.edit .p5 span {
+    display: inline-block;
+    color: #999;
+    font-size: 14px;
+    vertical-align: bottom;
+}
+.footer {
+    overflow: hidden;
+    padding: 20px 0;
+    border-top: 1px solid #eee;
+    border-radius: 0 0 8px 8px;
+    background: #fff;
+    box-sizing: border-box;
+}
+.footer button {
+    float: right;
+    height: 48px;
+    line-height: 48px;
+    border-radius: 100px;
+    font-size: 14px;
+    text-align: center;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0 10px 0 0;
+    cursor: pointer;
+}
+.footer .btn1 {
+    width: 140px;
+    border: 1px solid #cc5252;
+    color: #fff;
+    background: #cc5252;
+    margin-right: 20px;
+    font-weight: bold;
+}
+.footer .btn2 {
+    width: 100px;
+    border: 1px solid #999;
+    color: #999;
+    background: #fff;
+}
+.footer .btn1:hover {
+    opacity: .9;   
+}
+.edit .p3 span {
+    color: #666;
+    font-size: 12px;
+    line-height: 24px;
+}
+.form-control {
+    outline: none;
+    width: 120px;
+    height: 36px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    color: #999;
+    font-size: 16px;
+    padding-left: 5px;
+    margin-right: 8px;
+}
+.form-control option {
+    font-size: 12px;
+}
+.edit>p {
+    position: relative;
+}
+.edit>p em {
+    display: none;
+    position: absolute;
+    right: 0;
+    bottom: 10px;
+    font-size: 12px;
+    color: #cc5252;
+}
+.L_address ul .changeBorder{
+    border: 2px solid #cc5252;
+}

@@ -1,0 +1,169 @@
+*{
+    outline: none;
+}
+body {
+    background-color: #fafafa;
+}
+.r-head {
+    width: 990px;
+    height: 115px;
+    margin: auto;
+    padding-top: 47px;
+    box-sizing: border-box;
+    background-color: #fafafa;
+}
+.r-content {
+    width: 990px;
+    height: 615px;
+    margin: 40px auto 0;
+    background-color: #fff;
+}
+.r-content p {
+    font-size: 28px;
+    color: #000;
+    margin: 0;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 30px;
+    box-sizing: border-box;
+}
+.r-content-from {
+    width: 338px;
+    height: 451px;
+    margin: auto;
+}
+.r-content-from input {
+    width: 338px;
+    height: 40px;
+    padding-left: 35px;
+    box-sizing: border-box;
+    border: 1px solid #e8e8e8;
+}
+#r-content-from-last {
+    padding: 10px;
+}
+.r-content-from span {
+    display: inline-block;
+    font-size: 12px;
+    color: red;
+    padding-left: 18px;
+    box-sizing: border-box;
+}
+#r-content-from-input,#r-content-from-code {
+    display: inline-block;
+    width: 230px;
+    /* display: block; */
+    /* float: left; */
+}
+.r-content-from div {
+    margin-bottom: 10px;
+    position: relative;
+
+}
+.r-content-from-phone,.r-content-from-s,.r-content-from-dun {
+    display: inline-block;
+    background-image: url(../images/spriteB.png);
+    background-size: 589px;
+    width: 14px;
+    height: 16px; 
+    position: absolute;
+    top: 12px;
+    left: 13px;
+}
+.r-content-from-phone {
+    background-position: -576px -25px;
+}
+.r-content-from-s {
+    background-position: -576px -50px;
+}
+.r-content-from-dun {
+    background-position: -576px 0px;
+}
+.r-content-from-error {
+    display: inline-block;
+    background-image: url(../images/spriteB.png);
+    background-position: -347px -325px;
+    background-size: 589px;
+    width: 20px;
+    height: 20px; 
+    position: absolute;
+    top: 5px;
+    left: -6px;
+}
+.r-content-from-clear {
+    overflow: hidden;
+}
+.r-error {
+    display: none;
+}
+form {
+    position: relative;
+}
+#r-content-from-img{
+    display: inline-block;
+    width: 98px;
+    height: 38px;
+    float: right;
+    margin: 0;
+}
+/* .r-content-from-phone1 button{
+    display: inline-block;
+    width: 98px;
+    height: 38px;
+    float: right;
+    margin: 0;
+    color: #333;
+    font-size: 12px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid #e8e8e8;
+} */
+::-webkit-input-placeholder {
+    font-size: 12px;
+    color: rgb(207, 201, 201);
+}
+::-moz-placeholder {
+    font-size: 12px;
+    color: rgb(207, 201, 201);
+}
+:-ms-input-placeholder {
+    font-size: 12px;
+    color: rgb(207, 201, 201);
+}
+input:-moz-placeholder {
+    font-size: 12px;
+    color: rgb(207, 201, 201);
+}
+.r-content-from-submit {
+    width: 338px;
+    height: 40px;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    padding: 0!important;
+    cursor: pointer;
+    border: 1px solid #e8e8e8;
+    background-color: #b32424;
+}
+.r-content-from1>p {
+    padding: 0;
+    color: #999;
+    font-size: 12px;
+    margin-top: 20px;
+}
+.r-content-from1 a {
+    color: #000;
+    text-decoration: none;
+}
+.r-content-from-one,.r-content-from-two {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    /* background-color: #000; */
+    background-image: url(../images/d.png);
+    background-position: 80px 102px;
+    position: absolute;
+    top: 13px;
+    right: 15px
+}

@@ -1,0 +1,1015 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery_lazyload/1.9.7/jquery.lazyload.js"></script>
+    <link rel="stylesheet" href="css/shop.css">
+    <link rel="stylesheet" href="css/ydetails.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="js/shop.js"></script>
+    <title>商品详情</title>
+</head>
+<body>
+    <!--顶部搜索及logo-->
+    <div class="ad">
+        <a href="javascript:void(0)" class="wrap">
+            <img src="images/index_ad.jpg">
+        </a>
+        <div class="ad_close"></div>
+    </div>
+    <div class="top clearfix" style="overflow: unset;">
+        <div class="inner_top clearfix">
+            <div class="wrap clearfix">
+                <a href="javascript:void(0)">正品保障，免息分期！</a>
+                <div class="inner_top_right">
+                    <a href="login.html">请登录</a>
+                    <a href="register.html" id="top_gift">注册即送3500元大礼包</a>
+                    <span class="line">|</span>
+                    <a href="shop_car.html" class="cartNum">购物车<span></span></a>
+                    <div class="index_serbox">
+                        <a href="javascript:void(0)" id="ser">客户服务</a>
+                        <div id="drop_window">
+                            <div class="drop_box"></div>
+                            <ul class="clearfix">
+                                <li><a href="javascript:void(0)">客户顾问</a></li>
+                                <li><a href="javascript:void(0)">售后维修</a></li>
+                                <li><a href="help.html">帮助中心</a></li>
+                                <li><a href="credit-card.html">办理信用卡</a></li>
+                            </ul>
+                            <div class="serPhone">
+                                <p>服务专线：400-883-2688</p>
+                                <p>外呼号码：020-83931899</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)">会员福利</a>
+                    <span class="line">|</span>
+                    <a href="javascript:void(0)">ENGLISH</a>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="L_head">
+        <div class="L_header">
+            <div class="L_header_left">
+                <img src="https://static.wbiao.co/p/pc/images/1/logo-icon.png" title="正品名表，终身服务">
+                <a href="javascript:void(0)">
+                    <p>阿玛尼ARMANI<span class="L_header_left_span">自营</span></p>
+                    <p>销量47868 粉丝14505</p>
+                </a>
+            </div>
+            <div class="L_header_rigth">
+                <input class="L_seach_input" type="text" maxlength="30">
+                <button class="L_seach_wbiao" type="button">搜万表</button>
+                <button class="L_seach_shop" type="button">搜本店</button> 
+                <span>搜索 品牌/系列/型号</span>
+            </div>
+        </div>
+    </div>
+    <!--顶部导航-->
+    <a class="L_shop_sign" href="javascript:void(0)"></a>
+    <div class="L_nav_div">
+        <div class="L_nav">
+            <a href="index.html">首页</a>
+            <a href="w_wanbiao-woman.html">商品</a>
+            <a href="w_wanbiao-man.html">男士</a>
+            <a href="w_wanbiao-woman.html">女士</a>
+            <a href="w_wanbiao-fast.html">热卖推选</a>
+            <a href="w_wanbiao-brand.html">特卖专区</a>
+            <a href="w_wanbiao-brand.html">新品专区</a>
+            <a href="w_wanbiao-brand.html">机械表</a>
+            <a href="w_wanbiao-brand.html">石英表</a>
+            <a href="w_wanbiao-brand.html">智能表</a>
+            <div class="L_nav_right">
+            <i></i>
+            <span>联系商家</span>
+            </div>
+        </div>
+    </div>
+    <div class="L_nav_div2">
+        <div class="L_nav_bottom">
+            <div class="L_nav_bottom_left">
+                <a href="javascript:void(0)">首页</a><span>></span>
+                <a href="javascript:void(0)">阿玛尼</a><span>></span>
+                <a href="javascript:void(0)">阿玛尼-LUIGI系列 AR1970 石英男表</a>
+            </div>
+            <div class="L_nav_bottom_right">
+                <span>自营</span>
+                <a href="javascript:void(0)">阿玛尼ARMANI</a>
+                <span>+ 关注</span>
+            </div>
+        </div>
+    </div>
+    <!--商品购物详情-->
+    <div class="L_shop_content">
+        <div class="L_shop_div">
+            <div class="L_shop_detail">
+                <div class="L_shop_img_content">
+                    <div class="L_shop_img">
+                        <div class="L_shop_img_box">
+                            <img src="https://image8.wbiao.co/shop/201708_16_AR1970_29629.jpg?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff" alt="">
+                        </div>
+                        <i id="L_change_img"></i>
+                    </div>
+                    <div class="L_shop_img_bottom">
+                        <i class="L_img_list_left"></i>
+                        <div class="L_img_list_box">
+                            <ul class="L_img_list">
+                                <li class="L_img_list_li">
+                                    <img src="https://image8.wbiao.co/shop/c7fe11add1b24475b1d582b053687469.jpg?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff" alt="">
+                                </li>
+                                <li>
+                                    <img src="https://image8.wbiao.co/shop/201708_16_AR1970_29629.jpg?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff" alt="">
+                                </li>
+                                <li>
+                                    <img src="https://image8.wbiao.co/shop/50410debdf744890bb1c2bc4851de1c1.JPG?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff" alt="">
+                                </li>
+                                <li>
+                                    <img src="https://image8.wbiao.co/shop/8ae381227d1e4af68fdc34af8941112b.JPG?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff" alt="">
+                                </li>
+                                <li>
+                                    <img src="https://image8.wbiao.co/shop/94ad15e495b9433abd415135d6b2315a.JPG?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff" alt="">
+                                </li>
+                                <li>
+                                    <img src="https://image8.wbiao.co/shop/180049aad9f64c3f81bdcd4c0e6b02f6.jpg?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff" alt="">
+                                </li>
+                            </ul>
+                        </div>
+                        <i class="L_img_list_right"></i>
+                    </div>
+                    <div class="L_shop_share">
+                        <span class="collect">收藏</span>
+                        <span>分享</span>
+                    </div>
+                </div>
+                <div class="L_shop_detail_right">
+                    <h2>阿玛尼-LUIGI系列 AR1970 石英男表</h2>
+                    <p class="L_shop_more">绅士型格 经典三眼表盘<span>了解更多>></span></p>
+                    <div class="L_shop_num">
+                        <span>型号: AR1970</span>
+                        <span>编号: 51564</span>
+                        <span>品牌: 阿玛尼</span>
+                        <span>销量: 293</span>
+                    </div>
+                    <div class="L_shop_price">
+                        <div class="L_shop_date">
+                            <p>
+                                <span>分期</span>
+                                <span>￥</span>
+                                <strong>176.7</strong>
+                                <span>x12期</span>
+                            </p>
+                            <span><i></i> 免息免手续费</span>
+                            <div id="L_right_pay">
+                                <p class="L_pay_title1">信用卡分期付款服务</p>
+                                <p class="L_pay_title2">部分银行免息免手续费分期，详情请咨询客服</p>
+                                <ul>
+                                    <li><i></i><span>招商</span></li>
+                                    <li><i></i><span>建行</span></li>
+                                    <li><i></i><span>农行</span></li>
+                                    <li><i></i><span>中行</span></li>
+                                    <li><i></i><span>广发</span></li>
+                                    <li><i></i><span>工行</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="L_shop_price_all">
+                            <span>万表价</span>
+                            <span>￥<span>2,120</span></span>
+                            <span>一口价</span>
+                            <span>市场价</span>
+                            <span>￥2,590</span>
+                        </div>
+                        <p>无需领券，已为您设置最大折扣，咨询客服下单即可</p>
+                    </div>
+                    <div class="L_shop_dispatch">
+                        <span>配送</span>
+                        <span>（顺丰包邮）</span>
+                        <span>预计3-7个工作日内发货</span>
+                    </div>
+                    <div class="L_shop_promise">
+                        <span>承诺</span>
+                        <ul>
+                            <li>
+                                <i></i>正品保障
+                                <div class="L_placehoder">
+                                    全站自营直采，高于瑞士国家标准的进出仓全检机制，万表7年零假货投诉。
+                                </div>
+                            </li>
+                            <li>
+                                <i></i>正规发票
+                                <div class="L_placehoder">
+                                    提供国家税务局认可的正规发票，具有售后维权法律效力。
+                                </div>
+                            </li>
+                            <li>
+                                <i></i>假一赔三
+                                <div class="L_placehoder">
+                                    已售出名表超过45万枚，正品无假货，如有售假三倍赔偿。
+                                </div>
+                            </li>
+                            <li>
+                                <i></i>七天退换
+                                <div class="L_placehoder">
+                                    无理由退换：除特殊商品外（特卖、私人定制、预售等）质量退换：非人为机芯故障或商品制造缺陷。
+                                </div>
+                            </li>
+                            <li>
+                                <i></i>全球联保
+                                <div class="L_placehoder L_placehoder_right">
+                                    800+家售后服务点，完善的售后保障，可享受品牌全球联保服务。
+                                </div>
+                            </li>
+                            <li>
+                                <i></i>免息分期
+                                <div class="L_placehoder L_placehoder_right">
+                                    与15家银行合作，招商、中行等提供免息分期购表服务。
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="L_shop_serev">
+                        <span>服务</span>
+                        <a class="L_shop_serev1" href="javascript:void(0)">
+                            <span>“特惠” 购表延保服务</span>
+                            <i></i>
+                        </a>
+                        <a class="L_shop_serev2" href="javascript:void(0)">
+                            <span>100%正品二手表库</span>
+                            <i></i>
+                        </a>
+                    </div>
+                    <div class="L_shop_style">
+                        <span>款式</span>
+                        <div>
+                            <a href="javascript:void(0)">
+                                <img src="https://image6.wbiao.co/shop/c7fe11add1b24475b1d582b053687469.jpg?x-oss-process=image/resize,w_50,h_50" alt="">
+                                <span>混合 黑色</span>
+                                <i></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="L_shop_number">
+                        <span>数量</span>
+                        <div class="L_shop_count">
+                            <button class="L_number_sub">-</button>
+                            <input type="text" value="1">
+                            <button class="L_number_add">+</button>
+                        </div>
+                        <p></p>
+                    </div>
+                    <div class="L_shop_buy">
+                        <button class="L_shop_btn1" type="button">立即购买</button>
+                        <button class="L_shop_btn2" type="button">加入购物车</button>
+                        <div class="L_buy_code">
+                            <i></i>
+                            <span>手机购买</span>
+                            <img src="https://www.wbiao.cn/pub/qr/?content=https://m.wbiao.cn/goods/51564.html" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <img class="L_AD" src="https://image8.wbiao.co/mall/a62ef484a0ca496285420bb08801867f.jpg" alt="">
+            <div class="L_shop_nav">
+                <div class="L_shop_nav_left">
+                    <div class="L_self_shop">
+                        <h2>阿玛尼ARMANI</h2>
+                        <div class="L_self_content">
+                            <a href="javascript:void(0)">
+                                <img src="https://image8.wbiao.co/shop/0ddca2694fb9496090d74ac8cdeaa357.jpg" alt="">
+                                <span>自营</span>
+                            </a>
+                            <p>全部商品</p><span>1165</span>
+                            <p>累计销量</p><span>1165</span>
+                            <p>关注数</p><span>1165</span>
+                            <div class="L_shop_look">
+                                <i></i><span>进店逛逛</span>
+                                <i></i><span>联系客服</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="L_self_seach">
+                        <h2>店内搜索</h2>
+                        <div class="L_self_seach_content">
+                            <p>
+                                <span>关键字</span>
+                                <input type="text">
+                            </p>
+                            <p>
+                                <span>价格区间</span>
+                                <input type="text">
+                                <span id="L_noMargin">-</span>
+                                <input type="text">
+                            </p>
+                            <button>搜索</button>
+                        </div>
+                    </div>
+                    <div class="L_self_list">
+                        <h2>大家还看了这些</h2>
+                        <ul>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <img src="https://image8.wbiao.co/shop/76d699e812944fc4a43717894656afb9.jpg?x-oss-process=image/resize,w_300,h_300,color_ffffff" alt="">
+                                    <p class="L_Mpay">
+                                        <span>月付</span>
+                                        <span>￥130</span>
+                                        <span>￥1560</span>
+                                    </p>
+                                    <p>吉普Jeep-威利斯系列 JPL200201MA 镂空全自动机械男表</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <img src="https://image8.wbiao.co/shop/a41f490d2e6b4d9081a9c10ac8edaffa.jpg?x-oss-process=image/resize,w_300,h_300,color_ffffff" alt="">
+                                    <p class="L_Mpay">
+                                        <span>月付</span>
+                                        <span>￥574</span>
+                                        <span>￥6888</span>
+                                    </p>
+                                    <p>泰格豪雅(TAG HEUER)- FORMULA 1系列 WAZ1015.FC8198 石英男表</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <img src="https://image8.wbiao.co/shop/48b88e9be01f449ca543972c67ecfbca.jpg?x-oss-process=image/resize,w_300,h_300,color_ffffff" alt="">
+                                    <p class="L_Mpay">
+                                        <span>月付</span>
+                                        <span>￥409.2</span>
+                                        <span>￥4910</span>
+                                    </p>
+                                    <p>法国国民腕表品牌：Michel Herbelin赫柏林  City都市系列  1669/04  男士自动机械表</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <img src="https://image8.wbiao.co/shop/2bbf13d343c64eaaaeb4ab138319115a.jpg?x-oss-process=image/resize,w_300,h_300,color_ffffff" alt="">
+                                    <p class="L_Mpay">
+                                        <span>月付</span>
+                                        <span>￥14</span>
+                                        <span>￥168</span>
+                                    </p>
+                                    <p>迪士尼（Disney）-时尚男表 MK-12022B1 少年学生 简约时尚 石英男表</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <img src="https://image8.wbiao.co/shop/cca92e8cf5f64284ad1b466db48e7cce.jpg?x-oss-process=image/resize,w_300,h_300,color_ffffff" alt="">
+                                    <p class="L_Mpay">
+                                        <span>月付</span>
+                                        <span>￥149.2</span>
+                                        <span>￥1790</span>
+                                    </p>
+                                    <p>纯正瑞士品牌 迪沃斯DAVOSA-Executive行政系列 Vireo Dual Time 商务精英 双时区世界时 黑盘皮带 41</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0)">
+                                    <img src="https://image8.wbiao.co/shop/201604_18_16249355_66617.jpg?x-oss-process=image/resize,w_300,h_300,color_ffffff" alt="">
+                                    <p class="L_Mpay">
+                                        <span>月付</span>
+                                        <span>￥195</span>
+                                        <span>￥2340</span>
+                                    </p>
+                                    <p>纯正瑞士品牌 迪沃斯DAVOSA-Executive行政系列 Vireo Chrono 商务精英 计时版 黑盘皮带 41mm 16249355 </p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="L_shop_nav_content">
+                    <div class="L_bottom_line">
+                        <div class="L_move_nav">
+                            <a class="L_checkOn">商品详情</a>
+                            <a>规格参数</a>
+                            <a>售后服务</a>
+                            <a>线下体验</a>
+                            <a>评价(99)</a>
+                        </div>
+                        <p><a href="submitIndent.html" style="color: #fff;">立即购买</a>
+                            </p>
+                    </div>
+                    <div class="L_nav_content" style="display: block">
+                        <div class="prompt">
+                            <p>温馨提示</p>
+                            <p>商品展示区划去的价格为品牌建议零售价，并非原价；万表价为商品实时售价，欢迎比较购买！</p>
+                        </div>
+                        <div class="imgList">
+                            <img src="https://image8.wbiao.co/shop/baeeddad38264753b17e4659950eda38.jpg?x-oss-process=image/resize,w_920" alt="">
+                        </div>
+                        <img src="https://image8.wbiao.co/detail/goods_201708_16_1502849608617399138.jpg?x-oss-process=image/resize,w_920/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                        <img src="https://image8.wbiao.co/detail/goods_201708_16_1502849608273144795.jpg?x-oss-process=image/resize,w_920/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                        <img src="https://image8.wbiao.co/detail/goods_201708_16_1502849608929996632.jpg?x-oss-process=image/resize,w_920/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                        <img src="https://image8.wbiao.co/detail/goods_201708_16_1502849608981138635.jpg?x-oss-process=image/resize,w_920/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                        <img src="https://image8.wbiao.co/detail/goods_201708_16_1502849608626506599.jpg?x-oss-process=image/resize,w_920/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                        <img src="https://image8.wbiao.co/detail/goods_201708_16_1502849608054208176.jpg?x-oss-process=image/resize,w_920/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                        <img src="https://image8.wbiao.co/shop/50410debdf744890bb1c2bc4851de1c1.JPG?x-oss-process=image/resize,w_920/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                        <img src="https://image8.wbiao.co/shop/94ad15e495b9433abd415135d6b2315a.JPG?x-oss-process=image/resize,w_920/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                        <img src="https://image8.wbiao.co/shop/8ae381227d1e4af68fdc34af8941112b.JPG?x-oss-process=image/resize,w_920/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                        <img src="https://image8.wbiao.co/shop/180049aad9f64c3f81bdcd4c0e6b02f6.jpg?x-oss-process=image/resize,w_920/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                        <img src="https://image8.wbiao.co/detail/goods_201708_16_1502849608897655402.jpg?x-oss-process=image/resize,w_920/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                        <div class="unitPrice">
+                            <p class="unitPrice_a">价格说明</p>
+                            <p class="unitPrice_b">
+                                <span>划线价：</span>
+                                商品展示的划线价或参考价可能是品牌专柜价、商品吊牌价或由品牌供应商提供的正品零售价（如厂商指导价、建议零售价等）或该商品在万表上曾经展示过的销售价；由于地区、时间的差异性和市场行情波动，品牌专柜标价、商品吊牌价等可能会与您购物时展示的不一致，该价格仅供您参考。
+                                <br>
+                                <span>折扣：</span>
+                                如无特殊说明，促销价是销售商在参考价基础上给予的优惠比例/优惠金额。如有疑问，您可以在购买前与客服联系。
+                                <br>
+                                异常问题：因可能存在系统缓存、页面更新延迟等不确定性情况，导致价格显示异常，商品具体售价请以订单结算页价格为准。如您发现异常情况出现，请立即联系我们补正，以便您能顺利购物。
+                            </p>
+                        </div>
+                        <div class="L_shop_comment">
+                            <h2>商品评论</h2>
+                            <div class="L_comment_top">
+                                <div class="L_comment_top_a">
+                                    <div>100</div>
+                                    <span>好感度</span>
+                                    <p>%</p>
+                                </div>
+                                <div class="L_comment_top_b">
+                                    <p>全部评价(100)</p>
+                                    <span>有图(5)</span>
+                                </div>
+                            </div>
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="L_nav_content">
+                        <div class="prompt">
+                            <p>温馨提示</p>
+                            <p>商品展示区划去的价格为品牌建议零售价，并非原价；万表价为商品实时售价，欢迎比较购买！</p>
+                        </div>
+                        <div class="specification">
+                            <div class="specification_title">
+                                混合 黑色－规格参数
+                            </div>
+                            <div class="specification_title_a">
+                                <span>腕表机芯</span>
+                                <div class="title_a_fl">
+                                    <p>
+                                        <span>机芯类型</span>
+                                        <span>石英</span>  
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="specification_title_a">
+                                <span>腕表外壳</span>
+                                <div class="title_a_fl">
+                                    <p>
+                                       <span>外壳材质</span>
+                                        <span>不锈钢</span> 
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="specification_title_a">
+                                <span>腕表表盘</span>
+                                <div class="title_a_fl">
+                                    <p>
+                                        <span>表盘宽度</span>
+                                        <span>46mm</span>
+                                    </p>
+                                    <p>
+                                        <span>表盘厚度</span>
+                                        <span>12mm</span> 
+                                    </p>
+                                    <p>
+                                        <span>表耳</span>
+                                        <span>22mm</span> 
+                                    </p>
+                                    <p>
+                                        <span>表冠</span>
+                                        <span>计时码表三表冠</span> 
+                                    </p>
+                                    <p>
+                                        <span>镜面材质</span>
+                                        <span>矿物玻璃</span> 
+                                    </p>
+                                    <p>
+                                        <span>表盘直径</span>
+                                        <span>超大45mm以上</span> 
+                                    </p>
+                                    <p>
+                                        <span>表盘形状</span>
+                                        <span>圆形</span> 
+                                    </p>
+                                    <p>
+                                        <span>表壳底盖</span>
+                                        <span>不透底</span> 
+                                    </p>
+                                    <p>
+                                        <span>表盘刻度</span>
+                                        <span>条形</span> 
+                                    </p>
+                                    <p>
+                                        <span>表盘颜色</span>
+                                        <span>黑色</span> 
+                                    </p>
+                                </div>
+                                
+                            </div>
+                            <div class="specification_title_a">
+                                <span>腕表表带</span>
+                                <div class="title_a_fl">
+                                    <p>
+                                        <span>表带颜色</span>
+                                        <span>黑色</span> 
+                                    </p>
+                                    <p>
+                                        <span>表带材质</span>
+                                        <span>真皮、橡胶</span> 
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="specification_title_a">
+                                <span>腕表表扣</span>
+                                <div class="title_a_fl">
+                                    <p>
+                                        <span>表扣类型</span>
+                                        <span>针扣</span>  
+                                    </p>
+                                </div>
+                            </div>
+                            <div class="specification_title_a">
+                                <span>腕表其他</span>
+                                <div class="title_a_fl">
+                                    <p>
+                                        <span>适用人群</span>
+                                        <span>男表</span>  
+                                    </p>
+                                    <p>
+                                        <span>包装</span>
+                                        <span>精美包装盒、说明书、保修卡等</span>  
+                                    </p>
+                                    <p>
+                                        <span>特殊功能</span>
+                                        <span>计时</span>  
+                                    </p>
+                                    <p>
+                                        <span>防水</span>
+                                        <span>50米</span>  
+                                    </p>
+                                    <p>
+                                        <span>佩戴场合</span>
+                                        <span>时尚</span>  
+                                    </p>
+                                    <p>
+                                        <span>联保</span>
+                                        <span>全球联保，两年保修</span>  
+                                    </p>
+                                    <p>
+                                        <span>价格区间</span>
+                                        <span>1000-3000</span>  
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="L_nav_content">
+                        <div class="prompt">
+                            <p>温馨提示</p>
+                            <p>
+                                1.商品展示区划去的价格为品牌建议零售价，并非原价；万表价为商品实时售价，欢迎比较购买！
+                                <br>
+                                2.万表商城销售的手表都是正品手表，享受品牌官方保修；亦由万表名匠提供全国售后诚信服务！
+                            </p>
+                        </div>
+                        <img src="https://image8.wbiao.co/shop/5498f3570e5f45a989d4e0a09dd1c352.png" alt="">
+                        <p><strong> 售后详细规则请参考</strong><span>：https://www.wbiao.cn/help-20.html</span></p>
+                    </div>
+                    <div class="L_nav_content">
+                        <ul class="more_shop">
+                        </ul>
+                    </div>
+                    <div class="L_nav_content">
+                        <div class="L_shop_comment">
+                            <ul>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--遮罩轮播图-->
+    <div class="L_img_shade">
+        <div class="L_shade_content">
+            <i class="L_shade_content_left"></i>
+            <div class="L_shade_box">
+                <ul class="L_shade_ul">
+                    <li>
+                        <img src="https://image8.wbiao.co/shop/c7fe11add1b24475b1d582b053687469.jpg?x-oss-process=image/resize,m_pad,w_1000,h_1000,color_ffffff/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                    </li>
+                    <li>
+                        <img src="https://image8.wbiao.co/shop/201708_16_AR1970_29629.jpg?x-oss-process=image/resize,m_pad,w_1000,h_1000,color_ffffff/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                    </li>
+                    <li>
+                        <img src="https://image8.wbiao.co/shop/50410debdf744890bb1c2bc4851de1c1.JPG?x-oss-process=image/resize,m_pad,w_1000,h_1000,color_ffffff/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                    </li>
+                    <li>
+                        <img src="https://image8.wbiao.co/shop/8ae381227d1e4af68fdc34af8941112b.JPG?x-oss-process=image/resize,m_pad,w_1000,h_1000,color_ffffff/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                    </li>
+                    <li>
+                        <img src="https://image8.wbiao.co/shop/94ad15e495b9433abd415135d6b2315a.JPG?x-oss-process=image/resize,m_pad,w_1000,h_1000,color_ffffff/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                    </li>
+                    <li>
+                        <img src="https://image8.wbiao.co/shop/180049aad9f64c3f81bdcd4c0e6b02f6.jpg?x-oss-process=image/resize,m_pad,w_1000,h_1000,color_ffffff/watermark,image_c2hvcC9sb2dvLWljb24ucG5n,t_100,g_center" alt="">
+                    </li>
+                </ul>
+            </div>
+            <i class="L_shade_content_right"></i>
+            <span class="L_shade_off"></span>
+        </div>
+    </div>
+    <!-- 遮罩分享 -->
+    <div class="L_share_shade">
+        <div class="L_share_content">
+            <p>
+                分享给好友
+                <i></i>
+            </p>
+            <div class="L_shareTo">
+                <p class="L_share_check">
+                    <span>分享到：</span>
+                    <input type="checkbox"><i></i>
+                    <input type="checkbox"><i></i>
+                    <input type="checkbox"><i></i>
+                </p>
+                <textarea name="" id="" cols="30" rows="10">我在@万表发现了一个非常不错的商品阿玛尼-LUIGI系列 AR1970 石英男表 万表价：2120。感觉不错，分享一下</textarea>
+                <div class="L_share_img">
+                    <i class="L_img_share_left"></i>
+                    <div class="L_share_box">
+                        <ul class="L_share_list">
+                            <li class="L_share_li">
+                                <img src="https://image8.wbiao.co/shop/c7fe11add1b24475b1d582b053687469.jpg?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff" alt="">
+                            </li>
+                            <li>
+                                <img src="https://image8.wbiao.co/shop/201708_16_AR1970_29629.jpg?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff" alt="">
+                            </li>
+                            <li>
+                                <img src="https://image8.wbiao.co/shop/50410debdf744890bb1c2bc4851de1c1.JPG?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff" alt="">
+                            </li>
+                            <li>
+                                <img src="https://image8.wbiao.co/shop/8ae381227d1e4af68fdc34af8941112b.JPG?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff" alt="">
+                            </li>
+                            <li>
+                                <img src="https://image8.wbiao.co/shop/94ad15e495b9433abd415135d6b2315a.JPG?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff" alt="">
+                            </li>
+                            <li>
+                                <img src="https://image8.wbiao.co/shop/180049aad9f64c3f81bdcd4c0e6b02f6.jpg?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff" alt="">
+                            </li>
+                        </ul>
+                    </div>
+                    <i class="L_img_share_right"></i>
+                </div>
+            </div>
+            <div class="L_whileShare">
+                <a href="javascript:void(0)">分享</a>
+                <a href="javascript:void(0)">取消</a>
+            </div>
+        </div>
+    </div>
+    <!-- 客服部分 -->
+    <div class="yan-service">
+        <div class="dialogue-wrapper">
+            <!--   客服对话框-->
+            <div class="dialogue-main">
+                <div class="dialogue-header">
+                    <span id="btn_close1" class="dialogue-close1"></span>
+                    <span id="btn_close2" class="dialogue-close2"></span>
+                    <span id="btn_close" class="dialogue-close"></span>
+                    <div class="dialogue-service-info">
+                        <i class="dialogue-support-img"></i><span class="dialogue-person">高级客服振军为您服务</span>
+                        <p style="margin-left: 117px;">您的一对一名表顾问，为您提供更优质便捷的服务</p>
+                    </div>
+                </div>
+                <div id="dialogue_contain" class="dialogue-contain">
+                    <img src="https://assist.wbiao.com/setting/uploadIcon/img_entp_info/uploadIcon/wx_1000_922684489.png"
+                        alt="">
+                    <p class="dialogue-service-contain"><span
+                            class="dialogue-text dialogue-service-text">您好，001号振军为您服务</span></p>
+                    <p class="dialogue-service-contain"><span
+                            class="dialogue-text dialogue-service-text">万表八周年庆盛惠启幕！全球奢华名表低至4.9折，部分品牌每满1000减120
+                            上不封顶！咨询客服购表送白天鹅定制首饰、双面鳄鱼皮表带等好礼！点击进入
+                            <a
+                                href="https://m.wbiao.cn/topics/2019920dianqing/">https://m.wbiao.cn/topics/2019920dianqing/</a></span>
+                    </p>
+                </div>
+                <div class="dialogue-aside">
+                    <div class="dialogue-pic">
+                        <!-- <img src="https://ss1.bdstatic.com/70cFuXSh_Q1YnxGkpoWK1HF6hhy/it/u=2712878680,1972118837&fm=26&gp=0.jpg" alt=""> -->
+                    </div>
+                    <div class="dialogue-trouble">
+                        <ul>
+                            <li style="text-align:center ;font-size:14px;font-weight: 700">常见问题</li>
+                            <li>• 怎样退货？</li>
+                            <li>• 手表都是正品吗？</li>
+                            <li>• 分期付款怎么操作？</li>
+                            <li>• 能不能货到付款？</li>
+                            <li>• 可以去专柜维修/鉴定吗？</li>
+                        </ul>
+                    </div>
+    
+                </div>
+                <div class="dialogue-submit">
+                    <p id="dialogue_hint" class="dialogue-hint"><span class="dialogue-hint-icon">!</span><span
+                            class="dialogue-hint-text">发送内容不能为空</span></p>
+                    <textarea id="dialogue_input" class="dialogue-input-text" placeholder="请输入您的问题，按Enter键提交"></textarea>
+                    <span class="over-message">结束会话</span>
+                    <button class="send-message">发送</button>
+                </div>
+            </div>
+        </div>
+        <div class="wrapper-zoom" style="display: none;">
+            <img src="https://assist.wbiao.com/setting/uploadIcon/img_pers_info/avatar_origin/wx_1000_ISME9754_T2D_wangshiping.jpg?rand=1426289464"
+                alt="">
+            <div class="ari"> 001号客服 小军为您服务</div>
+        </div>
+        <div class="ypanel-btn">
+            <div class="right-panel">
+                <div id="btn_open" class="dialogue-support-btn">
+                    <!--头像鼠标悬浮-->
+                    <i class="dialogue-support-icon" id="btn-pic">
+                    <div class="dialogue-hover">
+                        <div class="content">
+                            <span class="dialogue-close3"></span>
+                            <span class="trigon"></span>
+                            <span class="contentbox">
+                                <b>十月特惠专场</b>
+                                <em>低至3.5折起 咨询客服享好礼</em>
+                            </span>
+                        </div>
+                        <ul class="talk_btn">
+                            <li class="btn1">选表咨询</li>
+                            <li class="btn">手表维修</li>
+                        </ul>
+                    </div>
+                </i>
+                </div>
+                <div class="left-panel">
+                    <!--右侧菜单-->
+                    <a href="javascript:void(0)" class="btnn">
+                        <i class="car"></i>
+                        <i class="car-number">0</i>
+                        <span class="cardiv ypanel-box1">购物车</span>
+                    </a>
+                    <a href="javascript:void(0)" class="btnn">
+                        <i class="love car"></i>
+                        <span class="cardiv ypanel-box2">我的收藏</span>
+                    </a>
+                    <a href="javascript:void(0)" class="btnn">
+                        <i class="clock car"></i>
+                        <span class="cardiv ypanel-box3">浏览足迹</span>
+                    </a>
+                    <a href="javascript:void(0)" class="btnn">
+                        <i class="twoma"></i>
+                        <div class="twomadiv ypanel-box5">
+                            <img src="https://qd2.wbiao.co/img/5.0/index/tdc/QRcode_wbapp.png?20160919" alt="">
+                            <p>下载万表app</p>
+                        </div>
+                    </a>
+                    <a href="#" class="btnn">
+                        <i class="up"></i>
+                        <span class="cardiv ypanel-box4">返回顶部</span>
+                    </a>
+                </div>
+                <div>
+                    <div class="right-panel-box">
+                        <div class="right-panel-top">
+                            <b class="fl">购物车</b>
+                            <span class="dialogue-close4 right-panel-close"></span>
+                        </div>
+                        <p class="login-look">
+                            <span>登录之后显示您之前加入的商品</span>
+                            <a href="login.html" class="show-login">现在登录</a>
+                        </p>
+                      <div class="yshop-car" style="display: none;">
+                            <div class="top">
+                                <span class="all">满减</span>
+                                <span class="title">11·11全球名表狂欢节，欧米茄每满100000减500，上不封顶</span>
+                            </div>
+                            <div class="middle">
+                                <div class="left">
+                                    <img src="https://image8.wbiao.co/shop/c7fe11add1b24475b1d582b053687469.jpg?x-oss-process=image/resize,m_pad,w_480,h_480,color_ffffff" alt="">
+                                </div>
+                                <div class="right">
+                                    <span class="p1">阿玛尼-LUIGI系列 AR1970 石英男表</span>
+                                    <span class="pr"><b id="pricc">￥2120</b><em>x<i class="coun">0</i></em><span class="delete-g">删除</span></span>
+                                    
+                                </div>
+                            </div>
+                            <div class="bottom">
+                                <span class="bottom-left">
+                                   想买就点右边
+                                </span>
+                                <a href="shop_car.html" class="to-car">到购物车结算</a>
+                            </div>
+                        </div>
+                        <div class="cart-empty">
+                            <i class="icon-car"></i>
+                            <span>快去挑心仪的产品吧</span>
+                        </div>
+                        
+                    </div>
+                    <div class="right-panel-box">
+                        <div class="right-panel-top">
+                            <ul>
+                                <li class="on" style="border-bottom:1px solid #333">商品收藏</li>
+                                <li class="on">店铺收藏</li>
+                            </ul>
+                            <span class="dialogue-close4 right-panel-close"></span>
+                        </div>
+                        <p class="login-look">
+                            <span>登录之后显示您之前收藏的店铺<a href="login.html" class="show-login">现在登录</a></span>
+                            
+                        </p>
+                        <div class="collect-g">
+                            <p class="p1"><img src="https://image8.wbiao.co/shop/7ddedc6efcf6440e88ab7743fbc85934.jpg" alt=""></p>
+                            <span class="p2">￥2120</span>
+                            <p class="p3">加入购物车</p>
+                            <div class="bottom">
+                                <a href="javascript:void(0)">查看更多</a>
+                            </div>
+                        </div>
+                        <div class="cart-empty">
+                            <span>快去收藏心仪的产品吧</span>
+                        </div>
+                    </div>
+                    <div class="right-panel-box">
+                        <div class="right-panel-top">
+                            <b class="fl">浏览足迹</b>
+                            <span class="dialogue-close4 right-panel-close"></span>
+                        </div>
+                        <p class="login-look">
+                            <span>登录后显示您之前浏览商品</span>
+                            <a href="login.html" class="show-login">现在登录</a>
+                        </p>
+                        <div class="cart-empty">
+                            <span>暂无浏览记录</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+        <!-- 万表网尾部开始 -->
+        <div class="footer">
+            <div class="top_foot clearfix wrap">
+                <a href="javascript:void(0)" class="help">
+                    正品保障
+                    <i class="help_icon1"></i>
+                </a>
+                <a href="javascript:void(0)" class="help">
+                    免期分期
+                    <i class="help_icon2"></i>
+                </a>
+                <a href="javascript:void(0)" class="help">
+                    全球联保
+                    <i class="help_icon3"></i>
+                </a>
+                <a href="javascript:void(0)" class="help">
+                    假一赔三
+                    <i class="help_icon4"></i>
+                </a>
+                <a href="javascript:void(0)" class="help">
+                    终身售后
+                    <i class="help_icon5"></i>
+                </a>
+            </div>
+        </div>
+        <div class="middle_foot clearfix">
+            <div class="wrap clearfix">
+                <div class="foot_help">
+                    <p class="index_p1">客服电话</p>
+                    <p class="index_p2">400-883-2688</p>
+                    <p class="index_p3">外呼电话020-83931899</p>
+                    <a href="javascript:void(0)" class="index_p4">售后维修</a>
+                </div>
+                <div class="foot_list">
+                    <ul>
+                        <li class="foot_list_tit">新手指南</li>
+                        <li><a href="javascript:void(0)">注册新会员</a></li>
+                        <li><a href="javascript:void(0)">购物流程</a></li>
+                        <li><a href="javascript:void(0)">手表小知识</a></li>
+                        <li><a href="javascript:void(0)">退换货流程</a></li>
+                    </ul>
+                    <ul>
+                        <li class="foot_list_tit">支 付</li>
+                        <li><a href="javascript:void(0)">支付方式</a></li>
+                        <li><a href="javascript:void(0)">分期付款</a></li>
+                        <li><a href="javascript:void(0)">发票说明</a></li>
+                        <li><a href="javascript:void(0)">支付问题</a></li>
+                    </ul>
+                    <ul>
+                        <li class="foot_list_tit">配 送</li>
+                        <li><a href="javascript:void(0)">包裹签收</a></li>
+                        <li><a href="javascript:void(0)">配送方式</a></li>
+                        <li><a href="javascript:void(0)">配送说明</a></li>
+                        <li><a href="javascript:void(0)">自提流程</a></li>
+                    </ul>
+                    <ul>
+                        <li class="foot_list_tit">万表保障</li>
+                        <li><a href="javascript:void(0)">正品保障</a></li>
+                        <li><a href="javascript:void(0)">售后服务</a></li>
+                        <li><a href="javascript:void(0)">价格保护</a></li>
+                        <li><a href="javascript:void(0)">七天退换说明</a></li>
+                    </ul>
+                    <ul>
+                        <li class="foot_list_tit tit_spc">开放合作</li>
+                        <li><a href="javascript:void(0)">关于万表</a></li>
+                        <li><a href="javascript:void(0)" class="tit_spc">商务合作</a></li>
+                        <li><a href="javascript:void(0)">万表声明</a></li>
+                    </ul>
+                </div>
+                <a href="javascript:void(0)"><img src="images/foot_Qc.jpg" class="foot_Qc"></a>
+            </div>
+            <div class="foot_info clearfix">
+                <a href="javascript:void(0)">万表app</a>
+                <a href="javascript:void(0)">万表名匠</a>
+                <a href="javascript:void(0)">奢品共享</a>
+                <a href="javascript:void(0)">新款手表</a>
+                <a href="javascript:void(0)">二手商城</a>
+                <a href="javascript:void(0)">热销</a>
+                <a href="javascript:void(0)">天猫万表网旗舰店</a>
+                <a href="javascript:void(0)">京东万表网旗舰店</a>
+                <a href="javascript:void(0)">手表资讯</a>
+                <a href="javascript:void(0)">天梭手表</a>
+                <span class="foot_slide_info">&gt;</span>
+            </div>
+            <div class="foot_info_list foot_info hide">
+                <a href="javascript:void(0)">浪琴手表</a>
+                <a href="javascript:void(0)">欧米茄手表</a>
+                <a href="javascript:void(0)">卡西欧手表</a>
+                <a href="javascript:void(0)">卡地亚手表</a>
+                <a href="javascript:void(0)">手表图片</a>
+                <a href="javascript:void(0)">手表评论</a>
+                <a href="javascript:void(0)">手表排行榜</a>
+                <a href="javascript:void(0)">珠宝新闻</a>
+                <a href="javascript:void(0)">手表问答</a>
+                <a href="javascript:void(0)">智能手表</a>
+                <a href="javascript:void(0)">信用卡中心</a>
+                <a href="javascript:void(0)">手表专题</a>
+                <a href="javascript:void(0)">手表常识</a>
+            </div>
+            <div class="copyright">
+                <span>万表网名表商城 版权所有 2009-2019</span>
+                <a href="javascript:void(0)">ICP备案证书号:粤ICP备09108738号</a>
+                <span>网监备案:4401060103141</span>
+                <p>广州市万表科技股份有限公司 地址:广州市番禺区番禺大道北60-1号</p>
+                <p>Copyright 2009-2019 WWW.WBIAO.CN.LTD ALL RIGHT RESERVED.</p>
+            </div>
+            <div class="final">
+                <div class="police clearfix">
+                    <a href="javascript:void(0)"><img src="images/final1.png"></a>
+                    <a href="javascript:void(0)"><img src="images/final2.png"></a>
+                    <a href="javascript:void(0)"><img src="images/final3.png"></a>
+                </div>
+                <div class="nice_link">
+                    <a href="javascript:void(0)">联系QQ3268217127</a>
+                    <a href="javascript:void(0)">折800网</a>
+                    <a href="javascript:void(0)">音乐巴士</a>
+                    <a href="javascript:void(0)">聚美优品优惠券</a>
+                    <a href="javascript:void(0)">手表问答</a>
+                    <a href="javascript:void(0)">搜了网</a>
+                    <a href="javascript:void(0)">海鸥</a>
+                    <a href="javascript:void(0)">健客网上药店</a>
+                    <a href="javascript:void(0)">名表回收</a>
+                    <a href="javascript:void(0)">律师</a>
+                    <span class="foot_slide_info1">&gt;</span>
+                    <div class="foot_info_list1 foot_info hide">
+                        <a href="javascript:void(0)">B2B平台</a>
+                        <a href="javascript:void(0)">美乐乐</a>
+                        <a href="javascript:void(0)">友情链接</a>
+                        <a href="javascript:void(0)">赫柏林</a>
+                        <a href="javascript:void(0)">盛时表行</a>
+                        <a href="javascript:void(0)">小红树</a>
+                        <a href="javascript:void(0)">驴妈妈旅游网</a>
+                        <a href="javascript:void(0)">查工资</a>
+                        <a href="javascript:void(0)">腕表专卖店</a>
+                        <a href="javascript:void(0)">万表网的售后服务</a>
+                        <a href="javascript:void(0)">手表品牌大全</a>
+                        <a href="javascript:void(0)">翡翠</a>
+                        <a href="javascript:void(0)">cps广告联盟</a>
+                        <a href="javascript:void(0)">手机大全</a>
+                        <a href="javascript:void(0)">手工diy</a>
+                        <a href="javascript:void(0)">好豆菜谱</a>
+                        <a href="javascript:void(0)">苹果绿养生网</a>
+                        <a href="javascript:void(0)">网站地图</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 万表网尾部结束 -->
+        <!-- <script src="js/swiper.min.js"></script> -->
+    <script src="js/service.js"></script>
+    <script src="js/cartNum.js"></script>
+    <!-- <script src="js/shipai.js"></script> -->
+    <!-- <script src="js/index.js"></script> -->
+</body>
+</html>

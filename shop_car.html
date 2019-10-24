@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/shop_car.css">
+    <link rel="stylesheet" href="css/index.css">
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <title>购物车</title>
+</head>
+
+<body>
+    <div class="ad">
+        <a href="javascript:void(0)" class="wrap">
+            <img src="images/index_ad.jpg">
+        </a>
+        <div class="ad_close"></div>
+    </div>
+    <div class="top clearfix">
+        <div class="inner_top clearfix">
+            <div class="wrap clearfix" style="width: 990px;">
+                <a href="javascript:void(0)">正品保障，免息分期！</a>
+                <div class="inner_top_right">
+                    <a href="login.html">请登录</a>
+                    <a href="register.html" id="top_gift">注册即送3500元大礼包</a>
+                    <span class="line">|</span>
+                    <a href="shop_car.html" class="cartNum">购物车<span></span></a>
+                    <div class="index_serbox">
+                        <a href="javascript:void(0)" id="ser">客户服务</a>
+                        <div id="drop_window">
+                            <ul class="clearfix">
+                                <li><a href="javascript:void(0)">客户顾问</a></li>
+                                <li><a href="javascript:void(0)">售后维修</a></li>
+                                <li><a href="help.html">帮助中心</a></li>
+                                <li><a href="credit-card.html">办理信用卡</a></li>
+                            </ul>
+                            <div class="serPhone">
+                                <p>服务专线：400-883-2688</p>
+                                <p>外呼号码：020-83931899</p>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="javascript:void(0)">会员福利</a>
+                    <span class="line">|</span>
+                    <a href="javascript:void(0)">ENGLISH</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box">
+        <div class="shopCar_top">
+            <div class="header_logo">
+                <a href="index.html">
+                    <img src="https://static.wbiao.co/p/pc/images/1/logo-icon.png" alt="">
+                </a>
+                <a href="javascript:void(0)">
+                    <img src="https://static.wbiao.co/p/pc/images/1/slogan-02242018.png" alt="">
+                </a>
+            </div>
+            <div class="header_right">
+                <ul>
+                    <li class="changeColor">
+                        <i></i>
+                        <span>购物车</span>
+                    </li>
+                    <li>
+                        <i></i>
+                        <span>填写订单信息</span>
+                    </li>
+                    <li>
+                        <i></i>
+                        <span>支付订单</span>
+                    </li>
+                    <li>
+                        <i></i>
+                        <span>等待签收</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="shopNull" style="display: none;">
+            <i></i>
+            <p class="p1">你的购物车还是空的</p>
+            <p class="p2" style="display: none;">现在<a href="javascript:void(0)">登录</a>，购物车信息将一直为您保存</p>
+            <div>
+                <a class="a1" href="index.html">马上购物</a>
+                <a class="a2" href="javascript:void(0)">看看收藏</a>
+            </div>
+        </div>
+        <div class="shopAll">
+            <h2>全部商品 （<span class="shop_num">1</span>）</h2>
+            <div class="checkAll">
+                <i></i>
+                <span>全选</span>
+                <span>商品信息</span>
+                <ul>
+                    <li>单价</li>
+                    <li>数量</li>
+                    <li>小计</li>
+                    <li>操作</li>
+                </ul>
+            </div>
+            <div class="shopCar_content">
+                <div class="shopName">
+                    <i class="check"></i>
+                    <span>阿玛尼ARMANI
+                        <a href="javascript:void(0)">
+                            <span>领券</span>
+                            <div class="ticket" style="display: none;">
+                                <em>¥870</em>
+                                <div>
+                                    <p class="p1">大牌保价神券</p><br />
+                                    <p class="p2">2019.10.09-2019.10.19</p>
+                                </div>
+                                <i>领取</i>
+                            </div>
+                        </a>
+                    </span>
+                    <em style="display: none;"></em>
+                </div>
+                <ul></ul>
+            </div>
+            <div class="payment">
+                <div class="check_payment">
+                    <i></i>
+                    <a href="javascript:void(0)">全选</a>
+                    <a class="checkDel" href="javascript:void(0)">删除</a>
+                    <a href="javascript:void(0)">移入收藏</a>
+                    <a href="javascript:void(0)">清空失效商品</a>
+                    <p>已选商品<span class="checkedNum">0</span>件</p>
+                </div>
+                <div class="pay">
+                    <div>
+                        <p>合计<span>￥<span class="total">0</span></span></p>
+                        <br>
+                        <p>总额<span>￥</span>
+                            <sapn class="totalPrice">0</span>
+                        </p>
+                    </div>
+                    <button>结算</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <div class="top_foot clearfix wrap">
+            <a href="javascript:void(0)" class="help">
+                正品保障
+                <i class="help_icon1"></i>
+            </a>
+            <a href="javascript:void(0)" class="help">
+                免期分期
+                <i class="help_icon2"></i>
+            </a>
+            <a href="javascript:void(0)" class="help">
+                全球联保
+                <i class="help_icon3"></i>
+            </a>
+            <a href="javascript:void(0)" class="help">
+                假一赔三
+                <i class="help_icon4"></i>
+            </a>
+            <a href="javascript:void(0)" class="help">
+                终身售后
+                <i class="help_icon5"></i>
+            </a>
+        </div>
+    </div>
+    <div class="middle_foot clearfix">
+        <div class="wrap clearfix">
+            <div class="foot_help">
+                <p class="p1">客服电话</p>
+                <p class="p2">400-883-2688</p>
+                <p class="p3">外呼电话020-83931899</p>
+                <a href="javascript:void(0)" class="p4">售后维修</a>
+            </div>
+            <div class="foot_list">
+                <ul>
+                    <li class="foot_list_tit">新手指南</li>
+                    <li><a href="javascript:void(0)">注册新会员</a></li>
+                    <li><a href="javascript:void(0)">购物流程</a></li>
+                    <li><a href="javascript:void(0)">手表小知识</a></li>
+                    <li><a href="javascript:void(0)">退换货流程</a></li>
+                </ul>
+                <ul>
+                    <li class="foot_list_tit">支 付</li>
+                    <li><a href="javascript:void(0)">支付方式</a></li>
+                    <li><a href="javascript:void(0)">分期付款</a></li>
+                    <li><a href="javascript:void(0)">发票说明</a></li>
+                    <li><a href="javascript:void(0)">支付问题</a></li>
+                </ul>
+                <ul>
+                    <li class="foot_list_tit">配 送</li>
+                    <li><a href="javascript:void(0)">包裹签收</a></li>
+                    <li><a href="javascript:void(0)">配送方式</a></li>
+                    <li><a href="javascript:void(0)">配送说明</a></li>
+                    <li><a href="javascript:void(0)">自提流程</a></li>
+                </ul>
+                <ul>
+                    <li class="foot_list_tit">万表保障</li>
+                    <li><a href="javascript:void(0)">正品保障</a></li>
+                    <li><a href="javascript:void(0)">售后服务</a></li>
+                    <li><a href="javascript:void(0)">价格保护</a></li>
+                    <li><a href="javascript:void(0)">七天退换说明</a></li>
+                </ul>
+                <ul>
+                    <li class="foot_list_tit tit_spc">开放合作</li>
+                    <li><a href="javascript:void(0)">关于万表</a></li>
+                    <li><a href="javascript:void(0)" class="tit_spc">商务合作</a></li>
+                    <li><a href="javascript:void(0)">万表声明</a></li>
+                </ul>
+            </div>
+            <a href="javascript:void(0)"><img src="images/foot_Qc.jpg" class="foot_Qc"></a>
+        </div>
+        <div class="foot_info clearfix">
+            <a href="javascript:void(0)">万表app</a>
+            <a href="javascript:void(0)">万表名匠</a>
+            <a href="javascript:void(0)">奢品共享</a>
+            <a href="javascript:void(0)">新款手表</a>
+            <a href="javascript:void(0)">二手商城</a>
+            <a href="javascript:void(0)">热销</a>
+            <a href="javascript:void(0)">天猫万表网旗舰店</a>
+            <a href="javascript:void(0)">京东万表网旗舰店</a>
+            <a href="javascript:void(0)">手表资讯</a>
+            <a href="javascript:void(0)">天梭手表</a>
+            <span class="foot_slide_info">&gt;</span>
+        </div>
+        <div class="foot_info_list foot_info hide">
+            <a href="javascript:void(0)">浪琴手表</a>
+            <a href="javascript:void(0)">欧米茄手表</a>
+            <a href="javascript:void(0)">卡西欧手表</a>
+            <a href="javascript:void(0)">卡地亚手表</a>
+            <a href="javascript:void(0)">手表图片</a>
+            <a href="javascript:void(0)">手表评论</a>
+            <a href="javascript:void(0)">手表排行榜</a>
+            <a href="javascript:void(0)">珠宝新闻</a>
+            <a href="javascript:void(0)">手表问答</a>
+            <a href="javascript:void(0)">智能手表</a>
+            <a href="javascript:void(0)">信用卡中心</a>
+            <a href="javascript:void(0)">手表专题</a>
+            <a href="javascript:void(0)">手表常识</a>
+        </div>
+        <div class="copyright">
+            <span>万表网名表商城 版权所有 2009-2019</span>
+            <a href="javascript:void(0)">ICP备案证书号:粤ICP备09108738号</a>
+            <span>网监备案:4401060103141</span>
+            <p>广州市万表科技股份有限公司 地址:广州市番禺区番禺大道北60-1号</p>
+            <p>Copyright 2009-2019 WWW.WBIAO.CN.LTD ALL RIGHT RESERVED.</p>
+        </div>
+        <div class="final">
+            <div class="police clearfix">
+                <a href="javascript:void(0)"><img src="images/final1.png"></a>
+                <a href="javascript:void(0)"><img src="images/final2.png"></a>
+                <a href="javascript:void(0)"><img src="images/final3.png"></a>
+            </div>
+            <div class="nice_link">
+                <a href="javascript:void(0)">联系QQ3268217127</a>
+                <a href="javascript:void(0)">折800网</a>
+                <a href="javascript:void(0)">音乐巴士</a>
+                <a href="javascript:void(0)">聚美优品优惠券</a>
+                <a href="javascript:void(0)">手表问答</a>
+                <a href="javascript:void(0)">搜了网</a>
+                <a href="javascript:void(0)">海鸥</a>
+                <a href="javascript:void(0)">健客网上药店</a>
+                <a href="javascript:void(0)">名表回收</a>
+                <a href="javascript:void(0)">律师</a>
+                <span class="foot_slide_info1">&gt;</span>
+                <div class="foot_info_list1 foot_info hide">
+                    <a href="javascript:void(0)">B2B平台</a>
+                    <a href="javascript:void(0)">美乐乐</a>
+                    <a href="javascript:void(0)">友情链接</a>
+                    <a href="javascript:void(0)">赫柏林</a>
+                    <a href="javascript:void(0)">盛时表行</a>
+                    <a href="javascript:void(0)">小红树</a>
+                    <a href="javascript:void(0)">驴妈妈旅游网</a>
+                    <a href="javascript:void(0)">查工资</a>
+                    <a href="javascript:void(0)">腕表专卖店</a>
+                    <a href="javascript:void(0)">万表网的售后服务</a>
+                    <a href="javascript:void(0)">手表品牌大全</a>
+                    <a href="javascript:void(0)">翡翠</a>
+                    <a href="javascript:void(0)">cps广告联盟</a>
+                    <a href="javascript:void(0)">手机大全</a>
+                    <a href="javascript:void(0)">手工diy</a>
+                    <a href="javascript:void(0)">好豆菜谱</a>
+                    <a href="javascript:void(0)">苹果绿养生网</a>
+                    <a href="javascript:void(0)">网站地图</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/cartNum.js"></script>
+    <script src="js/shop_car.js"></script>
+    <!-- <script src="js/index.js"></script> -->
+
+</body>
+
+</html>
